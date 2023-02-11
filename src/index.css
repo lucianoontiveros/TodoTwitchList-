@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.contenedorTareas {
+  background-color: rgba(0, 0, 0, 0.472);
+  margin: 20px 20px 20px 20px;
+}
