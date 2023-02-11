@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { render } from "react-dom";
 import tmi from "tmi.js";
-import { customAlphabet } from 'nanoid'
-
-
-const nanoid = customAlphabet('1234567890abcdef', 10)
+import Controlador from "./componentes/Controlador.jsx";
 
 class Perfil {
   constructor(username) {
@@ -19,7 +16,7 @@ class Perfil {
   }
 }
 
-var perfil = JSON.parse(localStorage.getItem('perfil')) || []
+export var perfil = JSON.parse(localStorage.getItem('perfil')) || []
 function App() {
 
   const [user, setUser] = useState('brunispet')
@@ -92,97 +89,13 @@ function App() {
       const command = message.split(" ")[0];
       const tarea = message.substring(command.length + 1);
 
-      switch (command) {
-
-        case '!task':
-          corrobarUsername(username)
-          corrobarTareas(username, client, channel)
-          setRender(Date.now())
-          perfil.find(item => {
-            if (item.username === username) {
-              item.tareas.push({ tarea, id: nanoid(3) })
-              item.puntos += 50;
-              client.say(channel, `/me imGlitch @${item.username} imGlitch registré tu tarea: 🐱‍💻 ${tarea}  | BegWan VirtualHug`);
-
-            }
-          })
-          setUser(username)
-          setbadges(badges)
-          break;
-
-        case '!list':
-          corrobarUsername(username)
-          corrobarTareas(username, client, channel)
-          setRender(Date.now())
-          perfil.find(item => {
-            if (item.username === username) {
-              const listaTareas = item.tareas.forEach(i => {
-                client.say(channel, `/me imGlitch @${item.username} imGlitch TAREA: 📖  ${i.tarea} Id: 🔖 ${i.id}`)
-              })
-            }
-          })
-          setUser(username)
-          setbadges(badges)
-          break;
-
-        case '!delete':
-          corrobarUsername(username)
-          corrobarTareas(username, client, channel)
-          setRender(Date.now())
-          perfil.find(item => {
-            if (item.username === username) {
-              const tareaEliminada = item.tareas.find(u => u.id === id);
-              client.say(channel, `Esta tarea fue eliminada: 📖 ${tareaEliminada.tarea} => con el Id: 🔖 ${tareaEliminada.id} `)
-              const tareasFiltradas = item.tareas.filter(u => u.id !== id);
-              console.log(tareasFiltradas)
-              item.tareas = tareasFiltradas
-            }
-          })
-          setUser(username)
-          setbadges(badges)
-          break;
-
-        case '!check':
-          corrobarUsername(username)
-          corrobarTareas(username, client, channel)
-          setRender(Date.now())
-          perfil.find(item => {
-            if (item.username === username) {
-              const tareaMarcada = item.tareas.find(u => u.id === id);
-              client.say(channel, `Esta tarea fue marcada: 📖  ${tareaMarcada.tarea} => con el Id:  🔖 ${tareaMarcada.id} `)
-              const tareasFiltradas = item.tareas.filter(u => u.id !== id);
-              console.log(tareasFiltradas)
-              item.tareas = tareasFiltradas
-            }
-          })
-          setUser(username)
-          setbadges(badges)
-          break;
-
-        case '!clear':
-          setRender(Date.now())
-          perfil.find(item => {
-            if (item.username === username) {
-              client.say(channel, `Todas tus tareas fueron eliminadas`)
-              item.tareas = []
-            }
-          })
-          setUser(username)
-          setbadges(badges)
-          break;
-
-        case '!pickup':
-          setRender(Date.now())
-          perfil.find(item => {
-            if (item.username === username) {
-              client.say(channel, `Todas tus tareas fueron marcadas`)
-              const tareasFiltradas = item.tareas.filter(u => u.id !== id);
-              item.tareas = []
-            }
-          })
-          setUser(username)
-          setbadges(badges)
-          break;
+      if (command) {
+        corrobarUsername(username)
+        corrobarTareas(username, client, channel)
+        setRender(Date.now())
+        Controlador(client, channel, command, username, tarea, id, badges)
+        setUser(username)
+        setbadges(badges)
       }
       console.log('Este es el perfil de cuarto de chenz')
       console.log(perfil)
@@ -208,8 +121,8 @@ function App() {
         <ul className="my-4 space-y-3">
           {
             usernamePerfil(user) && (
-              usernamePerfil(user).tareas.map(i => (
-                <li key={i}>
+              usernamePerfil(user).tareas.map((i, index) => (
+                <li key={index}>
                   <a href="#" className="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
                     <span className="flex-1 ml-3 overflow-hidden">{i.tarea}</span>
                     <span className="inline-flex items-center justify-center px-2 py-0.5 ml-3 text-xs font-medium text-black-500 bg-gray-200 rounded dark:bg-green-700 dark:text-green-400">{i.id}</span>
