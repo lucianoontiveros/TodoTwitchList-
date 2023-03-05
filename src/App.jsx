@@ -19,9 +19,14 @@ class Perfil {
 export var perfil = JSON.parse(localStorage.getItem('perfil')) || []
 function App() {
 
+
+  var [classTitle, setclassTitle] = useState("font-normal text-5xl font-weight: 500; text-center text-white");
+  var [classSubtitle, setclassSubtitle] = useState("font-normal text-3xl text-center  text-green-400")
+  var [aStyle, setaStyle] = useState("flex items-center p-3 text-base font-bold bg-black text-green-500 rounded-lg")
   const [user, setUser] = useState('brunispet')
   const [badges, setbadges] = useState()
   const [render, setRender] = useState(Date.now());
+
 
   const guardarPerfil = (perfil) => {
     const perfilString = JSON.stringify(perfil);
@@ -89,6 +94,8 @@ function App() {
       const command = message.split(" ")[0];
       const tarea = message.substring(command.length + 1);
 
+
+
       if (command) {
         corrobarUsername(username)
         corrobarTareas(username, client, channel)
@@ -97,6 +104,13 @@ function App() {
         setUser(username)
         setbadges(badges)
       }
+
+      if (isPrime) { setclassTitle("mb-2 font-bold text-4xl text-center tracking-tight text-blue-200 dark:text-white"); setclassSubtitle("font-normal text-3xl text-center text-blue-100"); setaStyle("flex items-center p-3 text-base font-bold bg-black text-indigo-400 rounded-lg"); }
+      if (isMod) { setclassTitle("mb-2 font-bold text-4xl text-center tracking-tight text-green-300 dark:text-white"); setclassSubtitle("font-normal text-3xl text-center text-green-100"); setaStyle("flex items-center p-3 text-base font-bold bg-black text-green-300 rounded-lg"); }
+      if (isVip) { setclassTitle("mb-2 font-bold text-4xl text-center tracking-tight text-pink-600 dark:text-white"); setclassSubtitle("font-normal text-3xl text-center text-pink-800"); setaStyle("flex items-center p-3 text-base font-bold bg-black text-pink-500 rounded-lg"); }
+      if (isSub) { setclassTitle("mb-2 font-bold text-4xl text-center tracking-tight text-yellow-300 dark:text-white"); setclassSubtitle("font-normal text-3xl text-center text-yellow-200"); setaStyle("flex items-center p-3 text-base font-bold bg-black text-yellow-400 rounded-lg"); }
+
+
       console.log('Este es el perfil de cuarto de chenz')
       console.log(perfil)
 
@@ -112,26 +126,25 @@ function App() {
   return (
     <div>
       <div className="contenedorTareas w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 dark:bg-gray-800 dark:border-gray-700">
-        <h1 className="mb-3 text-base text-center font-semibold text-gray-900 md:text-xl dark:text-white">
+        <h1 className={classTitle}>
           {badges}{user}{badges}
         </h1>
-        <h5 className="text-sm font-normal text-center  text-black-500 dark:text-gray-400">
-          Este es tu listado de tereas:
+        <h5 className={classSubtitle}>
+          Tareas pendientes:
         </h5>
         <ul className="my-4 space-y-3">
           {
             usernamePerfil(user) && (
               usernamePerfil(user).tareas.map((i, index) => (
                 <li key={index}>
-                  <a href="#" className="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
+                  <a href="#" className={aStyle}>
                     <span className="flex-1 ml-3 overflow-hidden">{i.tarea}</span>
-                    <span className="inline-flex items-center justify-center px-2 py-0.5 ml-3 text-xs font-medium text-black-500 bg-gray-200 rounded dark:bg-green-700 dark:text-green-400">{i.id}</span>
+                    <span className="inline-flex items-center justify-center px-2 py-0.5 ml-3 text-base font-medium text-black-500 bg-gray-700 rounded dark:bg-green-700 dark:text-green-400">{i.id}</span>
                   </a>
                 </li>
               ))
             )
           }
-
         </ul>
         <div>
           <a
