@@ -18,7 +18,7 @@ Se mostrará en distinto colores la tipografía de acuerdo al rol de cada usuari
 
 **- !tarea + más la descripción de la tarea:** Ingresando el comando junto con su correspondiente descripción, la misma quedará registrada y un mensaje vía chat avisará que se complió con la petición.
 
-**- !lista:** Ingresando este comando se desplegará en pantalla la lista de tareas, como también se expondrá en el chat. De no tener tareas registradas habrá un aviso informando la situación.
+**- !lista:** Ingresando este comando se desplegará en pantalla la lista de tareas y también se expondrá en el chat. De no tener tareas registradas habrá un aviso informando la situación.
 
 **- !eliminar + ID :** Ingresando el comando más el ID la tarea vinculada se elimina.
 
