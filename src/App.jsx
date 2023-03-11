@@ -49,16 +49,7 @@ function App() {
     }
   }
 
-  const corrobarTareas = (username, client, channel) => {
-    perfil.find(item => {
-      if (item.username === username) {
-        var anuncio = '/me No tiene tareas que tenga recordar. !comandos para revisar todo lo que puedo hacer BegWan VirtualHug .'
-        if (item.tareas.length === 0) {
-          return client.say(channel, anuncio)
-        }
-      }
-    })
-  }
+
 
   useEffect(() => {
     const client = new tmi.Client({
@@ -100,7 +91,6 @@ function App() {
 
       if (command) {
         corrobarUsername(username)
-        corrobarTareas(username, client, channel)
         Controlador(client, channel, command, username, tarea, id, badges)
         setUser(username)
         setbadges(badges)

@@ -25,20 +25,11 @@ const Controlador = (client, channel, command, username, tarea, id, badges) => {
     case '!tarea':
       perfil.find(item => {
         if (item.username === username) {
-          item.tareas.push({ tarea, id: nanoid(3) })
+          let nuevoId = nanoid(3)
+          item.tareas.push({ tarea, id: nuevoId })
           item.puntos += 50;
-          client.say(channel, `/me imGlitch @${item.username} imGlitch registré tu tarea: 🐱‍💻 ${tarea}  | BegWan VirtualHug`);
+          client.say(channel, `/me imGlitch @${item.username} imGlitch registré tu tarea: 🐱‍💻 ${tarea} con 🔖 ${nuevoId} | BegWan VirtualHug`);
 
-        }
-      })
-      break;
-
-    case '!list':
-      perfil.find(item => {
-        if (item.username === username) {
-          const listaTareas = item.tareas.forEach(i => {
-            client.say(channel, `/me imGlitch @${username} imGlitch TAREA: 📖  ${i.tarea} 🔖 !marcar ${i.id} !eliminar ${i.id} BegWan`)
-          })
         }
       })
       break;
@@ -49,9 +40,28 @@ const Controlador = (client, channel, command, username, tarea, id, badges) => {
           const listaTareas = item.tareas.forEach(i => {
             client.say(channel, `/me imGlitch @${username} imGlitch TAREA: 📖  ${i.tarea} 🔖 !marcar ${i.id} !eliminar ${i.id} BegWan`)
           })
+          var anuncio = '/me No tiene tareas que tenga recordar. !comandos para revisar todo lo que puedo hacer BegWan VirtualHug .'
+          if (item.tareas.length === 0) {
+            return client.say(channel, anuncio)
+          }
         }
       })
       break;
+
+    case '!list':
+      perfil.find(item => {
+        if (item.username === username) {
+          const listaTareas = item.tareas.forEach(i => {
+            client.say(channel, `/me imGlitch @${username} imGlitch TAREA: 📖  ${i.tarea} 🔖 !marcar ${i.id} !eliminar ${i.id} BegWan`)
+          })
+          var anuncio = '/me No tiene tareas que tenga recordar. !comandos para revisar todo lo que puedo hacer BegWan VirtualHug .'
+          if (item.tareas.length === 0) {
+            return client.say(channel, anuncio)
+          }
+        }
+      })
+      break;
+
 
     case '!delete':
       perfil.find(item => {
