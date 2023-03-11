@@ -52,7 +52,7 @@ function App() {
   const corrobarTareas = (username, client, channel) => {
     perfil.find(item => {
       if (item.username === username) {
-        var anuncio = '/me No tiene tareas registradas para recordar. !comandos para revisar todo lo que puedo hacer BegWan VirtualHug .'
+        var anuncio = '/me No tiene tareas que tenga recordar. !comandos para revisar todo lo que puedo hacer BegWan VirtualHug .'
         if (item.tareas.length === 0) {
           return client.say(channel, anuncio)
         }
