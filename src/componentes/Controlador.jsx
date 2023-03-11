@@ -37,7 +37,7 @@ const Controlador = (client, channel, command, username, tarea, id, badges) => {
       perfil.find(item => {
         if (item.username === username) {
           const listaTareas = item.tareas.forEach(i => {
-            client.say(channel, `/me imGlitch @${username} imGlitch TAREA: 📖  ${i.tarea} Id: 🔖 ${i.id}`)
+            client.say(channel, `/me imGlitch @${username} imGlitch TAREA: 📖  ${i.tarea} 🔖 !marcar ${i.id} !eliminar ${i.id} BegWan`)
           })
         }
       })
@@ -47,7 +47,7 @@ const Controlador = (client, channel, command, username, tarea, id, badges) => {
       perfil.find(item => {
         if (item.username === username) {
           const listaTareas = item.tareas.forEach(i => {
-            client.say(channel, `/me imGlitch @${username} imGlitch TAREA: 📖  ${i.tarea} Id: 🔖 ${i.id}`)
+            client.say(channel, `/me imGlitch @${username} imGlitch TAREA: 📖  ${i.tarea} 🔖 !marcar ${i.id} !eliminar ${i.id} BegWan`)
           })
         }
       })
