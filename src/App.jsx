@@ -93,7 +93,9 @@ function App() {
       const id = args[1]
       const command = message.split(" ")[0];
       const tarea = message.substring(command.length + 1);
-
+      if (username === 'brunispet') return
+      if (username === 'streamelements') return
+      if (username === 'nightbot') return
 
 
       if (command) {
