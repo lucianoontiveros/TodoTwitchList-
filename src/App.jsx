@@ -99,20 +99,20 @@ function App() {
       if (command) {
         corrobarUsername(username)
         corrobarTareas(username, client, channel)
-        setRender(Date.now())
         Controlador(client, channel, command, username, tarea, id, badges)
         setUser(username)
         setbadges(badges)
+        if (isPrime) { setclassTitle("mb-2 font-bold text-4xl text-center tracking-tight text-blue-200 dark:text-white"); setclassSubtitle("font-normal text-3xl text-center text-blue-100"); setaStyle("flex items-center p-3 text-base font-bold bg-black text-indigo-400 rounded-lg"); }
+        if (isMod) { setclassTitle("mb-2 font-bold text-4xl text-center tracking-tight text-green-300 dark:text-white"); setclassSubtitle("font-normal text-3xl text-center text-green-100"); setaStyle("flex items-center p-3 text-base font-bold bg-black text-green-300 rounded-lg"); }
+        if (isVip) { setclassTitle("mb-2 font-bold text-4xl text-center tracking-tight text-pink-600 dark:text-white"); setclassSubtitle("font-normal text-3xl text-center text-pink-800"); setaStyle("flex items-center p-3 text-base font-bold bg-black text-pink-500 rounded-lg"); }
+        if (isSub) { setclassTitle("mb-2 font-bold text-4xl text-center tracking-tight text-yellow-300 dark:text-white"); setclassSubtitle("font-normal text-3xl text-center text-yellow-200"); setaStyle("flex items-center p-3 text-base font-bold bg-black text-yellow-400 rounded-lg"); }
       }
 
-      if (isPrime) { setclassTitle("mb-2 font-bold text-4xl text-center tracking-tight text-blue-200 dark:text-white"); setclassSubtitle("font-normal text-3xl text-center text-blue-100"); setaStyle("flex items-center p-3 text-base font-bold bg-black text-indigo-400 rounded-lg"); }
-      if (isMod) { setclassTitle("mb-2 font-bold text-4xl text-center tracking-tight text-green-300 dark:text-white"); setclassSubtitle("font-normal text-3xl text-center text-green-100"); setaStyle("flex items-center p-3 text-base font-bold bg-black text-green-300 rounded-lg"); }
-      if (isVip) { setclassTitle("mb-2 font-bold text-4xl text-center tracking-tight text-pink-600 dark:text-white"); setclassSubtitle("font-normal text-3xl text-center text-pink-800"); setaStyle("flex items-center p-3 text-base font-bold bg-black text-pink-500 rounded-lg"); }
-      if (isSub) { setclassTitle("mb-2 font-bold text-4xl text-center tracking-tight text-yellow-300 dark:text-white"); setclassSubtitle("font-normal text-3xl text-center text-yellow-200"); setaStyle("flex items-center p-3 text-base font-bold bg-black text-yellow-400 rounded-lg"); }
 
 
       console.log('Este es el perfil de cuarto de chenz')
       console.log(perfil)
+      setRender(Date.now())
 
     });
     return () => {
