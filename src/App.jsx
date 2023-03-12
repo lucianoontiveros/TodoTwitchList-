@@ -82,25 +82,39 @@ function App() {
         (isMod ? "🗡️" : "");
       const args = message.slice(1).split(' ');
       const id = args[1]
-      const command = message.split(" ")[0];
+      const command = message.toLowerCase().split(" ")[0];
       const tarea = message.substring(command.length + 1);
       if (username === 'brunispet') return
       if (username === 'streamelements') return
       if (username === 'nightbot') return
 
-
-      if (command) {
-        corrobarUsername(username)
-        Controlador(client, channel, command, username, tarea, id, badges)
-        setUser(username)
-        setbadges(badges)
-        if (isPrime) { setclassTitle("mb-2 font-bold text-4xl text-center tracking-tight text-blue-200 dark:text-white"); setclassSubtitle("font-normal text-3xl text-center text-blue-100"); setaStyle("flex items-center p-3 text-base font-bold bg-black text-indigo-400 rounded-lg"); }
-        if (isMod) { setclassTitle("mb-2 font-bold text-4xl text-center tracking-tight text-green-300 dark:text-white"); setclassSubtitle("font-normal text-3xl text-center text-green-100"); setaStyle("flex items-center p-3 text-base font-bold bg-black text-green-300 rounded-lg"); }
-        if (isVip) { setclassTitle("mb-2 font-bold text-4xl text-center tracking-tight text-pink-600 dark:text-white"); setclassSubtitle("font-normal text-3xl text-center text-pink-800"); setaStyle("flex items-center p-3 text-base font-bold bg-black text-pink-500 rounded-lg"); }
-        if (isSub) { setclassTitle("mb-2 font-bold text-4xl text-center tracking-tight text-yellow-300 dark:text-white"); setclassSubtitle("font-normal text-3xl text-center text-yellow-200"); setaStyle("flex items-center p-3 text-base font-bold bg-black text-yellow-400 rounded-lg"); }
+      switch (command) {
+        case '!task':
+        case '!tarea':
+        case '!lista':
+        case '!list':
+        case '!delete':
+        case '!eliminar':
+        case '!check':
+        case '!marcar':
+        case '!clear':
+        case '!pickup':
+        case '!croqueta':
+          console.log('Entre a este if ')
+          console.log(command)
+          corrobarUsername(username)
+          Controlador(client, channel, command, username, tarea, id, badges)
+          setUser(username)
+          setbadges(badges)
+          if (isPrime) { setclassTitle("mb-2 font-bold text-4xl text-center tracking-tight text-blue-200 dark:text-white"); setclassSubtitle("font-normal text-3xl text-center text-blue-100"); setaStyle("flex items-center p-3 text-base font-bold bg-black text-indigo-400 rounded-lg"); }
+          if (isMod) { setclassTitle("mb-2 font-bold text-4xl text-center tracking-tight text-green-300 dark:text-white"); setclassSubtitle("font-normal text-3xl text-center text-green-100"); setaStyle("flex items-center p-3 text-base font-bold bg-black text-green-300 rounded-lg"); }
+          if (isVip) { setclassTitle("mb-2 font-bold text-4xl text-center tracking-tight text-pink-600 dark:text-white"); setclassSubtitle("font-normal text-3xl text-center text-pink-800"); setaStyle("flex items-center p-3 text-base font-bold bg-black text-pink-500 rounded-lg"); }
+          if (isSub) { setclassTitle("mb-2 font-bold text-4xl text-center tracking-tight text-yellow-300 dark:text-white"); setclassSubtitle("font-normal text-3xl text-center text-yellow-200"); setaStyle("flex items-center p-3 text-base font-bold bg-black text-yellow-400 rounded-lg"); }
+          else {
+            setclassTitle("font-normal text-5xl font-weight: 500; text-center text-white"); setclassSubtitle("font-normal text-3xl text-center  text-green-400"); setaStyle("flex items-center p-3 text-base font-bold bg-black text-green-500 rounded-lg");
+          }
+          break;
       }
-
-
 
       console.log('Este es el perfil de cuarto de chenz')
       console.log(perfil)
@@ -130,6 +144,7 @@ function App() {
               usernamePerfil(user).tareas.map((i, index) => (
                 <li key={index}>
                   <a href="#" className={aStyle}>
+
                     <span className="flex-1 ml-3 overflow-hidden">{i.tarea}</span>
                     <span className="inline-flex items-center justify-center px-2 py-0.5 ml-3 text-base font-medium text-black-500 bg-gray-700 rounded dark:bg-green-700 dark:text-green-400">{i.id}</span>
                   </a>
