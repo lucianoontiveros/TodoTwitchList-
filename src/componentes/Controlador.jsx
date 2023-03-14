@@ -33,7 +33,7 @@ const Controlador = (client, channel, command, username, tarea, id, badges) => {
         let mensajeCroqueta = item.tareasRealizadas === 1 ? `Me regalaste una croqueta ${username} BegWan VirtualHug hoy realizaste ${item.tareasRealizadas} una tarea GlitchCat,` : `Me regalaste una croqueta ${username} BegWan VirtualHug hoy realizaste ${item.tareasRealizadas} tareas de tu lista GlitchCat,`
         let mensajeUsuario = item.tareasEliminadas === 0 ? " No borraste niguna de las tareas registradas PogChamp" : ` y borraste ${item.tareasEliminadas} de las registradas PogChamp `
         let MensajeCam = ""
-        if (username === 'cuartodechenz') {
+        if (username === 'camm_sss') {
           MensajeCam = 'Tu eres mi mamá Camm PrimeMe '
         }
         client.say(channel, MensajeCam + mensajeCroqueta + mensajeUsuario + MensajecroquetaTotal)
