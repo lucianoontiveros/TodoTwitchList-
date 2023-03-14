@@ -53,7 +53,7 @@ function App() {
 
   useEffect(() => {
     const client = new tmi.Client({
-      options: { debug: true },
+      options: { debug: false },
       identity: {
         username: import.meta.env.VITE_APP_USERNAME,
         password: import.meta.env.VITE_APP_PASSWORD,
@@ -100,8 +100,8 @@ function App() {
         case '!clear':
         case '!pickup':
         case '!croqueta':
-          console.log('Entre a este if ')
-          console.log(command)
+
+
           corrobarUsername(username)
           Controlador(client, channel, command, username, tarea, id, badges)
           setUser(username)
@@ -114,7 +114,6 @@ function App() {
           break;
       }
 
-      console.log('Este es el perfil de cuarto de chenz')
       console.log(perfil)
       setRender(Date.now())
 

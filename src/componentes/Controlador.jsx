@@ -18,18 +18,48 @@ const Controlador = (client, channel, command, username, tarea, id, badges) => {
     }
   }
 
-  const sumarCroquetas = (cantidadDeTareas) => {
+  const usernameCroquetas = (username) => croquetas.find((item) => item.username === username)
+
+
+  const identificarCroquetas = (username) => {
+    if (!usernameCroquetas(username)) {
+      let nuevoCroquetas = new Croquetas(username)
+      croquetas.push(nuevoCroquetas)
+    }
     croquetas.find(item => {
       if (item.username === username) {
-        item.croquetasCantidad = item.croquetasCantidad + cantidadDeTareas
-        return console.log(item.croquetasCantidad)
+        let croquetaTotal = item.croquetasCantidad + 1
+        let MensajecroquetaTotal = croquetaTotal === 1 ? "Me diste un total de una croqueta" : `Me regalaste un total de ${croquetaTotal} croquetas`
+        let mensajeCroqueta = item.tareasRealizadas === 1 ? `Me regalaste una croqueta ${username} BegWan VirtualHug hoy realizaste ${item.tareasRealizadas} una tarea GlitchCat,` : `Me regalaste una croqueta ${username} BegWan VirtualHug hoy realizaste ${item.tareasRealizadas} tareas de tu lista GlitchCat,`
+        let mensajeUsuario = item.tareasEliminadas === 0 ? " No borraste niguna de las tareas registradas PogChamp" : ` y borraste ${item.tareasEliminadas} de las registradas PogChamp `
+        let MensajeCam = ""
+        if (username === 'cuartodechenz') {
+          MensajeCam = 'Tu eres mi mamá Camm PrimeMe '
+        }
+        client.say(channel, MensajeCam + mensajeCroqueta + mensajeUsuario + MensajecroquetaTotal)
+        console.log(croquetas)
       }
-      console.log("el usuario no tiene croquetas")
-      console.log(croquetas)
     })
   }
 
-  const usernameCroquetas = (username) => croquetas.find((item) => item.username === username)
+  const rendicionCroqueta = (username, lengthTareas, negLengthTareas) => {
+    if (!usernameCroquetas(username)) {
+      let nuevoCroquetas = new Croquetas(username)
+      croquetas.push(nuevoCroquetas)
+    }
+    croquetas.find(item => {
+      if (item.username === username) {
+        if (lengthTareas) {
+          item.croquetasCantidad += lengthTareas
+          item.tareasRealizadas += lengthTareas
+        }
+        if (negLengthTareas) {
+          item.tareasEliminadas += negLengthTareas
+        }
+      }
+    })
+  }
+
 
   switch (command) {
 
@@ -39,7 +69,7 @@ const Controlador = (client, channel, command, username, tarea, id, badges) => {
         if (item.username === username) {
           item.tareas.push({ tarea, id: nanoid(3) })
           item.puntos += 50;
-          client.say(channel, `/me imGlitch @${item.username} imGlitch registré tu tarea: 🐱‍💻 ${tarea}  | BegWan VirtualHug`);
+          client.say(channel, `/me imGlitch @${item.username} imGlitch registré tu tarea: 🐱‍💻 ${tarea}  | BegWan VirtualHug Could you give me a !croqueta?`);
 
         }
       })
@@ -51,7 +81,7 @@ const Controlador = (client, channel, command, username, tarea, id, badges) => {
           let nuevoId = nanoid(3)
           item.tareas.push({ tarea, id: nuevoId })
           item.puntos += 50;
-          client.say(channel, `/me imGlitch @${item.username} imGlitch registré tu tarea: 🐱‍💻 ${tarea} con 🔖 ${nuevoId} | BegWan VirtualHug`);
+          client.say(channel, `/me imGlitch @${item.username} imGlitch registré tu tarea: 🐱‍💻 ${tarea} con 🔖 ${nuevoId} | BegWan VirtualHug podrías regalarme una !croqueta?`);
 
         }
       })
@@ -91,11 +121,10 @@ const Controlador = (client, channel, command, username, tarea, id, badges) => {
         perfil.find(item => {
           if (item.username === username) {
             const tareaEliminada = item.tareas.find(u => u.id === id)
-            console.log(tareaEliminada)
             client.say(channel, `Esta tarea fue eliminada: 📖 ${tareaEliminada.tarea}  con el Id: 🔖 ${tareaEliminada.id} `)
             const tareasFiltradas = item.tareas.filter(u => u.id !== id);
-            console.log(tareasFiltradas)
             item.tareas = tareasFiltradas
+            rendicionCroqueta(username, 0, 1)
           }
         })
       } catch (error) {
@@ -112,8 +141,8 @@ const Controlador = (client, channel, command, username, tarea, id, badges) => {
             console.log(tareaEliminada)
             client.say(channel, `This task was eliminated: 📖 ${tareaEliminada.tarea}  with the id: 🔖 ${tareaEliminada.id} `)
             const tareasFiltradas = item.tareas.filter(u => u.id !== id);
-            console.log(tareasFiltradas)
             item.tareas = tareasFiltradas
+            rendicionCroqueta(username, 0, 1)
           }
         })
       } catch (error) {
@@ -130,6 +159,8 @@ const Controlador = (client, channel, command, username, tarea, id, badges) => {
             const tareasFiltradas = item.tareas.filter(u => u.id !== id);
             console.log(tareasFiltradas)
             item.tareas = tareasFiltradas
+            rendicionCroqueta(username, 1, 0)
+
           }
         })
       } catch (error) {
@@ -146,8 +177,7 @@ const Controlador = (client, channel, command, username, tarea, id, badges) => {
             const tareasFiltradas = item.tareas.filter(u => u.id !== id);
             console.log(tareasFiltradas)
             item.tareas = tareasFiltradas
-            sumarCroquetas(1)
-            console.log(croquetas)
+            rendicionCroqueta(username, 1, 0)
           }
         })
       } catch (error) {
@@ -159,6 +189,8 @@ const Controlador = (client, channel, command, username, tarea, id, badges) => {
       perfil.find(item => {
         if (item.username === username) {
           client.say(channel, `Todas tus tareas fueron eliminadas | All your tasks were deleted`)
+          let negLengthTareas = item.tareas.length
+          rendicionCroqueta(username, 0, negLengthTareas)
           item.tareas = []
         }
       })
@@ -170,25 +202,15 @@ const Controlador = (client, channel, command, username, tarea, id, badges) => {
           client.say(channel, `Todas tus tareas fueron marcadas como realizadas | All your tasks were marked as done`)
           const tareasFiltradas = item.tareas.filter(u => u.id !== id);
           let cantidadDeTareas = item.tareas.length
+          let lengthTareas = item.tareas.length
+          rendicionCroqueta(username, lengthTareas, 0)
           item.tareas = []
-          sumarCroquetas(cantidadDeTareas)
-
         }
       })
       break;
 
     case '!croqueta':
-      if (!usernameCroquetas(username)) {
-        let nuevoCroquetas = new Croquetas(username)
-        croquetas.push(nuevoCroquetas)
-        return console.log('Se ha creado un nuevo comedero de croquetas')
-      }
-      croquetas.find(item => {
-        if (item.username === username) {
-          item.croquetasCantidad++
-          console.log(croquetas)
-        }
-      })
+      identificarCroquetas(username)
       break;
   }
   return (
