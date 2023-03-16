@@ -28,13 +28,17 @@ const Controlador = (client, channel, command, username, tarea, id, badges) => {
     }
     croquetas.find(item => {
       if (item.username === username) {
-        let croquetaTotal = item.croquetasCantidad + 1
+        let croquetaTotal = item.croquetasCantidad + 1;
+        item.croquetasCantidad = croquetaTotal
         let MensajecroquetaTotal = croquetaTotal === 1 ? "Me diste un total de una croqueta" : `Me regalaste un total de ${croquetaTotal} croquetas`
-        let mensajeCroqueta = item.tareasRealizadas === 1 ? `Me regalaste una croqueta ${username} BegWan VirtualHug hoy realizaste ${item.tareasRealizadas} una tarea GlitchCat,` : `Me regalaste una croqueta ${username} BegWan VirtualHug hoy realizaste ${item.tareasRealizadas} tareas de tu lista GlitchCat,`
-        let mensajeUsuario = item.tareasEliminadas === 0 ? " No borraste niguna de las tareas registradas PogChamp" : ` y borraste ${item.tareasEliminadas} de las registradas PogChamp `
+        let mensajeCroqueta = croquetaTotal === 1 ? `Me regalaste una croqueta ${username} BegWan VirtualHug hoy realizaste ${item.tareasRealizadas} una tarea GlitchCat ,` : `Me regalaste una croqueta ${username} BegWan VirtualHug hoy realizaste ${item.tareasRealizadas} tareas de tu lista GlitchCat,`
+        let mensajeUsuario = croquetaTotal === 0 ? " No borraste niguna de las tareas registradas PogChamp " : ` y borraste ${item.tareasEliminadas} de las registradas PogChamp `
         let MensajeCam = ""
         if (username === 'camm_sss') {
           MensajeCam = 'Tu eres mi mamá Camm PrimeMe '
+        }
+        if (username === 'cristianmeichtry') {
+          MensajeCam = 'Tu malditas croquetas están rancias BibleThump  '
         }
         client.say(channel, MensajeCam + mensajeCroqueta + mensajeUsuario + MensajecroquetaTotal)
         console.log(croquetas)
@@ -69,7 +73,7 @@ const Controlador = (client, channel, command, username, tarea, id, badges) => {
         if (item.username === username) {
           item.tareas.push({ tarea, id: nanoid(3) })
           item.puntos += 50;
-          client.say(channel, `/me imGlitch @${item.username} imGlitch registré tu tarea: 🐱‍💻 ${tarea}  | BegWan VirtualHug Could you give me a !croqueta?`);
+          client.say(channel, `/me imGlitch @${item.username} imGlitch I registered your task: 🐱‍💻 ${tarea}  | BegWan VirtualHug Could you give me a !croqueta?`);
 
         }
       })
@@ -107,7 +111,7 @@ const Controlador = (client, channel, command, username, tarea, id, badges) => {
           const listaTareas = item.tareas.forEach(i => {
             client.say(channel, `/me imGlitch @${username} imGlitch TAREA: 📖  ${i.tarea} 🔖 !marcar ${i.id} 🔖 !eliminar ${i.id} BegWan`)
           })
-          var anuncio = '/me No tiene tareas que tenga recordar. !comandos para revisar todo lo que puedo hacer BegWan VirtualHug .'
+          var anuncio = `/me You don't have any tasks to remember. !commands to review everything I can do BegWan VirtualHug .`
           if (item.tareas.length === 0) {
             return client.say(channel, anuncio)
           }
@@ -121,7 +125,7 @@ const Controlador = (client, channel, command, username, tarea, id, badges) => {
         perfil.find(item => {
           if (item.username === username) {
             const tareaEliminada = item.tareas.find(u => u.id === id)
-            client.say(channel, `Esta tarea fue eliminada: 📖 ${tareaEliminada.tarea}  con el Id: 🔖 ${tareaEliminada.id} `)
+            client.say(channel, `This task was eliminated: 📖 ${tareaEliminada.tarea}  with the id: 🔖 ${tareaEliminada.id} `)
             const tareasFiltradas = item.tareas.filter(u => u.id !== id);
             item.tareas = tareasFiltradas
             rendicionCroqueta(username, 0, 1)
@@ -139,7 +143,7 @@ const Controlador = (client, channel, command, username, tarea, id, badges) => {
           if (item.username === username) {
             const tareaEliminada = item.tareas.find(u => u.id === id)
             console.log(tareaEliminada)
-            client.say(channel, `This task was eliminated: 📖 ${tareaEliminada.tarea}  with the id: 🔖 ${tareaEliminada.id} `)
+            client.say(channel, `Está tarea fue eliminada: 📖 ${tareaEliminada.tarea}  con el Id: 🔖 ${tareaEliminada.id} `)
             const tareasFiltradas = item.tareas.filter(u => u.id !== id);
             item.tareas = tareasFiltradas
             rendicionCroqueta(username, 0, 1)
@@ -188,7 +192,7 @@ const Controlador = (client, channel, command, username, tarea, id, badges) => {
     case '!clear':
       perfil.find(item => {
         if (item.username === username) {
-          client.say(channel, `Todas tus tareas fueron eliminadas | All your tasks were deleted`)
+          client.say(channel, `Todas tus tareas fueron eliminadas | All your tasks were deleted  ImTyping ImTyping BegWan `)
           let negLengthTareas = item.tareas.length
           rendicionCroqueta(username, 0, negLengthTareas)
           item.tareas = []
@@ -199,7 +203,7 @@ const Controlador = (client, channel, command, username, tarea, id, badges) => {
     case '!pickup':
       perfil.find(item => {
         if (item.username === username) {
-          client.say(channel, `Todas tus tareas fueron marcadas como realizadas | All your tasks were marked as done`)
+          client.say(channel, `Todas tus tareas fueron marcadas como realizadas | All your tasks were marked as done ImTyping ImTyping BegWan `)
           const tareasFiltradas = item.tareas.filter(u => u.id !== id);
           let cantidadDeTareas = item.tareas.length
           let lengthTareas = item.tareas.length
