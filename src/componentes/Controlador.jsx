@@ -31,7 +31,7 @@ const Controlador = (client, channel, command, username, tarea, id, badges) => {
         let croquetaTotal = item.croquetasCantidad + 1;
         item.croquetasCantidad = croquetaTotal
         let MensajecroquetaTotal = croquetaTotal === 1 ? "Me diste un total de una croqueta" : `Me regalaste un total de ${croquetaTotal} croquetas`
-        let mensajeCroqueta = croquetaTotal === 1 ? `Me regalaste una croqueta ${username} BegWan VirtualHug hoy realizaste ${item.tareasRealizadas} una tarea GlitchCat ,` : `Me regalaste una croqueta ${username} BegWan VirtualHug hoy realizaste ${item.tareasRealizadas} tareas de tu lista GlitchCat,`
+        let mensajeCroqueta = croquetaTotal === 1 ? `Me regalaste una croqueta ${username} BegWan VirtualHug hoy realizaste ${item.tareasRealizadas} de los pendientes GlitchCat ,` : `Me regalaste una croqueta ${username} BegWan VirtualHug hoy realizaste ${item.tareasRealizadas} tareas de tu lista GlitchCat,`
         let mensajeUsuario = croquetaTotal === 0 ? " No borraste niguna de las tareas registradas PogChamp " : ` y borraste ${item.tareasEliminadas} de las registradas PogChamp `
         let MensajeCam = ""
         if (username === 'camm_sss') {
