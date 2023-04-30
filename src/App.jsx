@@ -83,7 +83,8 @@ function App() {
       const args = message.slice(1).split(' ');
       const id = args[1]
       const command = message.toLowerCase().split(" ")[0];
-      const tarea = message.substring(command.length + 1);
+      const tareaSinMayuscula = message.substring(command.length + 1);
+      const tarea = tareaSinMayuscula.charAt(0).toUpperCase() + tareaSinMayuscula.slice(1);
       if (username === 'brunispet') return
       if (username === 'streamelements') return
       if (username === 'nightbot') return
