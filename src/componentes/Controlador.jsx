@@ -192,7 +192,7 @@ const Controlador = (client, channel, command, username, tarea, id, badges) => {
     case '!clear':
       perfil.find(item => {
         if (item.username === username) {
-          client.say(channel, `Todas tus tareas fueron eliminadas | All your tasks were deleted  ImTyping ImTyping BegWan `)
+          client.say(channel, `Todas tus tareas fueron eliminadas ImTyping | All your tasks were deleted   ImTyping BegWan `)
           let negLengthTareas = item.tareas.length
           rendicionCroqueta(username, 0, negLengthTareas)
           item.tareas = []
@@ -203,7 +203,7 @@ const Controlador = (client, channel, command, username, tarea, id, badges) => {
     case '!pickup':
       perfil.find(item => {
         if (item.username === username) {
-          client.say(channel, `Todas tus tareas fueron marcadas como realizadas | All your tasks were marked as done ImTyping ImTyping BegWan `)
+          client.say(channel, `Todas tus tareas fueron marcadas como realizadas ImTyping | All your tasks were marked as done ImTyping BegWan `)
           const tareasFiltradas = item.tareas.filter(u => u.id !== id);
           let cantidadDeTareas = item.tareas.length
           let lengthTareas = item.tareas.length
