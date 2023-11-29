@@ -250,8 +250,8 @@ function App() {
               <a className="flex overflow-hidden text-base p-1 mx-0.5">{usernamePerfil(infoUsaurio.user)  ? ( usernamePerfil(infoUsaurio.user).signo) : ("") }</a>
               <a className="flex overflow-hidden text-base p-1 mx-0.5">{usernamePerfil(infoUsaurio.user)  ? (` 🌐 !nacionalidad ` + usernamePerfil(infoUsaurio.user).nacionalidad) : ("") }</a>
               <a className="flex overflow-hidden text-base p-1 mx-0.5">{usernamePerfil(infoUsaurio.user)  ? (` 🌐 !instagram ` + usernamePerfil(infoUsaurio.user).instagram) : ("") }</a>
-              <a className="flex overflow-hidden text-base p-1 mx-0.5">{usernamePerfil(infoUsaurio.user)  ? (` 🏦 !estudiopara ` + usernamePerfil(infoUsaurio.user).estudiopara) : ("") }</a>
-              <a className="flex overflow-hidden text-base p-1 mx-0.5">{usernamePerfil(infoUsaurio.user)  ? ` 🏦 !opositopara ` + usernamePerfil(infoUsaurio.user).opositopara : "" }</a>
+              <a className="flex overflow-hidden text-base p-1 mx-0.5">{usernamePerfil(infoUsaurio.user) && usernamePerfil(infoUsaurio.user).estudiopara ? ` 🏦 !estudiopara ` + usernamePerfil(infoUsaurio.user).estudiopara : ""}</a>
+              <a className="flex overflow-hidden text-base p-1 mx-0.5">{usernamePerfil(infoUsaurio.user) && usernamePerfil(infoUsaurio.user).opositopara ? ` 🏦 !opositopara ` + usernamePerfil(infoUsaurio.user).opositopara : ""}</a>
     
             </span>
 

@@ -236,6 +236,7 @@ const Controlador = (client, channel, command, username, tarea, id, badges) => {
         client.say(channel, `Nacionalidad actualizada para ${username}: ${tarea}`);
       }
     });
+    break;
     case '!estudiopara':
     perfil.find(item => {
       if (item.username === username) {
@@ -251,7 +252,7 @@ const Controlador = (client, channel, command, username, tarea, id, badges) => {
         client.say(channel, `${username} oposito para: ${tarea}`);
       }
     });
-    break
+    break;
     case '!nacimiento':
     perfil.find(item => {
       if (item.username === username) {
