@@ -231,7 +231,7 @@ function App() {
               usernamePerfil(infoUsaurio.user).tareas.map((i, index) => (
                 <li key={index}>
                   <a href="#" className={clases.style}>
-                    <span className="flex-1 text-2xl ml-3 overflow-hidden">{i.tarea}</span>
+                    <span className="flex-1 text-1xl ml-3 overflow-hidden">{i.tarea}</span>
                     <span className="inline-flex items-center justify-center px-2 py-0.5 ml-3 text-base font-medium text-black-500 bg-gray-700 rounded dark:bg-green-700 dark:text-green-400">{i.id}</span>
                   </a>
                 </li>
