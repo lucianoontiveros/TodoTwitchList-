@@ -35,7 +35,14 @@ const Controlador = (client, channel, command, username, tarea, id, badges) => {
         item.croquetasCantidad = item.croquetasCantidad + 1
         const perfilUsuario = perfil.find((perfilItem) => perfilItem.username === username);
         if (perfilUsuario) {
-          let croquetasHistoricas = perfilUsuario.croquetasTotal + 1;
+          let croquetasHistoricas
+          if (!isNaN(perfilUsuario.croquetasTotal)) {
+            // Si es un número, realizar la operación de suma
+            croquetasHistoricas = perfilUsuario.croquetasTotal + 1;
+            console.log("Resultado:", croquetasHistoricas);
+          } else {
+            croquetasHistoricas = + 1;           
+          }
           perfilUsuario.croquetasTotal = croquetasHistoricas
           console.log("me guarde")
         }
@@ -274,7 +281,7 @@ const Controlador = (client, channel, command, username, tarea, id, badges) => {
                 item.signo = dia <= 20 ? "Tauro ♉︎" : "Géminis ♊︎";                
                 break;
               case 6:
-                item.mpsigno = dia <= 20 ? "Géminis ♊︎" : "Cáncer ♋︎";
+                item.signo = dia <= 20 ? "Géminis ♊︎" : "Cáncer ♋︎";
                 break;
               case 7:
                 item.signo = dia <= 22 ? "Cáncer ♋︎" : "Leo ♌︎";
@@ -302,6 +309,7 @@ const Controlador = (client, channel, command, username, tarea, id, badges) => {
                 break;
               default:
                 item.signo = ""; // En caso de que el mes no esté en el rango válido
+              return client.say(channel, `Corrobora que ingresaras correctamente la fecha de tu cumpleaños, el formato es DD-MM`);
             }
           
           client.say(channel, `Fecha de nacimiento actualizada para ${username}: ${tarea}. Signo zodiacal: ${item.signo}`);

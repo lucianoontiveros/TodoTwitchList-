@@ -115,13 +115,16 @@ function App() {
     
     client.on("message", (channel, userstate, message, self) => {
       if (self) return;
-      var username = userstate.username;
+      /* 
       const displayName = userstate['display-name'];
       const subs = userstate?.subscriber;
       const mod = userstate?.mod;
       const type = userstate['message-type'];
-      const isSub = userstate.badges?.subscriber
       const monSubs = userstate['badge-info']?.subscriber;
+      
+      */
+      var username = userstate.username;
+      const isSub = userstate.badges?.subscriber
       const isPrime = userstate.badges?.premium
       const isVip = userstate.badges?.vip
       const isMod = userstate.badges?.moderator
@@ -246,20 +249,68 @@ function App() {
             </a>
             <span className="flex flex-wrap   items-center text-xl text-indigo-100 p-3 font-bold bg-gradient-to-r from-purple-800 to-blue-900 rounded-lg">
               <a className="flex p-3   w-full mx-2.5 bg-black items-center text-xl0 rounded-lg" >{infoUsaurio.badges} {infoUsaurio.user} {infoUsaurio.badges} 🐾 {infoUsaurio.index}</a>
-              <a className="flex overflow-hidden text-base p-1 mx-0.5">{usernamePerfil(infoUsaurio.user)  ? (`🎂 !nacimiento ` + usernamePerfil(infoUsaurio.user).nacimiento) : ("") }</a>
-              <a className="flex overflow-hidden text-base p-1 mx-0.5">{usernamePerfil(infoUsaurio.user)  ? ( usernamePerfil(infoUsaurio.user).signo) : ("") }</a>
-              <a className="flex overflow-hidden text-base p-1 mx-0.5">{usernamePerfil(infoUsaurio.user)  ? (` 🌐 !nacionalidad ` + usernamePerfil(infoUsaurio.user).nacionalidad) : ("") }</a>
-              <a className="flex overflow-hidden text-base p-1 mx-0.5">{usernamePerfil(infoUsaurio.user)  ? (` 🌐 !instagram ` + usernamePerfil(infoUsaurio.user).instagram) : ("") }</a>
+              <a className="flex overflow-hidden text-base p-1 mx-0.5">{usernamePerfil(infoUsaurio.user) ? `🎂 !nacimiento ` + usernamePerfil(infoUsaurio.user).nacimiento : "" }</a>
+              <a className="flex overflow-hidden text-base p-1 mx-0.5">{usernamePerfil(infoUsaurio.user) && usernamePerfil(infoUsaurio.user).signo ?  usernamePerfil(infoUsaurio.user).signo : "" }</a>
+              <a className="flex overflow-hidden text-base p-1 mx-0.5">{usernamePerfil(infoUsaurio.user) && usernamePerfil(infoUsaurio.user).nacionalidad ? ` 🌐 !nacionalidad ` + usernamePerfil(infoUsaurio.user).nacionalidad : "" }</a>
+              <a className="flex overflow-hidden text-base p-1 mx-0.5">{usernamePerfil(infoUsaurio.user) && usernamePerfil(infoUsaurio.user).instagram ? ` 🌐 !instagram ` + usernamePerfil(infoUsaurio.user).instagram : "" }</a>
               <a className="flex overflow-hidden text-base p-1 mx-0.5">{usernamePerfil(infoUsaurio.user) && usernamePerfil(infoUsaurio.user).estudiopara ? ` 🏦 !estudiopara ` + usernamePerfil(infoUsaurio.user).estudiopara : ""}</a>
               <a className="flex overflow-hidden text-base p-1 mx-0.5">{usernamePerfil(infoUsaurio.user) && usernamePerfil(infoUsaurio.user).opositopara ? ` 🏦 !opositopara ` + usernamePerfil(infoUsaurio.user).opositopara : ""}</a>
-    
             </span>
-
           </div>
-      </div>
+        </div>
       )}
       {!infoTareas.showTasks && (
-          <div className="contenedorTareas w-full p-4 rounded-lg shadow sm:p-6 dark:bg-gray-800 dark:border-gray-700">
+        <>
+          {infoTareas.usuarioNuevo.username ? (
+            <div className="contenedorTareas w-full p-4 rounded-lg shadow sm:p-6 dark:bg-gray-800 dark:border-gray-700">
+                <>
+                <h1 className={clases.title}>
+                  {infoTareas.usuarioNuevo.username}
+                </h1>
+                <h5 className={clases.subtitle}>
+                    Tareas pendientes
+                </h5>
+                <ul className="my-4 space-y-3">
+                  {infoTareas.usuarioNuevo.tareas ? (
+                    infoTareas.usuarioNuevo.tareas.map((i, index) => (
+                      <li key={index}>
+                        <a key={index} href="#" className={clases.style}>
+                          <span className="flex-1 ml-3 overflow-hidden">{i.tarea}</span>
+                          <span className="inline-flex items-center justify-center px-2 py-0.5 ml-3 text-base font-medium text-black-500 bg-gray-700 rounded dark:bg-green-700 dark:text-green-400">{i.id}</span>
+                        </a>
+                      </li>
+                    ))
+                  ) : (
+                    ""
+                  )}
+                </ul>
+                <div>
+                  <a
+                    href="#"
+                    className="inline-flex items-center text-xs font-normal text-gray-500 hover:underline dark:text-gray-400"
+                  >
+                  </a>
+                </div>
+                </>
+              </div> 
+            ):(<h5 className={clases.subtitle}> Iniciando </h5>)}        
+        </>
+      )}
+    </>
+  )
+}
+
+/*
+      </div>
+    
+    <h1 className={clases.title}>
+    {infoTareas.usuarioNuevo.username}
+  </h1>
+  <h5 className={clases.subtitle}>
+      Tareas pendientes
+  </h5>
+  </>
+
               {infoTareas.usuarioNuevo.username ? (
                 <>
                 <h1 className={clases.title}>
@@ -270,7 +321,7 @@ function App() {
                 </h5>
                 </>
               
-              ):(<h5 className={clases.subtitle}> Iniciando </h5> )}
+              ):(<h5 className={clases.subtitle}>BRUNISPET</h5> )}
               
           <ul className="my-4 space-y-3">
           {infoTareas.usuarioNuevo.tareas ? (
@@ -292,12 +343,8 @@ function App() {
             className="inline-flex items-center text-xs font-normal text-gray-500 hover:underline dark:text-gray-400"
           >
           </a>
-        </div>
-    </div>
-      )}
-    </>
-  )
-}
+        </div> 
+*/
 
 export default App
 
