@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "browserslist": "^4.22.1",
+    "caniuse-lite": "^1.0.30001565",
     "dotenv": "^16.0.3",
     "flowbite": "^1.6.3",
     "flowbite-react": "^0.3.8",

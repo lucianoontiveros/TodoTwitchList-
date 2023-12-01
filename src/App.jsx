@@ -39,7 +39,7 @@ function App() {
     usuarioNuevo: [],
   });
   const [render, setRender] = useState(Date.now());
-  var usuario = [];
+  let usuarioConTareas = []
   
   const usernamePerfil = (username) => perfil.find((item) => item.username === username)
   let taskTimeout;
@@ -54,7 +54,13 @@ function App() {
     guardarPerfil(perfil)
   }, [render])
 
-
+  const perfilesConTareas = () => perfil.filter((item) =>  {
+    if(item.tareas.length > 0) {
+      console.log(item)
+      usuarioConTareas.push(item)
+    }
+  })
+  
   const corrobarUsername = (username) => {
     if (!usernamePerfil(username)) {
       let nuevoPerfil = new Perfil(username)
@@ -96,12 +102,15 @@ function App() {
     client.connect(); 
 
     const startInterval = () => {
+      if(usuarioConTareas.length == 0){
+        perfilesConTareas();
+      }
       showTasksInterval = setInterval(() => {
         // Cuando se completa de recorrer el array objetos
-        if (perfil.length == infoTareas.currentProfileIndex){
+        if (usuarioConTareas.length == infoTareas.currentProfileIndex){
           infoTareas.currentProfileIndex = 0;
         }
-        let usuarioInterado = perfil[infoTareas.currentProfileIndex];
+        let usuarioInterado = usuarioConTareas[infoTareas.currentProfileIndex];
         // Cuando todavia no  completa de recorrer el array objetos
         setInfoTareas((prevInfoTareas) => ({
           ...prevInfoTareas,
@@ -144,13 +153,13 @@ function App() {
         case '!task':
         case '!tarea':
         case '!lista':
-        case '!list':
         case '!delete':
         case '!eliminar':
         case '!check':
         case '!marcar':
         case '!clear':
         case '!pickup':
+        case '!list':
         case '!croqueta':
         case '!nacionalidad':
         case '!nacimiento':
@@ -161,7 +170,7 @@ function App() {
         case '!verusuario':
         corrobarUsername(username)
         actualizarEstado(username,badges)
-        Controlador(client, channel, command, username, tarea, id, badges,clases, infoUsaurio, infoTareas)
+        Controlador(client, channel, command, username, tarea, id, badges,clases, infoUsaurio, infoTareas, perfilesConTareas, usuarioConTareas)
         clearTimeout(taskTimeout);
         clearInterval(showTasksInterval);
         switch(true){
@@ -259,6 +268,7 @@ function App() {
           </div>
         </div>
       )}
+      
       {!infoTareas.showTasks && (
         <>
           {infoTareas.usuarioNuevo.username ? (
@@ -299,52 +309,6 @@ function App() {
     </>
   )
 }
-
-/*
-      </div>
-    
-    <h1 className={clases.title}>
-    {infoTareas.usuarioNuevo.username}
-  </h1>
-  <h5 className={clases.subtitle}>
-      Tareas pendientes
-  </h5>
-  </>
-
-              {infoTareas.usuarioNuevo.username ? (
-                <>
-                <h1 className={clases.title}>
-                  {infoTareas.usuarioNuevo.username}
-                </h1>
-                <h5 className={clases.subtitle}>
-                    Tareas pendientes
-                </h5>
-                </>
-              
-              ):(<h5 className={clases.subtitle}>BRUNISPET</h5> )}
-              
-          <ul className="my-4 space-y-3">
-          {infoTareas.usuarioNuevo.tareas ? (
-            infoTareas.usuarioNuevo.tareas.map((i, index) => (
-              <li key={index}>
-                <a key={index} href="#" className={clases.style}>
-                  <span className="flex-1 ml-3 overflow-hidden">{i.tarea}</span>
-                  <span className="inline-flex items-center justify-center px-2 py-0.5 ml-3 text-base font-medium text-black-500 bg-gray-700 rounded dark:bg-green-700 dark:text-green-400">{i.id}</span>
-                </a>
-              </li>
-            ))
-          ) : (
-            ""
-          )}
-          </ul>
-        <div>
-          <a
-            href="#"
-            className="inline-flex items-center text-xs font-normal text-gray-500 hover:underline dark:text-gray-400"
-          >
-          </a>
-        </div> 
-*/
 
 export default App
 

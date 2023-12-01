@@ -22,7 +22,7 @@ class Croquetas {
 
 const croquetas = [];
 
-const Controlador = (client, channel, command, username, tarea, id, badges) => {
+const Controlador = (client, channel, command, username, tarea, id, badges, perfilesConTareas, usuarioConTareas) => {
   const usernameCroquetas = (username) => croquetas.find((item) => item.username === username);
 
   const identificarCroquetas = (username) => {
@@ -85,11 +85,15 @@ const Controlador = (client, channel, command, username, tarea, id, badges) => {
       perfil.find(item => {
         if (item.username === username) {
           if (item.tareas.length >= 10) {
+            usuarioConTareas = [];
+            perfilesConTareas()
             client.say(channel, `Disculpe, ${username}, la petición fue rechazada por un limite maximo de 10 tareas. Complete o elimine algunas de sus tareas. Sorry, ${username}, you've reached the maximum limit of tasks (10). Complete or delete existing tasks to add new ones.`);
             return;
           }
           item.tareas.push({ tarea, id: nanoid(3) })
           item.puntos += 50;
+          usuarioConTareas = [];
+          perfilesConTareas()
           client.say(channel, `/me imGlitch @${item.username} imGlitch I registered your task: 🐱‍💻 ${tarea}  | BegWan VirtualHug Could you give me a !croqueta?`);
         }
       })
@@ -98,12 +102,16 @@ const Controlador = (client, channel, command, username, tarea, id, badges) => {
       perfil.find(item => {
         if (item.username === username) {
           if (item.tareas.length >= 10) {
+            usuarioConTareas = [];
+            perfilesConTareas()
             client.say(channel, `Disculpe, ${username}, la petición fue rechazada por un limite maximo de 10 tareas. Complete o elimine algunas de sus tareas. Sorry, ${username}, you've reached the maximum limit of tasks (10). Complete or delete existing tasks to add new ones.`);
             return;
           }
           let nuevoId = nanoid(3)
           item.tareas.push({ tarea, id: nuevoId })
           item.puntos += 50;
+          usuarioConTareas = [];
+          perfilesConTareas()
           client.say(channel, `/me imGlitch @${item.username} imGlitch registré tu tarea: 🐱‍💻 ${tarea} con 🔖 ${nuevoId} | BegWan VirtualHug podrías regalarme una !croqueta?`);
         }
       })
@@ -143,6 +151,8 @@ const Controlador = (client, channel, command, username, tarea, id, badges) => {
             const tareasFiltradas = item.tareas.filter(u => u.id !== id);
             item.tareas = tareasFiltradas
             rendicionCroqueta(username, 0, 1)
+            usuarioConTareas = [];
+            perfilesConTareas()
           }
         })
       } catch (error) {
@@ -159,6 +169,8 @@ const Controlador = (client, channel, command, username, tarea, id, badges) => {
             const tareasFiltradas = item.tareas.filter(u => u.id !== id);
             item.tareas = tareasFiltradas
             rendicionCroqueta(username, 0, 1)
+            usuarioConTareas = [];
+            perfilesConTareas()
           }
         })
       } catch (error) {
@@ -175,6 +187,8 @@ const Controlador = (client, channel, command, username, tarea, id, badges) => {
             console.log(tareasFiltradas)
             item.tareas = tareasFiltradas
             rendicionCroqueta(username, 1, 0)
+            usuarioConTareas = [];
+            perfilesConTareas()
           }
         })
       } catch (error) {
@@ -191,6 +205,8 @@ const Controlador = (client, channel, command, username, tarea, id, badges) => {
             console.log(tareasFiltradas)
             item.tareas = tareasFiltradas
             rendicionCroqueta(username, 1, 0)
+            usuarioConTareas = [];
+            perfilesConTareas()
           }
         })
       } catch (error) {
@@ -204,6 +220,8 @@ const Controlador = (client, channel, command, username, tarea, id, badges) => {
           let negLengthTareas = item.tareas.length
           rendicionCroqueta(username, 0, negLengthTareas)
           item.tareas = []
+          usuarioConTareas = [];
+          perfilesConTareas()
         }
       })
       break;
@@ -216,6 +234,8 @@ const Controlador = (client, channel, command, username, tarea, id, badges) => {
           let lengthTareas = item.tareas.length
           rendicionCroqueta(username, lengthTareas, 0)
           item.tareas = []
+          usuarioConTareas = [];
+          perfilesConTareas()
         }
       })
       break;
@@ -228,6 +248,8 @@ const Controlador = (client, channel, command, username, tarea, id, badges) => {
         if (!isNaN(indexToRemove) && indexToRemove >= 0 && indexToRemove < perfil.length) {
           // Eliminar el usuario del perfil
           const removedUser = perfil.splice(indexToRemove, 1)[0];
+          usuarioConTareas = [];
+          perfilesConTareas()
           client.say(channel, `Usuario ${removedUser.username} eliminado por cuartodechenz.`);
         } else {
           client.say(channel, 'Error: el índice proporcionado no es válido.');
