@@ -170,7 +170,7 @@ function App() {
         case '!verusuario':
         corrobarUsername(username)
         actualizarEstado(username,badges)
-        Controlador(client, channel, command, username, tarea, id, badges,clases, infoUsaurio, infoTareas, perfilesConTareas, usuarioConTareas)
+        Controlador(client, channel, command, username, tarea, id, badges,clases, infoUsaurio, infoTareas, usuarioConTareas)
         clearTimeout(taskTimeout);
         clearInterval(showTasksInterval);
         switch(true){
