@@ -22,7 +22,7 @@ class Croquetas {
 
 const croquetas = [];
 
-const Controlador = (client, channel, command, username, tarea, id, badges,  usuarioConTareas) => {
+const Controlador = (client, channel, command, username, tarea, id, badges,clases, infoUsaurio, infoTareas, usuarioConTareas) => {
   const usernameCroquetas = (username) => croquetas.find((item) => item.username === username);
 
   const perfilesConTareas = () => perfil.filter((item) =>  {
@@ -31,7 +31,7 @@ const Controlador = (client, channel, command, username, tarea, id, badges,  usu
       usuarioConTareas.push(item)
     }
   })
-  
+
   const identificarCroquetas = (username) => {
     if (!usernameCroquetas(username)) {
       let nuevoCroquetas = new Croquetas(username);
