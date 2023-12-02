@@ -22,9 +22,16 @@ class Croquetas {
 
 const croquetas = [];
 
-const Controlador = (client, channel, command, username, tarea, id, badges, perfilesConTareas, usuarioConTareas) => {
+const Controlador = (client, channel, command, username, tarea, id, badges,  usuarioConTareas) => {
   const usernameCroquetas = (username) => croquetas.find((item) => item.username === username);
 
+  const perfilesConTareas = () => perfil.filter((item) =>  {
+    if(item.tareas.length > 0) {
+      console.log(item)
+      usuarioConTareas.push(item)
+    }
+  })
+  
   const identificarCroquetas = (username) => {
     if (!usernameCroquetas(username)) {
       let nuevoCroquetas = new Croquetas(username);
@@ -55,6 +62,9 @@ const Controlador = (client, channel, command, username, tarea, id, badges, perf
         }
         if (username === 'cristianmeichtry') {
           MensajeCam = 'Tu malditas croquetas están rancias BibleThump  '
+        }
+        if (username === 'cristianmeichtry') {
+          MensajeCam = 'Em fas una abraçada Sarita?'
         }
         client.say(channel, MensajeCam + mensajeCroqueta + mensajeUsuario + MensajecroquetaTotal)
         console.log(croquetas)
