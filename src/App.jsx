@@ -24,11 +24,13 @@ export var perfil = JSON.parse(localStorage.getItem('perfil')) || [];
 
 function App() {
   const [clases, setClases] = useState({
-  title:"font-normal text-5xl font-weight: 500; text-center text-white",
-  subtitle: "font-normal text-3xl text-center  text-blue-400",
-  style: "flex items-center p-3 text-base font-bold bg-black text-blue-500 rounded-lg",
+    title:"mb-2  font-normal text-5xl font-weight: 500; text-center text-white",
+    subtitle: "font-normal text-3xl text-center  text-purple-400",
+    style: "flex items-center p-3 text-base font-bold bg-black text-purple-500 rounded-lg",
+    container:"",
+
   });
-  const [infoUsaurio, setInfoUsuario] = useState({
+  const [infoUsuario, setInfoUsuario] = useState({
     user: "brunispet",
     badges:"",
     index:"",
@@ -68,7 +70,7 @@ function App() {
     }
   }
 
-  const actualizarEstado = (username,badges) => {
+  const actualizarEstado = (username, badges, badgesClases) => {
     const indexEnPerfil = perfil.findIndex(item => item.username === username);
     usernamePerfil(username).index = indexEnPerfil;
     setInfoTareas((prevInfoTareas) => ({
@@ -81,12 +83,53 @@ function App() {
       badges:badges,
       index: indexEnPerfil,
     }));
-    setClases((prevClases) => ({
-      ...prevClases,
-      title:"font-normal text-5xl font-weight: 500; text-center text-white",
-      subtitle:"font-normal text-3xl text-center  text-green-400",
-      style:"flex items-center p-3 text-base font-bold bg-black text-green-500 rounded-lg",
-    }));
+    console.log(badgesClases)
+    switch(badgesClases){
+      case "prime": 
+        setClases((prevClases) => ({
+          ...prevClases,
+          title:"mb-2 font-bold text-4xl text-center tracking-tight text-blue-600 dark:text-white",
+          subtitle: "font-normal text-3xl text-center text-blue-200",
+          style: "flex items-center p-3 text-base font-bold bg-black text-blue-600 rounded-lg",
+          container:"flex flex-wrap items-center text-xl text-indigo-100 p-3 font-bold bg-gradient-to-r from-blue-600 to-indigo-900 rounded-lg",
+      }))
+      break;
+      case "mod": 
+        setClases((prevClases) => ({
+          ...prevClases,
+          title:"mb-2 font-bold text-4xl text-center tracking-tight text-green-400 dark:text-white",
+          subtitle: "font-normal text-3xl text-center text-green-100",
+          style: "flex items-center p-3 text-base font-bold bg-black text-green-300 rounded-lg",
+          container:"flex flex-wrap items-center text-xl text-indigo-100 p-3 font-bold bg-gradient-to-r from-green-600 to-green-900 rounded-lg"
+      }))
+        break;
+      case "vip":
+        setClases((prevClases) => ({
+          ...prevClases,
+          title:"mb-2 font-bold text-4xl text-center tracking-tight text-pink-600 dark:text-white",
+          subtitle: "font-normal text-3xl text-center text-pink-800",
+          style: "flex items-center p-3 text-base font-bold bg-black text-pink-500 rounded-lg",
+          container:"flex flex-wrap items-center text-xl text-indigo-100 p-3 font-bold bg-gradient-to-r from-pink-600 to-purple-900 rounded-lg"
+        }))
+        break;
+      case "sub":
+        setClases((prevClases) => ({
+          ...prevClases,
+          title:"mb-2 font-bold text-4xl text-center tracking-tight text-purple-900 dark:text-white",
+          subtitle: "font-normal text-3xl text-center text-blue-300",
+          style: "flex items-center p-3 text-base font-bold bg-black text-blue-200 rounded-lg",
+          container:"flex flex-wrap items-center text-xl text-blue-300 p-3 font-bold bg-gradient-to-r from-gray-700 to-purple-900 rounded-lg",
+        }))
+      break;
+      default:
+        setClases((prevClases) => ({
+          ...prevClases,
+          title:"mb-2  font-normal text-5xl font-weight: 500; text-center text-white",
+          subtitle: "font-normal text-3xl text-center  text-purple-400",
+          style: "flex items-center p-3 text-base font-bold bg-black text-purple-500 rounded-lg",
+          container:"flex flex-wrap items-center text-xl text-indigo-100 p-3 font-bold bg-gradient-to-r from-purple-800 to-blue-900 rounded-lg",
+        }))
+      }
   };
 
   useEffect(() => {
@@ -142,6 +185,12 @@ function App() {
         (isVip ? "💎" : "") +
         (isSub ? "🏆" : "") +
         (isMod ? "🗡️" : "");
+      const badgesClases = 
+      (isPrime ? "prime" : "") ||
+        (isVip ? "vip" : "") ||
+        (isSub ? "sub" : "") ||
+        (isMod ? "mod" : "");
+
       const args = message.slice(1).split(' ');
       const id = args[1];
       const command = message.toLowerCase().split(" ")[0];
@@ -169,49 +218,23 @@ function App() {
         case '!opositopara':
         case '!verusuario':
         corrobarUsername(username)
-        actualizarEstado(username,badges)
-        Controlador(client, channel, command, username, tarea, id, badges,clases, infoUsaurio, infoTareas, usuarioConTareas)
+        actualizarEstado(username,badges,badgesClases)
+        Controlador(client, channel, command, username, tarea, id, badges,clases, infoUsuario, infoTareas, usuarioConTareas)
         clearTimeout(taskTimeout);
         clearInterval(showTasksInterval);
-        switch(true){
-          case isPrime: 
-            setClases((prevClases) => ({
-              ...prevClases,
-              title:"mb-2 font-bold text-4xl text-center tracking-tight text-blue-200 dark:text-white",
-              subtitle: "font-normal text-3xl text-center text-blue-100",
-              style: "flex items-center p-3 text-base font-bold bg-black text-indigo-400 rounded-lg",
-          }))
-          break;
-          case isMod: 
-            setClases((prevClases) => ({
-              ...prevClases,
-              title:"mb-2 font-bold text-4xl text-center tracking-tight text-green-300 dark:text-white",
-              subtitle: "font-normal text-3xl text-center text-green-100",
-              style: "flex items-center p-3 text-base font-bold bg-black text-green-300 rounded-lg",
-            }))
-            break;
-          case isVip:
-            setClases((prevClases) => ({
-              ...prevClases,
-              title:"mb-2 font-bold text-4xl text-center tracking-tight text-pink-600 dark:text-white",
-              subtitle: "font-normal text-3xl text-center text-pink-800",
-              style: "flex items-center p-3 text-base font-bold bg-black text-pink-500 rounded-lg",
-            }))
-            break;
-          case isSub:
-            setClases((prevClases) => ({
-              ...prevClases,
-              title:"mb-2 font-bold text-4xl text-center tracking-tight text-yellow-300 dark:text-white",
-              subtitle: "font-normal text-3xl text-center text-yellow-200",
-              style: "flex items-center p-3 text-base font-bold bg-black text-yellow-400 rounded-lg",
-            }))
-          break;
-          }
+        
         taskTimeout = setTimeout(() => {
             setInfoTareas((prevInfoTareas) => ({
               ...prevInfoTareas,
               showTasks:false,
             }));
+            setClases((prevClases) => ({
+              ...prevClases,
+              title:"font-normal text-5xl font-weight: 500; text-center text-white",
+              subtitle: "font-normal text-3xl text-center  text-blue-400",
+              style: "flex items-center p-3 text-base font-bold bg-black text-blue-500 rounded-lg",
+              container:"flex flex-wrap items-center text-xl text-indigo-100 p-3 font-bold bg-gradient-to-r from-purple-800 to-blue-900 rounded-lg",
+            }))
             startInterval()
           }, 10000);
           console.log(perfil)
@@ -233,14 +256,14 @@ function App() {
       {infoTareas.showTasks && (
         <div className="contenedorTareas w-full p-4 rounded-lg shadow sm:p-6 dark:bg-gray-800 dark:border-gray-700">
           <h1 className={clases.title}>
-            {infoUsaurio.user}
+            {infoUsuario.user}
           </h1>
           <h5 className={clases.subtitle}>
             Tareas pendientes:
           </h5>
           <ul className="my-4 space-y-3">
-            {infoTareas.showTasks && usernamePerfil(infoUsaurio.user) && (
-              usernamePerfil(infoUsaurio.user).tareas.map((i, index) => (
+            {infoTareas.showTasks && usernamePerfil(infoUsuario.user) && (
+              usernamePerfil(infoUsuario.user).tareas.map((i, index) => (
                 <li key={index}>
                   <a href="#" className={clases.style}>
                     <span className="flex-1 text-1xl ml-3 overflow-hidden">{i.tarea}</span>
@@ -256,14 +279,14 @@ function App() {
               className="inline-flex items-center text-xs font-normal text-gray-500 hover:underline dark:text-gray-400"
             >
             </a>
-            <span className="flex flex-wrap   items-center text-xl text-indigo-100 p-3 font-bold bg-gradient-to-r from-purple-800 to-blue-900 rounded-lg">
-              <a className="flex p-3   w-full mx-2.5 bg-black items-center text-xl0 rounded-lg" >{infoUsaurio.badges} {infoUsaurio.user} {infoUsaurio.badges} 🐾 {infoUsaurio.index}</a>
-              <a className="flex overflow-hidden text-base p-1 mx-0.5">{usernamePerfil(infoUsaurio.user) ? `🎂 !nacimiento ` + usernamePerfil(infoUsaurio.user).nacimiento : "" }</a>
-              <a className="flex overflow-hidden text-base p-1 mx-0.5">{usernamePerfil(infoUsaurio.user) && usernamePerfil(infoUsaurio.user).signo ?  usernamePerfil(infoUsaurio.user).signo : "" }</a>
-              <a className="flex overflow-hidden text-base p-1 mx-0.5">{usernamePerfil(infoUsaurio.user) && usernamePerfil(infoUsaurio.user).nacionalidad ? ` 🌐 !nacionalidad ` + usernamePerfil(infoUsaurio.user).nacionalidad : "" }</a>
-              <a className="flex overflow-hidden text-base p-1 mx-0.5">{usernamePerfil(infoUsaurio.user) && usernamePerfil(infoUsaurio.user).instagram ? ` 🌐 !instagram ` + usernamePerfil(infoUsaurio.user).instagram : "" }</a>
-              <a className="flex overflow-hidden text-base p-1 mx-0.5">{usernamePerfil(infoUsaurio.user) && usernamePerfil(infoUsaurio.user).estudiopara ? ` 🏦 !estudiopara ` + usernamePerfil(infoUsaurio.user).estudiopara : ""}</a>
-              <a className="flex overflow-hidden text-base p-1 mx-0.5">{usernamePerfil(infoUsaurio.user) && usernamePerfil(infoUsaurio.user).opositopara ? ` 🏦 !opositopara ` + usernamePerfil(infoUsaurio.user).opositopara : ""}</a>
+            <span className={clases.container}>
+              <a className="flex p-3   w-full mx-2.5 bg-black items-center text-xl0 rounded-lg" >{infoUsuario.badges} {infoUsuario.user} {infoUsuario.badges} 🐾 {infoUsuario.index}</a>
+              <a className="flex overflow-hidden text-base p-1 mx-0.5">{usernamePerfil(infoUsuario.user) ? `🎂 !nacimiento ` + usernamePerfil(infoUsuario.user).nacimiento : "" }</a>
+              <a className="flex overflow-hidden text-base p-1 mx-0.5">{usernamePerfil(infoUsuario.user) && usernamePerfil(infoUsuario.user).signo ?  usernamePerfil(infoUsuario.user).signo : "" }</a>
+              <a className="flex overflow-hidden text-base p-1 mx-0.5">{usernamePerfil(infoUsuario.user) && usernamePerfil(infoUsuario.user).nacionalidad ? ` 🌐 !nacionalidad ` + usernamePerfil(infoUsuario.user).nacionalidad : "" }</a>
+              <a className="flex overflow-hidden text-base p-1 mx-0.5">{usernamePerfil(infoUsuario.user) && usernamePerfil(infoUsuario.user).instagram ? ` 🌐 !instagram ` + usernamePerfil(infoUsuario.user).instagram : "" }</a>
+              <a className="flex overflow-hidden text-base p-1 mx-0.5">{usernamePerfil(infoUsuario.user) && usernamePerfil(infoUsuario.user).estudiopara ? ` 🏦 !estudiopara ` + usernamePerfil(infoUsuario.user).estudiopara : ""}</a>
+              <a className="flex overflow-hidden text-base p-1 mx-0.5">{usernamePerfil(infoUsuario.user) && usernamePerfil(infoUsuario.user).opositopara ? ` 🏦 !opositopara ` + usernamePerfil(infoUsuario.user).opositopara : ""}</a>
             </span>
           </div>
         </div>
