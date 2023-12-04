@@ -90,7 +90,7 @@ function App() {
           ...prevClases,
           title:"mb-2 font-bold text-4xl text-center tracking-tight text-blue-600 dark:text-white",
           subtitle: "font-normal text-3xl text-center text-blue-200",
-          style: "flex items-center p-3 text-base font-bold bg-black text-blue-600 rounded-lg",
+          style: "flex items-center p-3 text-base font-bold bg-black text-blue-200 rounded-lg",
           container:"flex flex-wrap items-center text-xl text-indigo-100 p-3 font-bold bg-gradient-to-r from-blue-600 to-indigo-900 rounded-lg",
       }))
       break;
