@@ -286,10 +286,7 @@ function App() {
             </a>
             <span className={clases.container}>
               <a className="flex p-3   w-full mx-2.5 bg-black items-center text-xl0 rounded-lg" >
-                { infoUsuario.isPrime ? (<img id="insignia" src={prime} />) : ("")} 
-                { infoUsuario.isSub ? (<img id="insignia" src={sub} />) : ("")} 
-                { infoUsuario.isMod ? (<img id="insignia" src={mod} />) : ("")} 
-                { infoUsuario.isVip ? (<img id="insignia" src={vip} />) : ("")} 
+                { infoUsuario.isPrime ? (<img id="insignia" src={prime} />) : (" ")} { infoUsuario.isSub ? (<img id="insignia" src={sub} />) : (" ")} { infoUsuario.isMod ? (<img id="insignia" src={mod} />) : (" ")} { infoUsuario.isVip ? (<img id="insignia" src={vip} />) : (" ")} 
                 {infoUsuario.user} 🐾 {infoUsuario.index}</a>
               <a className="flex overflow-hidden text-base p-1 mx-0.5">{usernamePerfil(infoUsuario.user) ? `🎂 !nacimiento ` + usernamePerfil(infoUsuario.user).nacimiento : "" }</a>
               <a className="flex overflow-hidden text-base p-1 mx-0.5">{usernamePerfil(infoUsuario.user) && usernamePerfil(infoUsuario.user).signo ?  usernamePerfil(infoUsuario.user).signo : "" }</a>
