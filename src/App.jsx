@@ -2,6 +2,10 @@ import React, { useEffect, useState } from "react";
 import { render } from "react-dom";
 import tmi from "tmi.js";
 import Controlador from "./componentes/Controlador.jsx";
+import mod from "./img/mod.png"
+import prime from "./img/prime.png"
+import sub from "./img/sub.png"
+import vip from "./img/vip.png"
 
 class Perfil {
   constructor(username) {
@@ -32,7 +36,10 @@ function App() {
   });
   const [infoUsuario, setInfoUsuario] = useState({
     user: "brunispet",
-    badges:"",
+    isSub: false,
+    isPrime: false,
+    isVip: false,
+    isMod: false,
     index:"",
   });
   const [infoTareas, setInfoTareas] = useState({
@@ -70,7 +77,7 @@ function App() {
     }
   }
 
-  const actualizarEstado = (username, badges, badgesClases) => {
+  const actualizarEstado = (username , isSub, isPrime, isVip, isMod, badgesClases) => {
     const indexEnPerfil = perfil.findIndex(item => item.username === username);
     usernamePerfil(username).index = indexEnPerfil;
     setInfoTareas((prevInfoTareas) => ({
@@ -80,7 +87,10 @@ function App() {
     setInfoUsuario((prevInfoUsuario) => ({
       ...prevInfoUsuario,
       user:username,
-      badges:badges,
+      isSub: isSub,
+      isPrime: isPrime,
+      isVip: isVip,
+      isMod: isMod,
       index: indexEnPerfil,
     }));
     console.log(badgesClases)
@@ -177,14 +187,9 @@ function App() {
       */
       var username = userstate.username;
       const isSub = userstate.badges?.subscriber
-      const isPrime = userstate.badges?.premium
+      const  isPrime = userstate.badges?.premium
       const isVip = userstate.badges?.vip
       const isMod = userstate.badges?.moderator
-      const badges =
-        (isPrime ? "👑" : "") +
-        (isVip ? "💎" : "") +
-        (isSub ? "🏆" : "") +
-        (isMod ? "🗡️" : "");
       const badgesClases = 
       (isPrime ? "prime" : "") ||
         (isVip ? "vip" : "") ||
@@ -218,8 +223,8 @@ function App() {
         case '!opositopara':
         case '!verusuario':
         corrobarUsername(username)
-        actualizarEstado(username,badges,badgesClases)
-        Controlador(client, channel, command, username, tarea, id, badges,clases, infoUsuario, infoTareas, usuarioConTareas)
+        actualizarEstado(username , isSub, isPrime, isVip, isMod, badgesClases)
+        Controlador(client, channel, command, username, tarea, id,clases, infoUsuario, infoTareas, usuarioConTareas)
         clearTimeout(taskTimeout);
         clearInterval(showTasksInterval);
         
@@ -236,7 +241,7 @@ function App() {
               container:"flex flex-wrap items-center text-xl text-indigo-100 p-3 font-bold bg-gradient-to-r from-purple-800 to-blue-900 rounded-lg",
             }))
             startInterval()
-          }, 10000);
+          }, 15000);
           console.log(perfil)
         break;
       }
@@ -280,11 +285,16 @@ function App() {
             >
             </a>
             <span className={clases.container}>
-              <a className="flex p-3   w-full mx-2.5 bg-black items-center text-xl0 rounded-lg" >{infoUsuario.badges} {infoUsuario.user} {infoUsuario.badges} 🐾 {infoUsuario.index}</a>
+              <a className="flex p-3   w-full mx-2.5 bg-black items-center text-xl0 rounded-lg" >
+                { infoUsuario.isPrime ? (<img id="insignia" src={prime} />) : ("")} 
+                { infoUsuario.isSub ? (<img id="insignia" src={sub} />) : ("")} 
+                { infoUsuario.isMod ? (<img id="insignia" src={mod} />) : ("")} 
+                { infoUsuario.isVip ? (<img id="insignia" src={vip} />) : ("")} 
+                {infoUsuario.user} 🐾 {infoUsuario.index}</a>
               <a className="flex overflow-hidden text-base p-1 mx-0.5">{usernamePerfil(infoUsuario.user) ? `🎂 !nacimiento ` + usernamePerfil(infoUsuario.user).nacimiento : "" }</a>
               <a className="flex overflow-hidden text-base p-1 mx-0.5">{usernamePerfil(infoUsuario.user) && usernamePerfil(infoUsuario.user).signo ?  usernamePerfil(infoUsuario.user).signo : "" }</a>
-              <a className="flex overflow-hidden text-base p-1 mx-0.5">{usernamePerfil(infoUsuario.user) && usernamePerfil(infoUsuario.user).nacionalidad ? ` 🌐 !nacionalidad ` + usernamePerfil(infoUsuario.user).nacionalidad : "" }</a>
-              <a className="flex overflow-hidden text-base p-1 mx-0.5">{usernamePerfil(infoUsuario.user) && usernamePerfil(infoUsuario.user).instagram ? ` 🌐 !instagram ` + usernamePerfil(infoUsuario.user).instagram : "" }</a>
+              <a className="flex overflow-hidden text-base p-1 mx-0.5">{usernamePerfil(infoUsuario.user) && usernamePerfil(infoUsuario.user).nacionalidad ? ` 📡 !nacionalidad ` + usernamePerfil(infoUsuario.user).nacionalidad : "" }</a>
+              <a className="flex overflow-hidden text-base p-1 mx-0.5">{usernamePerfil(infoUsuario.user) && usernamePerfil(infoUsuario.user).instagram ? ` 📷 !instagram ` + usernamePerfil(infoUsuario.user).instagram : "" }</a>
               <a className="flex overflow-hidden text-base p-1 mx-0.5">{usernamePerfil(infoUsuario.user) && usernamePerfil(infoUsuario.user).estudiopara ? ` 🏦 !estudiopara ` + usernamePerfil(infoUsuario.user).estudiopara : ""}</a>
               <a className="flex overflow-hidden text-base p-1 mx-0.5">{usernamePerfil(infoUsuario.user) && usernamePerfil(infoUsuario.user).opositopara ? ` 🏦 !opositopara ` + usernamePerfil(infoUsuario.user).opositopara : ""}</a>
             </span>

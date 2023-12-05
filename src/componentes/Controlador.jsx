@@ -22,7 +22,7 @@ class Croquetas {
 
 const croquetas = [];
 
-const Controlador = (client, channel, command, username, tarea, id, badges,clases, infoUsaurio, infoTareas, usuarioConTareas) => {
+const Controlador = (client, channel, command, username, tarea, id, clases, infoUsaurio, infoTareas, usuarioConTareas) => {
   const usernameCroquetas = (username) => croquetas.find((item) => item.username === username);
 
   const perfilesConTareas = () => perfil.filter((item) =>  {

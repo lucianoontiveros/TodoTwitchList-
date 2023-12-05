@@ -6,3 +6,8 @@
 .contenedorTareas {
   background-color: rgba(0, 0, 0, 0.472);
 }
+
+#insignia {
+  height: 40px;
+  width:40px;
+}
