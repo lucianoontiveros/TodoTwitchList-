@@ -177,6 +177,8 @@ function App() {
     
     client.on("message", (channel, userstate, message, self) => {
       if (self) return;
+      if (!message.startsWith('!')) return;
+      console.log("Se esta ejecutando")
       /* 
       const displayName = userstate['display-name'];
       const subs = userstate?.subscriber;
