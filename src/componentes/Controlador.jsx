@@ -308,7 +308,7 @@ const Controlador = (client, channel, command, username, tarea, id, clases, info
         
             switch (mes) {
               case 3:
-                item.signo = dia >= 21 ? "Aries ♈︎ " : "Piscis ♓︎ ";
+                item.signo = dia >= 21 ? "Aries ♈︎" : "Piscis ♓︎";
                 break;
               case 4:
                 item.signo = dia <= 19 ? "Aries ♈︎" : "Tauro ♉︎";
@@ -338,10 +338,10 @@ const Controlador = (client, channel, command, username, tarea, id, clases, info
                 item.signo = dia <= 21 ? "Sagitario ♐︎" : "Capricornio ♑︎";
                 break;
               case 1:
-                item.signo = dia >= 20 ? "Acuario ♒︎" : "Piscis ♓︎";
+                item.signo = dia <= 18 ? "Capricornio ♑︎" : "Acuario ♒︎";
                 break;
               case 2:
-                item.signo = dia <= 18 ? "Acuario ♒︎" : "Piscis ♓︎";
+                item.signo = dia <= 19 ? "Acuario ♒︎" : "Piscis ♓︎";
                 break;
               default:
                 item.signo = ""; // En caso de que el mes no esté en el rango válido
