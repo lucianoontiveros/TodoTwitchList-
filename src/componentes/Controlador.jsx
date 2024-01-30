@@ -53,9 +53,7 @@ const Controlador = (client, channel, command, username, tarea, id, clases, info
           perfilUsuario.croquetasTotal = croquetasHistoricas
           console.log("me guarde")
         }
-        let MensajecroquetaTotal = `Me regalaste un total de ${perfilUsuario.croquetasTotal} croquetas`
-        let mensajeCroqueta = item.croquetasCantidad=== 1 ? `Me regalaste una croqueta ${username} BegWan VirtualHug hoy realizaste ${item.tareasRealizadas} de los pendientes GlitchCat ,` : `Me regalaste una croqueta ${username} BegWan VirtualHug hoy realizaste ${item.tareasRealizadas} tareas de tu lista GlitchCat,`
-        let mensajeUsuario = item.croquetasCantidad=== 0 ? " No borraste niguna de las tareas registradas PogChamp " : ` y borraste ${item.tareasEliminadas} de las registradas PogChamp `
+
         let MensajeCam = ""
         if (username === 'camm_sss') {
           MensajeCam = 'Tu eres mi mamá Camm PrimeMe '
@@ -63,9 +61,15 @@ const Controlador = (client, channel, command, username, tarea, id, clases, info
         if (username === 'cristianmeichtry') {
           MensajeCam = 'Tu malditas croquetas están rancias BibleThump  '
         }
-        if (username === 'cristianmeichtry') {
-          MensajeCam = 'Em fas una abraçada Sarita?'
+        if (username === 'saraacatalan') {
+          MensajeCam = '¿Me das un abracito Sarita? '
         }
+        if (username === 'saraacatalan') {
+          MensajeCam = ' Hola ojitos claros '
+        }
+        let mensajeCroqueta = item.croquetasCantidad=== 1 ? `Me regalaste una croqueta ${username} BegWan VirtualHug hoy realizaste ${item.tareasRealizadas} de los pendientes GlitchCat ,` : `Me regalaste una croqueta ${username} BegWan VirtualHug hoy realizaste ${item.tareasRealizadas} tareas de tu lista GlitchCat,`
+        let mensajeUsuario = item.croquetasCantidad=== 0 ? " No borraste niguna de las tareas registradas PogChamp " : ` y borraste ${item.tareasEliminadas} de las registradas PogChamp `
+        let MensajecroquetaTotal = `Me regalaste un total de ${perfilUsuario.croquetasTotal} croquetas. `
         client.say(channel, MensajeCam + mensajeCroqueta + mensajeUsuario + MensajecroquetaTotal)
         console.log(croquetas)
       }
@@ -310,7 +314,7 @@ const Controlador = (client, channel, command, username, tarea, id, clases, info
                 item.signo = dia <= 19 ? "Aries ♈︎" : "Tauro ♉︎";
                 break;
               case 5:
-                item.signo = dia <= 20 ? "Tauro ♉︎" : "Géminis ♊︎";                
+                item.signo = dia <= 20 ? "Tauro ♉︎" : "Géminis ♊︎";
                 break;
               case 6:
                 item.signo = dia <= 20 ? "Géminis ♊︎" : "Cáncer ♋︎";
@@ -320,10 +324,10 @@ const Controlador = (client, channel, command, username, tarea, id, clases, info
                 break;
               case 8:
                 item.signo = dia <= 22 ? "Leo ♌︎" : "Virgo ♍︎";
-                break; 
+                break;
               case 9:
                 item.signo = dia <= 22 ? "Virgo ♍︎" : "Libra ♎︎";
-                break; 
+                break;
               case 10:
                 item.signo = dia <= 22 ? "Libra ♎︎" : "Escorpio ♏︎";
                 break;
@@ -334,16 +338,15 @@ const Controlador = (client, channel, command, username, tarea, id, clases, info
                 item.signo = dia <= 21 ? "Sagitario ♐︎" : "Capricornio ♑︎";
                 break;
               case 1:
-                item.signo = dia <= 19 ? "Capricornio ♑︎" : "Acuario ♒︎";
+                item.signo = dia >= 20 ? "Acuario ♒︎" : "Piscis ♓︎";
                 break;
               case 2:
                 item.signo = dia <= 18 ? "Acuario ♒︎" : "Piscis ♓︎";
                 break;
               default:
                 item.signo = ""; // En caso de que el mes no esté en el rango válido
-              return client.say(channel, `Corrobora que ingresaras correctamente la fecha de tu cumpleaños, el formato es DD-MM`);
+                client.say(channel, `Corrobora que ingresaras correctamente la fecha de tu cumpleaños, el formato es DD-MM`);
             }
-          
           client.say(channel, `Fecha de nacimiento actualizada para ${username}: ${tarea}. Signo zodiacal: ${item.signo}`);
         } else {
           client.say(channel, `Formato de fecha no válido. Por favor, usa el formato dd-mm.`);
