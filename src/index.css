@@ -2,13 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
+.contenedor {
+  background-color: rgba(14, 17, 18, 0.06);
+  width: 1920px;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 75%;
+}
+.contenedor_tareas {
+  background-color: rgba(5, 1, 9, 0.783);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-end; */
+  margin: 10px;
+}
 
-.contenedorTareas {
-  background-color: rgba(0, 0, 0, 0.472);
+.contenedor_tareas li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.contenedor_usuario_activo a {
+  text-overflow: ellipsis; /* Si el texto es demasiado largo, se cortará con "..." */
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+  overflow: hidden;
+}
+
+.contenedor_tareas li a {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 8px;
+  text-overflow: ellipsis; /* Si el texto es demasiado largo, se cortará con "..." */
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+  overflow: hidden;
 }
 
 #insignia {
   padding-right: 10px;
   height: 40px;
-  width:40px;
+  width: 40px;
+}
+
+.marco {
+  width: 100%;
+  border: solid 5px;
 }
