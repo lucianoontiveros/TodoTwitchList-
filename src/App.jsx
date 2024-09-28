@@ -307,179 +307,178 @@ function App() {
   }, []);
 
   // Estilos del contenedor de tareas
-  const contenedor_tareas_style =
-    "contenedor_tareas w-full p-4 rounded-lg shadow sm:p-6 dark:bg-gray-800 dark:border-gray-700";
+  const contenedor_tareas_style = "contenedor_tareas rounded-lg shadow ";
   const contenedor_tareas_ul = "my-4 space-y-3";
+  const contenedor_tareas_card = "contenedor_tareas_card";
 
   return (
     <>
       <div className="contenedor">
-        {infoTareas.showTasks && (
-          <div className={contenedor_tareas_style}>
-            <h5 className={`marco ${clases.subtitle}`}>TAREAS PENDIENTES</h5>
-            <ul className={contenedor_tareas_ul}>
-              {infoTareas.showTasks &&
-                usernamePerfil(infoUsuario.user) &&
-                usernamePerfil(infoUsuario.user).tareas.map((i, index) => (
-                  <li key={index}>
-                    <a
-                      href="#"
-                      className={clases.style}
-                    >
-                      <span className="flex-1 text-1xl overflow-hidden">
-                        {i.tarea}
-                      </span>
-                      <span className="inline-flex items-center justify-center px-2 py-0.5 ml-3 text-base font-medium text-black-500 bg-gray-700 rounded dark:bg-green-700 dark:text-green-400">
-                        {i.id}
-                      </span>
-                    </a>
-                  </li>
-                ))}
-            </ul>
-            <div>
-              <a
-                href="#"
-                className="inline-flex items-center text-xs font-normal text-gray-500 hover:underline dark:text-gray-400"
-              ></a>
+        <div className={contenedor_tareas_style}>
+          {infoTareas.showTasks && (
+            <div className={contenedor_tareas_card}>
+              <h5 className={`marco ${clases.subtitle}`}>TAREAS PENDIENTES</h5>
+              <ul className={contenedor_tareas_ul}>
+                {infoTareas.showTasks &&
+                  usernamePerfil(infoUsuario.user) &&
+                  usernamePerfil(infoUsuario.user).tareas.map((i, index) => (
+                    <li key={index}>
+                      <a
+                        href="#"
+                        className={clases.style}
+                      >
+                        <span className="flex-1 text-1xl overflow-hidden">
+                          {i.tarea}
+                        </span>
+                        <span className="inline-flex items-center justify-center px-2 py-0.5 ml-3 text-base font-medium text-black-500 bg-gray-700 rounded dark:bg-green-700 dark:text-green-400">
+                          {i.id}
+                        </span>
+                      </a>
+                    </li>
+                  ))}
+              </ul>
+              <div>
+                <a
+                  href="#"
+                  className="inline-flex items-center text-xs font-normal text-gray-500 hover:underline dark:text-gray-400"
+                ></a>
 
-              <span
-                className={`contenedor_usuario_activo  ${clases.container}`}
-              >
-                <div className="flex p-3 w-full bg-black justify-center items-center text-xl0 rounded-lg">
-                  <h1 className={clases.title}>
-                    {infoUsuario.user} <span>#{infoUsuario.index}</span>
-                  </h1>
-                </div>
-
-                <a className="flex p-3 w-full justify-center mx-2.5 items-center text-xl0 rounded-lg">
-                  {infoUsuario.isPrime ? (
-                    <img
-                      id="insignia"
-                      src={prime}
-                    />
-                  ) : (
-                    " "
-                  )}{" "}
-                  {infoUsuario.isSub ? (
-                    <img
-                      id="insignia"
-                      src={sub}
-                    />
-                  ) : (
-                    " "
-                  )}{" "}
-                  {infoUsuario.isMod ? (
-                    <img
-                      id="insignia"
-                      src={mod}
-                    />
-                  ) : (
-                    " "
-                  )}{" "}
-                  {infoUsuario.isVip ? (
-                    <img
-                      id="insignia"
-                      src={vip}
-                    />
-                  ) : (
-                    " "
-                  )}
-                </a>
-                <a className="flex overflow-hidden text-base p-1 mx-0.5">
-                  {usernamePerfil(infoUsuario.user) &&
-                  usernamePerfil(infoUsuario.user).nacimiento
-                    ? `🎂 !nacimiento ` +
-                      usernamePerfil(infoUsuario.user).nacimiento
-                    : ""}
-                </a>
-                <a className="flex overflow-hidden text-base p-1 mx-0.5">
-                  {usernamePerfil(infoUsuario.user) &&
-                  usernamePerfil(infoUsuario.user).signo
-                    ? usernamePerfil(infoUsuario.user).signo
-                    : ""}
-                </a>
-                <a className="flex overflow-hidden text-base p-1 mx-0.5">
-                  {usernamePerfil(infoUsuario.user) &&
-                  usernamePerfil(infoUsuario.user).nacionalidad
-                    ? ` 📡 !nacionalidad ` +
-                      usernamePerfil(infoUsuario.user).nacionalidad
-                    : ""}
-                </a>
-                <a className="flex overflow-hidden text-base p-1 mx-0.5">
-                  {usernamePerfil(infoUsuario.user) &&
-                  usernamePerfil(infoUsuario.user).instagram
-                    ? ` 📷 !instagram ` +
-                      usernamePerfil(infoUsuario.user).instagram
-                    : ""}
-                </a>
-                <a className="flex overflow-hidden text-base p-1 mx-0.5">
-                  {usernamePerfil(infoUsuario.user) &&
-                  usernamePerfil(infoUsuario.user).estudiopara
-                    ? ` 🏦 !estudiopara ` +
-                      usernamePerfil(infoUsuario.user).estudiopara
-                    : ""}
-                </a>
-                <a className="flex overflow-hidden text-base p-1 mx-0.5">
-                  {usernamePerfil(infoUsuario.user) &&
-                  usernamePerfil(infoUsuario.user).opositopara
-                    ? ` 🏦 !opositopara ` +
-                      usernamePerfil(infoUsuario.user).opositopara
-                    : ""}
-                </a>
-              </span>
-            </div>
-          </div>
-        )}
-
-        {!infoTareas.showTasks && (
-          <>
-            {/* Aqui se muestran las tareas de todos los usuarios, se utiliza operador teneraria para iniciar el bot */}
-            {infoTareas.usuarioNuevo.username ? (
-              <div className="contenedor_tareas w-full p-4 rounded-lg shadow sm:p-6 dark:bg-gray-800 dark:border-gray-700">
-                <h1 className={clases.title}>
-                  {infoTareas.usuarioNuevo.username}
-                </h1>
-                <h5 className={`my-2 text-bs ${clases.subtitle}`}>
-                  <span>👤Membresía #{infoTareas.usuarioNuevo.index}</span>
-                </h5>
-                <h5 className={`marco ${clases.subtitle}`}>
-                  LISTADO DE TAREAS
-                </h5>
-                <>
-                  <ul className="my-4 space-y-3">
-                    {infoTareas.usuarioNuevo.tareas
-                      ? infoTareas.usuarioNuevo.tareas.map((i, index) => (
-                          <li key={index}>
-                            <a
-                              key={index}
-                              href="#"
-                              className={clases.style}
-                            >
-                              <div className="flex-1 ml-3 overflow-hidden">
-                                {i.tarea}
-                              </div>
-                              <span className="inline-flex items-center justify-center px-2 py-0.5 ml-3 text-base font-medium text-black-500 bg-gray-700 rounded dark:bg-green-700 dark:text-green-400">
-                                {i.id}
-                              </span>
-                            </a>
-                          </li>
-                        ))
-                      : ""}
-                  </ul>
-
-                  <div>
-                    <a
-                      href="#"
-                      className="inline-flex items-center text-xs font-normal text-gray-500 hover:underline dark:text-gray-400"
-                    ></a>
+                <span
+                  className={`contenedor_usuario_activo  ${clases.container}`}
+                >
+                  <div className="flex p-3 w-full bg-black justify-center items-center text-xl0 rounded-lg">
+                    <h1 className={clases.title}>
+                      {infoUsuario.user} <span>#{infoUsuario.index}</span>
+                    </h1>
                   </div>
-                </>
+
+                  <a className="flex p-3 w-full justify-center mx-2.5 items-center text-xl0 rounded-lg">
+                    {infoUsuario.isPrime ? (
+                      <img
+                        id="insignia"
+                        src={prime}
+                      />
+                    ) : (
+                      " "
+                    )}{" "}
+                    {infoUsuario.isSub ? (
+                      <img
+                        id="insignia"
+                        src={sub}
+                      />
+                    ) : (
+                      " "
+                    )}{" "}
+                    {infoUsuario.isMod ? (
+                      <img
+                        id="insignia"
+                        src={mod}
+                      />
+                    ) : (
+                      " "
+                    )}{" "}
+                    {infoUsuario.isVip ? (
+                      <img
+                        id="insignia"
+                        src={vip}
+                      />
+                    ) : (
+                      " "
+                    )}
+                  </a>
+                  <a className="flex overflow-hidden text-base p-1 mx-0.5">
+                    {usernamePerfil(infoUsuario.user) &&
+                    usernamePerfil(infoUsuario.user).nacimiento
+                      ? `🎂 !nacimiento ` +
+                        usernamePerfil(infoUsuario.user).nacimiento
+                      : ""}
+                  </a>
+                  <a className="flex overflow-hidden text-base p-1 mx-0.5">
+                    {usernamePerfil(infoUsuario.user) &&
+                    usernamePerfil(infoUsuario.user).signo
+                      ? usernamePerfil(infoUsuario.user).signo
+                      : ""}
+                  </a>
+                  <a className="flex overflow-hidden text-base p-1 mx-0.5">
+                    {usernamePerfil(infoUsuario.user) &&
+                    usernamePerfil(infoUsuario.user).nacionalidad
+                      ? ` 📡 !nacionalidad ` +
+                        usernamePerfil(infoUsuario.user).nacionalidad
+                      : ""}
+                  </a>
+                  <a className="flex overflow-hidden text-base p-1 mx-0.5">
+                    {usernamePerfil(infoUsuario.user) &&
+                    usernamePerfil(infoUsuario.user).instagram
+                      ? ` 📷 !instagram ` +
+                        usernamePerfil(infoUsuario.user).instagram
+                      : ""}
+                  </a>
+                  <a className="flex overflow-hidden text-base p-1 mx-0.5">
+                    {usernamePerfil(infoUsuario.user) &&
+                    usernamePerfil(infoUsuario.user).estudiopara
+                      ? ` 🏦 !estudiopara ` +
+                        usernamePerfil(infoUsuario.user).estudiopara
+                      : ""}
+                  </a>
+                  <a className="flex overflow-hidden text-base p-1 mx-0.5">
+                    {usernamePerfil(infoUsuario.user) &&
+                    usernamePerfil(infoUsuario.user).opositopara
+                      ? ` 🏦 !opositopara ` +
+                        usernamePerfil(infoUsuario.user).opositopara
+                      : ""}
+                  </a>
+                </span>
               </div>
-            ) : (
-              <h5 className={clases.subtitle}> Iniciando brunito Pet </h5>
-            )}
-          </>
-        )}
+            </div>
+          )}
+          {!infoTareas.showTasks && (
+            <div className={contenedor_tareas_card}>
+              {/* Aqui se muestran las tareas de todos los usuarios, se utiliza operador teneraria para iniciar el bot */}
+              {infoTareas.usuarioNuevo.username ? (
+                <div className="contenedor_tareas w-full rounded-lg">
+                  <h1 className={clases.title}>
+                    {infoTareas.usuarioNuevo.username}
+                  </h1>
+                  <h5 className={`my-2 text-bs ${clases.subtitle}`}>
+                    <span>👤Membresía #{infoTareas.usuarioNuevo.index}</span>
+                  </h5>
+                  <h5 className={clases.subtitle}>LISTADO DE TAREAS</h5>
+                  <>
+                    <ul className="my-4 space-y-3">
+                      {infoTareas.usuarioNuevo.tareas
+                        ? infoTareas.usuarioNuevo.tareas.map((i, index) => (
+                            <li key={index}>
+                              <a
+                                key={index}
+                                href="#"
+                                className={clases.style}
+                              >
+                                <div className="flex-1 ml-3 overflow-hidden">
+                                  {i.tarea}
+                                </div>
+                                <span className="inline-flex items-center justify-center px-2 py-0.5 ml-3 text-base font-medium text-black-500 bg-gray-700 rounded dark:bg-green-700 dark:text-green-400">
+                                  {i.id}
+                                </span>
+                              </a>
+                            </li>
+                          ))
+                        : ""}
+                    </ul>
+
+                    <div>
+                      <a
+                        href="#"
+                        className="inline-flex items-center text-xs font-normal text-gray-500 hover:underline dark:text-gray-400"
+                      ></a>
+                    </div>
+                  </>
+                </div>
+              ) : (
+                <h5 className={clases.subtitle}> Iniciando brunito Pet </h5>
+              )}
+            </div>
+          )}
+        </div>
       </div>
     </>
   );
