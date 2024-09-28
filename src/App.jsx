@@ -110,7 +110,7 @@ function App() {
         setClases((prevClases) => ({
           ...prevClases,
           title:
-            "mb-2 font-bold text-4xl text-center tracking-tight text-blue-600 dark:text-white",
+            "mb-2 font-bold text-4xl text-center tracking-tight text-blue-600",
           subtitle: "font-normal text-3xl text-center text-blue-200",
           style:
             "flex items-center p-3 text-base font-bold bg-black text-blue-200 rounded-lg",
@@ -122,7 +122,7 @@ function App() {
         setClases((prevClases) => ({
           ...prevClases,
           title:
-            "mb-2 font-bold text-4xl text-center tracking-tight text-green-400 dark:text-white",
+            "mb-2 font-bold text-4xl text-center tracking-tight text-green-400",
           subtitle: "font-normal text-3xl text-center text-green-100",
           style:
             "flex items-center p-3 text-base font-bold bg-black text-green-300 rounded-lg",
@@ -134,7 +134,7 @@ function App() {
         setClases((prevClases) => ({
           ...prevClases,
           title:
-            "mb-2 font-bold text-4xl text-center tracking-tight text-pink-600 dark:text-white",
+            "mb-2 font-bold text-4xl text-center tracking-tight text-pink-600",
           subtitle: "font-normal text-3xl text-center text-pink-800",
           style:
             "flex items-center p-3 text-base font-bold bg-black text-pink-500 rounded-lg",
@@ -146,7 +146,7 @@ function App() {
         setClases((prevClases) => ({
           ...prevClases,
           title:
-            "mb-2 font-bold text-4xl text-center tracking-tight text-purple-900 dark:text-white",
+            "mb-2 font-bold text-4xl text-center tracking-tight text-purple-900",
           subtitle: "font-normal text-3xl text-center text-blue-300",
           style:
             "flex items-center p-3 text-base font-bold bg-black text-blue-200 rounded-lg",
