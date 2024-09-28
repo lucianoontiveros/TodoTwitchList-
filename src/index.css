@@ -3,22 +3,31 @@
 @tailwind utilities;
 
 .contenedor {
-  background-color: rgba(14, 17, 18, 0.06);
   width: 1920px;
   height: 100vh;
+  margin: 0px;
   display: grid;
   grid-template-columns: 1fr 75%;
 }
+
 .contenedor_tareas {
-  background-color: rgba(5, 1, 9, 0.783);
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  /* justify-content: flex-end; */
-  margin: 10px;
+  justify-content: flex-end;
+  padding: 5px;
 }
 
-.contenedor_tareas li {
+.contenedor_tareas_card {
+  padding: 10px 0px;
+  margin: 10px;
+  background-color: rgba(5, 1, 9, 0.783);
+  border-radius: 1rem;
+}
+
+/* background-color: rgba(5, 1, 9, 0.783); */
+
+.contenedor_tareas_card li {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -31,12 +40,11 @@
   overflow: hidden;
 }
 
-.contenedor_tareas li a {
+.contenedor_tareas_card li a {
   display: flex;
   flex: 1;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
   border-radius: 8px;
   text-overflow: ellipsis; /* Si el texto es demasiado largo, se cortará con "..." */
   white-space: nowrap; /* Evita que el texto se divida en varias líneas */
@@ -47,9 +55,4 @@
   padding-right: 10px;
   height: 40px;
   width: 40px;
-}
-
-.marco {
-  width: 100%;
-  border: solid 5px;
 }
