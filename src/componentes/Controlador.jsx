@@ -64,7 +64,7 @@ const Controlador = (client, channel, command, username, tarea, id, clases, info
         if (username === 'saraacatalan') {
           MensajeCam = '¿Me das un abracito Sarita? '
         }
-        if (username === 'saraacatalan') {
+        if (username === 'antonellavrl_') {
           MensajeCam = ' Hola ojitos claros '
         }
         let mensajeCroqueta = item.croquetasCantidad=== 1 ? `Me regalaste una croqueta ${username} BegWan VirtualHug hoy realizaste ${item.tareasRealizadas} de los pendientes GlitchCat ,` : `Me regalaste una croqueta ${username} BegWan VirtualHug hoy realizaste ${item.tareasRealizadas} tareas de tu lista GlitchCat,`
