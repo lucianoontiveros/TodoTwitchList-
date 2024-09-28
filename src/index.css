@@ -7,7 +7,7 @@
   height: 100vh;
   margin: 0px;
   display: grid;
-  grid-template-columns: 1fr 75%;
+  grid-template-columns: 1fr 74%;
 }
 
 .contenedor_tareas {
@@ -19,7 +19,7 @@
 }
 
 .contenedor_tareas_card {
-  padding: 10px 0px;
+  padding: 10px;
   margin: 10px;
   background-color: rgba(5, 1, 9, 0.783);
   border-radius: 1rem;
