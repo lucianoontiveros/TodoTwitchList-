@@ -111,11 +111,11 @@ function App() {
           ...prevClases,
           title:
             "mb-2 font-bold text-4xl text-center tracking-tight text-blue-600",
-          subtitle: "font-normal text-3xl text-center text-blue-200",
+          subtitle: "font-normal text-3xl text-center text-blue-400",
           style:
-            "flex items-center p-3 text-base font-bold bg-black text-blue-200 rounded-lg",
+            "flex items-center p-3 text-base font-bold bg-black text-blue-400 rounded-lg",
           container:
-            "flex flex-wrap items-center text-xl text-indigo-100 p-3 font-bold bg-gradient-to-r from-blue-600 to-indigo-900 rounded-lg",
+            "flex flex-wrap items-center text-xl text-blue-400 p-3 prime_fondo font-bold bg-transparente rounde",
         }));
         break;
       case "mod":
@@ -123,11 +123,11 @@ function App() {
           ...prevClases,
           title:
             "mb-2 font-bold text-4xl text-center tracking-tight text-green-400",
-          subtitle: "font-normal text-3xl text-center text-green-100",
+          subtitle: "font-normal text-3xl text-center text-green-300",
           style:
-            "flex items-center p-3 text-base font-bold bg-black text-green-300 rounded-lg",
+            "flex items-center p-3 text-base font-bold bg-black text-green-300 ",
           container:
-            "flex flex-wrap items-center text-xl text-indigo-100 p-3 font-bold bg-gradient-to-r from-green-600 to-green-900 rounded-lg",
+            "flex flex-wrap items-center text-xl text-green-100 p-3 font-bold mod_fondo bg-transparente rounde",
         }));
         break;
       case "vip":
@@ -135,35 +135,35 @@ function App() {
           ...prevClases,
           title:
             "mb-2 font-bold text-4xl text-center tracking-tight text-pink-600",
-          subtitle: "font-normal text-3xl text-center text-pink-800",
+          subtitle: "font-normal text-3xl text-center text-pink-400",
           style:
-            "flex items-center p-3 text-base font-bold bg-black text-pink-500 rounded-lg",
+            "flex items-center p-3 text-base font-bold bg-black text-pink-500 ",
           container:
-            "flex flex-wrap items-center text-xl text-indigo-100 p-3 font-bold bg-gradient-to-r from-pink-600 to-purple-900 rounded-lg",
+            "flex flex-wrap items-center text-xl text-indigo-100 p-3 vip_fondo bg-transparente rounde",
         }));
         break;
       case "sub":
         setClases((prevClases) => ({
           ...prevClases,
           title:
-            "mb-2 font-bold text-4xl text-center tracking-tight text-purple-900",
-          subtitle: "font-normal text-3xl text-center text-blue-300",
+            "mb-2 font-bold text-4xl text-center tracking-tight text-purple-500",
+          subtitle: "font-normal text-3xl text-center text-purple-300",
           style:
-            "flex items-center p-3 text-base font-bold bg-black text-blue-200 rounded-lg",
+            "flex items-center p-3 text-base font-bold bg-black text-purple-400 ",
           container:
-            "flex flex-wrap items-center text-xl text-blue-300 p-3 font-bold bg-gradient-to-r from-gray-700 to-purple-900 rounded-lg",
+            "flex flex-wrap items-center text-xl text-purple-300 p-3 font-bold sus_fondo bg-transparente rounde ",
         }));
         break;
       default:
         setClases((prevClases) => ({
           ...prevClases,
           title:
-            "mb-2  font-normal text-5xl font-weight: 500; text-center text-white",
-          subtitle: "font-normal text-3xl text-center  text-purple-400",
+            "mb-2  font-normal text-4xl font-weight: 500; text-center text-white",
+          subtitle: "font-normal text-3xl text-center text-white",
           style:
-            "flex items-center p-3 text-base font-bold bg-black text-purple-500 rounded-lg",
+            "flex items-center p-3 text-base font-bold bg-black text-white ",
           container:
-            "flex flex-wrap items-center text-xl text-indigo-100 p-3 font-bold bg-gradient-to-r from-purple-800 to-blue-900 rounded-lg",
+            "flex flex-wrap items-center text-xl text-white p-3 font-bold viewer bg-transparente rounde ",
         }));
     }
   };
@@ -284,13 +284,11 @@ function App() {
             }));
             setClases((prevClases) => ({
               ...prevClases,
-              title:
-                "font-normal text-5xl font-weight: 500; text-center text-white",
-              subtitle: "font-normal text-3xl text-center  text-blue-400",
+              title: "font-normal text-4xl text-center text-white",
+              subtitle: "font-normal text-3xl text-center text-white",
               style:
-                "flex items-center p-3 text-base font-bold bg-black text-blue-500 rounded-lg",
-              container:
-                "flex flex-wrap items-center text-xl text-indigo-100 p-3 font-bold bg-gradient-to-r from-purple-800 to-blue-900 rounded-lg",
+                "flex items-center p-3 text-base font-bold bg-black text-white rounded",
+              container: "flex flex-wrap items-center text-xl text-white p-3",
             }));
             startInterval();
           }, 15000);
@@ -313,11 +311,11 @@ function App() {
 
   return (
     <>
-      <div className="contenedor">
+      <div className="contenedor ">
         <div className={contenedor_tareas_style}>
           {infoTareas.showTasks && (
             <div className={contenedor_tareas_card}>
-              <h5 className={`marco ${clases.subtitle}`}>TAREAS PENDIENTES</h5>
+              <h5 className={clases.subtitle}>TAREAS PENDIENTES</h5>
               <ul className={contenedor_tareas_ul}>
                 {infoTareas.showTasks &&
                   usernamePerfil(infoUsuario.user) &&
@@ -327,7 +325,7 @@ function App() {
                         href="#"
                         className={clases.style}
                       >
-                        <span className="flex-1 text-1xl overflow-hidden">
+                        <span className="flex-1 text-1xl overflow-hidden bg-">
                           {i.tarea}
                         </span>
                         <span className="inline-flex items-center justify-center px-2 py-0.5 ml-3 text-base font-medium text-black-500 bg-gray-700 rounded dark:bg-green-700 dark:text-green-400">
@@ -352,75 +350,41 @@ function App() {
                     </h1>
                   </div>
 
-                  <a className="flex p-3 w-full justify-center mx-2.5 items-center text-xl0 rounded-lg">
-                    {infoUsuario.isPrime ? (
-                      <img
-                        id="insignia"
-                        src={prime}
-                      />
-                    ) : (
-                      " "
-                    )}{" "}
-                    {infoUsuario.isSub ? (
-                      <img
-                        id="insignia"
-                        src={sub}
-                      />
-                    ) : (
-                      " "
-                    )}{" "}
-                    {infoUsuario.isMod ? (
-                      <img
-                        id="insignia"
-                        src={mod}
-                      />
-                    ) : (
-                      " "
-                    )}{" "}
-                    {infoUsuario.isVip ? (
-                      <img
-                        id="insignia"
-                        src={vip}
-                      />
-                    ) : (
-                      " "
-                    )}
-                  </a>
-                  <a className="flex overflow-hidden text-base p-1 mx-0.5">
+                  <a className="flex overflow-hidden text-base p-1 mx-0.5 bg-black mt-1">
                     {usernamePerfil(infoUsuario.user) &&
                     usernamePerfil(infoUsuario.user).nacimiento
                       ? `🎂 !nacimiento ` +
                         usernamePerfil(infoUsuario.user).nacimiento
                       : ""}
                   </a>
-                  <a className="flex overflow-hidden text-base p-1 mx-0.5">
+                  <a className="flex overflow-hidden text-base p-1 mx-0.5 bg-black mt-1">
                     {usernamePerfil(infoUsuario.user) &&
                     usernamePerfil(infoUsuario.user).signo
                       ? usernamePerfil(infoUsuario.user).signo
                       : ""}
                   </a>
-                  <a className="flex overflow-hidden text-base p-1 mx-0.5">
+                  <a className="flex overflow-hidden text-base p-1 mx-0.5 bg-black mt-1">
                     {usernamePerfil(infoUsuario.user) &&
                     usernamePerfil(infoUsuario.user).nacionalidad
                       ? ` 📡 !nacionalidad ` +
                         usernamePerfil(infoUsuario.user).nacionalidad
                       : ""}
                   </a>
-                  <a className="flex overflow-hidden text-base p-1 mx-0.5">
+                  <a className="flex overflow-hidden text-base p-1 mx-0.5 bg-black mt-1">
                     {usernamePerfil(infoUsuario.user) &&
                     usernamePerfil(infoUsuario.user).instagram
                       ? ` 📷 !instagram ` +
                         usernamePerfil(infoUsuario.user).instagram
                       : ""}
                   </a>
-                  <a className="flex overflow-hidden text-base p-1 mx-0.5">
+                  <a className="flex overflow-hidden text-base p-1 mx-0.5 bg-black mt-1">
                     {usernamePerfil(infoUsuario.user) &&
                     usernamePerfil(infoUsuario.user).estudiopara
                       ? ` 🏦 !estudiopara ` +
                         usernamePerfil(infoUsuario.user).estudiopara
                       : ""}
                   </a>
-                  <a className="flex overflow-hidden text-base p-1 mx-0.5">
+                  <a className="flex overflow-hidden text-base p-1 mx-0.5 bg-black mt-1">
                     {usernamePerfil(infoUsuario.user) &&
                     usernamePerfil(infoUsuario.user).opositopara
                       ? ` 🏦 !opositopara ` +
@@ -435,14 +399,17 @@ function App() {
             <div className={contenedor_tareas_card}>
               {/* Aqui se muestran las tareas de todos los usuarios, se utiliza operador teneraria para iniciar el bot */}
               {infoTareas.usuarioNuevo.username ? (
-                <div className="contenedor_tareas w-full rounded-lg">
+                <div className="contenedor_tareas w-full rounded">
                   <h1 className={clases.title}>
                     {infoTareas.usuarioNuevo.username}
                   </h1>
                   <h5 className={`my-2 text-bs ${clases.subtitle}`}>
-                    <span>👤Membresía #{infoTareas.usuarioNuevo.index}</span>
+                    <span>👤#{infoTareas.usuarioNuevo.index}</span>
                   </h5>
-                  <h5 className={clases.subtitle}>LISTADO DE TAREAS</h5>
+                  <div className="px-4 py-2 bg-black rounded-full">
+                    <h5 className={` ${clases.subtitle}`}>Listado de tareas</h5>
+                  </div>
+
                   <>
                     <ul className="my-4 space-y-3">
                       {infoTareas.usuarioNuevo.tareas
