@@ -51,6 +51,41 @@
   overflow: hidden;
 }
 
+.vip_fondo {
+  background: url("src/img/vip_fondo.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+.mod_fondo {
+  background: url("src/img/mod_fondo.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+.prime_fondo {
+  background: url("src/img/prime_fondo.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+.sus_fondo {
+  background: url("src/img/sus_fondo.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+.viewer {
+  background: url("src/img/viewer_fondo.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
 #insignia {
   padding-right: 10px;
   height: 40px;
