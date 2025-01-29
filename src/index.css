@@ -21,7 +21,10 @@
 .contenedor_tareas_card {
   padding: 10px;
   margin: 10px;
-  background-color: rgba(5, 1, 9, 0.783);
+  background: url("./img/fondo_default.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
   border-radius: 1rem;
 }
 
