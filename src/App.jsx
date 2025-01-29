@@ -25,6 +25,33 @@ class Perfil {
 
 export var perfil = JSON.parse(localStorage.getItem("perfil")) || [];
 
+const descargarPerfiles = () => {
+  // Se verifica que los perfiles esten cargados en memoría
+  if (perfil.length === 0) {
+    console.log("No hay perfiles para descargar.");
+    return;
+  }
+
+  // Ordenar perfiles alfabéticamente por username
+  const perfilesOrdenados = [...perfil].sort((a, b) =>
+    a.username.localeCompare(b.username)
+  );
+
+  // Convertir el JSON a una cadena formateada
+  const texto = JSON.stringify(perfilesOrdenados, null, 2);
+
+  // Crear un blob y un enlace de descarga
+  const blob = new Blob([texto], { type: "text/plain" });
+  const link = document.createElement("a");
+  link.href = URL.createObjectURL(blob);
+  link.download = "perfiles_usuarios.txt";
+
+  // Simular clic en el enlace para descargar el archivo
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
 function App() {
   const [clases, setClases] = useState({
     title:
@@ -293,6 +320,9 @@ function App() {
             startInterval();
           }, 15000);
           console.log(perfil);
+          break;
+        case "!descargar":
+          descargarPerfiles();
           break;
       }
       setRender(Date.now());
