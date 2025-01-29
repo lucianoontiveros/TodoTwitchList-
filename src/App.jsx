@@ -26,6 +26,7 @@ class Perfil {
 export var perfil = JSON.parse(localStorage.getItem("perfil")) || [];
 
 const descargarPerfiles = () => {
+  // Se verifica que los perfiles esten cargados en memoría
   if (perfil.length === 0) {
     console.log("No hay perfiles para descargar.");
     return;
