@@ -1,484 +1,192 @@
 import React, { useEffect, useState } from "react";
-import { render } from "react-dom";
-import tmi from "tmi.js";
-import Controlador from "./componentes/Controlador.jsx";
-import mod from "./img/mod.png";
-import prime from "./img/prime.png";
-import sub from "./img/sub.png";
-import vip from "./img/vip.png";
 
-class Perfil {
-  constructor(username) {
-    this.username = username;
-    this.tareas = [];
-    this.signo = "";
-    this.puntos = 0;
-    this.nacionalidad = "";
-    this.nacimiento = "";
-    this.instagram = "";
-    this.opositopara = "";
-    this.estudiopara = "";
-    this.croquetasTotal = 0;
-    this.index = "No establecido";
-  }
-}
+// Importación de funcionalidades
+import {
+  foundOrCreateUser,
+  deleteUser,
+  verifyIdUser,
+  changeNameUser,
+  deleteInactiveUsersTwoMonths,
+} from "./data/controllerUsers/controllerUsers";
 
-export var perfil = JSON.parse(localStorage.getItem("perfil")) || [];
+import {
+  addTaskUser,
+  reviewListTaskUser,
+  readyTaskUser,
+  deleteTaskUser,
+  modifyTaskUser,
+  deleteAllListTaskUser,
+  readyListAllListUser,
+} from "./data/controllerProperties/controllerTasks";
 
-const descargarPerfiles = () => {
-  // Se verifica que los perfiles esten cargados en memoría
-  if (perfil.length === 0) {
-    console.log("No hay perfiles para descargar.");
-    return;
-  }
+import {
+  addExam,
+  deleteExam,
+  reviewExam,
+  deleteAllExams,
+} from "./data/controllerProperties/controllerExams";
 
-  // Ordenar perfiles alfabéticamente por username
-  const perfilesOrdenados = [...perfil].sort((a, b) =>
-    a.username.localeCompare(b.username)
-  );
+import {
+  getUserInfo,
+  addDataNationality,
+  addBirth,
+  addInstagram,
+  addOppositionfor,
+  addStudyFor,
+  giveCroquetas,
+} from "./data/controllerProperties/controllerPersonalData";
 
-  // Convertir el JSON a una cadena formateada
-  const texto = JSON.stringify(perfilesOrdenados, null, 2);
+// Importación de cliente de Twitch
+import client from "./data/controllerClientTwitch/clientTwitch.js";
 
-  // Crear un blob y un enlace de descarga
-  const blob = new Blob([texto], { type: "text/plain" });
-  const link = document.createElement("a");
-  link.href = URL.createObjectURL(blob);
-  link.download = "perfiles_usuarios.txt";
+// Importaciones de utilidad con el localStorage
+import jsonData from "./data/localStorageData.json";
 
-  // Simular clic en el enlace para descargar el archivo
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-};
+import {
+  loadLocalStorageFromFile,
+  saveLocalStorageFile,
+} from "./data/LocalStorage/controllerLocalStorage";
 
-function App() {
-  const [clases, setClases] = useState({
-    title:
-      "mb-2  font-normal text-5xl font-weight: 500; text-center text-white",
-    subtitle: "font-normal text-3xl text-center  text-purple-400",
-    style:
-      "flex items-center p-3 text-base font-bold bg-black text-purple-500 rounded-lg",
-    container: "",
-  });
-  const [infoUsuario, setInfoUsuario] = useState({
-    user: "brunispet",
-    isSub: false,
-    isPrime: false,
-    isVip: false,
-    isMod: false,
-    index: "",
-  });
-  const [infoTareas, setInfoTareas] = useState({
-    showTasks: false,
-    currentProfileIndex: 0,
-    usuarioNuevo: [],
-  });
-  const [render, setRender] = useState(Date.now());
-  let usuarioConTareas = [];
+// Importación de componentes
+import TaskList from "./components/TaskList";
+import InfoUser from "./components/InfoUser";
+import UserList from "./components/UserList";
 
-  const usernamePerfil = (username) =>
-    perfil.find((item) => item.username === username);
-  let taskTimeout;
-  let showTasksInterval;
+const App = () => {
+  client.connect();
 
-  const guardarPerfil = (perfil) => {
-    const perfilString = JSON.stringify(perfil);
-    localStorage.setItem("perfil", perfilString);
-  };
+  client.on("message", (channel, tags, message, self) => {
+    // Ignore echoed mesages.
+    if (self) return;
+    if (!message.startsWith("-")) return;
 
-  useEffect(() => {
-    guardarPerfil(perfil);
-  }, [render]);
+    // nombre de usuario y sus propiedades
+    var username = tags.username;
+    const isSub = tags.badges?.subscriber;
+    const isPrime = tags.badges?.premium;
+    const isVip = tags.badges?.vip;
+    const isMod = tags.badges?.moderator;
+    const badgesClases =
+      (isPrime ? "prime" : "") ||
+      (isVip ? "vip" : "") ||
+      (isSub ? "sub" : "") ||
+      (isMod ? "mod" : "");
 
-  const perfilesConTareas = () =>
-    perfil.filter((item) => {
-      if (item.tareas.length > 0) {
-        console.log(item);
-        usuarioConTareas.push(item);
-      }
-    });
+    // Informacion que ingresa el usuario
+    const command = message.toLowerCase().split(" ")[0].slice(1);
+    const args = message.slice(1).split(" ");
+    const arg = args[1];
+    const otherUsername = message.slice(7);
+    const taskLowercase = message.substring(command.length + 1);
+    const task = taskLowercase.charAt(0).toUpperCase() + taskLowercase.slice(1);
+    const taskMod =
+      taskLowercase.charAt(0).toUpperCase() + taskLowercase.slice(4);
 
-  const corrobarUsername = (username) => {
-    if (!usernamePerfil(username)) {
-      let nuevoPerfil = new Perfil(username);
-      perfil.push(nuevoPerfil);
-    }
-  };
-
-  const actualizarEstado = (
-    username,
-    isSub,
-    isPrime,
-    isVip,
-    isMod,
-    badgesClases
-  ) => {
-    const indexEnPerfil = perfil.findIndex(
-      (item) => item.username === username
-    );
-    usernamePerfil(username).index = indexEnPerfil;
-    setInfoTareas((prevInfoTareas) => ({
-      ...prevInfoTareas,
-      showTasks: true,
-    }));
-    setInfoUsuario((prevInfoUsuario) => ({
-      ...prevInfoUsuario,
-      user: username,
-      isSub: isSub,
-      isPrime: isPrime,
-      isVip: isVip,
-      isMod: isMod,
-      index: indexEnPerfil,
-    }));
-    console.log(badgesClases);
-    switch (badgesClases) {
-      case "prime":
-        setClases((prevClases) => ({
-          ...prevClases,
-          title:
-            "mb-2 font-bold text-4xl text-center tracking-tight text-blue-600",
-          subtitle: "font-normal text-3xl text-center text-blue-400",
-          style:
-            "flex items-center p-3 text-base font-bold bg-black text-blue-400 rounded-lg",
-          container:
-            "flex flex-wrap items-center text-xl text-blue-400 p-3 prime_fondo font-bold bg-transparente rounde",
-        }));
+    // Funcionalidad para identificar usuario y gestionarlo
+    console.log(command);
+    switch (command) {
+      //comandos de usaurio.
+      case "id?":
+        verifyIdUser(channel, arg);
         break;
-      case "mod":
-        setClases((prevClases) => ({
-          ...prevClases,
-          title:
-            "mb-2 font-bold text-4xl text-center tracking-tight text-green-400",
-          subtitle: "font-normal text-3xl text-center text-green-300",
-          style:
-            "flex items-center p-3 text-base font-bold bg-black text-green-300 ",
-          container:
-            "flex flex-wrap items-center text-xl text-green-100 p-3 font-bold mod_fondo bg-transparente rounde",
-        }));
+      case "eliminarusuario":
+        deleteUser(channel, username, arg);
         break;
-      case "vip":
-        setClases((prevClases) => ({
-          ...prevClases,
-          title:
-            "mb-2 font-bold text-4xl text-center tracking-tight text-pink-600",
-          subtitle: "font-normal text-3xl text-center text-pink-400",
-          style:
-            "flex items-center p-3 text-base font-bold bg-black text-pink-500 ",
-          container:
-            "flex flex-wrap items-center text-xl text-indigo-100 p-3 vip_fondo bg-transparente rounde",
-        }));
-        break;
-      case "sub":
-        setClases((prevClases) => ({
-          ...prevClases,
-          title:
-            "mb-2 font-bold text-4xl text-center tracking-tight text-purple-500",
-          subtitle: "font-normal text-3xl text-center text-purple-300",
-          style:
-            "flex items-center p-3 text-base font-bold bg-black text-purple-400 ",
-          container:
-            "flex flex-wrap items-center text-xl text-purple-300 p-3 font-bold sus_fondo bg-transparente rounde ",
-        }));
-        break;
-      default:
-        setClases((prevClases) => ({
-          ...prevClases,
-          title:
-            "mb-2  font-normal text-4xl font-weight: 500; text-center text-white",
-          subtitle: "font-normal text-3xl text-center text-white",
-          style:
-            "flex items-center p-3 text-base font-bold bg-black text-white ",
-          container:
-            "flex flex-wrap items-center text-xl text-white p-3 font-bold viewer bg-transparente rounde ",
-        }));
-    }
-  };
-
-  useEffect(() => {
-    const client = new tmi.Client({
-      options: { debug: false },
-      identity: {
-        username: import.meta.env.VITE_APP_USERNAME,
-        password: import.meta.env.VITE_APP_PASSWORD,
-      },
-      channels: [import.meta.env.VITE_APP_CHANNELS],
-    });
-
-    client.connect();
-
-    const startInterval = () => {
-      if (usuarioConTareas.length == 0) {
-        perfilesConTareas();
-      }
-      showTasksInterval = setInterval(() => {
-        // Cuando se completa de recorrer el array objetos
-        if (usuarioConTareas.length == infoTareas.currentProfileIndex) {
-          infoTareas.currentProfileIndex = 0;
+      case "cambiarusuario":
+        if (username == "cuartodechenz") {
+          changeNameUser(channel, arg, username);
         }
-        let usuarioInterado = usuarioConTareas[infoTareas.currentProfileIndex];
-        // Cuando todavia no  completa de recorrer el array objetos
-        setInfoTareas((prevInfoTareas) => ({
-          ...prevInfoTareas,
-          usuarioNuevo: usuarioInterado,
-          currentProfileIndex: infoTareas.currentProfileIndex++,
-        }));
-      }, 10000);
-    };
+        break;
 
-    startInterval();
+      // comandos para minipular tareas
+      case "tarea":
+      case "add":
+        addTaskUser(username, task, channel);
+        break;
+      case "lista":
+      case "list":
+        reviewListTaskUser(username, channel);
+        break;
+      case "v":
+      case "marcar":
+      case "check":
+        readyTaskUser(username, arg, channel);
+        break;
+      case "x":
+      case "eliminar":
+      case "borrar":
+      case "delete":
+        deleteTaskUser(username, arg, channel);
+        break;
+      case "modificar":
+      case "mod":
+        modifyTaskUser(username, arg, taskMod, channel);
+        break;
+      case "clear":
+        deleteAllListTaskUser(username, channel);
+        break;
+      case "pickup":
+        readyListAllListUser(username, channel);
+        break;
 
-    client.on("message", (channel, userstate, message, self) => {
-      if (self) return;
-      if (!message.startsWith("!")) return;
-      console.log("Se esta ejecutando");
-      /* 
-      const displayName = userstate['display-name'];
-      const subs = userstate?.subscriber;
-      const mod = userstate?.mod;
-      const type = userstate['message-type'];
-      const monSubs = userstate['badge-info']?.subscriber;
-      
-      */
-      var username = userstate.username;
-      const isSub = userstate.badges?.subscriber;
-      const isPrime = userstate.badges?.premium;
-      const isVip = userstate.badges?.vip;
-      const isMod = userstate.badges?.moderator;
-      const badgesClases =
-        (isPrime ? "prime" : "") ||
-        (isVip ? "vip" : "") ||
-        (isSub ? "sub" : "") ||
-        (isMod ? "mod" : "");
+      // comandos para gestionar personal
+      case "nacimiento":
+        addBirth(username, arg, channel);
+        break;
+      case "instagram":
+        addInstagram(username, arg, channel);
+        break;
+      case "opositopara":
+        addOppositionfor(username, task, channel);
+        break;
+      case "estudiopara":
+        addStudyFor(username, task, channel);
+        break;
+      case "croquetas":
+        giveCroquetas(username, channel);
+        break;
+      case "nacionalidad":
+        addDataNationality(username, task, channel);
+        break;
+      case "datos":
+        getUserInfo(username, channel);
+        break;
+      case "info":
+        getUserInfo(otherUsername, channel);
+        break;
 
-      const args = message.slice(1).split(" ");
-      const id = args[1];
-      const command = message.toLowerCase().split(" ")[0];
-      const tareaSinMayuscula = message.substring(command.length + 1);
-      const tarea =
-        tareaSinMayuscula.charAt(0).toUpperCase() + tareaSinMayuscula.slice(1);
-      const isBot = ["brunispet", "streamelements", "nightbot"].includes(
-        username
-      );
-      if (isBot) return;
-      switch (command) {
-        case "!task":
-        case "!tarea":
-        case "!lista":
-        case "!delete":
-        case "!eliminar":
-        case "!check":
-        case "!marcar":
-        case "!clear":
-        case "!pickup":
-        case "!list":
-        case "!croqueta":
-        case "!nacionalidad":
-        case "!nacimiento":
-        case "!instagram":
-        case "!eliminarusuario":
-        case "!estudiopara":
-        case "!opositopara":
-        case "!verusuario":
-          corrobarUsername(username);
-          actualizarEstado(
-            username,
-            isSub,
-            isPrime,
-            isVip,
-            isMod,
-            badgesClases
-          );
-          Controlador(
-            client,
-            channel,
-            command,
-            username,
-            tarea,
-            id,
-            clases,
-            infoUsuario,
-            infoTareas,
-            usuarioConTareas
-          );
-          clearTimeout(taskTimeout);
-          clearInterval(showTasksInterval);
+      // registrar examenes
+      case "addexam":
+        addExam(username, task, channel);
+        break;
+      case "examdelete":
+        deleteExam(username, arg, channel);
+        break;
+      case "reviewexam":
+        reviewExam(username, channel);
+        break;
+      case "deleteallexam":
+        deleteAllExams(username, channel);
+        break;
 
-          taskTimeout = setTimeout(() => {
-            setInfoTareas((prevInfoTareas) => ({
-              ...prevInfoTareas,
-              showTasks: false,
-            }));
-            setClases((prevClases) => ({
-              ...prevClases,
-              title: "font-normal text-4xl text-center text-white",
-              subtitle: "font-normal text-3xl text-center text-white",
-              style:
-                "flex items-center p-3 text-base font-bold bg-black text-white rounded",
-              container: "flex flex-wrap items-center text-xl text-white p-3",
-            }));
-            startInterval();
-          }, 15000);
-          console.log(perfil);
-          break;
-        case "!descargar":
-          descargarPerfiles();
-          break;
-      }
-      setRender(Date.now());
-    });
-    return () => {
-      clearTimeout(taskTimeout);
-      clearInterval(showTasksInterval);
-      client.disconnect();
-    };
-  }, []);
+      // gestionar localStorage
+      case "guardar":
+        saveLocalStorageFile();
+        break;
+      case "cargar":
+        loadLocalStorageFromFile(jsonData);
+        break;
+    }
 
-  // Estilos del contenedor de tareas
-  const contenedor_tareas_style = "contenedor_tareas rounded-lg shadow ";
-  const contenedor_tareas_ul = "my-4 space-y-3";
-  const contenedor_tareas_card = "contenedor_tareas_card";
-
+    deleteInactiveUsersTwoMonths();
+  });
   return (
     <>
-      <div className="contenedor ">
-        <div className={contenedor_tareas_style}>
-          {infoTareas.showTasks && (
-            <div className={contenedor_tareas_card}>
-              <h5 className={clases.subtitle}>TAREAS PENDIENTES</h5>
-              <ul className={contenedor_tareas_ul}>
-                {infoTareas.showTasks &&
-                  usernamePerfil(infoUsuario.user) &&
-                  usernamePerfil(infoUsuario.user).tareas.map((i, index) => (
-                    <li key={index}>
-                      <a
-                        href="#"
-                        className={clases.style}
-                      >
-                        <span className="flex-1 text-1xl overflow-hidden bg-">
-                          {i.tarea}
-                        </span>
-                        <span className="inline-flex items-center justify-center px-2 py-0.5 ml-3 text-base font-medium text-black-500 bg-gray-700 rounded dark:bg-green-700 dark:text-green-400">
-                          {i.id}
-                        </span>
-                      </a>
-                    </li>
-                  ))}
-              </ul>
-              <div>
-                <a
-                  href="#"
-                  className="inline-flex items-center text-xs font-normal text-gray-500 hover:underline dark:text-gray-400"
-                ></a>
-
-                <span
-                  className={`contenedor_usuario_activo  ${clases.container}`}
-                >
-                  <div className="flex p-3 w-full bg-black justify-center items-center text-xl0 rounded-lg">
-                    <h1 className={clases.title}>
-                      {infoUsuario.user} <span>#{infoUsuario.index}</span>
-                    </h1>
-                  </div>
-
-                  <a className="flex overflow-hidden text-base p-1 mx-0.5 bg-black mt-1">
-                    {usernamePerfil(infoUsuario.user) &&
-                    usernamePerfil(infoUsuario.user).nacimiento
-                      ? `🎂 !nacimiento ` +
-                        usernamePerfil(infoUsuario.user).nacimiento
-                      : ""}
-                  </a>
-                  <a className="flex overflow-hidden text-base p-1 mx-0.5 bg-black mt-1">
-                    {usernamePerfil(infoUsuario.user) &&
-                    usernamePerfil(infoUsuario.user).signo
-                      ? usernamePerfil(infoUsuario.user).signo
-                      : ""}
-                  </a>
-                  <a className="flex overflow-hidden text-base p-1 mx-0.5 bg-black mt-1">
-                    {usernamePerfil(infoUsuario.user) &&
-                    usernamePerfil(infoUsuario.user).nacionalidad
-                      ? ` 📡 !nacionalidad ` +
-                        usernamePerfil(infoUsuario.user).nacionalidad
-                      : ""}
-                  </a>
-                  <a className="flex overflow-hidden text-base p-1 mx-0.5 bg-black mt-1">
-                    {usernamePerfil(infoUsuario.user) &&
-                    usernamePerfil(infoUsuario.user).instagram
-                      ? ` 📷 !instagram ` +
-                        usernamePerfil(infoUsuario.user).instagram
-                      : ""}
-                  </a>
-                  <a className="flex overflow-hidden text-base p-1 mx-0.5 bg-black mt-1">
-                    {usernamePerfil(infoUsuario.user) &&
-                    usernamePerfil(infoUsuario.user).estudiopara
-                      ? ` 🏦 !estudiopara ` +
-                        usernamePerfil(infoUsuario.user).estudiopara
-                      : ""}
-                  </a>
-                  <a className="flex overflow-hidden text-base p-1 mx-0.5 bg-black mt-1">
-                    {usernamePerfil(infoUsuario.user) &&
-                    usernamePerfil(infoUsuario.user).opositopara
-                      ? ` 🏦 !opositopara ` +
-                        usernamePerfil(infoUsuario.user).opositopara
-                      : ""}
-                  </a>
-                </span>
-              </div>
-            </div>
-          )}
-          {!infoTareas.showTasks && (
-            <div className={contenedor_tareas_card}>
-              {/* Aqui se muestran las tareas de todos los usuarios, se utiliza operador teneraria para iniciar el bot */}
-              {infoTareas.usuarioNuevo.username ? (
-                <div className="contenedor_tareas w-full rounded">
-                  <h1 className={clases.title}>
-                    {infoTareas.usuarioNuevo.username}
-                  </h1>
-                  <h5 className={`my-2 text-bs ${clases.subtitle}`}>
-                    <span>👤#{infoTareas.usuarioNuevo.index}</span>
-                  </h5>
-                  <div className="px-4 py-2 bg-black rounded-full">
-                    <h5 className={` ${clases.subtitle}`}>Listado de tareas</h5>
-                  </div>
-
-                  <>
-                    <ul className="my-4 space-y-3">
-                      {infoTareas.usuarioNuevo.tareas
-                        ? infoTareas.usuarioNuevo.tareas.map((i, index) => (
-                            <li key={index}>
-                              <a
-                                key={index}
-                                href="#"
-                                className={clases.style}
-                              >
-                                <div className="flex-1 ml-3 overflow-hidden">
-                                  {i.tarea}
-                                </div>
-                                <span className="inline-flex items-center justify-center px-2 py-0.5 ml-3 text-base font-medium text-black-500 bg-gray-700 rounded dark:bg-green-700 dark:text-green-400">
-                                  {i.id}
-                                </span>
-                              </a>
-                            </li>
-                          ))
-                        : ""}
-                    </ul>
-
-                    <div>
-                      <a
-                        href="#"
-                        className="inline-flex items-center text-xs font-normal text-gray-500 hover:underline dark:text-gray-400"
-                      ></a>
-                    </div>
-                  </>
-                </div>
-              ) : (
-                <h5 className={clases.subtitle}> Iniciando brunito Pet </h5>
-              )}
-            </div>
-          )}
-        </div>
-      </div>
+      <TaskList />
+      <InfoUser />
+      <UserList />
     </>
   );
-}
+};
 
 export default App;

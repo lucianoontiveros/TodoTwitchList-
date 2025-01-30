@@ -12,10 +12,11 @@
     "browserslist": "^4.22.1",
     "caniuse-lite": "^1.0.30001565",
     "dotenv": "^16.0.3",
+    "file-saver": "^2.0.5",
     "flowbite": "^1.6.3",
     "flowbite-react": "^0.3.8",
     "million": "^2.6.4",
-    "nanoid": "^4.0.1",
+    "nanoid": "^5.0.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "tmi.js": "^1.8.5"
