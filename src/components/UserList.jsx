@@ -1,7 +1,50 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { registrationUsers } from "../data/LocalStorage/controllerLocalStorage";
 
 const UserList = () => {
-  return <div>UserList</div>;
+  const [users, setUsers] = useState([]);
+  const [currentUserIndex, setCurrentUserIndex] = useState(0); // Índice del usuario actual
+
+  useEffect(() => {
+    // Obtener los usuarios del localStorage
+    const storedUsers = JSON.parse(localStorage.getItem("users")) || {};
+    const userList = Object.keys(storedUsers).map((username) => ({
+      username,
+      ...storedUsers[username],
+    }));
+    setUsers(userList);
+
+    // Configurar un intervalo para cambiar el usuario cada 5 segundos
+    const interval = setInterval(() => {
+      setCurrentUserIndex((prevIndex) => (prevIndex + 1) % userList.length); // Avanza al siguiente usuario
+    }, 5000); // 5000 ms = 5 segundos
+
+    // Limpiar el intervalo cuando el componente se desmonte
+    return () => clearInterval(interval);
+  }, []);
+
+  // Si no hay usuarios, mostrar un mensaje
+  if (users.length === 0) {
+    return <div>No hay usuarios registrados.</div>;
+  }
+
+  // Obtener el usuario actual
+  const currentUser = users[currentUserIndex];
+
+  return (
+    <div>
+      <h2>Mostrando usuario cada 5 segundos</h2>
+      <div>
+        <strong>Usuario: {currentUser.username}</strong>
+        <p>ID: {currentUser._id}</p>
+        <p>
+          Última conexión: {new Date(currentUser.lastTime).toLocaleString()}
+        </p>
+        <p>Tareas: {currentUser.tasks.length}</p>
+        <p>Exámenes: {currentUser.exams.length}</p>
+      </div>
+    </div>
+  );
 };
 
 export default UserList;
