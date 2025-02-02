@@ -137,7 +137,7 @@ function App() {
           ...prevClases,
           title:
             "mb-2 font-bold text-4xl text-center tracking-tight text-blue-600",
-          subtitle: "font-normal text-3xl text-center text-blue-400",
+          subtitle: "font-normal text-3xl text-center text-blue-700",
           style:
             "flex items-center p-3 text-base font-bold bg-black text-blue-400 rounded-lg",
           container:
@@ -184,7 +184,7 @@ function App() {
         setClases((prevClases) => ({
           ...prevClases,
           title:
-            "mb-2  font-normal text-4xl font-weight: 500; text-center text-white",
+            "mb-2  font-normal text-4xl font-weight: 500; text-center text-white my-4",
           subtitle: "font-normal text-3xl text-center text-white",
           style:
             "flex items-center p-3 text-base font-bold bg-black text-white ",
@@ -310,7 +310,7 @@ function App() {
             }));
             setClases((prevClases) => ({
               ...prevClases,
-              title: "font-normal text-4xl text-center text-white",
+              title: "font-normal text-4xl text-center text-white mb-2",
               subtitle: "font-normal text-3xl text-center text-white",
               style:
                 "flex items-center p-3 text-base font-bold bg-black text-white rounded",
@@ -433,7 +433,7 @@ function App() {
                     {infoTareas.usuarioNuevo.username}
                   </h1>
 
-                  <div className="px-4 py-2 bg-black rounded-full">
+                  <div className="px-4 py-3 bg-black rounded-full">
                     <h4 className={` ${clases.subtitle}`}>Listado de tareas</h4>
                   </div>
 
