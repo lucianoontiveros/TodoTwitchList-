@@ -26,7 +26,6 @@ class Perfil {
 export var perfil = JSON.parse(localStorage.getItem("perfil")) || [];
 
 const descargarPerfiles = () => {
-  // Se verifica que los perfiles esten cargados en memoría
   if (perfil.length === 0) {
     console.log("No hay perfiles para descargar.");
     return;
@@ -433,11 +432,9 @@ function App() {
                   <h1 className={clases.title}>
                     {infoTareas.usuarioNuevo.username}
                   </h1>
-                  <h5 className={`my-2 text-bs ${clases.subtitle}`}>
-                    <span>👤#{infoTareas.usuarioNuevo.index}</span>
-                  </h5>
+
                   <div className="px-4 py-2 bg-black rounded-full">
-                    <h5 className={` ${clases.subtitle}`}>Listado de tareas</h5>
+                    <h4 className={` ${clases.subtitle}`}>Listado de tareas</h4>
                   </div>
 
                   <>
