@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 // Importación de funcionalidades
 import {
@@ -53,7 +53,9 @@ import InfoUser from "./components/InfoUser";
 
 const App = () => {
   const [currentUser, setCurrentUser] = useState(null); // Usuario actual mostrado en InfoUser
-  const [isInfoUserVisible, setIsInfoUserVisible] = useState(false); // Estado para controlar la visibilidad de InfoUser
+  const [isInfoUserVisible, setIsInfoUserVisible] = useState(false); // Estado de visibilidad de InfoUser
+  const prevUser = useRef(null); // Almacena el último usuario que ingresó un comando
+  const timeoutRef = useRef(null); // Referencia al temporizador para reiniciarlo
 
   // Conectar el cliente de Twitch y manejar comandos
   useEffect(() => {
@@ -63,9 +65,27 @@ const App = () => {
       if (self || !message.startsWith("-")) return;
       const username = tags.username;
 
-      setCurrentUser(username); // Cambiamos al nuevo usuario
-      setIsInfoUserVisible(true); // Mostramos la información del nuevo usuario
+      setCurrentUser(username);
+      setIsInfoUserVisible(true);
 
+      // Si el mismo usuario ingresa otro comando, extendemos el tiempo de visibilidad
+      if (prevUser.current === username) {
+        clearTimeout(timeoutRef.current); // Cancelamos el temporizador anterior
+        timeoutRef.current = setTimeout(() => {
+          setIsInfoUserVisible(false);
+          setCurrentUser(null);
+        }, 5000); // Solo extendemos 5 segundos más
+      } else {
+        // Si es un nuevo usuario, iniciamos el temporizador estándar
+        prevUser.current = username;
+        clearTimeout(timeoutRef.current);
+        timeoutRef.current = setTimeout(() => {
+          setIsInfoUserVisible(false);
+          setCurrentUser(null);
+        }, 10000);
+      }
+
+      // Extraemos el comando
       const command = message.toLowerCase().split(" ")[0].slice(1);
       const args = message.slice(1).split(" ");
       const arg = args[1];
@@ -76,7 +96,7 @@ const App = () => {
       const taskMod =
         taskLowercase.charAt(0).toUpperCase() + taskLowercase.slice(4);
 
-      console.log(command);
+      // Manejo de comandos
       switch (command) {
         case "id?":
           verifyIdUser(channel, arg);
@@ -167,20 +187,9 @@ const App = () => {
     client.on("message", handleMessage);
     return () => {
       client.removeListener("message", handleMessage);
+      clearTimeout(timeoutRef.current); // Limpiamos el temporizador al desmontar
     };
   }, []);
-
-  // Efecto para ocultar InfoUser después de 5 segundos
-  useEffect(() => {
-    if (isInfoUserVisible) {
-      const timeout = setTimeout(() => {
-        setIsInfoUserVisible(false);
-        setCurrentUser(null); // Limpiamos el usuario actual
-      }, 10000); //
-
-      return () => clearTimeout(timeout);
-    }
-  }, [isInfoUserVisible]);
 
   return (
     <>

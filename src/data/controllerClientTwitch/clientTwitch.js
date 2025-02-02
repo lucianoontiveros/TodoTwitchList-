@@ -8,6 +8,4 @@ const client = new tmi.Client({
   channels: [import.meta.env.VITE_APP_CHANNELS],
 });
 
-
-
 export default client;
