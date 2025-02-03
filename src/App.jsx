@@ -62,7 +62,7 @@ const App = () => {
     client.connect();
 
     const handleMessage = (channel, tags, message, self) => {
-      if (self || !message.startsWith("-")) return;
+      if (self || !message.startsWith("!")) return;
       const username = tags.username;
 
       setCurrentUser(username);
