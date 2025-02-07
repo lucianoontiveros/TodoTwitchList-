@@ -76,16 +76,29 @@ const getUserInfo = (user, channel) => {
 
   // Formatear la información del usuario
   const userInfo = `
-Información del usuario: ${user}
-- Signo zodiacal: ${personalData.sign || "No especificado"}
-- Puntos: ${personalData.points || 0}
-- Nacionalidad: ${personalData.nationality || "No especificada"}
-- Fecha de nacimiento: ${personalData.birth || "No especificada"}
-- Instagram: ${personalData.instagram || "No especificado"}
-- Oposición: ${personalData.oppositionfor || "No especificada"}
-- Estudios: ${personalData.studyfor || "No especificados"}
-- Croquetas totales entregadas: ${personalData.croquetastotal || 0}
-`;
+  Información del usuario: ${user}
+  ${personalData.sign ? `- Signo zodiacal: ${personalData.sign}` : ""}
+  ${personalData.points ? `- Puntos: ${personalData.points}` : ""}
+  ${
+    personalData.nationality
+      ? `- Nacionalidad: ${personalData.nationality}`
+      : ""
+  }
+  ${personalData.birth ? `- Fecha de nacimiento: ${personalData.birth}` : ""}
+  ${personalData.points ? `- Puntos: ${personalData.points}` : ""}
+  ${personalData.instagram ? `- Instagram: ${personalData.instagram}` : ""}
+  ${
+    personalData.oppositionfor
+      ? `- Oposición: ${personalData.oppositionfor}`
+      : ""
+  }
+  ${personalData.studyfor ? `- Estudios: ${personalData.studyfor}` : ""}
+  ${
+    personalData.croquetastotal
+      ? `- Croquetas totales entregadas: ${personalData.croquetastotal}`
+      : ""
+  }
+  `;
 
   // Enviar el mensaje al canal
   sendMensaje(userInfo, channel);

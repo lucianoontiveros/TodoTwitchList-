@@ -25,11 +25,11 @@ const MESSAGES = {
   noTasks: (user) =>
     `${user}, no tienes tareas registradas. Puedes informarte como utilizar el gestor de tareas a través de !taskInfo.`,
   tasksList: (user, description, ID) =>
-    `|${user}|  ${description}  | -marcar ${ID} | -eliminar ${ID} |`,
+    `|${user}|  ${description}  | !marcar ${ID} :VoteYea | !eliminar ${ID} :VoteNay   |`,
   deleteTask: (user, description, ID) =>
-    `${user}, la tarea | ${ID} | ${description} | fue ELIMINADA.`,
+    `${user}, la tarea con | ID: ${ID} | ${description} | fue ELIMINADA.`,
   readyTask: (user, description, ID) =>
-    `${user}, la tarea | ${ID} | ${description} | fue marcada como REALIZADA.`,
+    `${user}, la tarea con | ID: ${ID} | ${description} | fue marcada como REALIZADA.`,
   readyAllTaks: (user) =>
     `${user} todas tus tareas fueron marcadas como REALIZADAS.`,
   clearAllTaks: (user) => `${user} todas tus tareas fueron ELIMINADAS.`,
