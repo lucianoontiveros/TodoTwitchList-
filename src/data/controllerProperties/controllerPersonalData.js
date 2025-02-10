@@ -23,27 +23,27 @@ const sendMensaje = (message, channel) => {
 
 const MESSAGE = {
   addConfirmDataUser: (user) =>
-    `${user} agrega por primera vez un perfil de información de usuario`,
+    `${user} agrega por primera vez un perfil de información de usuario 🏛️`,
   addPointsUser: (user, points) =>
     points == 1
-      ? `${user} agregó ${points} punto`
-      : `${user} ahora tiene ${points} puntos`,
+      ? `${user} agregó ${points} punto ➕`
+      : `${user} ahora tiene ${points} puntos ➕`,
   addNationalityUser: (user, nationality) =>
-    `${user}, confirma su nacionalidad como ${nationality}`,
+    `${user}, confirma su nacionalidad como ${nationality} 🏴`,
   addBirthUser: (user, birth, sign) =>
-    `${user} indico que su fecha de nacimiento es el ${birth} y su signo es ${sign}`,
+    `${user} indico que su fecha de nacimiento es el  📅 ${birth} y su signo es ${sign}`,
   addInstagramUser: (user, instagram) =>
-    `${user} confirma que su usuario de instagram es: ${instagram}`,
+    `${user} confirma que su usuario de instagram es: ${instagram} 📷`,
   addOppositionUser: (user, oppositionUser) =>
-    `${user} indicó que oposita para ${oppositionUser}`,
+    `${user} indicó que oposita para ${oppositionUser} 🛡️`,
   addStudyForUser: (user, studyForUser) =>
-    `${user} indicó que estudia para ${studyForUser}`,
+    `${user} indicó que estudia para ${studyForUser} 🎓`,
   addCroquetasUser: (user, croquetasUser) =>
     croquetasUser == 1
-      ? `${user} le entregó ${croquetasUser} croqueta a Brunito, en todo este tiempo`
-      : `${user} le entrego ${croquetasUser} croquetas en todo este tiempo`,
+      ? `${user} le entregó ${croquetasUser} croqueta a Brunito, en todo este tiempo 🍪`
+      : `${user} le entrego ${croquetasUser} croquetas en todo este tiempo 🍪`,
   noPoints: (user) =>
-    `${user}, no tiene puntos. Puede generar los mismos registrando y gestionando tus tareas y examenes`,
+    `${user}, 😐 no tiene puntos. Puede generar los mismos registrando y gestionando tus tareas y examenes`,
 };
 
 const reviewPersonalData = (user) => {
@@ -131,40 +131,40 @@ const addDataSignZodiacal = (user, dateBirth, channel) => {
   let sign;
   switch (mes) {
     case 3:
-      sign = dia >= 21 ? "Aries ♈︎" : "Piscis ♓︎";
+      sign = dia >= 21 ? "Aries ♈" : "Piscis ♓";
       break;
     case 4:
-      sign = dia <= 19 ? "Aries ♈︎" : "Tauro ♉︎";
+      sign = dia <= 19 ? "Aries ♈" : "Tauro ♉";
       break;
     case 5:
-      sign = dia <= 20 ? "Tauro ♉︎" : "Géminis ♊︎";
+      sign = dia <= 20 ? "Tauro ♉" : "Géminis ♊";
       break;
     case 6:
-      sign = dia <= 20 ? "Géminis ♊︎" : "Cáncer ♋︎";
+      sign = dia <= 20 ? "Géminis ♊" : "Cáncer ♋";
       break;
     case 7:
-      sign = dia <= 22 ? "Cáncer ♋︎" : "Leo ♌︎";
+      sign = dia <= 22 ? "Cáncer ♋" : "Leo ♌";
       break;
     case 8:
-      sign = dia <= 22 ? "Leo ♌︎" : "Virgo ♍︎";
+      sign = dia <= 22 ? "Leo ♌" : "Virgo ♍";
       break;
     case 9:
-      sign = dia <= 22 ? "Virgo ♍︎" : "Libra ♎︎";
+      sign = dia <= 22 ? "Virgo ♍" : "Libra ♎";
       break;
     case 10:
-      sign = dia <= 22 ? "Libra ♎︎" : "Escorpio ♏︎";
+      sign = dia <= 22 ? "Libra ♎" : "Escorpio ♏";
       break;
     case 11:
-      sign = dia <= 21 ? "Escorpio ♏︎" : "Sagitario ♐︎";
+      sign = dia <= 21 ? "Escorpio ♏" : "Sagitario ♐";
       break;
     case 12:
-      sign = dia <= 21 ? "Sagitario ♐︎" : "Capricornio ♑︎";
+      sign = dia <= 21 ? "Sagitario ♐" : "Capricornio ♑";
       break;
     case 1:
-      sign = dia <= 18 ? "Capricornio ♑︎" : "Acuario ♒︎";
+      sign = dia <= 18 ? "Capricornio ♑" : "Acuario ♒";
       break;
     case 2:
-      sign = dia <= 19 ? "Acuario ♒︎" : "Piscis ♓︎";
+      sign = dia <= 19 ? "Acuario ♒" : "Piscis ♓";
       break;
     default:
       sign = "Indefinido, no pudo establecerse";

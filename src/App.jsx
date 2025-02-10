@@ -65,9 +65,6 @@ const App = () => {
       if (self || !message.startsWith("!")) return;
       const username = tags.username;
 
-      setCurrentUser(username);
-      setIsInfoUserVisible(true);
-
       // Si el mismo usuario ingresa otro comando, extendemos el tiempo de visibilidad
       if (prevUser.current === username) {
         clearTimeout(timeoutRef.current); // Cancelamos el temporizador anterior
@@ -98,6 +95,7 @@ const App = () => {
 
       // Manejo de comandos
       switch (command) {
+        // Administrar usuarios
         case "id?":
           verifyIdUser(channel, arg);
           break;
@@ -109,6 +107,8 @@ const App = () => {
             changeNameUser(channel, arg, username);
           }
           break;
+
+        // Administrar tareas
         case "tarea":
         case "add":
           addTaskUser(username, task, channel);
@@ -129,7 +129,6 @@ const App = () => {
           deleteTaskUser(username, arg, channel);
           break;
         case "modificar":
-        case "mod":
           modifyTaskUser(username, arg, taskMod, channel);
           break;
         case "clear":
@@ -138,6 +137,8 @@ const App = () => {
         case "pickup":
           readyListAllListUser(username, channel);
           break;
+
+        //Administrar información personal de usuarios
         case "nacimiento":
           addBirth(username, arg, channel);
           break;
@@ -150,7 +151,7 @@ const App = () => {
         case "estudiopara":
           addStudyFor(username, task, channel);
           break;
-        case "croquetas":
+        case "croqueta":
           giveCroquetas(username, channel);
           break;
         case "nacionalidad":
@@ -162,6 +163,8 @@ const App = () => {
         case "info":
           getUserInfo(otherUsername, channel);
           break;
+
+        // Administrar lista de examenes
         case "addexam":
           addExam(username, task, channel);
           break;
@@ -174,13 +177,19 @@ const App = () => {
         case "deleteallexam":
           deleteAllExams(username, channel);
           break;
+
+        // Administrar lista de examenes
         case "guardar":
           saveLocalStorageFile();
           break;
         case "cargar":
           loadLocalStorageFromFile(jsonData);
           break;
+        default:
+          return;
       }
+      setCurrentUser(username);
+      setIsInfoUserVisible(true);
       deleteInactiveUsersTwoMonths();
     };
 
