@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import InfoUser_component from "./InfoUser_component/InfoUser_component";
 
 const InfoUser = ({ username }) => {
   const [user, setUser] = useState(null);
@@ -33,31 +34,10 @@ const InfoUser = ({ username }) => {
   }
 
   return (
-    <div
-      style={{ border: "1px solid #ccc", padding: "10px", margin: "10px 0" }}
-    >
-      <h3>Información completa de {username}</h3>
-      <p>ID: {user._id}</p>
-      <p>Última conexión: {new Date(user.lastTime).toLocaleString()}</p>
-      <p>Tareas: {user.tasks.length}</p>
-      <ul>
-        {user.tasks.map((task, index) => (
-          <li key={index}>
-            <strong>Tarea {index + 1}:</strong> {task.description} -{" "}
-            {task.completed ? "Completada" : "Pendiente"}
-          </li>
-        ))}
-      </ul>
-      <p>Exámenes: {user.exams.length}</p>
-      <p>Instagram: {user.personaldata[0]?.instagram || "No especificado"}</p>
-      <p>
-        Nacionalidad: {user.personaldata[0]?.nationality || "No especificada"}
-      </p>
-      <p>
-        Fecha de nacimiento: {user.personaldata[0]?.birth || "No especificada"}
-      </p>
-      <p>Signo zodiacal: {user.personaldata[0]?.sign || "No especificado"}</p>
-    </div>
+    <InfoUser_component
+      user={user}
+      username={username}
+    />
   );
 };
 
