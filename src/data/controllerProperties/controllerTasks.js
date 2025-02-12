@@ -21,25 +21,26 @@ const sendMessage = (message, channel) => {
 
 const MESSAGES = {
   addTask: (user, task, ID) =>
-    `${user}, Registramos tu tarea: ${task} | ID: ${ID}.`,
+    ` @${user}, 📄 Registramos tu tarea: ${task} | 📎ID: ${ID}.`,
   noTasks: (user) =>
-    `${user}, no tienes tareas registradas. Puedes informarte como utilizar el gestor de tareas a través de !taskInfo.`,
+    `| @${user}, no tienes tareas registradas. Puedes informarte como utilizar el gestor de tareas a través de !taskInfo.`,
   tasksList: (user, description, ID) =>
-    `|${user}|  ${description}  | -marcar ${ID} | -eliminar ${ID} |`,
+    `| @${user}| 📋 ${description}  | !marcar ${ID} ✅ | !eliminar ${ID} ❌  |`,
   deleteTask: (user, description, ID) =>
-    `${user}, la tarea | ${ID} | ${description} | fue ELIMINADA.`,
+    `| @${user} | La tarea 📎 ID: ${ID} | 📋 ${description} | fue ELIMINADA ❌.`,
   readyTask: (user, description, ID) =>
-    `${user}, la tarea | ${ID} | ${description} | fue marcada como REALIZADA.`,
+    `| @${user} | La tarea 📎 ID: ${ID} | 📋 ${description} | fue marcada como REALIZADA ✅.`,
   readyAllTaks: (user) =>
-    `${user} todas tus tareas fueron marcadas como REALIZADAS.`,
-  clearAllTaks: (user) => `${user} todas tus tareas fueron ELIMINADAS.`,
-  noFoundTask: (user, ID) => `|${user}|, la tarea con |ID: ${ID}| no existe.`,
+    `| @${user} todas tus tareas fueron marcadas como REALIZADAS ✅.`,
+  clearAllTaks: (user) => `${user} todas tus tareas fueron ELIMINADAS ❌.`,
+  noFoundTask: (user, ID) =>
+    `| @${user}| La tarea 📎 ID: ${ID} | no existe ⭕.`,
   modifyTask: (user, ID, task) =>
-    `|${user}| la tarea con ID: ${ID}| fue modificada por "${task}"`,
+    `| @${user}| la tarea con 📎 ID: ${ID}| fue modificada por 📋 "${task}"`,
   exceededTask: (user, MAX_TASKS) =>
-    `¡${user}! superaste el limite de ${MAX_TASKS} preestablecidos. No podras agregar otras hasta terminar alguno de tus pendientes `,
+    `¡ @${user} ! superaste el limite de ${MAX_TASKS} preestablecidos. No podras agregar otras hasta terminar alguno de tus pendientes ❌📋`,
   limiteTask: (user, availableTasks, MAX_TASKS) =>
-    `¡${user}! Solo pudiste agregar ${availableTasks} de las taras que querias registrar, por que superaste el limite de ${MAX_TASKS} preestablecidos.`,
+    `¡ @${user} ! Solo pudiste agregar ${availableTasks} de las taras que querias registrar, por que superaste el limite de ${MAX_TASKS} preestablecidos ❌📋.`,
 };
 
 // Funciones para dar soporte a funciones principales

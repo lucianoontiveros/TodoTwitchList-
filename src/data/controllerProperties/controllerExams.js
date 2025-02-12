@@ -24,17 +24,18 @@ const sendMensaje = (message, channel) => {
 
 const MESSAGE = {
   confirmAddExam: (user, dateExam, typeExam, titleExam) =>
-    `Examen añadido por ${user}: Fecha: ${dateExam} Tipo: ${typeExam} Descripción: ${titleExam}`,
+    `Examen añadido por ${user}: 📅 Fecha: ${dateExam} 📄 Tipo: ${typeExam}  📑 Descripción: ${titleExam} `,
   errorValidDate: (user) =>
-    `${user} Fecha no válida. Use el formato dd-mm y asegúrese de que sea una fecha existente. Además, debes hacer un espacio e ingresar las tres siglas de tipo de examen y finalmente describir la materia o tema evaluar. Ejemplo: para un recuperatorio el dia 10 del mes de septiembre -addexam 10-09 REC Matematica II.`,
-  errorID: (user) => `El id especificado es incorrecto, ${user}`,
-  noExamsID: (user) => `No tienes un exam con ese ID ${user}.`,
+    `${user} Fecha no válida 😐. Use el formato dd-mm y asegúrese de que sea una fecha existente 📅. Además, debes hacer un espacio e ingresar las tres siglas de tipo de examen FIN REC PAR (final, recuparatorio, parcial) y finalmente describir la materia o tema evaluar. Ejemplo: para un recuperatorio el dia 10 del mes de septiembre !addexam 10-09 REC Matematica II.`,
+  errorID: (user) => `🔦 El id especificado es incorrecto, ${user} `,
+  noExamsID: (user) => `${user} 😐 No tienes un exam con ese ID.`,
   noExams: (user) =>
-    `No tienes examenes pendientes ${user}. Puede crear un listado utilizando -addexam con el formato dd-mm, tipo de exam (tres letras) y el titulo del examen: ejemplo: Para un FINAL  el dia 12-03 de neumonia ingresar -addexam 12-03 FIN neumonia y otras enfermedades pulmonares`,
-  deleteExams: (user) => `${user}, tus examenes fueron eliminados de la lista`,
-  deleteExam: (user, ID) => `${user} tu examen fue eliminado con ID: ${ID}`,
+    `No tienes examenes pendientes ${user} 😁. Puede crear un listado utilizando  !addexam con el formato dd-mm, tipo de exam (tres letras) y el titulo del examen: ejemplo: Para un FINAL  el dia 12-03 de neumonia ingresar !addexam 12-03 FIN neumonia y otras enfermedades pulmonares 📑`,
+  deleteExams: (user) =>
+    `${user}, tus examenes fueron eliminados de la lista 🗑️`,
+  deleteExam: (user, ID) => `${user} tu examen fue eliminado con ID: ${ID} 🗑️`,
   viewExam: (user, dateExam, typeExam, titleExam, ID) =>
-    `${user} Fecha: ${dateExam} Tipo: ${typeExam} 📑 ${titleExam} ID: ${ID}`,
+    `${user} 📅 Fecha: ${dateExam} 📄 Tipo: ${typeExam} 📑 ${titleExam} ID: ${ID}`,
 };
 
 // comprobaciones de ingreso de fecha
@@ -138,7 +139,6 @@ const deleteExam = (deleteExamUser, examID, channel) => {
     console.log(users[deleteExamUser].exams);
   }
   registrationUsers(users);
-  reviewExam(deleteExamUser, channel);
 };
 
 const reviewExam = (reviewExamUSer, channel) => {

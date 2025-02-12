@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 // Importación de funcionalidades
 import {
@@ -48,143 +48,162 @@ import {
 } from "./data/LocalStorage/controllerLocalStorage";
 
 // Importación de componentes
-import TaskList from "./components/TaskList";
-import InfoUser from "./components/InfoUser";
 import UserList from "./components/UserList";
+import InfoUser from "./components/InfoUser";
 
 const App = () => {
-  client.connect();
+  const [currentUser, setCurrentUser] = useState(null); // Usuario actual mostrado en InfoUser
+  const [isInfoUserVisible, setIsInfoUserVisible] = useState(false); // Estado de visibilidad de InfoUser
+  const prevUser = useRef(null); // Almacena el último usuario que ingresó un comando
+  const timeoutRef = useRef(null); // Referencia al temporizador para reiniciarlo
 
-  client.on("message", (channel, tags, message, self) => {
-    // Ignore echoed mesages.
-    if (self) return;
-    if (!message.startsWith("-")) return;
+  // Conectar el cliente de Twitch y manejar comandos
+  useEffect(() => {
+    client.connect();
 
-    // nombre de usuario y sus propiedades
-    var username = tags.username;
-    const isSub = tags.badges?.subscriber;
-    const isPrime = tags.badges?.premium;
-    const isVip = tags.badges?.vip;
-    const isMod = tags.badges?.moderator;
-    const badgesClases =
-      (isPrime ? "prime" : "") ||
-      (isVip ? "vip" : "") ||
-      (isSub ? "sub" : "") ||
-      (isMod ? "mod" : "");
+    const handleMessage = (channel, tags, message, self) => {
+      if (self || !message.startsWith("!")) return;
+      const username = tags.username;
 
-    // Informacion que ingresa el usuario
-    const command = message.toLowerCase().split(" ")[0].slice(1);
-    const args = message.slice(1).split(" ");
-    const arg = args[1];
-    const otherUsername = message.slice(7);
-    const taskLowercase = message.substring(command.length + 1);
-    const task = taskLowercase.charAt(0).toUpperCase() + taskLowercase.slice(1);
-    const taskMod =
-      taskLowercase.charAt(0).toUpperCase() + taskLowercase.slice(4);
+      // Si el mismo usuario ingresa otro comando, extendemos el tiempo de visibilidad
+      if (prevUser.current === username) {
+        clearTimeout(timeoutRef.current); // Cancelamos el temporizador anterior
+        timeoutRef.current = setTimeout(() => {
+          setIsInfoUserVisible(false);
+          setCurrentUser(null);
+        }, 5000); // Solo extendemos 5 segundos más
+      } else {
+        // Si es un nuevo usuario, iniciamos el temporizador estándar
+        prevUser.current = username;
+        clearTimeout(timeoutRef.current);
+        timeoutRef.current = setTimeout(() => {
+          setIsInfoUserVisible(false);
+          setCurrentUser(null);
+        }, 10000);
+      }
 
-    // Funcionalidad para identificar usuario y gestionarlo
-    console.log(command);
-    switch (command) {
-      //comandos de usaurio.
-      case "id?":
-        verifyIdUser(channel, arg);
-        break;
-      case "eliminarusuario":
-        deleteUser(channel, username, arg);
-        break;
-      case "cambiarusuario":
-        if (username == "cuartodechenz") {
-          changeNameUser(channel, arg, username);
-        }
-        break;
+      // Extraemos el comando
+      const command = message.toLowerCase().split(" ")[0].slice(1);
+      const args = message.slice(1).split(" ");
+      const arg = args[1];
+      const otherUsername = message.slice(7);
+      const taskLowercase = message.substring(command.length + 1);
+      const task =
+        taskLowercase.charAt(0).toUpperCase() + taskLowercase.slice(1);
+      const taskMod =
+        taskLowercase.charAt(0).toUpperCase() + taskLowercase.slice(4);
 
-      // comandos para minipular tareas
-      case "tarea":
-      case "add":
-        addTaskUser(username, task, channel);
-        break;
-      case "lista":
-      case "list":
-        reviewListTaskUser(username, channel);
-        break;
-      case "v":
-      case "marcar":
-      case "check":
-        readyTaskUser(username, arg, channel);
-        break;
-      case "x":
-      case "eliminar":
-      case "borrar":
-      case "delete":
-        deleteTaskUser(username, arg, channel);
-        break;
-      case "modificar":
-      case "mod":
-        modifyTaskUser(username, arg, taskMod, channel);
-        break;
-      case "clear":
-        deleteAllListTaskUser(username, channel);
-        break;
-      case "pickup":
-        readyListAllListUser(username, channel);
-        break;
+      // Manejo de comandos
+      switch (command) {
+        // Administrar usuarios
+        case "id?":
+          verifyIdUser(channel, arg);
+          break;
+        case "eliminarusuario":
+          deleteUser(channel, username, arg);
+          break;
+        case "cambiarusuario":
+          if (username === "cuartodechenz") {
+            changeNameUser(channel, arg, username);
+          }
+          break;
 
-      // comandos para gestionar personal
-      case "nacimiento":
-        addBirth(username, arg, channel);
-        break;
-      case "instagram":
-        addInstagram(username, arg, channel);
-        break;
-      case "opositopara":
-        addOppositionfor(username, task, channel);
-        break;
-      case "estudiopara":
-        addStudyFor(username, task, channel);
-        break;
-      case "croquetas":
-        giveCroquetas(username, channel);
-        break;
-      case "nacionalidad":
-        addDataNationality(username, task, channel);
-        break;
-      case "datos":
-        getUserInfo(username, channel);
-        break;
-      case "info":
-        getUserInfo(otherUsername, channel);
-        break;
+        // Administrar tareas
+        case "tarea":
+        case "add":
+          addTaskUser(username, task, channel);
+          break;
+        case "lista":
+        case "list":
+          reviewListTaskUser(username, channel);
+          break;
+        case "v":
+        case "marcar":
+        case "check":
+          readyTaskUser(username, arg, channel);
+          break;
+        case "x":
+        case "eliminar":
+        case "borrar":
+        case "delete":
+          deleteTaskUser(username, arg, channel);
+          break;
+        case "modificar":
+          modifyTaskUser(username, arg, taskMod, channel);
+          break;
+        case "clear":
+          deleteAllListTaskUser(username, channel);
+          break;
+        case "pickup":
+          readyListAllListUser(username, channel);
+          break;
 
-      // registrar examenes
-      case "addexam":
-        addExam(username, task, channel);
-        break;
-      case "examdelete":
-        deleteExam(username, arg, channel);
-        break;
-      case "reviewexam":
-        reviewExam(username, channel);
-        break;
-      case "deleteallexam":
-        deleteAllExams(username, channel);
-        break;
+        //Administrar información personal de usuarios
+        case "nacimiento":
+          addBirth(username, arg, channel);
+          break;
+        case "instagram":
+          addInstagram(username, arg, channel);
+          break;
+        case "opositopara":
+          addOppositionfor(username, task, channel);
+          break;
+        case "estudiopara":
+          addStudyFor(username, task, channel);
+          break;
+        case "croqueta":
+          giveCroquetas(username, channel);
+          break;
+        case "nacionalidad":
+          addDataNationality(username, task, channel);
+          break;
+        case "datos":
+          getUserInfo(username, channel);
+          break;
+        case "info":
+          getUserInfo(otherUsername, channel);
+          break;
 
-      // gestionar localStorage
-      case "guardar":
-        saveLocalStorageFile();
-        break;
-      case "cargar":
-        loadLocalStorageFromFile(jsonData);
-        break;
-    }
+        // Administrar lista de examenes
+        case "addexam":
+          addExam(username, task, channel);
+          break;
+        case "examdelete":
+          deleteExam(username, arg, channel);
+          break;
+        case "reviewexam":
+          reviewExam(username, channel);
+          break;
+        case "deleteallexam":
+          deleteAllExams(username, channel);
+          break;
 
-    deleteInactiveUsersTwoMonths();
-  });
+        // Administrar lista de examenes
+        case "guardar":
+          saveLocalStorageFile();
+          break;
+        case "cargar":
+          loadLocalStorageFromFile(jsonData);
+          break;
+        default:
+          return;
+      }
+      setCurrentUser(username);
+      setIsInfoUserVisible(true);
+      deleteInactiveUsersTwoMonths();
+    };
+
+    client.on("message", handleMessage);
+    return () => {
+      client.removeListener("message", handleMessage);
+      clearTimeout(timeoutRef.current); // Limpiamos el temporizador al desmontar
+    };
+  }, []);
+
   return (
     <>
-      <TaskList />
-      <InfoUser />
-      <UserList />
+      {isInfoUserVisible && <InfoUser username={currentUser} />}
+      {!isInfoUserVisible && <UserList />}
     </>
   );
 };
