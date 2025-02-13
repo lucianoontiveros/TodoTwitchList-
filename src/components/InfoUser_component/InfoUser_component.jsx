@@ -1,4 +1,5 @@
 import React from "react";
+import Tasklist_compoment from "../Tasklist_component/Tasklist_compoment";
 
 const InfoUser_component = ({ user, username }) => {
   return (
@@ -9,17 +10,7 @@ const InfoUser_component = ({ user, username }) => {
       <p>ID: {user._id}</p>
       <p>Última conexión: {new Date(user.lastTime).toLocaleString()}</p>
       <p>Tareas: {user.tasks.length}</p>
-      <ul>
-        {user.tasks.map((task, index) => {
-          const taskStatus = task.completed ? "Completada" : "Pendiente";
-          return (
-            <li key={index}>
-              <strong>Tarea {index + 1}:</strong> {task.description} -{" "}
-              {taskStatus}
-            </li>
-          );
-        })}
-      </ul>
+      <Tasklist_compoment user={user} />
       <p>Exámenes: {user.exams.length}</p>
       <p>Instagram: {user.personaldata[0]?.instagram || "No especificado"}</p>
       <p>
