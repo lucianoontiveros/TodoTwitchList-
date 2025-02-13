@@ -1,5 +1,5 @@
 import React from "react";
-import Tasklist_compoment from "../Tasklist_component/Tasklist_compoment";
+import Tasklist_component from "../Tasklist_component/TaskList_component.jsx";
 
 const InfoUser_component = ({ user, username }) => {
   return (
@@ -10,7 +10,7 @@ const InfoUser_component = ({ user, username }) => {
       <p>ID: {user._id}</p>
       <p>Última conexión: {new Date(user.lastTime).toLocaleString()}</p>
       <p>Tareas: {user.tasks.length}</p>
-      <Tasklist_compoment user={user} />
+      <Tasklist_component user={user} />
       <p>Exámenes: {user.exams.length}</p>
       <p>Instagram: {user.personaldata[0]?.instagram || "No especificado"}</p>
       <p>
