@@ -1,6 +1,5 @@
 import React from "react";
-import Tasklist_component from "../Tasklist_component/TaskList_component.jsx";
-
+import Tasklist_compoment from "../Tasklist_component/TaskList_component";
 const InfoUser_component = ({ user, username }) => {
   return (
     <div
