@@ -21,7 +21,7 @@
 .contenedor_tareas_card {
   padding: 10px;
   margin: 10px;
-  background: url("./img/fondo_default.jpg");
+
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;

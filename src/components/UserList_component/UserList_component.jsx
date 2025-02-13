@@ -1,5 +1,5 @@
 import React from "react";
-import Tasklist_compoment from "../Tasklist_component/Tasklist_compoment";
+import TaskList_component from "../Tasklist_component/TaskList_component";
 
 const UserList_component = ({ currentUser }) => {
   return (
@@ -13,7 +13,7 @@ const UserList_component = ({ currentUser }) => {
         </p>
         <p>Tareas: {currentUser.tasks.length}</p>
         <p>Exámenes: {currentUser.exams.length}</p>
-        <Tasklist_compoment user={currentUser} />
+        <TaskList_component user={currentUser} />
       </div>
     </div>
   );
