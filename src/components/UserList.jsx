@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { registrationUsers } from "../data/LocalStorage/controllerLocalStorage";
+import UserList_component from "./UserList_component/UserList_component";
 
 const UserList = () => {
   const [users, setUsers] = useState([]);
@@ -31,20 +32,7 @@ const UserList = () => {
   // Obtener el usuario actual
   const currentUser = users[currentUserIndex];
 
-  return (
-    <div>
-      <h2>Mostrando usuario cada 5 segundos</h2>
-      <div>
-        <strong>Usuario: {currentUser.username}</strong>
-        <p>ID: {currentUser._id}</p>
-        <p>
-          Última conexión: {new Date(currentUser.lastTime).toLocaleString()}
-        </p>
-        <p>Tareas: {currentUser.tasks.length}</p>
-        <p>Exámenes: {currentUser.exams.length}</p>
-      </div>
-    </div>
-  );
+  return <UserList_component currentUser={currentUser} />;
 };
 
 export default UserList;

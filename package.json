@@ -12,13 +12,13 @@
     "browserslist": "^4.22.1",
     "caniuse-lite": "^1.0.30001565",
     "dotenv": "^16.0.3",
-    "esbuild": "^0.25.0",
     "file-saver": "^2.0.5",
     "flowbite": "^1.6.3",
+    "flowbite-react": "^0.3.8",
     "million": "^2.6.4",
     "nanoid": "^5.0.9",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "tmi.js": "^1.8.5"
   },
   "devDependencies": {
@@ -27,7 +27,7 @@
     "@vitejs/plugin-react": "^3.1.0",
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.21",
-    "tailwindcss": "^3.4.17",
+    "tailwindcss": "^3.2.7",
     "vite": "^4.1.0"
   }
 }
