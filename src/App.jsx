@@ -56,6 +56,7 @@ const App = () => {
   const [isInfoUserVisible, setIsInfoUserVisible] = useState(false); // Estado de visibilidad de InfoUser
   const prevUser = useRef(null); // Almacena el último usuario que ingresó un comando
   const timeoutRef = useRef(null); // Referencia al temporizador para reiniciarlo
+  const [tagUser, setTagUser] = useState(null);
 
   // Conectar el cliente de Twitch y manejar comandos
   useEffect(() => {
@@ -64,6 +65,7 @@ const App = () => {
     const handleMessage = (channel, tags, message, self) => {
       if (self || !message.startsWith("!")) return;
       const username = tags.username;
+      console.log(tags);
 
       // Si el mismo usuario ingresa otro comando, extendemos el tiempo de visibilidad
       if (prevUser.current === username) {
@@ -82,7 +84,18 @@ const App = () => {
         }, 10000);
       }
 
-      // Extraemos el comando
+      const isSub = tags.badges?.subscriber;
+      const isVip = tags.badges?.vip;
+      const isMod = tags.badges?.moderator;
+      const isPrime = tags.badges?.premium;
+      const tagsClases =
+        (isSub ? "sub" : "") ||
+        (isVip ? "vip" : "") ||
+        (isMod ? "mod" : "") ||
+        (isPrime ? "prime" : "");
+      console.log(tagsClases);
+
+      // promps que extraemos del comando
       const command = message.toLowerCase().split(" ")[0].slice(1);
       const args = message.slice(1).split(" ");
       const arg = args[1];
@@ -189,6 +202,7 @@ const App = () => {
           return;
       }
       setCurrentUser(username);
+      setTagUser(tagsClases);
       setIsInfoUserVisible(true);
       deleteInactiveUsersTwoMonths();
     };
@@ -202,7 +216,12 @@ const App = () => {
 
   return (
     <>
-      {isInfoUserVisible && <InfoUser username={currentUser} />}
+      {isInfoUserVisible && (
+        <InfoUser
+          username={currentUser}
+          tagsClases={tagUser}
+        />
+      )}
       {!isInfoUserVisible && <UserList />}
     </>
   );
