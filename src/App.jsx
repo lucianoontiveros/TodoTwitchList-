@@ -82,7 +82,7 @@ const App = () => {
         }, 10000);
       }
 
-      // Extraemos el comando
+      // promps que extraemos del comando
       const command = message.toLowerCase().split(" ")[0].slice(1);
       const args = message.slice(1).split(" ");
       const arg = args[1];
@@ -92,6 +92,21 @@ const App = () => {
         taskLowercase.charAt(0).toUpperCase() + taskLowercase.slice(1);
       const taskMod =
         taskLowercase.charAt(0).toUpperCase() + taskLowercase.slice(4);
+
+      const isSub = tags.badges?.subscriber;
+      const isVip = tags.badges?.vip;
+      const isMod = tags.badges?.moderator;
+      const isPrime = tags.badges?.premium;
+
+      const isTag = isSub
+        ? "sub"
+        : isVip
+        ? "vip"
+        : isMod
+        ? "mod"
+        : isPrime
+        ? "prime"
+        : "none";
 
       // Manejo de comandos
       switch (command) {
@@ -111,31 +126,31 @@ const App = () => {
         // Administrar tareas
         case "tarea":
         case "add":
-          addTaskUser(username, task, channel);
+          addTaskUser(username, task, channel, isTag);
           break;
         case "lista":
         case "list":
-          reviewListTaskUser(username, channel);
+          reviewListTaskUser(username, channel, isTag);
           break;
         case "v":
         case "marcar":
         case "check":
-          readyTaskUser(username, arg, channel);
+          readyTaskUser(username, arg, channel, isTag);
           break;
         case "x":
         case "eliminar":
         case "borrar":
         case "delete":
-          deleteTaskUser(username, arg, channel);
+          deleteTaskUser(username, arg, channel, isTag);
           break;
         case "modificar":
-          modifyTaskUser(username, arg, taskMod, channel);
+          modifyTaskUser(username, arg, taskMod, channel, isTag);
           break;
         case "clear":
-          deleteAllListTaskUser(username, channel);
+          deleteAllListTaskUser(username, channel, isTag);
           break;
         case "pickup":
-          readyListAllListUser(username, channel);
+          readyListAllListUser(username, channel, isTag);
           break;
 
         //Administrar información personal de usuarios

@@ -76,7 +76,7 @@ const foundIndexTask = (user, ID) => {
 
 // Funciones para gestionar tareas.
 
-const addTaskUser = (user, addTask, channel) => {
+const addTaskUser = (user, addTask, channel, tag) => {
   const MAX_TASKS = 10;
 
   // Separar tareas si hay un punto y coma
@@ -100,7 +100,7 @@ const addTaskUser = (user, addTask, channel) => {
     sendMessage(MESSAGES.limiteTask(user, availableSlots, MAX_TASKS), channel);
   }
 
-  foundOrCreateUser(user);
+  foundOrCreateUser(user, tag);
 
   const tasksToAdd = trimmedTasks.slice(0, availableSlots);
   tasksToAdd.forEach((task) => {
@@ -116,8 +116,8 @@ const addTaskUser = (user, addTask, channel) => {
   addDataPoints(user);
 };
 
-const reviewListTaskUser = (user, channel) => {
-  foundOrCreateUser(user);
+const reviewListTaskUser = (user, channel, tag) => {
+  foundOrCreateUser(user, tag);
   reviewListTask(user, channel);
 };
 
@@ -153,7 +153,7 @@ const deleteTaskUser = (user, ID, channel) => {
   }
 };
 
-const modifyTaskUser = (user, ID, modifyTask, channel) => {
+const modifyTaskUser = (user, ID, modifyTask, channel, tag) => {
   const taskUser = foundIndexTask(user, ID);
   const taskFoundUser = foundTask(user, ID);
 
@@ -163,19 +163,19 @@ const modifyTaskUser = (user, ID, modifyTask, channel) => {
     sendMessage(MESSAGES.modifyTask(user, ID, modifyTask), channel);
     users[user].tasks[taskUser].description = modifyTask;
   }
-  foundOrCreateUser(user);
+  foundOrCreateUser(user, tag);
   registrationUsers(users);
 };
 
-const deleteAllListTaskUser = (user, channel) => {
-  foundOrCreateUser(user);
+const deleteAllListTaskUser = (user, channel, tag) => {
+  foundOrCreateUser(user, tag);
   sendMessage(MESSAGES.clearAllTaks(user), channel);
   users[user].tasks = [];
   registrationUsers(users);
 };
 
-const readyListAllListUser = (user, channel) => {
-  foundOrCreateUser(user);
+const readyListAllListUser = (user, channel, tag) => {
+  foundOrCreateUser(user, tag);
   sendMessage(MESSAGES.readyAllTaks(user), channel);
   const points = users[user].tasks.length;
   users[user].tasks = [];
