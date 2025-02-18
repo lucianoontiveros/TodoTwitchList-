@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import InfoUser_component from "./InfoUser_component/InfoUser_component";
 
-const InfoUser = ({ username, tagsClases }) => {
+const InfoUser = ({ username }) => {
   const [user, setUser] = useState(null);
 
   const fetchUserData = () => {
@@ -37,7 +37,6 @@ const InfoUser = ({ username, tagsClases }) => {
     <InfoUser_component
       user={user}
       username={username}
-      tagsClases={tagsClases}
     />
   );
 };

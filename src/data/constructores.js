@@ -7,6 +7,7 @@ class Viewer {
     this.exams = [];
     this.lastTime = "";
     this.personaldata = [];
+    this.tag = "";
   }
 
   // Getter para mensaje

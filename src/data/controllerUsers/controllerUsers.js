@@ -50,12 +50,13 @@ const foundUser = (username) => {
 };
 
 // Devolver un objeto con propiedades al extraer de localStorage
-const identifiedUser = (foundUserView) => {
+const identifiedUser = (foundUserView, tag) => {
   try {
     const userAdapter = new Viewer(users[foundUserView].name);
     Object.assign(userAdapter, users[foundUserView]);
     userAdapter.registerUser();
     users[foundUserView] = userAdapter;
+    users[foundUserView].tag = tag;
     registrationUsers(users);
   } catch (error) {
     sendMessage(MESSAGES.userIDVerifyError(), error);
@@ -63,13 +64,14 @@ const identifiedUser = (foundUserView) => {
 };
 
 // Identificación de usuario
-const foundOrCreateUser = (foundUserView) => {
+const foundOrCreateUser = (foundUserView, tag) => {
   try {
     if (users[foundUserView]) {
-      identifiedUser(foundUserView);
+      identifiedUser(foundUserView, tag);
     } else {
       const user = new Viewer(foundUserView);
       user.mensaje = MESSAGES.userGenerated(user.name);
+      user.tag = tag;
       user.registerUser();
       user.registerID();
       users[foundUserView] = user;
