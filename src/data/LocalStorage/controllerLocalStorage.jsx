@@ -1,25 +1,28 @@
 import { saveAs } from "file-saver";
 
+// Obtener usuarios desde localStorage
 const users = JSON.parse(localStorage.getItem("users")) || {};
 
-// Registro de usuarios en localStorage
-const registrationUsers = (users) => {
-  localStorage.setItem("users", JSON.stringify(users));
+// Registrar usuarios en localStorage y notificar cambios
+const registrationUsers = (updatedUsers) => {
+  localStorage.setItem("users", JSON.stringify(updatedUsers));
+  window.dispatchEvent(new Event("usersUpdated")); // 🔹 Notificar actualización
 };
 
+// Guardar localStorage en un archivo
 const saveLocalStorageFile = () => {
   const localStorageData = JSON.stringify(localStorage, null, 2);
-  const blob = new Blob([localStorageData], {
-    type: "text/plain;changeNameUser",
-  });
+  const blob = new Blob([localStorageData], { type: "text/plain" });
   saveAs(blob, "localStorage.txt");
 };
 
+// Cargar datos desde un archivo a localStorage
 const loadLocalStorageFromFile = (jsonData) => {
   try {
     Object.keys(jsonData).forEach((key) => {
       localStorage.setItem(key, jsonData[key]);
     });
+    window.dispatchEvent(new Event("usersUpdated")); // 🔹 Notificar actualización
     console.log("LocalStorage cargado correctamente");
   } catch (error) {
     console.error("Hubo un error al leer los datos JSON:", error);

@@ -4,29 +4,37 @@ import InfoUser_component from "./InfoUser_component/InfoUser_component";
 const InfoUser = ({ username }) => {
   const [user, setUser] = useState("");
 
+  // Función para obtener los datos del usuario desde localStorage
   const fetchUserData = () => {
     if (username) {
       const storedUsers = JSON.parse(localStorage.getItem("users")) || {};
-      const userData = storedUsers[username];
-      if (userData) {
-        setUser(userData);
-      }
+      setUser(storedUsers[username] || "");
     }
   };
 
-  // Efecto para escuchar cambios en localStorage
   useEffect(() => {
-    const interval = setInterval(() => {
-      fetchUserData(); // Actualizar los datos cada segundo (o el tiempo que desees)
-      console.log("Estoy revisando el localstorage");
-    }, 1000); // 1000 ms = 1 segundo
+    fetchUserData(); // Cargar datos al montar el componente
 
-    return () => clearInterval(interval); // Limpiar el intervalo al desmontar
-  }, []);
+    // Escuchar cambios en localStorage desde otras pestañas
+    const handleStorageChange = (event) => {
+      if (event.key === "users") {
+        fetchUserData();
+      }
+    };
 
-  if (!user) {
-    return null; // No mostrar nada si no hay usuario
-  }
+    // Escuchar cambios en la misma pestaña mediante un evento personalizado
+    const handleUserUpdate = () => fetchUserData();
+
+    window.addEventListener("storage", handleStorageChange);
+    window.addEventListener("usersUpdated", handleUserUpdate);
+
+    return () => {
+      window.removeEventListener("storage", handleStorageChange);
+      window.removeEventListener("usersUpdated", handleUserUpdate);
+    };
+  }, [username]);
+
+  if (!user) return null;
 
   return (
     <InfoUser_component
