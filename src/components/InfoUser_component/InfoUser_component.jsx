@@ -75,14 +75,9 @@ const InfoUser_component = ({ user, username }) => {
   }, []);
 
   return (
-    <div
-      style={{ border: "1px solid #ccc", padding: "10px", margin: "10px 0" }}
-    >
-      <h3 className={clases.title}>Información completa de {username}</h3>
-      <p>ID: {user._id}</p>
+    <div className={clases.container}>
+      <h2 className={clases.title}>{username}</h2>
       <p>Última conexión: {new Date(user.lastTime).toLocaleString()}</p>
-      <p>Tareas: {user.tasks.length}</p>
-      <Tasklist_component user={user} />
       <p>Exámenes: {user.exams.length}</p>
       <p>Instagram: {user.personaldata[0]?.instagram || "No especificado"}</p>
       <p>
@@ -92,6 +87,9 @@ const InfoUser_component = ({ user, username }) => {
         Fecha de nacimiento: {user.personaldata[0]?.birth || "No especificada"}
       </p>
       <p>Signo zodiacal: {user.personaldata[0]?.sign || "No especificado"}</p>
+      <p className={clases.subtitle}>Tareas: {user.tasks.length}</p>
+      <Tasklist_component user={user} />
+      <p>ID: {user._id}</p>
     </div>
   );
 };
