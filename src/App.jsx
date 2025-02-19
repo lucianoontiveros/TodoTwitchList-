@@ -126,6 +126,7 @@ const App = () => {
         // Administrar tareas
         case "tarea":
         case "add":
+        case "task":
           addTaskUser(username, task, channel, isTag);
           break;
         case "lista":
@@ -144,18 +145,22 @@ const App = () => {
           deleteTaskUser(username, arg, channel, isTag);
           break;
         case "modificar":
+        case "cambiar":
+        case "change":
           modifyTaskUser(username, arg, taskMod, channel, isTag);
           break;
         case "clear":
+        case "borrartodo":
           deleteAllListTaskUser(username, channel, isTag);
           break;
         case "pickup":
+        case "realizadas":
           readyListAllListUser(username, channel, isTag);
           break;
 
         //Administrar información personal de usuarios
         case "nacimiento":
-          addBirth(username, arg, channel);
+          addBirth(username, arg, channel, isTag);
           break;
         case "instagram":
           addInstagram(username, arg, channel);
@@ -181,16 +186,16 @@ const App = () => {
 
         // Administrar lista de examenes
         case "addexam":
-          addExam(username, task, channel);
+          addExam(username, task, channel, isTag);
           break;
         case "examdelete":
-          deleteExam(username, arg, channel);
+          deleteExam(username, arg, channel, isTag);
           break;
         case "reviewexam":
-          reviewExam(username, channel);
+          reviewExam(username, channel, isTag);
           break;
         case "deleteallexam":
-          deleteAllExams(username, channel);
+          deleteAllExams(username, channel, isTag);
           break;
 
         // Administrar lista de examenes

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import InfoUser_component from "./InfoUser_component/InfoUser_component";
 
 const InfoUser = ({ username }) => {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState("");
 
   const fetchUserData = () => {
     if (username) {
@@ -14,11 +14,6 @@ const InfoUser = ({ username }) => {
     }
   };
 
-  // Efecto para obtener los datos iniciales del usuario
-  useEffect(() => {
-    fetchUserData();
-  }, [username]);
-
   // Efecto para escuchar cambios en localStorage
   useEffect(() => {
     const interval = setInterval(() => {
@@ -27,7 +22,7 @@ const InfoUser = ({ username }) => {
     }, 1000); // 1000 ms = 1 segundo
 
     return () => clearInterval(interval); // Limpiar el intervalo al desmontar
-  }, [username]);
+  }, []);
 
   if (!user) {
     return null; // No mostrar nada si no hay usuario

@@ -82,8 +82,8 @@ const isPastDate = (dateString) => {
 
 const examID = () => Math.random().toString(36).substring(2, 5);
 
-const addExam = (addExamUser, dateExamUser, channel) => {
-  foundOrCreateUser(addExamUser);
+const addExam = (addExamUser, dateExamUser, channel, isTag) => {
+  foundOrCreateUser(addExamUser, isTag);
   const dateExam = dateExamUser.slice(0, 6);
   if (dateExam.length === 0) {
   }
@@ -126,8 +126,8 @@ const addExam = (addExamUser, dateExamUser, channel) => {
 };
 
 // Eliminar examen por ID
-const deleteExam = (deleteExamUser, examID, channel) => {
-  foundOrCreateUser(deleteExamUser);
+const deleteExam = (deleteExamUser, examID, channel, isTag) => {
+  foundOrCreateUser(deleteExamUser, isTag);
   const deleteExamForID = users[deleteExamUser].exams.findIndex(
     (examUser) => examUser._id === examID
   );
@@ -141,8 +141,8 @@ const deleteExam = (deleteExamUser, examID, channel) => {
   registrationUsers(users);
 };
 
-const reviewExam = (reviewExamUSer, channel) => {
-  foundOrCreateUser(reviewExamUSer);
+const reviewExam = (reviewExamUSer, channel, isTag) => {
+  foundOrCreateUser(reviewExamUSer, isTag);
   users[reviewExamUSer].exams = users[reviewExamUSer].exams.filter(
     (exam) => !isPastDate(exam.dateExam)
   );
@@ -158,14 +158,14 @@ const reviewExam = (reviewExamUSer, channel) => {
       channel
     );
   });
-  foundOrCreateUser(reviewExamUSer);
+  foundOrCreateUser(reviewExamUSer, isTag);
   if (reviewExamUser.length === 0) {
     sendMensaje(MESSAGE.noExams(reviewExamUSer), channel);
   }
 };
 
-const deleteAllExams = (deletaAllExamUSer, channel) => {
-  foundOrCreateUser(deletaAllExamUSer);
+const deleteAllExams = (deletaAllExamUSer, channel, isTag) => {
+  foundOrCreateUser(deletaAllExamUSer, isTag);
   const deleteListExamsUser = users[deletaAllExamUSer].exams.map((userExam) => {
     console.log(userExam.typeExam, userExam.dateExam, userExam.titleExam);
   });
