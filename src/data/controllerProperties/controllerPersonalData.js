@@ -104,8 +104,8 @@ const getUserInfo = (user, channel) => {
   sendMensaje(userInfo, channel);
 };
 
-const addBirth = (user, dateBirth, channel) => {
-  foundOrCreateUser(user);
+const addBirth = (user, dateBirth, channel, isTag) => {
+  foundOrCreateUser(user, isTag);
   reviewPersonalData(user);
   updatePersonalData(user, "birth", dateBirth);
   registrationUsers(users);
