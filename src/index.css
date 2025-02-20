@@ -2,58 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.contenedor {
-  width: 1920px;
-  height: 100vh;
-  margin: 0px;
-  display: grid;
-  grid-template-columns: 1fr 74%;
-}
-
-.contenedor_tareas {
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 5px;
-}
-
-.contenedor_tareas_card {
-  padding: 10px;
-  margin: 10px;
-
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1rem;
-}
-
-/* background-color: rgba(5, 1, 9, 0.783); */
-
-.contenedor_tareas_card li {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 10px;
-}
-
-.contenedor_usuario_activo a {
-  text-overflow: ellipsis; /* Si el texto es demasiado largo, se cortará con "..." */
-  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
-  overflow: hidden;
-}
-
-.contenedor_tareas_card li a {
-  display: flex;
-  flex: 1;
-  align-items: center;
-  justify-content: space-between;
-  border-radius: 8px;
-  text-overflow: ellipsis; /* Si el texto es demasiado largo, se cortará con "..." */
-  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
-  overflow: hidden;
-}
-
 .vip_fondo {
   background: url("./img/vip_fondo.jpeg");
   background-repeat: no-repeat;

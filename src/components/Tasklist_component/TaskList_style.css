@@ -1,0 +1,43 @@
+h3 {
+  text-align: center;
+}
+
+ul {
+  padding: 10px;
+  margin: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1rem solid azure;
+}
+
+li {
+  display: flex;
+  height: 2em;
+  padding: 0px 2px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px;
+  color: black;
+  background-color: rgb(8, 172, 232);
+  border-radius: 5px;
+}
+
+li p {
+  font-size: medium;
+  font-weight: 500;
+  padding-left: 15px;
+  max-width: 430px;
+  text-overflow: ellipsis; /* Si el texto es demasiado largo, se cortará con "..." */
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+  overflow: hidden;
+}
+
+li strong {
+  text-align: center;
+  width: 50px;
+  border-radius: 0.5em;
+  padding: 0px 2px;
+  background-color: black;
+  color: azure;
+}
