@@ -20,7 +20,7 @@ li {
   margin: 5px;
   color: black;
   background-color: rgb(8, 172, 232);
-  border-radius: 20px;
+  border-radius: 5px;
 }
 
 li p {
@@ -36,20 +36,8 @@ li p {
 li strong {
   text-align: center;
   width: 50px;
-  border-radius: 1em;
+  border-radius: 0.5em;
   padding: 0px 2px;
   background-color: black;
   color: azure;
-}
-
-.div {
-  background-color: blue;
-  display: flex;
-  flex: 1;
-  align-items: center;
-  justify-content: space-between;
-  border-radius: 8px;
-  text-overflow: ellipsis; /* Si el texto es demasiado largo, se cortará con "..." */
-  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
-  overflow: hidden;
 }
