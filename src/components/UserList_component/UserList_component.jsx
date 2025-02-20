@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import TaskList_component from "../Tasklist_component/TaskList_component";
-import "../Userlist_component/Userlist_style.css";
 
 const UserList_component = ({ currentUser }) => {
   return (
