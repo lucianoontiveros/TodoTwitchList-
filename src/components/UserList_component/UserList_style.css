@@ -29,10 +29,10 @@
   font-size: 2rem;
   font-weight: 800;
   text-align: center;
-  border-radius: 20px;
+  border-radius: 1.23rem;
   min-width: 400px;
-  margin: 10px;
-  padding: 10px;
+  margin: 0.625em;
+  padding: 0.625em;
   color: black;
   background-color: rgb(8, 172, 232);
 }
@@ -48,9 +48,9 @@
   margin: 5px;
   text-align: center;
   border-radius: 20px;
-  font-size: 14px;
+  font-size: 0.875em;
   font-weight: 600;
-  padding: 10px;
+  padding: 0.625em;
   color: black;
   background-color: rgb(8, 172, 232);
 }
@@ -60,7 +60,7 @@
   flex-direction: row;
   justify-content: space-evenly;
   color: black;
-  border-top: 2px solid rgb(8, 172, 232);
+  border-top: 0.125rem solid rgb(8, 172, 232);
 }
 .info_conection_container p strong {
   margin-left: 2px;
