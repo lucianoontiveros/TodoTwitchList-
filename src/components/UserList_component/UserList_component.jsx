@@ -22,9 +22,11 @@ const UserList_component = ({ currentUser }) => {
           <p>
             Croquetas:
             <strong>
-              {currentUser.personaldata?.[0]?.croquetastotal == 0
-                ? currentUser.personaldata?.[0]?.croquetastotal
-                : " 0"}
+              {currentUser.personaldata?.[0]?.croquetastotal != null
+                ? currentUser.personaldata?.[0]?.croquetastotal == 0
+                  ? "0"
+                  : currentUser.personaldata?.[0]?.croquetastotal
+                : "0"}
             </strong>
           </p>
         </div>
@@ -40,7 +42,6 @@ const UserList_component = ({ currentUser }) => {
             <strong>{currentUser._id} </strong>
           </p>
           <p>
-            {" "}
             <strong>{new Date(currentUser.lastTime).toLocaleString()}</strong>
           </p>
         </div>
