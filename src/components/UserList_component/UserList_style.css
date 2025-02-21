@@ -1,8 +1,8 @@
 .contenedor {
   display: grid;
   grid-template-columns: 1fr;
-  height: 700px;
-  width: 500px;
+  height: 45rem;
+  width: 31.25rem;
   gap: 1rem;
   padding: 1rem;
   box-sizing: border-box;
@@ -13,10 +13,13 @@
 .card {
   display: flex;
   flex-direction: column;
+  align-self: flex-end;
+  width: auto;
   justify-content: flex-end;
-  color: azure;
-
+  background-color: rgba(84, 108, 111, 0.5);
+  color: rgba(14, 242, 223, 0.989);
   padding: 1rem;
+  border-radius: 2em;
 }
 
 .title_container {
@@ -30,11 +33,10 @@
   font-weight: 800;
   text-align: center;
   border-radius: 1.23rem;
-  min-width: 400px;
+  min-width: 25rem;
   margin: 0.625em;
   padding: 0.625em;
-  color: black;
-  background-color: rgb(8, 172, 232);
+  background-color: rgb(12, 14, 14);
 }
 
 .tags_container {
@@ -42,6 +44,8 @@
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
+  padding-top: 0.5em;
+  border-top: 0.125rem solid rgba(14, 242, 223, 0.989);
 }
 
 .tags_container p {
@@ -51,16 +55,20 @@
   font-size: 0.875em;
   font-weight: 600;
   padding: 0.625em;
-  color: black;
-  background-color: rgb(8, 172, 232);
+  background-color: rgb(12, 14, 14);
+}
+
+.tags_container p strong {
+  padding-left: 0.2em;
 }
 
 .info_conection_container {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  color: black;
-  border-top: 0.125rem solid rgb(8, 172, 232);
+  padding: 0.625em;
+  margin-top: 1em;
+  border-top: 0.125rem solid rgba(14, 242, 223, 0.989);
 }
 .info_conection_container p strong {
   margin-left: 2px;

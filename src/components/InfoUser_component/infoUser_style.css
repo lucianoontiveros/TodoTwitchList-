@@ -1,0 +1,69 @@
+.maincontainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 45rem;
+  width: 31.25rem;
+  gap: 1rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  font-family: "Noto Sans", serif;
+  font-optical-sizing: auto;
+  background-color: rgba(84, 108, 111, 0.5);
+  border-radius: 1em;
+}
+
+.mod_fondo {
+  background: url("./img/mod_fondo.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+.mod_fondo .task-header {
+  color: brown;
+}
+
+.mod_fondo .task-list {
+  color: brown;
+}
+
+.mod_fondo .task-list {
+  color: brown;
+}
+.mod_fondo .task-item .task-id {
+  background-color: brown;
+}
+
+.vip_fondo {
+  background: url("./img/vip_fondo.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+.prime_fondo {
+  background: url("./img/prime_fondo.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+.sus_fondo {
+  background: url("./img/sus_fondo.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+.viewer {
+  background: url("./img/viewer_fondo.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+#insignia {
+  padding-right: 10px;
+  height: 40px;
+  width: 40px;
+}
