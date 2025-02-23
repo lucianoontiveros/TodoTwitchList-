@@ -22,7 +22,6 @@
 .task-item {
   display: flex;
   height: 2em;
-  padding: 0px 0.125em;
   justify-content: space-between;
   align-items: center;
   margin: 5px;

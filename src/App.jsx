@@ -79,7 +79,7 @@ const App = () => {
         timeoutRef.current = setTimeout(() => {
           setIsInfoUserVisible(false);
           setCurrentUser(null);
-        }, 10000);
+        }, 30000);
       }
 
       // promps que extraemos del comando

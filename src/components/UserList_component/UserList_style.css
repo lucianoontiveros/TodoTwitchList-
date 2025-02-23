@@ -1,3 +1,9 @@
+:root {
+  height: 45rem;
+  width: 31.25rem;
+  margin: 0;
+}
+
 .contenedor {
   display: grid;
   grid-template-columns: 1fr;
