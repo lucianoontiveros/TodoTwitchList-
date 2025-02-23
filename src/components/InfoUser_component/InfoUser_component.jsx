@@ -2,92 +2,118 @@ import React, { useEffect, useState } from "react";
 import Tasklist_component from "../Tasklist_component/TaskList_component";
 
 const InfoUser_component = ({ user, username }) => {
-  const [clases, setClases] = useState({
-    title:
-      "mb-2  font-normal text-4xl font-weight: 500; text-center text-white ",
-    subtitle: "font-normal text-3xl text-center text-white",
-    style: " text-base font-bold bg-black text-white ",
-    container: " text-xl text-white  font-bold viewer  rounded ",
-  });
+  const [clases, setClases] = useState({});
+
+  console.log(user.tag);
   useEffect(() => {
     switch (user.tag) {
       case "sub":
         setClases((prevClases) => ({
           ...prevClases,
-          title:
-            " font-bold text-4xl text-center tracking-tight text-purple-500",
-          subtitle: "font-normal text-3xl text-center text-purple-300",
-          style: " text-base font-bold bg-black text-purple-400 ",
-          container: " text-xl text-purple-300  font-bold sus_fondo  rounded ",
+          container: "sus_fondo infoUSer_containers",
+          info_items: "p-[0.2em]",
+          info_title: "flex justify-center items-start px-[1em] text-center",
+          info_title_h2:
+            "m-3 text-3xl h-[1.5em] w-[12em] rounded-[0.2em] bg-black",
+          info_header: "flex flex-row flex-wrap",
+          info_header_div: "px-[1em] m-[0.3em] rounded-[1em] bg-black",
+          task_container: "flex flex-col justify-center",
         }));
         break;
       case "vip":
         setClases((prevClases) => ({
           ...prevClases,
-          title: " font-bold text-4xl text-center tracking-tight text-pink-600",
-          subtitle: "font-normal text-3xl text-center text-pink-400",
-          style: " text-base font-bold bg-black text-pink-500 ",
-          container: " text-xl text-indigo-100  vip_fondo  rounded",
+          container: "vip_fondo infoUSer_containers",
+          info_items: "p-[0.2em]",
+          info_title: "flex justify-center items-start px-[1em] text-center",
+          info_title_h2:
+            "m-3 text-3xl h-[1.5em] w-[12em] rounded-[0.2em] bg-black",
+          info_header: "flex flex-row flex-wrap",
+          info_header_div: "px-[1em] m-[0.3em] rounded-[1em] bg-black",
+          task_container: "flex flex-col justify-center",
         }));
         break;
       case "mod":
         setClases((prevClases) => ({
           ...prevClases,
-          title:
-            " font-bold text-4xl text-center tracking-tight text-green-400",
-          subtitle: "font-normal text-3xl text-center text-green-300",
-          style: " text-base font-bold bg-black text-green-300 ",
-          container: " text-xl text-green-100  font-bold mod_fondo  rounded",
+          container: "mod_fondo infoUSer_containers",
+          info_items: "p-[0.2em]",
+          info_title: "flex justify-center items-start px-[1em] text-center",
+          info_title_h2:
+            "m-3 text-3xl h-[1.5em] w-[12em] rounded-[0.2em] bg-black",
+          info_header: "flex flex-row flex-wrap",
+          info_header_div: "px-[1em] m-[0.3em] rounded-[1em] bg-black",
+          task_container: "flex flex-col justify-center",
         }));
         break;
       case "prime":
         setClases((prevClases) => ({
           ...prevClases,
-          title: " font-bold text-4xl text-center tracking-tight text-blue-600",
-          subtitle: "font-normal text-3xl text-center text-blue-700",
-          style: " text-base font-bold bg-black text-blue-400 rounded-lg",
-          container: " text-xl text-blue-400  prime_fondo font-bold  rounded",
+          container: "prime_fondo infoUSer_containers",
+          info_items: "p-[0.2em]",
+          info_title: "flex justify-center items-start px-[1em] text-center",
+          info_title_h2:
+            "m-3 text-3xl h-[1.5em] w-[12em] rounded-[0.2em] bg-black",
+          info_header: "flex flex-row flex-wrap",
+          info_header_div: "px-[1em] m-[0.3em] rounded-[1em] bg-black",
+          task_container: "flex flex-col justify-center",
         }));
         break;
       default:
         setClases((prevClases) => ({
           ...prevClases,
-          title:
-            "  font-normal text-4xl font-weight: 500; text-center text-white ",
-          subtitle: "font-normal text-3xl text-center text-white",
-          style: " text-base font-bold bg-black text-white ",
-          container: " text-xl text-white  font-bold viewer  rounde ",
+          container: "user_fondo infoUSer_containers",
+          info_items: "p-[0.2em]",
+          info_title: "flex justify-center items-start px-[1em] text-center",
+          info_title_h2:
+            "m-3 text-3xl h-[1.5em] w-[12em] rounded-[0.2em] bg-black",
+          info_header: "flex flex-row flex-wrap",
+          info_header_div: "px-[1em] m-[0.3em] rounded-[1em] bg-black",
+          task_container: "flex flex-col justify-center",
         }));
+        return;
     }
   }, []);
 
   return (
     <div className="maincontainer">
       <div className={clases.container}>
-        <div>
-          <h2 className={clases.title}>{username}</h2>
+        <div className={clases.info_items}>
+          <div className={clases.info_title}>
+            <h2 className={clases.info_title_h2}>{username}</h2>
+          </div>
+
+          <div className={clases.info_header}>
+            <div className={clases.info_header_div}>
+              Fecha de nacimiento:{" "}
+              {user.personaldata[0]?.birth || "No especificada"}
+            </div>
+            <div className={clases.info_header_div}>
+              Nacionalidad:{" "}
+              {user.personaldata[0]?.nationality || "No especificada"}
+            </div>
+            <div className={clases.info_header_div}>
+              Exámenes: {user.exams.length}
+            </div>
+            <div className={clases.info_header_div}>
+              Instagram: {user.personaldata[0]?.instagram || "No especificado"}
+            </div>
+            <div className={clases.info_header_div}>
+              Signo zodiacal: {user.personaldata[0]?.sign || "No especificado"}
+            </div>
+            <div className={clases.info_header_div}>
+              Tareas: {user.tasks.length}
+            </div>
+          </div>
         </div>
-        <div>
-          <p>Última conexión: {new Date(user.lastTime).toLocaleString()}</p>
-          <p>Exámenes: {user.exams.length}</p>
-          <p>
-            Instagram: {user.personaldata[0]?.instagram || "No especificado"}
-          </p>
-          <p>
-            Nacionalidad:{" "}
-            {user.personaldata[0]?.nationality || "No especificada"}
-          </p>
-          <p>
-            Fecha de nacimiento:{" "}
-            {user.personaldata[0]?.birth || "No especificada"}
-          </p>
-          <p>
-            Signo zodiacal: {user.personaldata[0]?.sign || "No especificado"}
-          </p>
-          <p className={clases.subtitle}>Tareas: {user.tasks.length}</p>
+
+        <div className="task-container">
+          {user.tasks.length == 0 ? "" : <Tasklist_component user={user} />}
+          <div className="data">
+            <p>ID: {user._id}</p>
+            <p>ULTC: {user.lastTime}</p>
+          </div>
         </div>
-        <Tasklist_component user={user} />
-        <p>ID: {user._id}</p>
       </div>
     </div>
   );
