@@ -65,22 +65,42 @@ const App = () => {
       if (self || !message.startsWith("!")) return;
       const username = tags.username;
 
-      // Si el mismo usuario ingresa otro comando, extendemos el tiempo de visibilidad
-      if (prevUser.current === username) {
-        clearTimeout(timeoutRef.current); // Cancelamos el temporizador anterior
-        timeoutRef.current = setTimeout(() => {
-          setIsInfoUserVisible(false);
-          setCurrentUser(null);
-        }, 5000); // Solo extendemos 5 segundos más
-      } else {
-        // Si es un nuevo usuario, iniciamos el temporizador estándar
-        prevUser.current = username;
-        clearTimeout(timeoutRef.current);
-        timeoutRef.current = setTimeout(() => {
-          setIsInfoUserVisible(false);
-          setCurrentUser(null);
-        }, 30000);
-      }
+      const validCommands = new Set([
+        "id?",
+        "eliminarusuario",
+        "cambiarusuario",
+        "tarea",
+        "add",
+        "task",
+        "lista",
+        "list",
+        "v",
+        "marcar",
+        "check",
+        "x",
+        "eliminar",
+        "borrar",
+        "delete",
+        "modificar",
+        "cambiar",
+        "change",
+        "clear",
+        "borrartodo",
+        "pickup",
+        "realizadas",
+        "nacimiento",
+        "instagram",
+        "opositopara",
+        "estudiopara",
+        "croqueta",
+        "nacionalidad",
+        "datos",
+        "info",
+        "addexam",
+        "examdelete",
+        "reviewexam",
+        "deleteallexam",
+      ]);
 
       // promps que extraemos del comando
       const command = message.toLowerCase().split(" ")[0].slice(1);
@@ -107,6 +127,26 @@ const App = () => {
         : isPrime
         ? "prime"
         : "none";
+
+      // Si el comando no está en la lista, salir
+      if (!validCommands.has(command)) return;
+
+      // Si el mismo usuario ingresa otro comando, extendemos el tiempo de visibilidad
+      if (prevUser.current === username) {
+        clearTimeout(timeoutRef.current); // Cancelamos el temporizador anterior
+        timeoutRef.current = setTimeout(() => {
+          setIsInfoUserVisible(false);
+          setCurrentUser(null);
+        }, 5000); // Solo extendemos 5 segundos más
+      } else {
+        // Si es un nuevo usuario, iniciamos el temporizador estándar
+        prevUser.current = username;
+        clearTimeout(timeoutRef.current);
+        timeoutRef.current = setTimeout(() => {
+          setIsInfoUserVisible(false);
+          setCurrentUser(null);
+        }, 30000);
+      }
 
       // Manejo de comandos
       switch (command) {
