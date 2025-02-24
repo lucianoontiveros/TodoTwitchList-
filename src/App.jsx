@@ -6,6 +6,7 @@ import mod from "./img/mod.png";
 import prime from "./img/prime.png";
 import sub from "./img/sub.png";
 import vip from "./img/vip.png";
+import Conversor from "./Conversor.jsx";
 
 class Perfil {
   constructor(username) {
@@ -340,6 +341,9 @@ function App() {
 
   return (
     <>
+      <div>
+        <Conversor />
+      </div>
       <div className="contenedor ">
         <div className={contenedor_tareas_style}>
           {infoTareas.showTasks && (
