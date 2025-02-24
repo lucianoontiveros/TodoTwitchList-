@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.vip_fondo {
+  background: url("./img/vip_fondo.jpeg");
+ 
+}
+
+.mod_fondo {
+  background: url("./img/mod_fondo.jpeg");
+
+}
+
+.prime_fondo {
+  background: url("./img/prime_fondo.jpeg");
+
+}
+
+.sus_fondo {
+  background: url("./img/sus_fondo.jpeg");
+  
+}
+
+.viewer {
+  background: url("./img/viewer_fondo.jpeg");
+
+}
+
