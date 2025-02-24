@@ -41,16 +41,19 @@
 }
 
 .info_header {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(120px, 1fr)
+  ); /* Columnas dinámicas */
+  gap: 0.5em;
 }
 
 .info_header div {
-  padding: 0 1em;
-  margin: 0.3em;
+  padding: 0.5em;
   border-radius: 1em;
   background-color: black;
+  text-align: center;
 }
 
 .task-container {

@@ -16,7 +16,7 @@ const UserList_component = ({ currentUser }) => {
             Exámenes: <strong>{currentUser.exams.length}</strong>
           </p>
           <p>
-            Points:
+            Puntos:
             <strong>{currentUser.personaldata?.[0]?.points ?? 0}</strong>
           </p>
           <p>
