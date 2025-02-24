@@ -84,31 +84,51 @@ const InfoUser_component = ({ user, username }) => {
           </div>
 
           <div className={clases.info_header}>
-            <div className={clases.info_header_div}>
-              Fecha de nacimiento:{" "}
-              {user.personaldata[0]?.birth || "No especificada"}
-            </div>
-            <div className={clases.info_header_div}>
-              Nacionalidad:{" "}
-              {user.personaldata[0]?.nationality || "No especificada"}
-            </div>
-            <div className={clases.info_header_div}>
-              Exámenes: {user.exams.length}
-            </div>
-            <div className={clases.info_header_div}>
-              Instagram: {user.personaldata[0]?.instagram || "No especificado"}
-            </div>
-            <div className={clases.info_header_div}>
-              Signo zodiacal: {user.personaldata[0]?.sign || "No especificado"}
-            </div>
-            <div className={clases.info_header_div}>
-              Tareas: {user.tasks.length}
-            </div>
+            {user.personaldata[0]?.birth && (
+              <div className={clases.info_header_div}>
+                🎂 Cumple: {user.personaldata[0].birth}
+              </div>
+            )}
+            {user.personaldata[0]?.sign && (
+              <div className={clases.info_header_div}>
+                Signo zodiacal: {user.personaldata[0].sign}
+              </div>
+            )}
+            {user.tasks.length > 0 && (
+              <div className={clases.info_header_div}>
+                📋 Tareas: {user.tasks.length}
+              </div>
+            )}
+            {user.exams.length > 0 && (
+              <div className={clases.info_header_div}>
+                📅 Exámenes: {user.exams.length}
+              </div>
+            )}
+            {user.personaldata[0]?.nationality && (
+              <div className={clases.info_header_div}>
+                🪪 Nacionalidad: {user.personaldata[0].nationality}
+              </div>
+            )}
+            {user.personaldata[0]?.oppositionfor && (
+              <div className={clases.info_header_div}>
+                📄 Oposito: {user.personaldata[0]?.oppositionfor}
+              </div>
+            )}
+            {user.personaldata[0]?.studyfor && (
+              <div className={clases.info_header_div}>
+                📓 Estudio: {user.personaldata[0]?.studyfor}
+              </div>
+            )}
+            {user.personaldata[0]?.instagram && (
+              <div className={clases.info_header_div}>
+                📷 Instagram: {user.personaldata[0].instagram}
+              </div>
+            )}
           </div>
         </div>
 
         <div className="task-container">
-          {user.tasks.length == 0 ? "" : <Tasklist_component user={user} />}
+          {user.tasks.length > 0 && <Tasklist_component user={user} />}
           <div className="data">
             <p>ID: {user._id}</p>
             <p>ULTC: {user.lastTime}</p>
@@ -118,5 +138,13 @@ const InfoUser_component = ({ user, username }) => {
     </div>
   );
 };
+
+/* https://www.twitch.tv/luzu
+  {user.tasks.length.sign != null
+                ? user.tasks.length.sign == 0
+                  ? "0"
+                  : user.tasks.length.sign
+                : "0"}
+*/
 
 export default InfoUser_component;

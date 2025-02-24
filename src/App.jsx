@@ -205,8 +205,9 @@ const App = () => {
         case "cargar":
           loadLocalStorageFromFile(jsonData);
           break;
+
         default:
-          return;
+          break;
       }
       setCurrentUser(username);
       setIsInfoUserVisible(true);
