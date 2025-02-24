@@ -70,14 +70,6 @@
 }
 
 /* MODERADORES: Propiedades para el fondo y colores de tareas  */
-.mod_fondo {
-  background: url("./img/mod_fondo.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: #86efac;
-}
 
 .mod_fondo .task-header {
   color: #86efac;
@@ -102,15 +94,6 @@
 
 /* VIP: Propiedades para el fondo y colores de tareas  */
 
-.vip_fondo {
-  background: url("./img/vip_fondo.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: rgb(222, 74, 151);
-}
-
 .vip_fondo .task-header {
   color: rgb(222, 74, 151);
 }
@@ -133,15 +116,6 @@
 }
 
 /* PRIME: Propiedades para el fondo y colores de tareas  */
-
-.prime_fondo {
-  background: url("./img/prime_fondo.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: rgb(77, 209, 242);
-}
 
 .prime_fondo .task-header {
   color: rgb(77, 209, 242);
@@ -166,15 +140,6 @@
 
 /* SUS: Propiedades para el fondo y colores de tareas  */
 
-.sus_fondo {
-  background: url("./img/wiew.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: rgb(206, 143, 243);
-}
-
 .sus_fondo .task-header {
   color: rgb(206, 143, 243);
 }
@@ -198,15 +163,6 @@
 }
 
 /* VIEWER: Propiedades para el fondo y colores de tareas  */
-
-.user_fondo {
-  background: url("./img/viewer.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: rgb(143, 247, 236);
-}
 
 .user_fondo .task-header {
   color: rgb(143, 247, 236);
