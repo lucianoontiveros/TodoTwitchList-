@@ -71,7 +71,7 @@
 
 /* MODERADORES: Propiedades para el fondo y colores de tareas  */
 .mod_fondo {
-  background: url("../img/mod_fondo.jpeg");
+
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
