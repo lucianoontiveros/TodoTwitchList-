@@ -4,27 +4,27 @@
 
 
 .vip_fondo {
-  background: url("./img/vip_fondo.jpeg");
+  background: url("/img/vip_fondo.jpeg");
  
 }
 
 .mod_fondo {
-  background: url("./img/mod_fondo.jpeg");
+  background: url("/img/mod_fondo.jpeg");
 
 }
 
 .prime_fondo {
-  background: url("./img/prime_fondo.jpeg");
+  background: url("/img/prime_fondo.jpeg");
 
 }
 
 .sus_fondo {
-  background: url("./img/sus_fondo.jpeg");
+  background: url("/img/sus_fondo.jpeg");
   
 }
 
 .user_fondo  {
-  background: url("./img/viewer_fondo.jpeg");
+  background: url("/img/viewer_fondo.jpeg");
 
 }
 
