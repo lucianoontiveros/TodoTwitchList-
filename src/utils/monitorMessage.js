@@ -107,6 +107,7 @@ export const monitorMessage = (
     case "tarea":
     case "add":
     case "task":
+    case "t":
       addTaskUser(username, task, channel, isTag);
       break;
     case "lista":
@@ -178,7 +179,7 @@ export const monitorMessage = (
       deleteAllExams(username, channel, isTag);
       break;
 
-    // Administrar lista de examenes
+    /* Administrar lista de examenes
     case "guardar":
       saveLocalStorageFile();
       break;
@@ -187,7 +188,7 @@ export const monitorMessage = (
       break;
 
     default:
-      break;
+      break; */
   }
 
   // Lógica de temporizador
