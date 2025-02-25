@@ -4,7 +4,6 @@ import Tasklist_component from "../Tasklist_component/TaskList_component";
 const InfoUser_component = ({ user, username }) => {
   const [clases, setClases] = useState({});
 
-  console.log(user.tag);
   useEffect(() => {
     switch (user.tag) {
       case "sub":
@@ -138,13 +137,5 @@ const InfoUser_component = ({ user, username }) => {
     </div>
   );
 };
-
-/* https://www.twitch.tv/luzu
-  {user.tasks.length.sign != null
-                ? user.tasks.length.sign == 0
-                  ? "0"
-                  : user.tasks.length.sign
-                : "0"}
-*/
 
 export default InfoUser_component;
