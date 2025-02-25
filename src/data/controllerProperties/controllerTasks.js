@@ -87,8 +87,6 @@ const addTaskUser = (user, addTask, channel, tag) => {
     .map((task) => task.trim())
     .filter((task) => task.length > 0);
 
-  console.log(tasks);
-
   const availableSlots = MAX_TASKS - currentTasksCount;
 
   if (currentTasksCount >= MAX_TASKS) {

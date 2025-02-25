@@ -155,7 +155,6 @@ const deleteInactiveUsersTwoMonths = () => {
   }
 };
 
-console.log(users);
 export {
   foundOrCreateUser,
   deleteUser,

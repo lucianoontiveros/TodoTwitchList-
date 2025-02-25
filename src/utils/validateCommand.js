@@ -5,6 +5,7 @@ export const validateCommand = (message) => {
     "cambiarusuario",
     "tarea",
     "add",
+    "t",
     "task",
     "lista",
     "list",
