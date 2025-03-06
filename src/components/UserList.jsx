@@ -7,21 +7,27 @@ const UserList = () => {
   const [currentUserIndex, setCurrentUserIndex] = useState(0); // Índice del usuario actual
 
   useEffect(() => {
-    // Obtener los usuarios del localStorage
-    const storedUsers = JSON.parse(localStorage.getItem("users")) || {};
-    const userList = Object.keys(storedUsers).map((username) => ({
-      username,
-      ...storedUsers[username],
-    }));
-    setUsers(userList);
+    try {
+      // Intentar obtener los usuarios del localStorage
+      const storedUsers = JSON.parse(localStorage.getItem("users")) || {};
+      const userList = Object.keys(storedUsers).map((username) => ({
+        username,
+        ...storedUsers[username],
+      }));
+      setUsers(userList);
 
-    // Configurar un intervalo para cambiar el usuario cada 5 segundos
-    const interval = setInterval(() => {
-      setCurrentUserIndex((prevIndex) => (prevIndex + 1) % userList.length); // Avanza al siguiente usuario
-    }, 5000); // 5000 ms = 5 segundos
+      if (userList.length === 0) return; // Evitar configurar el intervalo si no hay usuarios
 
-    // Limpiar el intervalo cuando el componente se desmonte
-    return () => clearInterval(interval);
+      // Configurar un intervalo para cambiar el usuario cada 5 segundos
+      const interval = setInterval(() => {
+        setCurrentUserIndex((prevIndex) => (prevIndex + 1) % userList.length); // Avanza al siguiente usuario
+      }, 5000);
+
+      // Limpiar el intervalo cuando el componente se desmonte
+      return () => clearInterval(interval);
+    } catch (error) {
+      console.error("Error al cargar usuarios desde localStorage:", error);
+    }
   }, []);
 
   // Si no hay usuarios, mostrar un mensaje

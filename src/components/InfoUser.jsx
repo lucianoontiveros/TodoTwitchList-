@@ -6,9 +6,17 @@ const InfoUser = ({ username }) => {
 
   // Función para obtener los datos del usuario desde localStorage
   const fetchUserData = () => {
-    if (username) {
+    try {
+      if (!username) return;
+
       const storedUsers = JSON.parse(localStorage.getItem("users")) || {};
       setUser(storedUsers[username] || "");
+    } catch (error) {
+      console.error(
+        "Error al obtener datos del usuario desde localStorage:",
+        error
+      );
+      setUser(""); // Evita que se quede un estado corrupto
     }
   };
 

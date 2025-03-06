@@ -18,22 +18,31 @@ const App = () => {
 
   // Conectar el cliente de Twitch y manejar comandos
   useEffect(() => {
-    client.connect();
+    try {
+      client.connect();
+    } catch (err) {
+      console.error("Error al conectar con Twitch:", err);
+    }
 
     const handleMessage = (channel, tags, message, self) => {
-      monitorMessage(
-        channel,
-        tags,
-        message,
-        self,
-        prevUser,
-        timeoutRef,
-        setIsInfoUserVisible,
-        setCurrentUser
-      );
+      try {
+        monitorMessage(
+          channel,
+          tags,
+          message,
+          self,
+          prevUser,
+          timeoutRef,
+          setIsInfoUserVisible,
+          setCurrentUser
+        );
+      } catch (err) {
+        console.error("Error al procesar el mensaje:", err);
+      }
     };
 
     client.on("message", handleMessage);
+
     return () => {
       client.removeListener("message", handleMessage);
       clearTimeout(timeoutRef.current); // Limpiamos el temporizador al desmontar
@@ -42,8 +51,7 @@ const App = () => {
 
   return (
     <>
-      {isInfoUserVisible && <InfoUser username={currentUser} />}
-      {!isInfoUserVisible && <UserList />}
+      {isInfoUserVisible ? <InfoUser username={currentUser} /> : <UserList />}
     </>
   );
 };
