@@ -8,7 +8,7 @@ import {
 
 const sendMessage = (channel, message, error) => {
   if (error) {
-    client.say(channel, "Deberías verificar el comando ingresado");
+    client.say(channel, "Deberias verificar el comando ingresado");
     return console.error(message);
   }
   client.say(channel, message);
@@ -20,7 +20,7 @@ const MESSAGES = {
   userNotFound: (username) => `El usuario ${username} no existe.`,
   userGenerated: (username) => `El usuario ${username} fue generado.`,
   userNameChange: (oldUserView, newUserView) =>
-    `El usuario ${oldUserView} cambio su nombre a ${newUserView}.`,
+    `El usuario ${oldUserView} cambio su nombrea a ${newUserView}.`,
   userRegistered: (username) => `Usuario ${username} registrado exitosamente.`,
   userID: (username, id) => `ID del usuario ${username}: ${id}`,
   userDeleteSuccess: (username) =>
@@ -43,7 +43,7 @@ const MESSAGES = {
 // Buscar un usuario por nombre
 const foundUser = (username) => {
   if (!users[username]) {
-    console.log("No encontré el usuario");
+    console.log("no encontre el usuario");
     throw new Error(MESSAGES.userNotFound(username));
   }
   return users[username];
@@ -109,7 +109,7 @@ const deleteUser = (channel, userViewDelete, userViewID) => {
       );
     }
   } catch (error) {
-    sendMessage(channel, MESSAGES.userDeleteError(), error);
+    sendMessage(channel, MESSAGES.userDeleteError()), error;
   }
 };
 
@@ -142,7 +142,7 @@ const deleteInactiveUsersTwoMonths = () => {
       const lastActiveTime = new Date(user.lastTime).getTime();
       if (currentTime - lastActiveTime > twoMonths) {
         delete users[username];
-        sendMessage(MESSAGES.userInactiveDeleted(username));
+        sendMessage("brunispet", MESSAGES.userInactiveDeleted(username));
         usersDeleted = true;
       }
     }

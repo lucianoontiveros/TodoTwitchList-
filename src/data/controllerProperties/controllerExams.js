@@ -141,26 +141,48 @@ const deleteExam = (deleteExamUser, examID, channel, isTag) => {
   registrationUsers(users);
 };
 
-const reviewExam = (reviewExamUSer, channel, isTag) => {
-  foundOrCreateUser(reviewExamUSer, isTag);
-  users[reviewExamUSer].exams = users[reviewExamUSer].exams.filter(
+const reviewExam = (reviewExamUser, channel, isTag) => {
+  foundOrCreateUser(reviewExamUser, isTag);
+
+  // Separar exámenes vencidos y no vencidos
+  const expiredExams = users[reviewExamUser].exams.filter((exam) =>
+    isPastDate(exam.dateExam)
+  );
+  const validExams = users[reviewExamUser].exams.filter(
     (exam) => !isPastDate(exam.dateExam)
   );
-  const reviewExamUser = users[reviewExamUSer].exams.map((userExam) => {
+
+  // Si hay exámenes vencidos, avisar y eliminarlos
+  if (expiredExams.length > 0) {
     sendMensaje(
-      MESSAGE.viewExam(
-        reviewExamUSer,
-        userExam.dateExam,
-        userExam.typeExam,
-        userExam.titleExam,
-        userExam._id
-      ),
+      `${reviewExamUser}, tus exámenes vencidos han sido eliminados 🗑️: ` +
+        expiredExams
+          .map((exam) => `${exam.titleExam} (${exam.dateExam})`)
+          .join(", "),
       channel
     );
-  });
-  foundOrCreateUser(reviewExamUSer, isTag);
-  if (reviewExamUser.length === 0) {
-    sendMensaje(MESSAGE.noExams(reviewExamUSer), channel);
+  }
+
+  // Actualizar la lista de exámenes válidos
+  users[reviewExamUser].exams = validExams;
+  registrationUsers(users);
+
+  // Mostrar los exámenes restantes si hay
+  if (validExams.length > 0) {
+    validExams.forEach((userExam) => {
+      sendMensaje(
+        MESSAGE.viewExam(
+          reviewExamUser,
+          userExam.dateExam,
+          userExam.typeExam,
+          userExam.titleExam,
+          userExam._id
+        ),
+        channel
+      );
+    });
+  } else {
+    sendMensaje(MESSAGE.noExams(reviewExamUser), channel);
   }
 };
 
