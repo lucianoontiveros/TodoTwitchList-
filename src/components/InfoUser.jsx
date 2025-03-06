@@ -1,44 +1,57 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import InfoUser_component from "./InfoUser_component/InfoUser_component";
 
 const InfoUser = ({ username }) => {
-  const [user, setUser] = useState("");
+  const [user, setUser] = useState(null);
+  const userUpdateRef = useRef(null); // Referencia para el eventListener
 
   // Función para obtener los datos del usuario desde localStorage
   const fetchUserData = () => {
     try {
-      if (!username) return;
+      if (!username) {
+        setUser(null);
+        return;
+      }
 
-      const storedUsers = JSON.parse(localStorage.getItem("users")) || {};
-      setUser(storedUsers[username] || "");
+      const storedUsers = localStorage.getItem("users");
+      if (!storedUsers) {
+        setUser(null);
+        return;
+      }
+
+      const parsedUsers = JSON.parse(storedUsers);
+      if (typeof parsedUsers !== "object" || parsedUsers === null) {
+        setUser(null);
+        return;
+      }
+
+      setUser(parsedUsers[username] || null);
     } catch (error) {
       console.error(
         "Error al obtener datos del usuario desde localStorage:",
         error
       );
-      setUser(""); // Evita que se quede un estado corrupto
+      setUser(null);
     }
   };
 
   useEffect(() => {
     fetchUserData(); // Cargar datos al montar el componente
 
-    // Escuchar cambios en localStorage desde otras pestañas
     const handleStorageChange = (event) => {
-      if (event.key === "users") {
-        fetchUserData();
-      }
+      if (event.key === "users") fetchUserData();
     };
 
-    // Escuchar cambios en la misma pestaña mediante un evento personalizado
-    const handleUserUpdate = () => fetchUserData();
+    userUpdateRef.current = () => fetchUserData();
 
     window.addEventListener("storage", handleStorageChange);
-    window.addEventListener("usersUpdated", handleUserUpdate);
+    window.addEventListener("usersUpdated", userUpdateRef.current);
 
     return () => {
       window.removeEventListener("storage", handleStorageChange);
-      window.removeEventListener("usersUpdated", handleUserUpdate);
+      if (userUpdateRef.current) {
+        window.removeEventListener("usersUpdated", userUpdateRef.current);
+      }
     };
   }, [username]);
 

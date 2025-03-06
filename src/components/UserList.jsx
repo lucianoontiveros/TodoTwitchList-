@@ -1,44 +1,50 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { registrationUsers } from "../data/LocalStorage/controllerLocalStorage";
 import UserList_component from "./UserList_component/UserList_component";
 
 const UserList = () => {
-  const [users, setUsers] = useState([]);
+  const [users, setUsers] = useState([]); // Lista de usuarios
   const [currentUserIndex, setCurrentUserIndex] = useState(0); // Índice del usuario actual
+  const intervalRef = useRef(null); // Referencia para el intervalo
 
   useEffect(() => {
     try {
-      // Intentar obtener los usuarios del localStorage
-      const storedUsers = JSON.parse(localStorage.getItem("users")) || {};
-      const userList = Object.keys(storedUsers).map((username) => ({
+      const storedUsers = localStorage.getItem("users");
+      if (!storedUsers) return; // Si no hay datos, salir
+
+      const parsedUsers = JSON.parse(storedUsers);
+      if (typeof parsedUsers !== "object" || parsedUsers === null) return; // Validación extra
+
+      const userList = Object.keys(parsedUsers).map((username) => ({
         username,
-        ...storedUsers[username],
+        ...parsedUsers[username],
       }));
+
+      if (userList.length === 0) return; // Evita configurar estado innecesariamente
+
       setUsers(userList);
 
-      if (userList.length === 0) return; // Evitar configurar el intervalo si no hay usuarios
+      if (userList.length === 1) return; // No configurar intervalo si hay solo un usuario
 
-      // Configurar un intervalo para cambiar el usuario cada 5 segundos
-      const interval = setInterval(() => {
-        setCurrentUserIndex((prevIndex) => (prevIndex + 1) % userList.length); // Avanza al siguiente usuario
+      intervalRef.current = setInterval(() => {
+        setCurrentUserIndex((prevIndex) => (prevIndex + 1) % userList.length);
       }, 5000);
 
-      // Limpiar el intervalo cuando el componente se desmonte
-      return () => clearInterval(interval);
+      return () => {
+        if (intervalRef.current) {
+          clearInterval(intervalRef.current);
+        }
+      };
     } catch (error) {
       console.error("Error al cargar usuarios desde localStorage:", error);
     }
   }, []);
 
-  // Si no hay usuarios, mostrar un mensaje
   if (users.length === 0) {
     return <div>No hay usuarios registrados.</div>;
   }
 
-  // Obtener el usuario actual
-  const currentUser = users[currentUserIndex];
-
-  return <UserList_component currentUser={currentUser} />;
+  return <UserList_component currentUser={users[currentUserIndex]} />;
 };
 
 export default UserList;
