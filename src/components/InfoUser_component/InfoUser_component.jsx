@@ -26,10 +26,10 @@ const InfoUser_component = ({ user, username }) => {
         case "vip":
           newClasses.container = "vip_fondo infoUSer_containers";
           break;
-        case "prime":
+        case "mod":
           newClasses.container = "mod_fondo infoUSer_containers";
           break;
-        case "mod":
+        case "prime":
           newClasses.container = "prime_fondo infoUSer_containers";
           break;
         default:
