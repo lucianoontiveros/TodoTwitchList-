@@ -45,3 +45,12 @@
   border-radius: 1em;
   color: rgb(143, 247, 236);
 }
+
+.antonellavrl_ {
+  background: url("/img/antonellavrl_2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: rgb(255, 202, 149);
+}

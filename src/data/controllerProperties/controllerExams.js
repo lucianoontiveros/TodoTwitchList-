@@ -144,7 +144,7 @@ const deleteExam = (deleteExamUser, examID, channel, isTag) => {
 const reviewExam = (reviewExamUser, channel, isTag) => {
   foundOrCreateUser(reviewExamUser, isTag);
 
-  // Separar exámenes vencidos y no vencidos
+  // Filtrar los exámenes vencidos y no vencidos
   const expiredExams = users[reviewExamUser].exams.filter((exam) =>
     isPastDate(exam.dateExam)
   );
@@ -152,19 +152,18 @@ const reviewExam = (reviewExamUser, channel, isTag) => {
     (exam) => !isPastDate(exam.dateExam)
   );
 
-  // Si hay exámenes vencidos, avisar y eliminarlos
+  // Si hay exámenes vencidos, enviamos un mensaje por cada uno antes de eliminarlos
   if (expiredExams.length > 0) {
-    sendMensaje(
-      `${reviewExamUser}, tus exámenes vencidos han sido eliminados 🗑️: ` +
-        expiredExams
-          .map((exam) => `${exam.titleExam} (${exam.dateExam})`)
-          .join(", "),
-      channel
-    );
+    expiredExams.forEach((exam) => {
+      let message = `${reviewExamUser}, tu examen ${exam.titleExam} expiró, del día (${exam.dateExam}) fue eliminado 🗑️`;
+      sendMensaje(message, "Brunispet");
+    });
+
+    // Eliminar los exámenes vencidos
+    users[reviewExamUser].exams = validExams;
   }
 
-  // Actualizar la lista de exámenes válidos
-  users[reviewExamUser].exams = validExams;
+  // Guardar los cambios
   registrationUsers(users);
 
   // Mostrar los exámenes restantes si hay

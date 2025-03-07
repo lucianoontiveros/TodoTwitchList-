@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  important: true, // Hace que todas las clases de Tailwind tengan prioridad
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",

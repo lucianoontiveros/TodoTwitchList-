@@ -6,10 +6,9 @@ const InfoUser_component = ({ user, username }) => {
 
   useEffect(() => {
     try {
-      if (!user?.tag) return; // Validación antes de asignar clases
+      if (!user || !user.tag) return; // Validación antes de asignar clases
 
-      // Definir clases predeterminadas
-      const newClasses = {
+      let newClasses = {
         container: "user_fondo infoUSer_containers",
         info_items: "p-[0.2em]",
         info_title: "flex justify-center items-start px-[1em] text-center",
@@ -18,41 +17,32 @@ const InfoUser_component = ({ user, username }) => {
         info_header: "flex flex-row flex-wrap",
         info_header_div: "px-[1em] m-[0.3em] rounded-[1em] bg-black",
         task_container: "flex flex-col justify-center",
+        task_header: "task-header",
       };
 
-      // Asignar clases según el tag del usuario
-      const tagClasses = {
-        sub: "sus_fondo infoUSer_containers",
-        vip: "vip_fondo infoUSer_containers",
-        mod: "mod_fondo infoUSer_containers",
-        prime: "prime_fondo infoUSer_containers",
-      };
+      switch (user.tag) {
+        case "sub":
+          newClasses.container = "sus_fondo infoUSer_containers";
+          break;
+        case "vip":
+          newClasses.container = "vip_fondo infoUSer_containers";
+          break;
+        case "mod":
+          newClasses.container = "mod_fondo infoUSer_containers";
 
-      newClasses.container = tagClasses[user.tag] || newClasses.container;
+          break;
+        case "prime":
+          newClasses.container = "prime_fondo infoUSer_containers rojo-naranja";
+          break;
+        default:
+          break;
+      }
 
       setClases(newClasses);
     } catch (error) {
       console.error("Error al asignar clases:", error);
     }
   }, [user]);
-
-  // Validación antes de renderizar
-  if (!user) return null;
-
-  const personalData = user?.personaldata?.[0] || {};
-  const { birth, sign, nationality, oppositionfor, studyfor, instagram } =
-    personalData;
-
-  const userInfo = [
-    { label: "🎂 Cumple", value: birth },
-    { label: "Signo zodiacal", value: sign },
-    { label: "📋 Tareas", value: user?.tasks?.length },
-    { label: "📅 Exámenes", value: user?.exams?.length },
-    { label: "🪪 Nacionalidad", value: nationality },
-    { label: "📄 Oposito", value: oppositionfor },
-    { label: "📓 Estudio", value: studyfor },
-    { label: "📷 Instagram", value: instagram },
-  ];
 
   return (
     <div className="maincontainer">
@@ -63,16 +53,57 @@ const InfoUser_component = ({ user, username }) => {
           </div>
 
           <div className={clases.info_header}>
-            {userInfo.map(({ label, value }, index) =>
-              value ? (
-                <div
-                  key={index}
-                  className={clases.info_header_div}
-                >
-                  {label}: {value}
-                </div>
-              ) : null
-            )}
+            {(() => {
+              try {
+                return (
+                  <>
+                    {user?.personaldata?.[0]?.birth && (
+                      <div className={clases.info_header_div}>
+                        🎂 Cumple: {user.personaldata[0].birth}
+                      </div>
+                    )}
+                    {user?.personaldata?.[0]?.sign && (
+                      <div className={clases.info_header_div}>
+                        Signo zodiacal: {user.personaldata[0].sign}
+                      </div>
+                    )}
+                    {user?.tasks?.length > 0 && (
+                      <div className={clases.info_header_div}>
+                        📋 Tareas: {user.tasks.length}
+                      </div>
+                    )}
+                    {user?.exams?.length > 0 && (
+                      <div className={clases.info_header_div}>
+                        📅 Exámenes: {user.exams.length}
+                      </div>
+                    )}
+                    {user?.personaldata?.[0]?.nationality && (
+                      <div className={clases.info_header_div}>
+                        🪪 Nacionalidad: {user.personaldata[0].nationality}
+                      </div>
+                    )}
+                    {user?.personaldata?.[0]?.oppositionfor && (
+                      <div className={clases.info_header_div}>
+                        📄 Oposito: {user.personaldata[0]?.oppositionfor}
+                      </div>
+                    )}
+                    {user?.personaldata?.[0]?.studyfor && (
+                      <div className={clases.info_header_div}>
+                        📓 Estudio: {user.personaldata[0]?.studyfor}
+                      </div>
+                    )}
+                    {user?.personaldata?.[0]?.instagram && (
+                      <div className={clases.info_header_div}>
+                        📷 Instagram: {user.personaldata[0].instagram}
+                      </div>
+                    )}
+                  </>
+                );
+              } catch (error) {
+                console.error("Error al renderizar datos del usuario:", error);
+                return null;
+              }
+            })()}
           </div>
         </div>
 

@@ -11,7 +11,7 @@
 
 .task-list {
   margin: 0em;
-  padding: 0.6em;
+  padding: 0.6em 0.9em;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -24,10 +24,11 @@
   height: 2em;
   justify-content: space-between;
   align-items: center;
-  margin: 5px;
+  margin-top: 0.2em;
+  padding: 0 0.2em;
   background-color: rgb(12, 14, 14);
   border-radius: 5px;
-  max-width: 25.5em;
+  min-width: 100%;
 }
 
 .task-item .task-description {
