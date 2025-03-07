@@ -55,7 +55,7 @@ const UserList = () => {
     if (users.length > 1) {
       intervalRef.current = setInterval(() => {
         setCurrentUserIndex((prevIndex) => (prevIndex + 1) % users.length);
-      }, 500);
+      }, 6000);
     } else {
       setCurrentUserIndex(0);
     }
