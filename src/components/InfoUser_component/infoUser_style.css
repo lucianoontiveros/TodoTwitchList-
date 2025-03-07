@@ -186,3 +186,32 @@
   background-color: rgb(18, 226, 237);
 }
 
+/* Degradado de Rojo a Naranja:  */
+
+.rojo-naranja .maincontainer {
+  
+}
+
+.rojo-naranja .task-header {
+  background: linear-gradient(to right, #ff0000, #ffa500);
+  font-weight: 700;
+  color: rgb(255, 202, 149);
+}
+
+.rojo-naranja .task-list {
+  color: rgb(255, 202, 149);
+}
+
+.rojo-naranja .task-item {
+  max-width: 26.99em;
+  color: rgb(255, 202, 149);
+}
+
+.rojo-naranja .task-list .task-item {
+  width: 100%;
+}
+
+.rojo-naranja .task-item .task-id {
+  font-size: medium;
+  background: linear-gradient(to right, #ff0000, #ffa500);
+}

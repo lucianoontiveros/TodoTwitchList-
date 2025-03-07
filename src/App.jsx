@@ -16,34 +16,60 @@ const App = () => {
   const prevUser = useRef(null); // Almacena el último usuario que ingresó un comando
   const timeoutRef = useRef(null); // Referencia al temporizador para reiniciarlo
 
-  // Conectar el cliente de Twitch y manejar comandos
+  // Conectar el cliente de Twitch al montar el componente
   useEffect(() => {
-    client.connect();
+    if (!client.readyState || client.readyState() !== "OPEN") {
+      // Validación de conexión
+      try {
+        client.connect();
+      } catch (err) {
+        console.error("Error al conectar con Twitch:", err);
+      }
+    }
 
+    return () => {
+      if (client.readyState && client.readyState() === "OPEN") {
+        client.disconnect(); // Desconectar al desmontar
+      }
+    };
+  }, []);
+
+  // Manejo de mensajes de Twitch
+  useEffect(() => {
     const handleMessage = (channel, tags, message, self) => {
-      monitorMessage(
-        channel,
-        tags,
-        message,
-        self,
-        prevUser,
-        timeoutRef,
-        setIsInfoUserVisible,
-        setCurrentUser
-      );
+      try {
+        monitorMessage(
+          channel,
+          tags,
+          message,
+          self,
+          prevUser,
+          timeoutRef,
+          setIsInfoUserVisible,
+          setCurrentUser
+        );
+      } catch (err) {
+        console.error("Error al procesar el mensaje:", err);
+      }
     };
 
     client.on("message", handleMessage);
+
     return () => {
       client.removeListener("message", handleMessage);
-      clearTimeout(timeoutRef.current); // Limpiamos el temporizador al desmontar
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current); // Limpiar el temporizador de forma segura
+      }
     };
   }, []);
 
   return (
     <>
-      {isInfoUserVisible && <InfoUser username={currentUser} />}
-      {!isInfoUserVisible && <UserList />}
+      {isInfoUserVisible && currentUser ? (
+        <InfoUser username={currentUser} />
+      ) : (
+        <UserList />
+      )}
     </>
   );
 };

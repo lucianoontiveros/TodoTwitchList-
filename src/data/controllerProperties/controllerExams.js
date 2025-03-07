@@ -141,26 +141,47 @@ const deleteExam = (deleteExamUser, examID, channel, isTag) => {
   registrationUsers(users);
 };
 
-const reviewExam = (reviewExamUSer, channel, isTag) => {
-  foundOrCreateUser(reviewExamUSer, isTag);
-  users[reviewExamUSer].exams = users[reviewExamUSer].exams.filter(
+const reviewExam = (reviewExamUser, channel, isTag) => {
+  foundOrCreateUser(reviewExamUser, isTag);
+
+  // Filtrar los exámenes vencidos y no vencidos
+  const expiredExams = users[reviewExamUser].exams.filter((exam) =>
+    isPastDate(exam.dateExam)
+  );
+  const validExams = users[reviewExamUser].exams.filter(
     (exam) => !isPastDate(exam.dateExam)
   );
-  const reviewExamUser = users[reviewExamUSer].exams.map((userExam) => {
-    sendMensaje(
-      MESSAGE.viewExam(
-        reviewExamUSer,
-        userExam.dateExam,
-        userExam.typeExam,
-        userExam.titleExam,
-        userExam._id
-      ),
-      channel
-    );
-  });
-  foundOrCreateUser(reviewExamUSer, isTag);
-  if (reviewExamUser.length === 0) {
-    sendMensaje(MESSAGE.noExams(reviewExamUSer), channel);
+
+  // Si hay exámenes vencidos, enviamos un mensaje por cada uno antes de eliminarlos
+  if (expiredExams.length > 0) {
+    expiredExams.forEach((exam) => {
+      let message = `${reviewExamUser}, tu examen ${exam.titleExam} expiró, del día (${exam.dateExam}) fue eliminado 🗑️`;
+      sendMensaje(message, "brunispet");
+    });
+
+    // Eliminar los exámenes vencidos
+    users[reviewExamUser].exams = validExams;
+  }
+
+  // Guardar los cambios
+  registrationUsers(users);
+
+  // Mostrar los exámenes restantes si hay
+  if (validExams.length > 0) {
+    validExams.forEach((userExam) => {
+      sendMensaje(
+        MESSAGE.viewExam(
+          reviewExamUser,
+          userExam.dateExam,
+          userExam.typeExam,
+          userExam.titleExam,
+          userExam._id
+        ),
+        channel
+      );
+    });
+  } else {
+    sendMensaje(MESSAGE.noExams(reviewExamUser), channel);
   }
 };
 
