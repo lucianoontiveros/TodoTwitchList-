@@ -2,51 +2,59 @@ import React, { useEffect, useState, useRef } from "react";
 import UserList_component from "./UserList_component/UserList_component";
 
 const UserList = () => {
-  const [users, setUsers] = useState([]); // Lista de usuarios
-  const [currentUserIndex, setCurrentUserIndex] = useState(0); // Índice del usuario actual
-  const intervalRef = useRef(null); // Referencia para el intervalo
+  const [users, setUsers] = useState([]);
+  const [currentUserIndex, setCurrentUserIndex] = useState(0);
+  const intervalRef = useRef(null);
 
-  useEffect(() => {
-    const loadUsers = () => {
-      try {
-        const storedUsers = localStorage.getItem("users");
-        if (!storedUsers) {
-          console.log("No hay usuarios en localStorage");
-          setUsers([]);
-          return;
-        }
+  // Función para cargar usuarios desde localStorage
+  const loadUsers = () => {
+    try {
+      if (typeof window === "undefined") return; // Evita errores en el servidor
 
-        const parsedUsers = JSON.parse(storedUsers);
-        if (!parsedUsers || typeof parsedUsers !== "object") {
-          console.log("Usuarios inválidos en localStorage");
-          setUsers([]);
-          return;
-        }
-
-        const userList = Object.keys(parsedUsers).map((username) => ({
-          username,
-          ...parsedUsers[username],
-        }));
-
-        console.log("Usuarios cargados:", userList);
-
-        setUsers(userList);
-        setCurrentUserIndex(0); // Reiniciar índice
-      } catch (error) {
-        console.error("Error al cargar usuarios desde localStorage:", error);
+      const storedUsers = localStorage.getItem("users");
+      if (!storedUsers) {
+        console.log("No hay usuarios en localStorage");
+        setUsers([]);
+        return;
       }
-    };
 
-    loadUsers(); // Cargar usuarios al iniciar
+      const parsedUsers = JSON.parse(storedUsers);
+      if (!parsedUsers || typeof parsedUsers !== "object") {
+        console.log("Usuarios inválidos en localStorage");
+        setUsers([]);
+        return;
+      }
 
-    // Escuchar cambios en localStorage (opcional si otros componentes lo modifican)
+      const userList = Object.keys(parsedUsers).map((username) => ({
+        username,
+        ...parsedUsers[username],
+      }));
+
+      console.log("Usuarios cargados:", userList);
+
+      setUsers(userList);
+      setCurrentUserIndex(0);
+    } catch (error) {
+      console.error("Error al cargar usuarios desde localStorage:", error);
+    }
+  };
+
+  // Cargar usuarios al iniciar
+  useEffect(() => {
+    loadUsers();
+  }, []);
+
+  // Escuchar cambios en localStorage (solo en el cliente)
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
     window.addEventListener("storage", loadUsers);
-
     return () => {
       window.removeEventListener("storage", loadUsers);
     };
   }, []);
 
+  // Rotación de usuarios cada 6 segundos
   useEffect(() => {
     if (intervalRef.current) {
       clearInterval(intervalRef.current);
