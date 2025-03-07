@@ -142,7 +142,7 @@ const deleteInactiveUsersTwoMonths = () => {
       const lastActiveTime = new Date(user.lastTime).getTime();
       if (currentTime - lastActiveTime > twoMonths) {
         delete users[username];
-        sendMessage("brunispet", MESSAGES.userInactiveDeleted(username));
+        sendMessage("cuartodechenz", MESSAGES.userInactiveDeleted(username));
         usersDeleted = true;
       }
     }

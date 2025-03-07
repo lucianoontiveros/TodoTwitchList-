@@ -156,7 +156,7 @@ const reviewExam = (reviewExamUser, channel, isTag) => {
   if (expiredExams.length > 0) {
     expiredExams.forEach((exam) => {
       let message = `${reviewExamUser}, tu examen ${exam.titleExam} expiró, del día (${exam.dateExam}) fue eliminado 🗑️`;
-      sendMensaje(message, "Brunispet");
+      sendMensaje(message, "cuartodechenz");
     });
 
     // Eliminar los exámenes vencidos
