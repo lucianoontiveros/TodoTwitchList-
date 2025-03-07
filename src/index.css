@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.vip_fondo {
+  background: url("/img/vip_fondo.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: rgb(222, 74, 151);
+}
+
+.mod_fondo {
+  background: url("/img/mod_fondo.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #86efac;
+}
+
+.prime_fondo {
+  background: url("/img/prime_fondo.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: rgb(77, 209, 242);
+}
+
+.sus_fondo {
+  background: url("/img/sus_fondo.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: rgb(206, 143, 243);
+}
+.user_fondo {
+  background: url("/img/viewer.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: rgb(143, 247, 236);
+}
+
+.antonellavrl_ {
+  background: url("/img/antonellavrl_.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #fcd34d;
+}
+.summertime0805 {
+  background: url("/img/summertime0805.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #f36cdd;
+}
