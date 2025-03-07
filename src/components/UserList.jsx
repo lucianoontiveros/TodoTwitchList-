@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useRef } from "react";
-import { registrationUsers } from "../data/LocalStorage/controllerLocalStorage";
 import UserList_component from "./UserList_component/UserList_component";
 
 const UserList = () => {
@@ -12,12 +11,14 @@ const UserList = () => {
       try {
         const storedUsers = localStorage.getItem("users");
         if (!storedUsers) {
+          console.log("No hay usuarios en localStorage");
           setUsers([]);
           return;
         }
 
         const parsedUsers = JSON.parse(storedUsers);
-        if (typeof parsedUsers !== "object" || parsedUsers === null) {
+        if (!parsedUsers || typeof parsedUsers !== "object") {
+          console.log("Usuarios inválidos en localStorage");
           setUsers([]);
           return;
         }
@@ -27,8 +28,10 @@ const UserList = () => {
           ...parsedUsers[username],
         }));
 
+        console.log("Usuarios cargados:", userList);
+
         setUsers(userList);
-        setCurrentUserIndex(0); // Reiniciar índice cuando cambien los usuarios
+        setCurrentUserIndex(0); // Reiniciar índice
       } catch (error) {
         console.error("Error al cargar usuarios desde localStorage:", error);
       }
@@ -36,7 +39,7 @@ const UserList = () => {
 
     loadUsers(); // Cargar usuarios al iniciar
 
-    // Escuchar cambios en localStorage (opcional, útil si otros componentes modifican "users")
+    // Escuchar cambios en localStorage (opcional si otros componentes lo modifican)
     window.addEventListener("storage", loadUsers);
 
     return () => {
@@ -52,7 +55,7 @@ const UserList = () => {
     if (users.length > 1) {
       intervalRef.current = setInterval(() => {
         setCurrentUserIndex((prevIndex) => (prevIndex + 1) % users.length);
-      }, 5000);
+      }, 500);
     } else {
       setCurrentUserIndex(0);
     }
@@ -62,7 +65,7 @@ const UserList = () => {
         clearInterval(intervalRef.current);
       }
     };
-  }, [users.length]); // Se ejecuta cuando cambia la cantidad de usuarios
+  }, [users]);
 
   if (users.length === 0) {
     return <div>No hay usuarios registrados.</div>;
