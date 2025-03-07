@@ -49,7 +49,6 @@ const App = () => {
           console.error("❌ Error al reconectar:", err);
         }
       }, 5000);
-      console.log("app 2");
     };
 
     client.on("disconnected", reconnect);
