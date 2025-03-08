@@ -62,3 +62,12 @@
   border-radius: 1em;
   color: #f36cdd;
 }
+
+.gominola_opositora {
+  background: url("/img/gominola_opositora.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  border-radius: 1em;
+  color: #15d4ff;
+}

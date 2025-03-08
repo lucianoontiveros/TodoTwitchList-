@@ -32,6 +32,10 @@ const InfoUser_component = ({ user, username }) => {
               newClasses.container =
                 "summertime0805 infoUSer_containers amarrillo_fondo";
               break;
+            case "gominola_opositora":
+              newClasses.container =
+                "gominola_opositora infoUSer_containers azul_fondo";
+              break;
           }
           break;
 

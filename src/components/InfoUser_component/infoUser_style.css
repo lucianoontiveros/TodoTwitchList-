@@ -232,7 +232,6 @@
 
 /* YELLLOW: Propiedades para el fondo y colores de tareas  */
 .amarrillo_fondo {
-  background: url("./img/viewer.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -264,7 +263,6 @@
 
 /* MAGENTA: Propiedades para el fondo y colores de tareas  */
 .magenta_fondo {
-  background: url("./img/viewer.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -292,4 +290,28 @@
 .magenta_fondo .task-item .task-id {
   font-size: medium;
   background-color: #e41ac3;
+}
+
+/* AZUL: Propiedades para el fondo y colores de tareas  */
+
+.azul_fondo .task-header {
+  color: #15d4ff;
+}
+
+.azul_fondo .task-list {
+  color: #15d4ff;
+}
+
+.azul_fondo .task-item {
+  max-width: 26.99em;
+  color: #15d4ff;
+}
+
+.azul_fondo .task-list .task-item {
+  width: 100%;
+}
+
+.azul_fondo .task-item .task-id {
+  font-size: medium;
+  background-color: #12a0ec;
 }
