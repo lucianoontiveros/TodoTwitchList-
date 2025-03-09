@@ -315,3 +315,27 @@
   font-size: medium;
   background-color: #12a0ec;
 }
+
+/* ROJO : Propiedades para el fondo y colores de tareas  */
+
+.rojo_fondo .task-header {
+  color: #ff8181;
+}
+
+.rojo_fondo .task-list {
+  color: #ff8181;
+}
+
+.rojo_fondo .task-item {
+  max-width: 26.99em;
+  color: #ff8181;
+}
+
+.rojo_fondo .task-list .task-item {
+  width: 100%;
+}
+
+.rojo_fondo .task-item .task-id {
+  font-size: medium;
+  background-color: #ff8181;
+}

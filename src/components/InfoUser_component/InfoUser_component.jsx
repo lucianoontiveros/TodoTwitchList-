@@ -36,6 +36,10 @@ const InfoUser_component = ({ user, username }) => {
               newClasses.container =
                 "gominola_opositora infoUSer_containers azul_fondo";
               break;
+            case "chinita098":
+              newClasses.container =
+                "chinita098 infoUSer_containers rojo_fondo";
+              break;
           }
           break;
 
@@ -44,6 +48,12 @@ const InfoUser_component = ({ user, username }) => {
           break;
         case "mod":
           newClasses.container = "mod_fondo infoUSer_containers";
+          switch (user.name) {
+            case "prueba":
+              newClasses.container =
+                "chinita098 infoUSer_containers rojo_fondo";
+              break;
+          }
           break;
         case "prime":
           newClasses.container = "prime_fondo infoUSer_containers";

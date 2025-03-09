@@ -71,3 +71,11 @@
   border-radius: 1em;
   color: #15d4ff;
 }
+.chinita098 {
+  background: url("/img/chinita098.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #ff8181;
+}
