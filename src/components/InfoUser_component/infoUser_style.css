@@ -339,3 +339,27 @@
   font-size: medium;
   background-color: #ff8181;
 }
+
+/* BLANCO : Propiedades para el fondo y colores de tareas  */
+
+.blanco_fondo .task-header {
+  color: #c8ecf4;
+}
+
+.blanco_fondo .task-list {
+  color: #c8ecf4;
+}
+
+.blanco_fondo .task-item {
+  max-width: 26.99em;
+  color: #c8ecf4;
+}
+
+.blanco_fondo .task-list .task-item {
+  width: 100%;
+}
+
+.blanco_fondo .task-item .task-id {
+  font-size: medium;
+  background-color: #c8ecf4;
+}

@@ -40,6 +40,10 @@ const InfoUser_component = ({ user, username }) => {
               newClasses.container =
                 "chinita098 infoUSer_containers rojo_fondo";
               break;
+            case "cuartodechenz":
+              newClasses.container =
+                "agos__________ infoUSer_containers blanco_fondo";
+              break;
           }
           break;
 
@@ -51,7 +55,7 @@ const InfoUser_component = ({ user, username }) => {
           switch (user.name) {
             case "prueba":
               newClasses.container =
-                "chinita098 infoUSer_containers rojo_fondo";
+                "agos__________ infoUSer_containers blanco_fondo";
               break;
           }
           break;
