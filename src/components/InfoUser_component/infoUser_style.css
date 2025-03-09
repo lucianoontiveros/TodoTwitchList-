@@ -71,7 +71,7 @@
 
 /* MODERADORES: Propiedades para el fondo y colores de tareas  */
 .mod_fondo {
-  background: url("./img/mod_fondo.jpeg");
+  background: url("/img/mod_fondo.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -103,7 +103,7 @@
 /* VIP: Propiedades para el fondo y colores de tareas  */
 
 .vip_fondo {
-  background: url("./img/vip_fondo.jpeg");
+  background: url("/img/vip_fondo.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -135,7 +135,7 @@
 /* PRIME: Propiedades para el fondo y colores de tareas  */
 
 .prime_fondo {
-  background: url("./img/prime_fondo.jpeg");
+  background: url("/img/prime_fondo.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -167,7 +167,7 @@
 /* SUS: Propiedades para el fondo y colores de tareas  */
 
 .sus_fondo {
-  background: url("./img/wiew.jpeg");
+  background: url("/img/wiew.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -200,7 +200,7 @@
 /* VIEWER: Propiedades para el fondo y colores de tareas  */
 
 .user_fondo {
-  background: url("./img/viewer.jpeg");
+  background: url("/img/viewer.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
