@@ -40,7 +40,7 @@ const InfoUser_component = ({ user, username }) => {
               newClasses.container =
                 "chinita098 infoUSer_containers rojo_fondo";
               break;
-            case "cuartodechenz":
+            case "agos__________":
               newClasses.container =
                 "agos__________ infoUSer_containers blanco_fondo";
               break;
