@@ -14,52 +14,10 @@ const App = () => {
   const prevUser = useRef(null);
   const timeoutRef = useRef(null);
 
-  // 🔹 Maneja la conexión con Twitch al montar
-  useEffect(() => {
-    const connectClient = async () => {
-      if (!client.connection || !client.connection.connected) {
-        try {
-          await client.connect();
-          console.log("✅ Conectado a Twitch");
-        } catch (err) {
-          console.error("❌ Error al conectar con Twitch:", err);
-        }
-      }
-    };
-
-    connectClient(); // Intenta conectar
-
-    return () => {
-      if (client.connection && client.connection.connected) {
-        client.disconnect();
-        console.log("🔌 Desconectado de Twitch");
-      }
-    };
-  }, []);
-
-  // 🔹 Maneja la reconexión si se desconecta
-  useEffect(() => {
-    const reconnect = async () => {
-      console.warn("⚠ Cliente desconectado. Intentando reconectar...");
-      setTimeout(async () => {
-        try {
-          await client.connect();
-          console.log("🔄 Reconectado a Twitch");
-        } catch (err) {
-          console.error("❌ Error al reconectar:", err);
-        }
-      }, 5000);
-    };
-
-    client.on("disconnected", reconnect);
-
-    return () => {
-      client.off("disconnected", reconnect);
-    };
-  }, []);
-
   // 🔹 Manejo de mensajes de Twitch
   useEffect(() => {
+    client.connect();
+
     const handleMessage = (channel, tags, message, self) => {
       try {
         monitorMessage(
@@ -84,6 +42,7 @@ const App = () => {
       if (timeoutRef.current) {
         clearTimeout(timeoutRef.current);
       }
+      client.disconnect();
     };
   }, []);
 

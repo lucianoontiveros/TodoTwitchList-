@@ -88,3 +88,12 @@
   border-radius: 1em;
   color: #c8ecf4;
 }
+
+.sofiaantok {
+  background: url("/img/sofiaantok.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #fcd34d;
+}

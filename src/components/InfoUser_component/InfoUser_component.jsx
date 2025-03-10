@@ -49,13 +49,19 @@ const InfoUser_component = ({ user, username }) => {
 
         case "vip":
           newClasses.container = "vip_fondo infoUSer_containers";
+          switch (user.name) {
+            case "sofiaantok":
+              newClasses.container =
+                "sofiaantok infoUSer_containers amarrillo_fondo";
+              break;
+          }
           break;
         case "mod":
           newClasses.container = "mod_fondo infoUSer_containers";
           switch (user.name) {
-            case "prueba":
+            case "cuartodechenz":
               newClasses.container =
-                "agos__________ infoUSer_containers blanco_fondo";
+                "sofiaantok infoUSer_containers amarrillo_fondo";
               break;
           }
           break;
