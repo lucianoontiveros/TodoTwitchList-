@@ -87,8 +87,6 @@ const addTaskUser = (user, addTask, channel, tag) => {
     .map((task) => task.trim())
     .filter((task) => task.length > 0);
 
-  console.log(tasks);
-
   const availableSlots = MAX_TASKS - currentTasksCount;
 
   if (currentTasksCount >= MAX_TASKS) {
@@ -123,7 +121,6 @@ const reviewListTaskUser = (user, channel, tag) => {
 
 const readyTaskUser = (user, ID, channel) => {
   const taskUser = foundTask(user, ID);
-  console.log(taskUser);
   if (!taskUser) {
     sendMessage(MESSAGES.noFoundTask(user, ID), channel);
   } else {

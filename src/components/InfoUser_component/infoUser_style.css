@@ -363,3 +363,51 @@
   font-size: medium;
   background-color: #c8ecf4;
 }
+
+/* AQUA : Propiedades para el fondo y colores de tareas  */
+
+.aqua_fondo .task-header {
+  color: #2ceded;
+}
+
+.aqua_fondo .task-list {
+  color: #2ceded;
+}
+
+.aqua_fondo .task-item {
+  max-width: 26.99em;
+  color: #2ceded;
+}
+
+.aqua_fondo .task-list .task-item {
+  width: 100%;
+}
+
+.aqua_fondo .task-item .task-id {
+  font-size: medium;
+  background-color: #2ceded;
+}
+
+/* CREMA : Propiedades para el fondo y colores de tareas  */
+
+.crema_fondo .task-header {
+  color: #f2955e;
+}
+
+.crema_fondo .task-list {
+  color: #f2955e;
+}
+
+.crema_fondo .task-item {
+  max-width: 26.99em;
+  color: #f2955e;
+}
+
+.crema_fondo .task-list .task-item {
+  width: 100%;
+}
+
+.crema_fondo .task-item .task-id {
+  font-size: medium;
+  background-color: #f2955e;
+}

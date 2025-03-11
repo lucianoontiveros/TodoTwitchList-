@@ -97,3 +97,21 @@
   border-radius: 1em;
   color: #fcd34d;
 }
+
+.jana10dv {
+  background: url("/img/jana10dv.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #2ceded;
+}
+
+.mont_opo {
+  background: url("/img/mont_opo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #f2955e;
+}

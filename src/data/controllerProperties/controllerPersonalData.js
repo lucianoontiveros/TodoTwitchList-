@@ -48,7 +48,6 @@ const MESSAGE = {
 
 const reviewPersonalData = (user) => {
   if (!users[user]?.personaldata?.length) {
-    console.log("ingrese");
     const personalDataUser = new PersonalData();
     users[user] = { ...users[user], personaldata: [personalDataUser] }; // Evitar mutaciones directas
     sendMensaje(MESSAGE.addConfirmDataUser(user));
@@ -227,7 +226,6 @@ const giveCroquetas = (user, channel) => {
   reviewPersonalData(user);
   if (users[user].personaldata[0].points !== 0) {
     let croquetas = users[user].personaldata[0].croquetastotal + 1 || 1;
-    console.log(users[user].personaldata[0].croquetastotal);
     addCroquetasTotal(user, croquetas, channel);
     updatePersonalData(user, "points", users[user].personaldata[0].points - 1);
   } else sendMensaje(MESSAGE.noPoints(user), channel);

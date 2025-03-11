@@ -97,8 +97,6 @@ const addExam = (addExamUser, dateExamUser, channel, isTag) => {
   const typeExam = dateExamUser.slice(6, 10).toUpperCase();
   const titleExam =
     dateExamUser.slice(10).charAt(0).toUpperCase() + dateExamUser.slice(11);
-  console.log(typeExam);
-  console.log(titleExam);
 
   const newDataExamUser = new Exams(dateExam, typeExam, titleExam, examID());
   users[addExamUser].exams.push(newDataExamUser);
@@ -136,7 +134,6 @@ const deleteExam = (deleteExamUser, examID, channel, isTag) => {
     sendMensaje(MESSAGE.deleteExam(deleteExamUser, examID), channel);
   } else {
     sendMensaje(MESSAGE.noExamsID(deleteExamUser), channel);
-    console.log(users[deleteExamUser].exams);
   }
   registrationUsers(users);
 };
@@ -160,7 +157,6 @@ const reviewExam = (reviewExamUSer, channel, isTag) => {
     expiredExams.forEach((exam) => {
       let message = `${reviewExamUSer}, tu examen ${exam.titleExam} expiró, del día (${exam.dateExam}) fue eliminado 🗑️`;
       sendMensaje(message, "cuartodechenz");
-      console.log(message);
     });
 
     // Eliminar los exámenes vencidos
@@ -191,9 +187,9 @@ const reviewExam = (reviewExamUSer, channel, isTag) => {
 
 const deleteAllExams = (deletaAllExamUSer, channel, isTag) => {
   foundOrCreateUser(deletaAllExamUSer, isTag);
-  const deleteListExamsUser = users[deletaAllExamUSer].exams.map((userExam) => {
-    console.log(userExam.typeExam, userExam.dateExam, userExam.titleExam);
-  });
+  const deleteListExamsUser = users[deletaAllExamUSer].exams.map(
+    (userExam) => {}
+  );
   if (deleteListExamsUser.length === 0) {
     sendMensaje(MESSAGE.noExams(deletaAllExamUSer), channel);
   } else {

@@ -42,7 +42,6 @@ const App = () => {
       if (timeoutRef.current) {
         clearTimeout(timeoutRef.current);
       }
-      client.disconnect();
     };
   }, []);
 

@@ -149,10 +149,6 @@ const deleteInactiveUsersTwoMonths = () => {
   });
 
   registrationUsers(users);
-
-  if (!usersDeleted) {
-    console.log(MESSAGES.noInactiveUsers()); // Registrar en consola
-  }
 };
 
 export {
