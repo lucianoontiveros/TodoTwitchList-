@@ -3,9 +3,10 @@ import { registrationUsers } from "../data/LocalStorage/controllerLocalStorage";
 import UserList_component from "./UserList_component/UserList_component";
 
 const UserList = () => {
-  const DISPLAY_TIME = 15000; // 15 segundos para mejor visualización
+  const DISPLAY_TIME = 10000; // 10 segundos para visualización
   const [users, setUsers] = useState([]);
   const [currentUserIndex, setCurrentUserIndex] = useState(0);
+  const [cycleCount, setCycleCount] = useState(0);
   const intervalRef = useRef(null);
   const userListRef = useRef([]);
 
@@ -23,7 +24,7 @@ const UserList = () => {
       userListRef.current = userList;
       setUsers(userList);
 
-      // Reiniciar el índice si está fuera de rango
+      // Reiniciar el índice si es necesario
       if (currentUserIndex >= userList.length) {
         setCurrentUserIndex(0);
       }
@@ -43,7 +44,16 @@ const UserList = () => {
     intervalRef.current = setInterval(() => {
       setCurrentUserIndex(prevIndex => {
         const nextIndex = (prevIndex + 1) % userListRef.current.length;
-        return userListRef.current.length > 0 ? nextIndex : 0;
+        if (nextIndex === 0) {
+          // Si volvemos al inicio, incrementar el contador de ciclos
+          setCycleCount(prev => prev + 1);
+          if (cycleCount >= 1) {
+            // Después de completar un ciclo, recargar usuarios
+            loadUsers();
+            setCycleCount(0);
+          }
+        }
+        return nextIndex;
       });
     }, DISPLAY_TIME);
 
@@ -52,7 +62,7 @@ const UserList = () => {
         clearInterval(intervalRef.current);
       }
     };
-  }, []);
+  }, [DISPLAY_TIME, cycleCount, loadUsers]);
 
   useEffect(() => {
     loadUsers();
@@ -62,7 +72,7 @@ const UserList = () => {
     const handleStorageChange = (e) => {
       if (e.key === 'users') {
         loadUsers();
-        startInterval(); // Reiniciar el intervalo cuando cambian los usuarios
+        startInterval();
       }
     };
 
