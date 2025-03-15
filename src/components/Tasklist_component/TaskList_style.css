@@ -1,0 +1,51 @@
+.task-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  margin: 1em 0.7em 0 0.7em;
+  background-color: black;
+  border-radius: 1em;
+}
+
+.task-list {
+  margin: 0em;
+  padding: 0.6em 0.9em;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1rem solid azure;
+  color: rgba(14, 242, 223, 0.989);
+}
+
+.task-item {
+  display: flex;
+  height: 2em;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.2em;
+  padding: 0 0.2em;
+  background-color: rgb(12, 14, 14);
+  border-radius: 5px;
+  min-width: 100%;
+}
+
+.task-item .task-description {
+  font-size: medium;
+  font-weight: 500;
+  padding-left: 15px;
+  max-width: 24.5em;
+  text-overflow: ellipsis; /* Si el texto es demasiado largo, se cortará con "..." */
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+  overflow: hidden;
+}
+
+.task-item .task-id {
+  text-align: center;
+  width: 50px;
+  border-radius: 0.5em;
+  margin-right: 0.3em;
+  background-color: rgba(14, 242, 223, 0.989);
+  color: rgb(7, 8, 8);
+}
