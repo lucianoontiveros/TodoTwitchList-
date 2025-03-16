@@ -1,4 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap');
 @import "tailwindcss";
+body {
+  font-family: 'Sawarabi Gothic', sans-serif;
+}
 
 .vip_fondo {
   background: url("/img/vip_fondo.jpeg");
