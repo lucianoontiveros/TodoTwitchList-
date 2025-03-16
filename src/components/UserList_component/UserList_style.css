@@ -25,7 +25,7 @@
   align-self: flex-end;
   width: auto;
   justify-content: flex-end;
-  background-color: rgba(84, 108, 111, 0.5);
+  background-color: rgba(2, 17, 19, 0.774);
   color: rgba(226, 238, 237, 0.989);
   padding: 1rem;
   border-radius: 2em;
@@ -38,6 +38,7 @@
   display: flex;
   justify-content: center;
   flex-direction: row;
+
 }
 
 .title_container strong {
@@ -49,6 +50,8 @@
   margin: 0.625em;
   padding: 0.625em;
   background-color: rgb(12, 14, 14);
+  box-shadow: 0 0.4em 0.6em rgba(14, 242, 223, 0.989);
+
 }
 
 .tags_container {
