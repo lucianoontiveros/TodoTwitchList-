@@ -70,6 +70,14 @@
 }
 
 /* MODERADORES: Propiedades para el fondo y colores de tareas  */
+.mod_fondo {
+  background: url("/img/mod_fondo.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #86efac;
+}
 
 .mod_fondo .task-header {
   color: #86efac;
@@ -94,6 +102,15 @@
 
 /* VIP: Propiedades para el fondo y colores de tareas  */
 
+.vip_fondo {
+  background: url("/img/vip_fondo.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: rgb(222, 74, 151);
+}
+
 .vip_fondo .task-header {
   color: rgb(222, 74, 151);
 }
@@ -117,6 +134,15 @@
 
 /* PRIME: Propiedades para el fondo y colores de tareas  */
 
+.prime_fondo {
+  background: url("/img/prime_fondo.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: rgb(77, 209, 242);
+}
+
 .prime_fondo .task-header {
   color: rgb(77, 209, 242);
 }
@@ -139,6 +165,15 @@
 }
 
 /* SUS: Propiedades para el fondo y colores de tareas  */
+
+.sus_fondo {
+  background: url("/img/wiew.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: rgb(206, 143, 243);
+}
 
 .sus_fondo .task-header {
   color: rgb(206, 143, 243);
@@ -164,6 +199,15 @@
 
 /* VIEWER: Propiedades para el fondo y colores de tareas  */
 
+.user_fondo {
+  background: url("/img/viewer.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: rgb(143, 247, 236);
+}
+
 .user_fondo .task-header {
   color: rgb(143, 247, 236);
 }
@@ -186,32 +230,233 @@
   background-color: rgb(18, 226, 237);
 }
 
-/* Degradado de Rojo a Naranja:  */
-
-.rojo-naranja .maincontainer {
-  
+/* YELLLOW: Propiedades para el fondo y colores de tareas  */
+.amarrillo_fondo {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #fcd34d;
 }
 
-.rojo-naranja .task-header {
-  background: linear-gradient(to right, #ff0000, #ffa500);
-  font-weight: 700;
-  color: rgb(255, 202, 149);
+.amarrillo_fondo .task-header {
+  color: #fcd34d;
 }
 
-.rojo-naranja .task-list {
-  color: rgb(255, 202, 149);
+.amarrillo_fondo .task-list {
+  color: #fcd34d;
 }
 
-.rojo-naranja .task-item {
+.amarrillo_fondo .task-item {
   max-width: 26.99em;
-  color: rgb(255, 202, 149);
+  color: #fcd34d;
 }
 
-.rojo-naranja .task-list .task-item {
+.amarrillo_fondo .task-list .task-item {
   width: 100%;
 }
 
-.rojo-naranja .task-item .task-id {
+.amarrillo_fondo .task-item .task-id {
   font-size: medium;
-  background: linear-gradient(to right, #ff0000, #ffa500);
+  background-color: #fcd34d;
+}
+
+/* MAGENTA: Propiedades para el fondo y colores de tareas  */
+.magenta_fondo {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #f36cdd;
+}
+
+.magenta_fondo .task-header {
+  color: #f36cdd;
+}
+
+.magenta_fondo .task-list {
+  color: #f36cdd;
+}
+
+.magenta_fondo .task-item {
+  max-width: 26.99em;
+  color: #f36cdd;
+}
+
+.magenta_fondo .task-list .task-item {
+  width: 100%;
+}
+
+.magenta_fondo .task-item .task-id {
+  font-size: medium;
+  background-color: #e41ac3;
+}
+
+/* AZUL: Propiedades para el fondo y colores de tareas  */
+
+.azul_fondo .task-header {
+  color: #15d4ff;
+}
+
+.azul_fondo .task-list {
+  color: #15d4ff;
+}
+
+.azul_fondo .task-item {
+  max-width: 26.99em;
+  color: #15d4ff;
+}
+
+.azul_fondo .task-list .task-item {
+  width: 100%;
+}
+
+.azul_fondo .task-item .task-id {
+  font-size: medium;
+  background-color: #12a0ec;
+}
+
+/* ROJO : Propiedades para el fondo y colores de tareas  */
+
+.rojo_fondo .task-header {
+  color: #ff8181;
+}
+
+.rojo_fondo .task-list {
+  color: #ff8181;
+}
+
+.rojo_fondo .task-item {
+  max-width: 26.99em;
+  color: #ff8181;
+}
+
+.rojo_fondo .task-list .task-item {
+  width: 100%;
+}
+
+.rojo_fondo .task-item .task-id {
+  font-size: medium;
+  background-color: #ff8181;
+}
+
+/* BLANCO : Propiedades para el fondo y colores de tareas  */
+
+.blanco_fondo .task-header {
+  color: #c8ecf4;
+}
+
+.blanco_fondo .task-list {
+  color: #c8ecf4;
+}
+
+.blanco_fondo .task-item {
+  max-width: 26.99em;
+  color: #c8ecf4;
+}
+
+.blanco_fondo .task-list .task-item {
+  width: 100%;
+}
+
+.blanco_fondo .task-item .task-id {
+  font-size: medium;
+  background-color: #c8ecf4;
+}
+
+/* AQUA : Propiedades para el fondo y colores de tareas  */
+
+.aqua_fondo .task-header {
+  color: #2ceded;
+}
+
+.aqua_fondo .task-list {
+  color: #2ceded;
+}
+
+.aqua_fondo .task-item {
+  max-width: 26.99em;
+  color: #2ceded;
+}
+
+.aqua_fondo .task-list .task-item {
+  width: 100%;
+}
+
+.aqua_fondo .task-item .task-id {
+  font-size: medium;
+  background-color: #2ceded;
+}
+
+/* CREMA : Propiedades para el fondo y colores de tareas  */
+
+.crema_fondo .task-header {
+  color: #f2955e;
+}
+
+.crema_fondo .task-list {
+  color: #f2955e;
+}
+
+.crema_fondo .task-item {
+  max-width: 26.99em;
+  color: #f2955e;
+}
+
+.crema_fondo .task-list .task-item {
+  width: 100%;
+}
+
+.crema_fondo .task-item .task-id {
+  font-size: medium;
+  background-color: #f2955e;
+}
+
+/* VERDE : Propiedades para el fondo y colores de tareas  */
+
+.verde_fondo .task-header {
+  color: #BCD955;
+}
+
+.verde_fondo .task-list {
+  color: #BCD955;
+}
+
+.verde_fondo .task-item {
+  max-width: 26.99em;
+  color: #BCD955;
+}
+
+.verde_fondo .task-list .task-item {
+  width: 100%;
+}
+
+.verde_fondo .task-item .task-id {
+  font-size: medium;
+  background-color: #BCD955;
+}
+
+
+/* ORANGE : Propiedades para el fondo y colores de tareas  */
+
+.orange_fondo .task-header {
+  color: #f87b33;
+}
+
+.orange_fondo .task-list {
+  color: #f87b33;
+}
+
+.orange_fondo .task-item {
+  max-width: 26.99em;
+  color: #f87b33;
+}
+
+.orange_fondo .task-list .task-item {
+  width: 100%;
+}
+
+.orange_fondo .task-item .task-id {
+  font-size: medium;
+  background-color: #f87b33;
 }

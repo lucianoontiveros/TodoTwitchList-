@@ -48,7 +48,6 @@ const MESSAGE = {
 
 const reviewPersonalData = (user) => {
   if (!users[user]?.personaldata?.length) {
-    console.log("ingrese");
     const personalDataUser = new PersonalData();
     users[user] = { ...users[user], personaldata: [personalDataUser] }; // Evitar mutaciones directas
     sendMensaje(MESSAGE.addConfirmDataUser(user));
@@ -77,20 +76,15 @@ const getUserInfo = (user, channel) => {
   // Formatear la información del usuario
   const userInfo = `
   Información del usuario: ${user}
-  ${personalData.birth ? `- Fecha de nacimiento: ${personalData.birth}` : ""}
   ${personalData.sign ? `- Signo zodiacal: ${personalData.sign}` : ""}
   ${personalData.points ? `- Puntos: ${personalData.points}` : ""}
-  ${
-    personalData.croquetastotal
-      ? `- Croquetas totales entregadas: ${personalData.croquetastotal}`
-      : ""
-  }
   ${
     personalData.nationality
       ? `- Nacionalidad: ${personalData.nationality}`
       : ""
   }
- 
+  ${personalData.birth ? `- Fecha de nacimiento: ${personalData.birth}` : ""}
+  ${personalData.points ? `- Puntos: ${personalData.points}` : ""}
   ${personalData.instagram ? `- Instagram: ${personalData.instagram}` : ""}
   ${
     personalData.oppositionfor
@@ -98,7 +92,11 @@ const getUserInfo = (user, channel) => {
       : ""
   }
   ${personalData.studyfor ? `- Estudios: ${personalData.studyfor}` : ""}
- 
+  ${
+    personalData.croquetastotal
+      ? `- Croquetas totales entregadas: ${personalData.croquetastotal}`
+      : ""
+  }
   `;
 
   // Enviar el mensaje al canal
@@ -228,7 +226,6 @@ const giveCroquetas = (user, channel) => {
   reviewPersonalData(user);
   if (users[user].personaldata[0].points !== 0) {
     let croquetas = users[user].personaldata[0].croquetastotal + 1 || 1;
-    console.log(users[user].personaldata[0].croquetastotal);
     addCroquetasTotal(user, croquetas, channel);
     updatePersonalData(user, "points", users[user].personaldata[0].points - 1);
   } else sendMensaje(MESSAGE.noPoints(user), channel);

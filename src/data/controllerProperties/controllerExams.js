@@ -97,8 +97,6 @@ const addExam = (addExamUser, dateExamUser, channel, isTag) => {
   const typeExam = dateExamUser.slice(6, 10).toUpperCase();
   const titleExam =
     dateExamUser.slice(10).charAt(0).toUpperCase() + dateExamUser.slice(11);
-  console.log(typeExam);
-  console.log(titleExam);
 
   const newDataExamUser = new Exams(dateExam, typeExam, titleExam, examID());
   users[addExamUser].exams.push(newDataExamUser);
@@ -136,31 +134,33 @@ const deleteExam = (deleteExamUser, examID, channel, isTag) => {
     sendMensaje(MESSAGE.deleteExam(deleteExamUser, examID), channel);
   } else {
     sendMensaje(MESSAGE.noExamsID(deleteExamUser), channel);
-    console.log(users[deleteExamUser].exams);
   }
   registrationUsers(users);
 };
 
-const reviewExam = (reviewExamUser, channel, isTag) => {
-  foundOrCreateUser(reviewExamUser, isTag);
+const reviewExam = (reviewExamUSer, channel, isTag) => {
+  foundOrCreateUser(reviewExamUSer, isTag);
+  users[reviewExamUSer].exams = users[reviewExamUSer].exams.filter(
+    (exam) => !isPastDate(exam.dateExam)
+  );
 
   // Filtrar los exámenes vencidos y no vencidos
-  const expiredExams = users[reviewExamUser].exams.filter((exam) =>
+  const expiredExams = users[reviewExamUSer].exams.filter((exam) =>
     isPastDate(exam.dateExam)
   );
-  const validExams = users[reviewExamUser].exams.filter(
+  const validExams = users[reviewExamUSer].exams.filter(
     (exam) => !isPastDate(exam.dateExam)
   );
 
   // Si hay exámenes vencidos, enviamos un mensaje por cada uno antes de eliminarlos
   if (expiredExams.length > 0) {
     expiredExams.forEach((exam) => {
-      let message = `${reviewExamUser}, tu examen ${exam.titleExam} expiró, del día (${exam.dateExam}) fue eliminado 🗑️`;
-      sendMensaje(message, "brunispet");
+      let message = `${reviewExamUSer}, tu examen ${exam.titleExam} expiró, del día (${exam.dateExam}) fue eliminado 🗑️`;
+      sendMensaje(message, "cuartodechenz");
     });
 
     // Eliminar los exámenes vencidos
-    users[reviewExamUser].exams = validExams;
+    users[reviewExamUSer].exams = validExams;
   }
 
   // Guardar los cambios
@@ -171,7 +171,7 @@ const reviewExam = (reviewExamUser, channel, isTag) => {
     validExams.forEach((userExam) => {
       sendMensaje(
         MESSAGE.viewExam(
-          reviewExamUser,
+          reviewExamUSer,
           userExam.dateExam,
           userExam.typeExam,
           userExam.titleExam,
@@ -181,15 +181,15 @@ const reviewExam = (reviewExamUser, channel, isTag) => {
       );
     });
   } else {
-    sendMensaje(MESSAGE.noExams(reviewExamUser), channel);
+    sendMensaje(MESSAGE.noExams(reviewExamUSer), channel);
   }
 };
 
 const deleteAllExams = (deletaAllExamUSer, channel, isTag) => {
   foundOrCreateUser(deletaAllExamUSer, isTag);
-  const deleteListExamsUser = users[deletaAllExamUSer].exams.map((userExam) => {
-    console.log(userExam.typeExam, userExam.dateExam, userExam.titleExam);
-  });
+  const deleteListExamsUser = users[deletaAllExamUSer].exams.map(
+    (userExam) => {}
+  );
   if (deleteListExamsUser.length === 0) {
     sendMensaje(MESSAGE.noExams(deletaAllExamUSer), channel);
   } else {

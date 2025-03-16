@@ -1,6 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
-
-// Importación de cliente de Twitch
+import React, { useEffect, useState, useRef, useCallback, memo } from "react";
 import client from "./data/controllerClientTwitch/clientTwitch.js";
 
 // Importación de componentes
@@ -8,70 +6,121 @@ import UserList from "./components/UserList";
 import InfoUser from "./components/InfoUser";
 
 // Importación de utilidades
-import { monitorMessage } from "./utils/monitorMessage"; // Importamos la función modularizada
+import { monitorMessage } from "./utils/monitorMessage";
 
-const App = () => {
-  const [currentUser, setCurrentUser] = useState(null); // Usuario actual mostrado en InfoUser
-  const [isInfoUserVisible, setIsInfoUserVisible] = useState(false); // Estado de visibilidad de InfoUser
-  const prevUser = useRef(null); // Almacena el último usuario que ingresó un comando
-  const timeoutRef = useRef(null); // Referencia al temporizador para reiniciarlo
+const App = memo(() => {
+  const [currentUser, setCurrentUser] = useState(null);
+  const [isInfoUserVisible, setIsInfoUserVisible] = useState(false);
+  const [connectionStatus, setConnectionStatus] = useState('connecting');
+  const prevUser = useRef(null);
+  const timeoutRef = useRef(null);
+  const reconnectAttempts = useRef(0);
+  const maxReconnectAttempts = 5;
 
-  // Conectar el cliente de Twitch al montar el componente
-  useEffect(() => {
-    if (!client.readyState || client.readyState() !== "OPEN") {
-      // Validación de conexión
-      try {
-        client.connect();
-      } catch (err) {
-        console.error("Error al conectar con Twitch:", err);
-      }
+  // Manejador de mensajes memoizado
+  const handleMessage = useCallback((channel, tags, message, self) => {
+    try {
+      monitorMessage(
+        channel,
+        tags,
+        message,
+        self,
+        prevUser,
+        timeoutRef,
+        setIsInfoUserVisible,
+        setCurrentUser
+      );
+    } catch (err) {
+      console.error("Error al procesar el mensaje:", err);
     }
-
-    return () => {
-      if (client.readyState && client.readyState() === "OPEN") {
-        client.disconnect(); // Desconectar al desmontar
-      }
-    };
   }, []);
 
-  // Manejo de mensajes de Twitch
+  // Manejador de reconexión
+  const handleReconnect = useCallback(() => {
+    if (reconnectAttempts.current < maxReconnectAttempts) {
+      reconnectAttempts.current += 1;
+      console.log(`Intento de reconexión ${reconnectAttempts.current}/${maxReconnectAttempts}`);
+      
+      setTimeout(() => {
+        client.connect()
+          .catch(err => {
+            console.error('Error en la reconexión:', err);
+            setConnectionStatus('error');
+          });
+      }, Math.min(1000 * Math.pow(2, reconnectAttempts.current), 30000));
+    } else {
+      setConnectionStatus('max_attempts_reached');
+      console.error('Máximo número de intentos de reconexión alcanzado');
+    }
+  }, []);
+
   useEffect(() => {
-    const handleMessage = (channel, tags, message, self) => {
-      try {
-        monitorMessage(
-          channel,
-          tags,
-          message,
-          self,
-          prevUser,
-          timeoutRef,
-          setIsInfoUserVisible,
-          setCurrentUser
-        );
-      } catch (err) {
-        console.error("Error al procesar el mensaje:", err);
-      }
+    // Configurar manejadores de eventos del cliente
+    const setupClientHandlers = () => {
+      client.on("message", handleMessage);
+      
+      client.on("connected", () => {
+        setConnectionStatus('connected');
+        reconnectAttempts.current = 0;
+      });
+
+      client.on("disconnected", () => {
+        setConnectionStatus('disconnected');
+        handleReconnect();
+      });
+
+      client.on("error", (err) => {
+        console.error('Error en la conexión:', err);
+        setConnectionStatus('error');
+      });
     };
 
-    client.on("message", handleMessage);
+    // Iniciar conexión
+    setupClientHandlers();
+    client.connect().catch(err => {
+      console.error('Error en la conexión inicial:', err);
+      setConnectionStatus('error');
+      handleReconnect();
+    });
 
+    // Limpieza
     return () => {
       client.removeListener("message", handleMessage);
+      client.disconnect();
       if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current); // Limpiar el temporizador de forma segura
+        clearTimeout(timeoutRef.current);
       }
     };
-  }, []);
+  }, [handleMessage, handleReconnect]);
+
+  // Renderizado condicional basado en el estado de conexión
+  if (connectionStatus === 'error' || connectionStatus === 'max_attempts_reached') {
+    return (
+      <div className="connection-error">
+        <h2>Error de conexión</h2>
+        <p>{connectionStatus === 'max_attempts_reached' ? 
+          'No se pudo reconectar después de múltiples intentos' : 
+          'Error en la conexión con Twitch'}</p>
+      </div>
+    );
+  }
 
   return (
     <>
-      {isInfoUserVisible && currentUser ? (
-        <InfoUser username={currentUser} />
-      ) : (
-        <UserList />
+      {connectionStatus === 'connecting' && (
+        <div className="connecting">Conectando con Twitch...</div>
+      )}
+      {connectionStatus === 'connected' && (
+        isInfoUserVisible && currentUser ? (
+          <InfoUser username={currentUser} />
+        ) : (
+          <UserList />
+        )
       )}
     </>
   );
-};
+});
+
+App.displayName = 'App';
 
 export default App;

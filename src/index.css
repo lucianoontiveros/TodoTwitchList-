@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 .vip_fondo {
   background: url("/img/vip_fondo.jpeg");
@@ -47,10 +45,81 @@
 }
 
 .antonellavrl_ {
-  background: url("/img/antonellavrl_2.jpg");
+  background: url("/img/antonellavrl_.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
   border-radius: 1em;
-  color: rgb(255, 202, 149);
+  color: #fcd34d;
 }
+.summertime0805 {
+  background: url("/img/summertime0805.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #f36cdd;
+}
+
+.gominola_opositora {
+  background: url("/img/gominola_opositora.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  border-radius: 1em;
+  color: #15d4ff;
+}
+.chinita098 {
+  background: url("/img/chinita098.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #ff8181;
+}
+
+.agos__________ {
+  background: url("/img/agos__________.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #c8ecf4;
+}
+
+.sofiaantok {
+  background: url("/img/sofiaantok.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #fcd34d;
+}
+
+.jana10dv {
+  background: url("/img/jana10dv.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #2ceded;
+}
+
+.mont_opo {
+  background: url("/img/mont_opo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #f2955e;
+}
+
+.camm_sss {
+  background: url("/img/camm_sss.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #f87b33;
+}
+

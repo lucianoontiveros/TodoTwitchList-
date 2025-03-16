@@ -121,7 +121,6 @@ const reviewListTaskUser = (user, channel, tag) => {
 
 const readyTaskUser = (user, ID, channel) => {
   const taskUser = foundTask(user, ID);
-  console.log(taskUser);
   if (!taskUser) {
     sendMessage(MESSAGES.noFoundTask(user, ID), channel);
   } else {

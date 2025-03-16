@@ -1,61 +1,66 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useCallback, memo } from "react";
 import InfoUser_component from "./InfoUser_component/InfoUser_component";
 
-const InfoUser = ({ username }) => {
+const InfoUser = memo(({ username }) => {
   const [user, setUser] = useState(null);
-  const userUpdateRef = useRef(null); // Referencia para el eventListener
+  const [error, setError] = useState(null);
 
-  // Función para obtener los datos del usuario desde localStorage
-  const fetchUserData = () => {
+  // Función memoizada para obtener los datos del usuario
+  const fetchUserData = useCallback(() => {
+    if (!username) return;
+
     try {
-      if (!username) {
+      const storedUsers = JSON.parse(localStorage.getItem("users")) || {};
+      const userData = storedUsers[username];
+
+      if (!userData) {
+        console.warn(`No se encontraron datos para el usuario: ${username}`);
+        setError('Usuario no encontrado');
         setUser(null);
         return;
       }
 
-      const storedUsers = localStorage.getItem("users");
-      if (!storedUsers) {
-        setUser(null);
-        return;
-      }
-
-      const parsedUsers = JSON.parse(storedUsers);
-      if (typeof parsedUsers !== "object" || parsedUsers === null) {
-        setUser(null);
-        return;
-      }
-
-      setUser(parsedUsers[username] || null);
-    } catch (error) {
-      console.error(
-        "Error al obtener datos del usuario desde localStorage:",
-        error
-      );
+      setUser(userData);
+      setError(null);
+    } catch (err) {
+      console.error('Error al obtener datos del usuario:', err);
+      setError('Error al cargar datos');
       setUser(null);
     }
-  };
-
-  useEffect(() => {
-    fetchUserData(); // Cargar datos al montar el componente
-
-    const handleStorageChange = (event) => {
-      if (event.key === "users") fetchUserData();
-    };
-
-    userUpdateRef.current = () => fetchUserData();
-
-    window.addEventListener("storage", handleStorageChange);
-    window.addEventListener("usersUpdated", userUpdateRef.current);
-
-    return () => {
-      window.removeEventListener("storage", handleStorageChange);
-      if (userUpdateRef.current) {
-        window.removeEventListener("usersUpdated", userUpdateRef.current);
-      }
-    };
   }, [username]);
 
-  if (!user) return null;
+  useEffect(() => {
+    // Cargar datos iniciales
+    fetchUserData();
+
+    // Configurar listeners para cambios
+    const handleStorageChange = (event) => {
+      if (event.key === "users") {
+        fetchUserData();
+      }
+    };
+
+    const handleUserUpdate = () => fetchUserData();
+
+    // Suscribirse a eventos
+    window.addEventListener("storage", handleStorageChange);
+    window.addEventListener("usersUpdated", handleUserUpdate);
+
+    // Limpieza de eventos
+    return () => {
+      window.removeEventListener("storage", handleStorageChange);
+      window.removeEventListener("usersUpdated", handleUserUpdate);
+    };
+  }, [fetchUserData]);
+
+  // Manejo de estados de error y carga
+  if (error) {
+    return <div className="error-message">{error}</div>;
+  }
+
+  if (!user) {
+    return <div className="loading">Cargando...</div>;
+  }
 
   return (
     <InfoUser_component
@@ -63,6 +68,8 @@ const InfoUser = ({ username }) => {
       username={username}
     />
   );
-};
+});
+
+InfoUser.displayName = 'InfoUser';
 
 export default InfoUser;

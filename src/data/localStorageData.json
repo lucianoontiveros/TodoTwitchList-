@@ -1,3 +1,6710 @@
 {
-  "users": "{\"Putito\":{\"name\":\"Putito\",\"_id\":\"m6c9nzt4-5l0\",\"status\":null,\"tasks\":[],\"exams\":[],\"lastTime\":\"2025-01-25T14:24:33.422Z\",\"personaldata\":[],\"mensaje\":\"cuartodechenz interactuó por última vez: 25/1/2025 11:24:33.\"}}"
+  "summertime0805": {
+    "name": "summertime0805",
+    "_id": "ldm2h32lv",
+    "status": null,
+    "tasks": [
+      {
+        "description": "Toma de impresiones implantes",
+        "_id": "5c0",
+        "active": false
+      },
+      {
+        "description": "Mantenimiento implantes",
+        "_id": "33c",
+        "active": false
+      },
+      { "description": "Periimplantitis", "_id": "4a2", "active": false },
+      {
+        "description": "Ver material y funciones exodoncia",
+        "_id": "205",
+        "active": false
+      },
+      {
+        "description": "Materiales y funciones cirugía",
+        "_id": "846",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 57950,
+        "birth": "08-07",
+        "sign": "Cáncer ♋︎",
+        "nationality": "Española",
+        "instagram": "",
+        "croquetastotal": 1053,
+        "studyfor": "Técnico Superior Higiene Bucodental",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "summertime0805 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "crazystudi3s": {
+    "name": "crazystudi3s",
+    "_id": "h0ux75w5n",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 5200,
+        "birth": "30-09",
+        "sign": "Libra ♎︎",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "crazystudi3s interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "estudiandopsico": {
+    "name": "estudiandopsico",
+    "_id": "mcpe5s93a",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 600,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 2,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "estudiandopsico interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "ccccccclaire": {
+    "name": "ccccccclaire",
+    "_id": "29uhfj225",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "ccccccclaire interactuó por última vez: 24/2/2024, 12:22:41"
+  },
+  "beaavg": {
+    "name": "beaavg",
+    "_id": "2esx0a1x3",
+    "status": null,
+    "tasks": [{ "description": "Esquema t22", "_id": "5ba", "active": false }],
+    "exams": [],
+    "lastTime": "2024-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 13800,
+        "birth": "04-11",
+        "sign": "Escorpio ♏︎",
+        "nationality": "Española",
+        "instagram": "",
+        "croquetastotal": 6,
+        "studyfor": "",
+        "oppositionfor": " conservadora de museos"
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "beaavg interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "mpaz98": {
+    "name": "mpaz98",
+    "_id": "2ht2oqvo6",
+    "status": null,
+    "tasks": [
+      { "description": "Sarampion", "_id": "e79", "active": false },
+      { "description": "Rubeola", "_id": "082", "active": false },
+      { "description": "Parvovirus b19", "_id": "e1c", "active": false },
+      { "description": "Varicela zoster", "_id": "c16", "active": false },
+      { "description": "VHH6", "_id": "2ef", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 1750,
+        "birth": "14-08",
+        "sign": "Leo ♌︎",
+        "nationality": "Argentina",
+        "instagram": "",
+        "croquetastotal": 3,
+        "studyfor": "Bioquímica",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "mpaz98 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "saraacatalan": {
+    "name": "saraacatalan",
+    "_id": "sost170t1",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2024-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 2000,
+        "birth": "27-10",
+        "sign": "Escorpio ♏︎",
+        "nationality": "Española",
+        "instagram": "",
+        "croquetastotal": 39,
+        "studyfor": "",
+        "oppositionfor": "PIR"
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "saraacatalan interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "aleeuuuu": {
+    "name": "aleeuuuu",
+    "_id": "4ut7q5cjw",
+    "status": null,
+    "tasks": [
+      {
+        "description": "Actualizar formulario excel Monitorias",
+        "_id": "bf0",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2024-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 4500,
+        "birth": "",
+        "sign": "",
+        "nationality": "Colombiana♥",
+        "instagram": "",
+        "croquetastotal": 22,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "aleeuuuu interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "rociog__": {
+    "name": "rociog__",
+    "_id": "hea767rgk",
+    "status": null,
+    "tasks": [
+      { "description": "Brechas", "_id": "fd9", "active": false },
+      { "description": "Estrategias", "_id": "66f", "active": false },
+      {
+        "description": "Estrategia de integración",
+        "_id": "234",
+        "active": false
+      },
+      { "description": "Repaso seminario org", "_id": "62e", "active": false },
+      {
+        "description": "Repaso planif estrategia",
+        "_id": "18f",
+        "active": false
+      },
+      { "description": "Ver proyecto", "_id": "122", "active": false },
+      {
+        "description": "Seguimiento y evaluación del proyecto",
+        "_id": "59d",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 27950,
+        "birth": "16-11",
+        "sign": "Escorpio ♏︎",
+        "nationality": "Argentina",
+        "instagram": "",
+        "croquetastotal": 30,
+        "studyfor": "Nutri",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "rociog__ interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "rox1134": {
+    "name": "rox1134",
+    "_id": "1a1fcyn27",
+    "status": null,
+    "tasks": [
+      { "description": "Intro PA2", "_id": "898", "active": false },
+      {
+        "description": "Propositos  y objetivos",
+        "_id": "699",
+        "active": false
+      },
+      { "description": "Ejes con bibliografia", "_id": "3bc", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2024-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 2200,
+        "birth": "11-07",
+        "sign": "Cáncer ♋︎",
+        "nationality": "Argentina",
+        "instagram": "Roxanapicuni",
+        "croquetastotal": 14,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "rox1134 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "carlita310": {
+    "name": "carlita310",
+    "_id": "qv1ci8qer",
+    "status": null,
+    "tasks": [
+      { "description": "Preguntero pediatría", "_id": "db9", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 950,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "carlita310 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "alexmauriciobp": {
+    "name": "alexmauriciobp",
+    "_id": "ymyhyq4cv",
+    "status": null,
+    "tasks": [
+      {
+        "description": "Combinación de documentos World",
+        "_id": "770",
+        "active": false
+      },
+      { "description": "", "_id": "b0a", "active": false },
+      {
+        "description": "Patrimonio Empresarial",
+        "_id": "dd7",
+        "active": false
+      },
+      { "description": "Contabilidad", "_id": "c8a", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 200,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "alexmauriciobp interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "camm_sss": {
+    "name": "camm_sss",
+    "_id": "xvcz49utj",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 22450,
+        "birth": "18-03",
+        "sign": "Piscis ♓︎ ",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 224,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "camm_sss interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "allanttf": {
+    "name": "allanttf",
+    "_id": "pp6mwm4aq",
+    "status": null,
+    "tasks": [
+      {
+        "description": "Finish Topic Types and Writing",
+        "_id": "570",
+        "active": false
+      },
+      {
+        "description": "Finish Topic Types and Reading",
+        "_id": "9f6",
+        "active": false
+      },
+      {
+        "description": "Finish Cards for Presentation",
+        "_id": "bcb",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 6350,
+        "birth": "17-02",
+        "sign": "Acuario ♒︎",
+        "nationality": "Hondureña",
+        "instagram": "Yosoyallan",
+        "croquetastotal": 21,
+        "studyfor": "Profesor en la Enseñanza del Inglés",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "allanttf interactuó por última vez: 24/2/2024, 12:22:41"
+  },
+  "pabloelcmdezgz": {
+    "name": "pabloelcmdezgz",
+    "_id": "ao6u6x8l9",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "pabloelcmdezgz interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "agusbuchy": {
+    "name": "agusbuchy",
+    "_id": "iqkk4t36e",
+    "status": null,
+    "tasks": [
+      {
+        "description": "Tp eco. terminar de investigar y escribir",
+        "_id": "acc",
+        "active": false
+      },
+      {
+        "description": "Ver puntos flojos examen",
+        "_id": "589",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 10700,
+        "birth": "19-11",
+        "sign": "Escorpio ♏︎",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "Comercio internacional",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "agusbuchy interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "jazzy_lemon": {
+    "name": "jazzy_lemon",
+    "_id": "u19aq6i6g",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 150,
+        "birth": "26-04",
+        "sign": "Tauro ♉︎",
+        "nationality": "Argentina",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "jazzy_lemon interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "pao87": {
+    "name": "pao87",
+    "_id": "w26in0kbh",
+    "status": null,
+    "tasks": [
+      { "description": "Leer Gurevich", "_id": "912", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 250,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 2,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "pao87 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "melissaregina": {
+    "name": "melissaregina",
+    "_id": "lmuesokz2",
+    "status": null,
+    "tasks": [
+      {
+        "description": "Repaso panificacion y pasteleria",
+        "_id": "7b5",
+        "active": false
+      },
+      { "description": "Definiciones epi", "_id": "6ec", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 2900,
+        "birth": "22-08",
+        "sign": "Leo ♌︎",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 3,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "melissaregina interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "cande_pl": {
+    "name": "cande_pl",
+    "_id": "m2lentsrr",
+    "status": null,
+    "tasks": [
+      { "description": "Repasar termodinamica", "_id": "b85", "active": false },
+      { "description": "Repasar cinetica", "_id": "441", "active": false },
+      {
+        "description": "Repasar ejercicios practicos de las guias 1-4",
+        "_id": "60f",
+        "active": false
+      },
+      { "description": "Repasar ultimas guias", "_id": "255", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 850,
+        "birth": "16-05",
+        "sign": "Tauro ♉︎",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "cande_pl interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "valenramos26": {
+    "name": "valenramos26",
+    "_id": "6xo4shhcw",
+    "status": null,
+    "tasks": [
+      {
+        "description": "Organizar semana de estudio",
+        "_id": "70d",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 9200,
+        "birth": "26-02",
+        "sign": "Piscis ♓︎",
+        "nationality": "Argentina",
+        "instagram": "",
+        "croquetastotal": 179,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "valenramos26 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "mont_opo": {
+    "name": "mont_opo",
+    "_id": "srhphf0zu",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 10350,
+        "birth": "03-04",
+        "sign": "Aries ♈︎",
+        "nationality": "Española",
+        "instagram": "",
+        "croquetastotal": 108,
+        "studyfor": "",
+        "oppositionfor": "Opos A1 Ayuntamiento"
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "mont_opo interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "nairim_25": {
+    "name": "nairim_25",
+    "_id": "utv7r5zhh",
+    "status": null,
+    "tasks": [
+      { "description": "Organigrama MI DGP", "_id": "912", "active": false },
+      { "description": "Clase 78", "_id": "507", "active": false },
+      { "description": "Excel autores 61 y 62", "_id": "e3d", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 3800,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 72,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "nairim_25 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "euflorica": {
+    "name": "euflorica",
+    "_id": "81c8rtuyp",
+    "status": null,
+    "tasks": [
+      {
+        "description": "Analizar EVERYMAN (resumen)",
+        "_id": "724",
+        "active": false
+      },
+      { "description": "Estudiar analisis", "_id": "29f", "active": false },
+      { "description": "Repasar r y j 1 vez", "_id": "c6e", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 4600,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 23,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "euflorica interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "melisandree88": {
+    "name": "melisandree88",
+    "_id": "tixkcx9bb",
+    "status": null,
+    "tasks": [{ "description": "Facturar", "_id": "196", "active": false }],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "melisandree88 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "rezamed": {
+    "name": "rezamed",
+    "_id": "4afgiy2zh",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 150,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "rezamed interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "juliapd23": {
+    "name": "juliapd23",
+    "_id": "zsopy5v0h",
+    "status": null,
+    "tasks": [
+      { "description": "Curso marketing", "_id": "678", "active": false },
+      { "description": "Junit", "_id": "415", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 3950,
+        "birth": "23-04",
+        "sign": "Tauro ♉︎",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 28,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "juliapd23 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "absolutezero_01": {
+    "name": "absolutezero_01",
+    "_id": "uxqltwrww",
+    "status": null,
+    "tasks": [
+      { "description": "Ejercicio 4.10", "_id": "ac2", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 3300,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 37,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "absolutezero_01 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "danuuam": {
+    "name": "danuuam",
+    "_id": "sr1oc7bzu",
+    "status": null,
+    "tasks": [
+      {
+        "description": "Ejercicios consolidado",
+        "_id": "8ed",
+        "active": false
+      },
+      { "description": "Ejercicio EFE", "_id": "b11", "active": false },
+      {
+        "description": "Ejercicio inv permanentes",
+        "_id": "603",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 400,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 6,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "danuuam interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "rethspace": {
+    "name": "rethspace",
+    "_id": "1p0vmew6l",
+    "status": null,
+    "tasks": [
+      { "description": "Planner semanal", "_id": "312", "active": false },
+      { "description": "Repaso balotario", "_id": "01e", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 1150,
+        "birth": "27-03",
+        "sign": "Aries ♈︎ ",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 3,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "rethspace interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "melu_130_trbl": {
+    "name": "melu_130_trbl",
+    "_id": "vwuzqzjlu",
+    "status": null,
+    "tasks": [{ "description": "Clase 16", "_id": "90c", "active": false }],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 2400,
+        "birth": "22-11",
+        "sign": "Sagitario ♐︎",
+        "nationality": "Argentina",
+        "instagram": "",
+        "croquetastotal": 3,
+        "studyfor": "Bioquimica",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "melu_130_trbl interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "elespiadearagon": {
+    "name": "elespiadearagon",
+    "_id": "7rqovjaow",
+    "status": null,
+    "tasks": [{ "description": "SWM", "_id": "77b", "active": false }],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 100,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "elespiadearagon interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "herc_sea": {
+    "name": "herc_sea",
+    "_id": "o5deonlzv",
+    "status": null,
+    "tasks": [
+      {
+        "description": "Editar vlog - YTChannel",
+        "_id": "6eb",
+        "active": false
+      },
+      { "description": "Regalo BS - Joss", "_id": "e1b", "active": false },
+      {
+        "description": "Cita FSV - Lunes 2:00 pm",
+        "_id": "dce",
+        "active": false
+      },
+      {
+        "description": "Temario Parcial 1 - Ingenieria Sanitaria",
+        "_id": "5c4",
+        "active": false
+      },
+      {
+        "description": "Agendar renovacion DUI y Tarjeta de Circulacion UM MaXx",
+        "_id": "46f",
+        "active": false
+      },
+      {
+        "description": "Calendario Marzo 2025 - Agenda iPad",
+        "_id": "8e4",
+        "active": false
+      },
+      {
+        "description": "Actualizar hoja de gastos - Notion",
+        "_id": "5b7",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 2450,
+        "birth": "16-02",
+        "sign": "Acuario ♒︎",
+        "nationality": "Salvadoreña",
+        "instagram": "",
+        "croquetastotal": 10,
+        "studyfor": "Ingeniería Civil (UPES) | Ingeniería en Sistemas Informáticos (UES)",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "herc_sea interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "yohaae": {
+    "name": "yohaae",
+    "_id": "uzxw1xkru",
+    "status": null,
+    "tasks": [{ "description": "Malaria", "_id": "984", "active": false }],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 150,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "yohaae interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "selsanx": {
+    "name": "selsanx",
+    "_id": "ik0u24prq",
+    "status": null,
+    "tasks": [{ "description": "Terminar t3", "_id": "232", "active": false }],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 100,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "selsanx interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "clau_condori": {
+    "name": "clau_condori",
+    "_id": "4an1oxv8t",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 6850,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 110,
+        "studyfor": "Evitar que la Tierra se muera (ingeniería ambiental)",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "clau_condori interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "diotima990": {
+    "name": "diotima990",
+    "_id": "bngs3voh9",
+    "status": null,
+    "tasks": [{ "description": "Revise", "_id": "982", "active": false }],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 200,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "diotima990 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "sannanas222": {
+    "name": "sannanas222",
+    "_id": "m017p87tm",
+    "status": null,
+    "tasks": [
+      { "description": "Big assignment", "_id": "505", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "sannanas222 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "crisopi": {
+    "name": "crisopi",
+    "_id": "8w3poxm3i",
+    "status": null,
+    "tasks": [
+      { "description": "TEMA 7", "_id": "e7d", "active": false },
+      { "description": "Tema 7", "_id": "039", "active": false },
+      { "description": "Tema 8", "_id": "8f1", "active": false },
+      { "description": "Tema 9", "_id": "dcc", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 200,
+        "birth": "01-06",
+        "sign": "Géminis ♊︎",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": "Funcionarios de la Administracion de Justicia"
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "crisopi interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "anyhernandez": {
+    "name": "anyhernandez",
+    "_id": "c3hukgfru",
+    "status": null,
+    "tasks": [
+      {
+        "description": "Control Bajas TECO 31/07",
+        "_id": "939",
+        "active": false
+      },
+      { "description": "Comparativa 092024", "_id": "76e", "active": false },
+      {
+        "description": "Cambio en las cuentas del banco - PMC",
+        "_id": "09c",
+        "active": false
+      },
+      {
+        "description": "Notificar aumentos 11/24 - limite 10/10",
+        "_id": "a5e",
+        "active": false
+      },
+      {
+        "description": "Controlar ingresos - Contadora",
+        "_id": "cf4",
+        "active": false
+      },
+      {
+        "description": "Adecuar notas de aumento - Ver IPC",
+        "_id": "c09",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 1150,
+        "birth": "27-05",
+        "sign": "Géminis ♊︎",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 6,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "anyhernandez interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "diegoelciego2": {
+    "name": "diegoelciego2",
+    "_id": "jj1unc5nn",
+    "status": null,
+    "tasks": [
+      {
+        "description": "Repaso abusivo trigonometría",
+        "_id": "128",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "26-08",
+        "sign": "Virgo ♍︎",
+        "nationality": "Peruano",
+        "instagram": "Diego.s34",
+        "croquetastotal": 1,
+        "studyfor": "Biología",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "diegoelciego2 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "rocasaurio78": {
+    "name": "rocasaurio78",
+    "_id": "gi0ofcziz",
+    "status": null,
+    "tasks": [
+      { "description": "5.4", "_id": "065", "active": false },
+      { "description": "5.5", "_id": "30d", "active": false },
+      { "description": "5.6", "_id": "14c", "active": false },
+      { "description": "5.7", "_id": "a08", "active": false },
+      { "description": "5.8", "_id": "eb0", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 8850,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 5,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "rocasaurio78 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "pldagnes25": {
+    "name": "pldagnes25",
+    "_id": "ckhwyiy55",
+    "status": null,
+    "tasks": [
+      { "description": "Unidad 5", "_id": "39d", "active": false },
+      { "description": "Unidad 6", "_id": "94d", "active": false },
+      { "description": "Repaso unidad 2", "_id": "b1b", "active": false },
+      { "description": "Repaso unidad 3", "_id": "57c", "active": false },
+      { "description": "Tp 2", "_id": "dd2", "active": false },
+      { "description": "Organizarme", "_id": "7eb", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 14750,
+        "birth": "25-07",
+        "sign": "Leo ♌︎",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 33,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "pldagnes25 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "callatemaya": {
+    "name": "callatemaya",
+    "_id": "e0xyco2xm",
+    "status": null,
+    "tasks": [
+      {
+        "description": "Ordenar resumen psicometricas",
+        "_id": "528",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 800,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "callatemaya interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "iminwe": {
+    "name": "iminwe",
+    "_id": "04uq51d47",
+    "status": null,
+    "tasks": [
+      { "description": "Organizar horario", "_id": "f35", "active": false },
+      {
+        "description": "CR: Enviar correos actividades",
+        "_id": "933",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 6750,
+        "birth": "19-07",
+        "sign": "Cáncer ♋︎",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 189,
+        "studyfor": "No electrocutarme",
+        "oppositionfor": "Jefa de mi casa"
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "iminwe interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "valenm_30": {
+    "name": "valenm_30",
+    "_id": "wvc5mke2h",
+    "status": null,
+    "tasks": [
+      { "description": "Fatiga", "_id": "f67", "active": false },
+      {
+        "description": "Ambiente hiper e hipobarico",
+        "_id": "46c",
+        "active": false
+      },
+      {
+        "description": "Deshidratacion y factores ambientales",
+        "_id": "492",
+        "active": false
+      },
+      { "description": "Unidad 1", "_id": "798", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 500,
+        "birth": "30-03",
+        "sign": "Aries ♈︎ ",
+        "nationality": "Argentina",
+        "instagram": "",
+        "croquetastotal": 5,
+        "studyfor": "Nutricionista",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "valenm_30 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "karol_dolce": {
+    "name": "karol_dolce",
+    "_id": "wl7xxwb82",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 400,
+        "birth": "07-05",
+        "sign": "Tauro ♉︎",
+        "nationality": "Española",
+        "instagram": "",
+        "croquetastotal": 10,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "karol_dolce interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "sereoviedo": {
+    "name": "sereoviedo",
+    "_id": "1qr0q530u",
+    "status": null,
+    "tasks": [{ "description": "Leer corazón", "_id": "1a4", "active": false }],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 150,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "sereoviedo interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "mariawolf_98": {
+    "name": "mariawolf_98",
+    "_id": "qlp3repcq",
+    "status": null,
+    "tasks": [
+      { "description": "Certificación 2", "_id": "6f7", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 3800,
+        "birth": "18-12",
+        "sign": "Sagitario ♐︎",
+        "nationality": "Argentina",
+        "instagram": "Mariawolf1",
+        "croquetastotal": 65,
+        "studyfor": "Notariado",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "mariawolf_98 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "itsscintia": {
+    "name": "itsscintia",
+    "_id": "o8v5ij92d",
+    "status": null,
+    "tasks": [
+      { "description": "Isabel II", "_id": "833", "active": false },
+      { "description": "Sexenio democrático", "_id": "fdb", "active": false },
+      { "description": "La resturación", "_id": "8fe", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 3100,
+        "birth": "21-09",
+        "sign": "Virgo ♍︎",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 21,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "itsscintia interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "lvndscaper": {
+    "name": "lvndscaper",
+    "_id": "t3mkpyhgb",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 0,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 2,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "lvndscaper interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "lulaluzz": {
+    "name": "lulaluzz",
+    "_id": "dsostosp5",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 750,
+        "birth": "26-07",
+        "sign": "Leo ♌︎",
+        "nationality": "Argentina",
+        "instagram": "",
+        "croquetastotal": 12,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "lulaluzz interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "facuroly": {
+    "name": "facuroly",
+    "_id": "qixf23ugf",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "facuroly interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "ruidodemate_rocio": {
+    "name": "ruidodemate_rocio",
+    "_id": "dy6oenc17",
+    "status": null,
+    "tasks": [
+      {
+        "description": "Intervención educativa y diagnóstico",
+        "_id": "9c6",
+        "active": false
+      },
+      {
+        "description": "Hacia una fragilidad común. Saberes profesionales",
+        "_id": "86a",
+        "active": false
+      },
+      {
+        "description": "Construyendo conocimientos  en la especificidad del campo psicopedagógico",
+        "_id": "dbf",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 400,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 2,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "ruidodemate_rocio interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "luanamstudy": {
+    "name": "luanamstudy",
+    "_id": "9js4u5bv0",
+    "status": null,
+    "tasks": [
+      {
+        "description": "Terminar insuficiencia cardíaca",
+        "_id": "4d5",
+        "active": false
+      },
+      { "description": "Repasar abdomen agudo", "_id": "571", "active": false },
+      { "description": "Cardiopatía isquémica", "_id": "626", "active": false },
+      { "description": "Repasar apendicitis", "_id": "cc6", "active": false },
+      {
+        "description": "Repasar nódulo tiroideo",
+        "_id": "69b",
+        "active": false
+      },
+      { "description": "Subrayar reu", "_id": "081", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 12950,
+        "birth": "23-11",
+        "sign": "Sagitario ♐︎",
+        "nationality": "Argentina",
+        "instagram": "",
+        "croquetastotal": 92,
+        "studyfor": "Medicina",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "luanamstudy interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "luu_165": {
+    "name": "luu_165",
+    "_id": "r0gu24pg5",
+    "status": null,
+    "tasks": [{ "description": "Ingles", "_id": "61d", "active": false }],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "luu_165 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "mandaariina": {
+    "name": "mandaariina",
+    "_id": "pkkmgwxbw",
+    "status": null,
+    "tasks": [
+      { "description": "Video 3 resp", "_id": "d45", "active": false },
+      {
+        "description": "Lectura 1er parte cap resp",
+        "_id": "5a8",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 3200,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 21,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "mandaariina interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "epl_17": {
+    "name": "epl_17",
+    "_id": "m8g5qjbla",
+    "status": null,
+    "tasks": [{ "description": "Diapos 1", "_id": "d85", "active": false }],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 350,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 3,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "epl_17 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "wandazk": {
+    "name": "wandazk",
+    "_id": "fxnehdwwx",
+    "status": null,
+    "tasks": [
+      {
+        "description": "Repaso cuaderno y hojas",
+        "_id": "60e",
+        "active": false
+      },
+      {
+        "description": "Tema y reprod de especies",
+        "_id": "6be",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 5900,
+        "birth": "10-03",
+        "sign": "Piscis ♓︎",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 7,
+        "studyfor": "Ser veterinaria",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "wandazk interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "chinita098": {
+    "name": "chinita098",
+    "_id": "rnedu63wg",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 1900,
+        "birth": "",
+        "sign": "",
+        "nationality": "Argentina",
+        "instagram": "***rdones",
+        "croquetastotal": 10,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "chinita098 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "dai_m00n": {
+    "name": "dai_m00n",
+    "_id": "4s7x99v0y",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 0,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "dai_m00n interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "papasfritas006": {
+    "name": "papasfritas006",
+    "_id": "zw5wt9udl",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 0,
+        "birth": "16-05",
+        "sign": "Tauro ♉︎",
+        "nationality": "Argentina",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "Ing quimica",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "papasfritas006 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "flaviiia_": {
+    "name": "flaviiia_",
+    "_id": "c51xd1rgk",
+    "status": null,
+    "tasks": [
+      { "description": "Resumen A.P.II", "_id": "22a", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 350,
+        "birth": "23-06",
+        "sign": "Cáncer ♋︎",
+        "nationality": "Argentina",
+        "instagram": "",
+        "croquetastotal": 5,
+        "studyfor": "Ing. Agronomica",
+        "oppositionfor": "Recibirme alguna vez en la vida"
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "flaviiia_ interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "laurean010": {
+    "name": "laurean010",
+    "_id": "ichjvxpak",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 0,
+        "birth": "08-05",
+        "sign": "Tauro ♉︎",
+        "nationality": "Uruguaya",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "Ing Civil",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "laurean010 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "sabrinab_": {
+    "name": "sabrinab_",
+    "_id": "e2klt4bss",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 0,
+        "birth": "25-06",
+        "sign": "Cáncer ♋︎",
+        "nationality": "Argentina",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "Ing. en Computación",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "sabrinab_ interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "caliubi": {
+    "name": "caliubi",
+    "_id": "90mx9dv4j",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 0,
+        "birth": "28-09",
+        "sign": "Libra ♎︎",
+        "nationality": "Peruana ps",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "caliubi interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "melanie3833": {
+    "name": "melanie3833",
+    "_id": "7yvo5urow",
+    "status": null,
+    "tasks": [
+      {
+        "description": "Repaso todos los temas",
+        "_id": "444",
+        "active": false
+      },
+      { "description": "Repaso micro", "_id": "ca9", "active": false },
+      { "description": "Repaso macro", "_id": "084", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 2250,
+        "birth": "04-05",
+        "sign": "Tauro ♉︎",
+        "nationality": "Argentina",
+        "instagram": "",
+        "croquetastotal": 24,
+        "studyfor": "Ingeniería Civil",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "melanie3833 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "melgor3333": {
+    "name": "melgor3333",
+    "_id": "4cuqk2t4v",
+    "status": null,
+    "tasks": [
+      {
+        "description": "Leer build a second brain",
+        "_id": "f19",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "melgor3333 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "sofiinader": {
+    "name": "sofiinader",
+    "_id": "6lahv1sn3",
+    "status": null,
+    "tasks": [
+      { "description": "Coloquio 8", "_id": "b1b", "active": false },
+      { "description": "Teoria eq heterogéneo", "_id": "b93", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 200,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "sofiinader interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "len11nqn": {
+    "name": "len11nqn",
+    "_id": "oi6k8g3an",
+    "status": null,
+    "tasks": [
+      {
+        "description": "Percepcion visual pasos",
+        "_id": "2f1",
+        "active": false
+      },
+      {
+        "description": "Proceso judicial definicion",
+        "_id": "b93",
+        "active": false
+      },
+      { "description": "Etapas del proceso", "_id": "1f0", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 4750,
+        "birth": "29-10",
+        "sign": "Escorpio ♏︎",
+        "nationality": "Argentina",
+        "instagram": "",
+        "croquetastotal": 12,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "len11nqn interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "johanafb96": {
+    "name": "johanafb96",
+    "_id": "l585xa9wa",
+    "status": null,
+    "tasks": [
+      { "description": "T.R.D.", "_id": "f16", "active": false },
+      { "description": "A.W.F.", "_id": "1c3", "active": false },
+      {
+        "description": "Hacer resumen y preguntas",
+        "_id": "444",
+        "active": false
+      },
+      { "description": "L.T.R", "_id": "f79", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 300,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "johanafb96 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "belumonge": {
+    "name": "belumonge",
+    "_id": "s8n8nbked",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 1250,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 11,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "belumonge interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "angelesspalavecino": {
+    "name": "angelesspalavecino",
+    "_id": "rozkuhdan",
+    "status": null,
+    "tasks": [{ "description": "Tema 3", "_id": "142", "active": false }],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 1100,
+        "birth": "10-04",
+        "sign": "Aries ♈︎",
+        "nationality": "Argentina",
+        "instagram": "",
+        "croquetastotal": 6,
+        "studyfor": "Ser psicologa",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "angelesspalavecino interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "kinelexxshi": {
+    "name": "kinelexxshi",
+    "_id": "0v3b97qzj",
+    "status": null,
+    "tasks": [
+      { "description": "Artroplastia de cadera", "_id": "552", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 100,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "kinelexxshi interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "97gigi": {
+    "name": "97gigi",
+    "_id": "w6hu19vdc",
+    "status": null,
+    "tasks": [
+      { "description": "Prevotella spp", "_id": "8c6", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 100,
+        "birth": "09-09",
+        "sign": "Virgo ♍︎",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "Ser odontóloga",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "97gigi interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "lexx_shi": {
+    "name": "lexx_shi",
+    "_id": "ysaycfz0v",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 2550,
+        "birth": "28-09",
+        "sign": "Libra ♎︎",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 18,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "lexx_shi interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "gretaruiz": {
+    "name": "gretaruiz",
+    "_id": "z165vffpn",
+    "status": null,
+    "tasks": [
+      { "description": "Contenido 17-23", "_id": "b16", "active": false },
+      { "description": "Publicar stories", "_id": "071", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 900,
+        "birth": "17-08",
+        "sign": "Leo ♌︎",
+        "nationality": "Mexicana",
+        "instagram": "",
+        "croquetastotal": 19,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "gretaruiz interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "rsofiaa": {
+    "name": "rsofiaa",
+    "_id": "p8egzgadd",
+    "status": null,
+    "tasks": [
+      {
+        "description": "Charla diplo ciberdelincuencia",
+        "_id": "010",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 25800,
+        "birth": "13-12",
+        "sign": "Sagitario ♐︎",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 283,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "rsofiaa interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "caluwuu": {
+    "name": "caluwuu",
+    "_id": "o77fg3evz",
+    "status": null,
+    "tasks": [
+      { "description": "Lista borrador", "_id": "86f", "active": false },
+      { "description": "Folleto", "_id": "d01", "active": false },
+      { "description": "Parcial int t1", "_id": "3c0", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 5550,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 123,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "caluwuu interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "florrrlopezz": {
+    "name": "florrrlopezz",
+    "_id": "h1jx4m7uy",
+    "status": null,
+    "tasks": [{ "description": "U11 histo", "_id": "96b", "active": false }],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 100,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "florrrlopezz interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "latere0057": {
+    "name": "latere0057",
+    "_id": "wefi8ti4g",
+    "status": null,
+    "tasks": [
+      { "description": "Clases pediatría", "_id": "aad", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "latere0057 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "angelic_layer12": {
+    "name": "angelic_layer12",
+    "_id": "fc4mng6j3",
+    "status": null,
+    "tasks": [
+      { "description": "Expo caso clinico", "_id": "825", "active": false },
+      {
+        "description": "Reusmen hemodinamia neo",
+        "_id": "6ea",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 100,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "angelic_layer12 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "palostudy": {
+    "name": "palostudy",
+    "_id": "2lo4fuuw0",
+    "status": null,
+    "tasks": [
+      {
+        "description": "Órganos del tubo digestivo + topografia abdominal",
+        "_id": "4f2",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "palostudy interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "michisycafe": {
+    "name": "michisycafe",
+    "_id": "nr0vdqdug",
+    "status": null,
+    "tasks": [
+      { "description": "Revolución libertadora", "_id": "331", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "michisycafe interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "esaplaza_esmia": {
+    "name": "esaplaza_esmia",
+    "_id": "gictqyyb3",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 0,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 2,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "esaplaza_esmia interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "lolamora4": {
+    "name": "lolamora4",
+    "_id": "x9v7sm0jl",
+    "status": null,
+    "tasks": [
+      { "description": "Facturas 2125 a julio", "_id": "eca", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 4400,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 89,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "lolamora4 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "yolomd": {
+    "name": "yolomd",
+    "_id": "03qbruz77",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 1050,
+        "birth": "15-06",
+        "sign": "Géminis ♊︎",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 11,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "yolomd interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "paolaut": {
+    "name": "paolaut",
+    "_id": "ywm71pxu6",
+    "status": null,
+    "tasks": [
+      {
+        "description": "20 preguntas formulario",
+        "_id": "235",
+        "active": false
+      },
+      { "description": "50 preguntas del test", "_id": "a6a", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 100,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "paolaut interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "sasha505mont": {
+    "name": "sasha505mont",
+    "_id": "9qsr4cg5b",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 250,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 6,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "sasha505mont interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "sofiarelylopez": {
+    "name": "sofiarelylopez",
+    "_id": "vw0zs20as",
+    "status": null,
+    "tasks": [{ "description": "Posibles 1", "_id": "e9a", "active": false }],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 500,
+        "birth": "07-09",
+        "sign": "Virgo ♍︎",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 5,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "sofiarelylopez interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "opopablo": {
+    "name": "opopablo",
+    "_id": "yvdt3c2nv",
+    "status": null,
+    "tasks": [{ "description": "Leer PDFs", "_id": "fc3", "active": false }],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 1050,
+        "birth": "09-10",
+        "sign": "Libra ♎︎",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 21,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "opopablo interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "fatygg": {
+    "name": "fatygg",
+    "_id": "u1nxnfan7",
+    "status": null,
+    "tasks": [
+      {
+        "description": "Diagrama de Exportación 2 pomos de 25 min",
+        "_id": "3ad",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 250,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "fatygg interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "chunhito": {
+    "name": "chunhito",
+    "_id": "3obt2kvrj",
+    "status": null,
+    "tasks": [
+      { "description": "2PS relacionados", "_id": "483", "active": false },
+      { "description": "Lyne vid", "_id": "bf9", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 250,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 3,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "chunhito interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "lauvet93": {
+    "name": "lauvet93",
+    "_id": "wiy41eqro",
+    "status": null,
+    "tasks": [
+      { "description": "Resumen T10 HI", "_id": "1b0", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "lauvet93 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "cami_a_g": {
+    "name": "cami_a_g",
+    "_id": "l3at67jqg",
+    "status": null,
+    "tasks": [
+      { "description": "Ejemplos moodle", "_id": "9fc", "active": false },
+      { "description": "Multiplechoice", "_id": "04c", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 1750,
+        "birth": "19-02",
+        "sign": "Acuario ♒︎",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 5,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "cami_a_g interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "ricardolopezd": {
+    "name": "ricardolopezd",
+    "_id": "ov4m6pbqr",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 650,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "ricardolopezd interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "angelic_braco": {
+    "name": "angelic_braco",
+    "_id": "8pm91kw6w",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 750,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 3,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "angelic_braco interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "noa_soleto": {
+    "name": "noa_soleto",
+    "_id": "kauzqr680",
+    "status": null,
+    "tasks": [
+      { "description": "Resumen tema3", "_id": "699", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 1250,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 18,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "noa_soleto interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "chemchanta": {
+    "name": "chemchanta",
+    "_id": "66cliq2s4",
+    "status": null,
+    "tasks": [
+      { "description": "Terminar paper n°1", "_id": "25f", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "chemchanta interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "lfrezzy_": {
+    "name": "lfrezzy_",
+    "_id": "51ajbig16",
+    "status": null,
+    "tasks": [
+      {
+        "description": "Leer y resumir prob. de la pobreza",
+        "_id": "1f5",
+        "active": false
+      },
+      {
+        "description": "Leer psico evolutiva y resumir",
+        "_id": "3af",
+        "active": false
+      },
+      {
+        "description": "Completar cuadro de problematica de la pobreza",
+        "_id": "a28",
+        "active": false
+      },
+      { "description": "Hacer tp3 informatica", "_id": "c3d", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 200,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "lfrezzy_ interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "estrellita1998": {
+    "name": "estrellita1998",
+    "_id": "of198mitv",
+    "status": null,
+    "tasks": [
+      { "description": "Vitaminas liposolubles", "_id": "71f", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 100,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "estrellita1998 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "aless_hi": {
+    "name": "aless_hi",
+    "_id": "kv1hfsnp7",
+    "status": null,
+    "tasks": [
+      {
+        "description": "Historia Aztecas e Incas Finalizar",
+        "_id": "494",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 100,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "aless_hi interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "liln1k": {
+    "name": "liln1k",
+    "_id": "hwjtm2nlp",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 2900,
+        "birth": "25-09",
+        "sign": "Libra ♎︎",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 34,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "liln1k interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "noriiiizz": {
+    "name": "noriiiizz",
+    "_id": "0os3eqxpu",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 4150,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 24,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "noriiiizz interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "defessus11": {
+    "name": "defessus11",
+    "_id": "kuaiwscwq",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 0,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "defessus11 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "jhachiko1995": {
+    "name": "jhachiko1995",
+    "_id": "lo5wzvvbm",
+    "status": null,
+    "tasks": [{ "description": " sp", "_id": "471", "active": false }],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "jhachiko1995 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "ysa_sr": {
+    "name": "ysa_sr",
+    "_id": "wpe4lw9t2",
+    "status": null,
+    "tasks": [
+      { "description": "Maquetacion", "_id": "823", "active": false },
+      { "description": "Revision guiones", "_id": "43e", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 600,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 8,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "ysa_sr interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "ailenk02": {
+    "name": "ailenk02",
+    "_id": "dmz8ox5vk",
+    "status": null,
+    "tasks": [
+      {
+        "description": " Destacar en  resumen de Salud del NIño, Niña y Adolescente lo importante",
+        "_id": "885",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "ailenk02 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "loot_stemmel": {
+    "name": "loot_stemmel",
+    "_id": "h8amhqo48",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 0,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "loot_stemmel interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "caroxdamon": {
+    "name": "caroxdamon",
+    "_id": "cnz8yuinn",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 850,
+        "birth": "28-12",
+        "sign": "Capricornio ♑︎",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 11,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "caroxdamon interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "micaelaqueen": {
+    "name": "micaelaqueen",
+    "_id": "1mstl11s3",
+    "status": null,
+    "tasks": [{ "description": "Cap 1", "_id": "432", "active": false }],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "micaelaqueen interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "agusw_w": {
+    "name": "agusw_w",
+    "_id": "c1utkzt6v",
+    "status": null,
+    "tasks": [
+      { "description": "Dibujo iv", "_id": "a38", "active": false },
+      { "description": "Informe dibujo", "_id": "7eb", "active": false },
+      { "description": "Tintes", "_id": "aeb", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 850,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 14,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "agusw_w interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "hormiguita_lab": {
+    "name": "hormiguita_lab",
+    "_id": "xdbr5ikb2",
+    "status": null,
+    "tasks": [
+      {
+        "description": "1ª vuelta T6 Hematología",
+        "_id": "461",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "hormiguita_lab interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "arturo_gd242": {
+    "name": "arturo_gd242",
+    "_id": "j8jnr2jm0",
+    "status": null,
+    "tasks": [
+      {
+        "description": "Terminar neuropsicología memoria",
+        "_id": "560",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "arturo_gd242 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "huilenacosta": {
+    "name": "huilenacosta",
+    "_id": "3nlzocvbq",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 3450,
+        "birth": "29-03",
+        "sign": "Aries ♈︎",
+        "nationality": "Argentina",
+        "instagram": "",
+        "croquetastotal": 62,
+        "studyfor": "Licenciada en Bioimágenes",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "huilenacosta interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "rocio_adm": {
+    "name": "rocio_adm",
+    "_id": "tqjr3pqjw",
+    "status": null,
+    "tasks": [{ "description": "Sección 10", "_id": "edf", "active": false }],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 3250,
+        "birth": "04-05",
+        "sign": "Tauro ♉︎",
+        "nationality": "Argentina",
+        "instagram": "",
+        "croquetastotal": 26,
+        "studyfor": "Técnica sup en Gestión de las Organizaciones",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "rocio_adm interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "purple0wl": {
+    "name": "purple0wl",
+    "_id": "h8axupyt4",
+    "status": null,
+    "tasks": [
+      {
+        "description": "Mecanismo de contracorriente",
+        "_id": "258",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "16-02",
+        "sign": "Acuario ♒︎",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "purple0wl interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "jana10dv": {
+    "name": "jana10dv",
+    "_id": "f6mbd0cv9",
+    "status": null,
+    "tasks": [
+      {
+        "description": "Radiología de cráneo Caballos",
+        "_id": "df1",
+        "active": false
+      },
+      {
+        "description": "T15 Adrenales Farmacología",
+        "_id": "653",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.225Z",
+    "personaldata": [
+      {
+        "points": 700,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 5,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "jana10dv interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "constanzabg": {
+    "name": "constanzabg",
+    "_id": "rhs6cwcc4",
+    "status": null,
+    "tasks": [
+      {
+        "description": "Tto enf coronaria cronica",
+        "_id": "dce",
+        "active": false
+      },
+      { "description": "Hipercalcemia", "_id": "c4a", "active": false },
+      { "description": "Infeccion urinaria", "_id": "b08", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 200,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "constanzabg interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "eli01az_": {
+    "name": "eli01az_",
+    "_id": "7dnsg1uue",
+    "status": null,
+    "tasks": [
+      { "description": "Simulacro gramática", "_id": "6c6", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "eli01az_ interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "cbet77": {
+    "name": "cbet77",
+    "_id": "3zbtah44t",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 300,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "cbet77 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "magikofjuan": {
+    "name": "magikofjuan",
+    "_id": "101v44b8t",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 0,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "magikofjuan interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "pandaraiii": {
+    "name": "pandaraiii",
+    "_id": "f1k9ict74",
+    "status": null,
+    "tasks": [
+      { "description": "Repaso de ingles", "_id": "c11", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "pandaraiii interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "maga_rdr": {
+    "name": "maga_rdr",
+    "_id": "imkqzdzbf",
+    "status": null,
+    "tasks": [
+      { "description": "Estudiar ingles", "_id": "b45", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "maga_rdr interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "rociiovm_02": {
+    "name": "rociiovm_02",
+    "_id": "4jw3bqzhq",
+    "status": null,
+    "tasks": [{ "description": "Tema 3 ME", "_id": "533", "active": false }],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 300,
+        "birth": "17-08",
+        "sign": "Leo ♌︎",
+        "nationality": "España",
+        "instagram": "Rociiovm_02",
+        "croquetastotal": 2,
+        "studyfor": "Derecho+Ade",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "rociiovm_02 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "abrillet": {
+    "name": "abrillet",
+    "_id": "qvwgfhrqj",
+    "status": null,
+    "tasks": [{ "description": "Resumen U5", "_id": "bc2", "active": false }],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "abrillet interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "lflorrr": {
+    "name": "lflorrr",
+    "_id": "6n850rhz8",
+    "status": null,
+    "tasks": [{ "description": "Milgram", "_id": "738", "active": false }],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 1150,
+        "birth": "06-04",
+        "sign": "Aries ♈︎",
+        "nationality": "Argentina",
+        "instagram": "",
+        "croquetastotal": 22,
+        "studyfor": "Lic en Psicología",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "lflorrr interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "antof253": {
+    "name": "antof253",
+    "_id": "ieyy3ijol",
+    "status": null,
+    "tasks": [
+      { "description": "Control convenc", "_id": "610", "active": false },
+      { "description": "Proceso penal juvenil", "_id": "54a", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 250,
+        "birth": "25-03",
+        "sign": "Aries ♈︎",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 3,
+        "studyfor": "Abogacia",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "antof253 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "rovilca93": {
+    "name": "rovilca93",
+    "_id": "50nqsay81",
+    "status": null,
+    "tasks": [
+      { "description": "Unidad 13 privado", "_id": "315", "active": false },
+      {
+        "description": "Transcribir lo de dinamica constitucional",
+        "_id": "7d0",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 100,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "rovilca93 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "blueroony": {
+    "name": "blueroony",
+    "_id": "81mdv8ask",
+    "status": null,
+    "tasks": [{ "description": "01", "_id": "a1a", "active": false }],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "blueroony interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "marina_oj": {
+    "name": "marina_oj",
+    "_id": "ayozej79o",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 200,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "marina_oj interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "agos__________": {
+    "name": "agos__________",
+    "_id": "5ftgapbok",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 11200,
+        "birth": "24-04",
+        "sign": "Tauro ♉︎",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 68,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "agos__________ interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "vikabros": {
+    "name": "vikabros",
+    "_id": "s5xpfd7ag",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 150,
+        "birth": "",
+        "sign": "",
+        "nationality": "Chilena",
+        "instagram": "",
+        "croquetastotal": 9,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "vikabros interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "valen2941": {
+    "name": "valen2941",
+    "_id": "1f26tdeqy",
+    "status": null,
+    "tasks": [
+      { "description": "Terminar parcial 2022", "_id": "db6", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 1100,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 3,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "valen2941 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "aranoria": {
+    "name": "aranoria",
+    "_id": "1ey7mr4f9",
+    "status": null,
+    "tasks": [
+      { "description": "Examen respiratorio", "_id": "17f", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "aranoria interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "alderetejv": {
+    "name": "alderetejv",
+    "_id": "mqtetbgbx",
+    "status": null,
+    "tasks": [{ "description": "Estructuras", "_id": "9bd", "active": false }],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "alderetejv interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "sukha_1": {
+    "name": "sukha_1",
+    "_id": "p5fxqbmhy",
+    "status": null,
+    "tasks": [
+      { "description": "Configurar vsc", "_id": "b50", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 650,
+        "birth": "21-02",
+        "sign": "Piscis ♓︎",
+        "nationality": "Argentina",
+        "instagram": "",
+        "croquetastotal": 7,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "sukha_1 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "jhasith_chess": {
+    "name": "jhasith_chess",
+    "_id": "uh1fj7b5d",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 1050,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 3,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "jhasith_chess interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "baarbisv": {
+    "name": "baarbisv",
+    "_id": "38gsxv8nm",
+    "status": null,
+    "tasks": [
+      { "description": "Anatomía pelviana", "_id": "a4c", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 100,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "baarbisv interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "arestudy": {
+    "name": "arestudy",
+    "_id": "ijp8ggexx",
+    "status": null,
+    "tasks": [
+      { "description": "Resumen L1M3", "_id": "1c9", "active": false },
+      { "description": "Resumen L2M3", "_id": "ec8", "active": false },
+      {
+        "description": "Resumen l2 campañas publicitarias",
+        "_id": "7cb",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 150,
+        "birth": "07-09",
+        "sign": "Virgo ♍︎",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "arestudy interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "eliiana_991": {
+    "name": "eliiana_991",
+    "_id": "hv5rb53ya",
+    "status": null,
+    "tasks": [{ "description": "Tema 6.4", "_id": "528", "active": false }],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "eliiana_991 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "martasalascar": {
+    "name": "martasalascar",
+    "_id": "ky6z3vn1x",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 150,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 3,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "martasalascar interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "kimi10111": {
+    "name": "kimi10111",
+    "_id": "2ip1yuutv",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 900,
+        "birth": "15-12",
+        "sign": "Sagitario ♐︎",
+        "nationality": "Argentina",
+        "instagram": "",
+        "croquetastotal": 28,
+        "studyfor": "Programación web Full Stack",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "kimi10111 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "belmonaco": {
+    "name": "belmonaco",
+    "_id": "tea0kx0qy",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 10850,
+        "birth": "26-10",
+        "sign": "Escorpio ♏︎",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 138,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "belmonaco interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "lanubedeoctubre": {
+    "name": "lanubedeoctubre",
+    "_id": "tyhnh69xi",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 100,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "lanubedeoctubre interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "ieroina": {
+    "name": "ieroina",
+    "_id": "be3bwrr3q",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 100,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "ieroina interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "giuliannemc": {
+    "name": "giuliannemc",
+    "_id": "6t532junb",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 400,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 2,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "giuliannemc interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "ly_student": {
+    "name": "ly_student",
+    "_id": "cyob77qet",
+    "status": null,
+    "tasks": [{ "description": "Cálculo t3", "_id": "daa", "active": false }],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "ly_student interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "luliteraturas": {
+    "name": "luliteraturas",
+    "_id": "nhkbqt0s1",
+    "status": null,
+    "tasks": [
+      {
+        "description": "Todas as aulas restantes",
+        "_id": "df0",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 100,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "luliteraturas interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "marlensarichetti": {
+    "name": "marlensarichetti",
+    "_id": "wgtzc7v0a",
+    "status": null,
+    "tasks": [
+      { "description": "PRACTICA NOTARIAL", "_id": "358", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 1600,
+        "birth": "05-04",
+        "sign": "Aries ♈︎",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 41,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "marlensarichetti interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "oporeina": {
+    "name": "oporeina",
+    "_id": "qevgwy5ax",
+    "status": null,
+    "tasks": [{ "description": "Tema47", "_id": "68d", "active": false }],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "oporeina interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "99diotima": {
+    "name": "99diotima",
+    "_id": "sqj2bc1i4",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 2350,
+        "birth": "",
+        "sign": "",
+        "nationality": "Italiana",
+        "instagram": "",
+        "croquetastotal": 12,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "99diotima interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "studyvan": {
+    "name": "studyvan",
+    "_id": "9fd8ay73e",
+    "status": null,
+    "tasks": [{ "description": "", "_id": "195", "active": false }],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "studyvan interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "florars19": {
+    "name": "florars19",
+    "_id": "ozb2zqyn9",
+    "status": null,
+    "tasks": [{ "description": "", "_id": "67d", "active": false }],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "florars19 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "feefenn": {
+    "name": "feefenn",
+    "_id": "ngjod3e19",
+    "status": null,
+    "tasks": [{ "description": "Finish qs", "_id": "76a", "active": false }],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "feefenn interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "maga_rd": {
+    "name": "maga_rd",
+    "_id": "r0sqc1z8l",
+    "status": null,
+    "tasks": [{ "description": "Endocrino", "_id": "4eb", "active": false }],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "maga_rd interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "danielenbici": {
+    "name": "danielenbici",
+    "_id": "23k6j3dmv",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 5,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "danielenbici interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "gominola_opositora": {
+    "name": "gominola_opositora",
+    "_id": "41vz0gs10",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 5200,
+        "birth": "25-12",
+        "sign": "Capricornio ♑︎",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 76,
+        "studyfor": "",
+        "oppositionfor": "Gestión Financiera Administración Pública"
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "gominola_opositora interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "miracles05": {
+    "name": "miracles05",
+    "_id": "2pzh896lu",
+    "status": null,
+    "tasks": [{ "description": "Leer paper", "_id": "438", "active": false }],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "miracles05 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "flord725": {
+    "name": "flord725",
+    "_id": "x044ohfg9",
+    "status": null,
+    "tasks": [{ "description": "13.13", "_id": "5ca", "active": false }],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 7650,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 32,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "flord725 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "sofiaantok": {
+    "name": "sofiaantok",
+    "_id": "1m1k8e8vq",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 5150,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 86,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "sofiaantok interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "planetnieves_": {
+    "name": "planetnieves_",
+    "_id": "zvl0627bt",
+    "status": null,
+    "tasks": [
+      { "description": "Inventario 1 página", "_id": "a91", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 150,
+        "birth": "28-01",
+        "sign": "Acuario ♒︎",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "planetnieves_ interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "camiiisaurio": {
+    "name": "camiiisaurio",
+    "_id": "4qfjai75a",
+    "status": null,
+    "tasks": [
+      {
+        "description": "Fundamentos desarrollo de identidad",
+        "_id": "9d1",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "camiiisaurio interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "lolapy94": {
+    "name": "lolapy94",
+    "_id": "97ydr3569",
+    "status": null,
+    "tasks": [{ "description": "Estudiar", "_id": "caf", "active": false }],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 100,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "lolapy94 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "julicaramia": {
+    "name": "julicaramia",
+    "_id": "jb56hs6uf",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 2050,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 13,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "julicaramia interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "alexis12324": {
+    "name": "alexis12324",
+    "_id": "qqs980xy6",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 150,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "alexis12324 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "eliii_b1": {
+    "name": "eliii_b1",
+    "_id": "rmlxmzkb3",
+    "status": null,
+    "tasks": [
+      { "description": "Pelvis masculina", "_id": "3c4", "active": false },
+      { "description": "Fascias pelvis", "_id": "998", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 200,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "eliii_b1 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "macacuelloo": {
+    "name": "macacuelloo",
+    "_id": "wi6x0xvhp",
+    "status": null,
+    "tasks": [
+      { "description": "Preparar el bolso", "_id": "346", "active": false },
+      { "description": "B9 nulidad", "_id": "ad4", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 850,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 12,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "macacuelloo interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "cande_lopez24": {
+    "name": "cande_lopez24",
+    "_id": "la20wn80j",
+    "status": null,
+    "tasks": [
+      { "description": "Niño sano", "_id": "87f", "active": false },
+      { "description": "Adolescenciaa", "_id": "fe7", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 2000,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 11,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "cande_lopez24 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "piluchaan": {
+    "name": "piluchaan",
+    "_id": "zp88yspp7",
+    "status": null,
+    "tasks": [{ "description": "Repaso", "_id": "16e", "active": false }],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "piluchaan interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "opopolii": {
+    "name": "opopolii",
+    "_id": "a9k60uit9",
+    "status": null,
+    "tasks": [
+      { "description": "Tema 1 repaso", "_id": "fb7", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 100,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "opopolii interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "bypipea": {
+    "name": "bypipea",
+    "_id": "st8vo1r4u",
+    "status": null,
+    "tasks": [{ "description": "Cardio 1-4", "_id": "941", "active": false }],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 1000,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 8,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "bypipea interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "crissworkoutt": {
+    "name": "crissworkoutt",
+    "_id": "lk3uoi04i",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 7450,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 68,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "crissworkoutt interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "taniamorgan_cabj": {
+    "name": "taniamorgan_cabj",
+    "_id": "4b12vc5n3",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 2500,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 51,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "taniamorgan_cabj interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "miicagigena": {
+    "name": "miicagigena",
+    "_id": "xwwtqfuck",
+    "status": null,
+    "tasks": [
+      { "description": "Hacer guia 22", "_id": "b03", "active": false },
+      { "description": "Hacer guia carbanion", "_id": "1f1", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 4400,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 38,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "miicagigena interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "angelamellamo": {
+    "name": "angelamellamo",
+    "_id": "575f4e7t7",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 2850,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 15,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "angelamellamo interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "denise_v2": {
+    "name": "denise_v2",
+    "_id": "oa3s7627i",
+    "status": null,
+    "tasks": [
+      { "description": "Estudiar morfología", "_id": "700", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "denise_v2 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "flautista25": {
+    "name": "flautista25",
+    "_id": "25ah30saj",
+    "status": null,
+    "tasks": [
+      {
+        "description": "Problemas física cuántica",
+        "_id": "2a4",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "flautista25 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "avellaneta": {
+    "name": "avellaneta",
+    "_id": "23393hr0o",
+    "status": null,
+    "tasks": [
+      { "description": "Lectura tema 5", "_id": "d11", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "avellaneta interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "ignipiuyo": {
+    "name": "ignipiuyo",
+    "_id": "olho311mh",
+    "status": null,
+    "tasks": [{ "description": "Sintesis", "_id": "6e1", "active": false }],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "ignipiuyo interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "pomelalimon": {
+    "name": "pomelalimon",
+    "_id": "9azx1vs3a",
+    "status": null,
+    "tasks": [
+      { "description": "Escribir hipótesis", "_id": "935", "active": false },
+      {
+        "description": "Introducción, Edición Estructura, Fin PB, Ver lo de NMR, Esotericismo, Cita Wright",
+        "_id": "295",
+        "active": false
+      },
+      { "description": "Fijarme directorio", "_id": "10d", "active": false },
+      { "description": "Fin estado del arte", "_id": "923", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 250,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 8,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "pomelalimon interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "isadoradominique": {
+    "name": "isadoradominique",
+    "_id": "ivfetmh5m",
+    "status": null,
+    "tasks": [
+      {
+        "description": "Revisar embargos causas cartera MC",
+        "_id": "df8",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "isadoradominique interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "rulit00sss": {
+    "name": "rulit00sss",
+    "_id": "604gatk9j",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 0,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "rulit00sss interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "moguritochan": {
+    "name": "moguritochan",
+    "_id": "rgofgt59s",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 3750,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 8,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "moguritochan interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "kimi101111": {
+    "name": "kimi101111",
+    "_id": "4l0sz3uwr",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 100,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 4,
+        "studyfor": "Programación Web Full Stack",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "kimi101111 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "alfon_a": {
+    "name": "alfon_a",
+    "_id": "d9s0q45kv",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 5950,
+        "birth": "12-07",
+        "sign": "Cáncer ♋︎",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 53,
+        "studyfor": "Licenciatura en Administración",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "alfon_a interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "r0sssie": {
+    "name": "r0sssie",
+    "_id": "hy5vyy24d",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 100,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 2,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "r0sssie interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "valeketa": {
+    "name": "valeketa",
+    "_id": "tgsrsdbxb",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 0,
+        "birth": "26-04",
+        "sign": "Tauro ♉︎",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "valeketa interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "malenaamt": {
+    "name": "malenaamt",
+    "_id": "b7qs521p7",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 2150,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 19,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "malenaamt interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "manumedina_": {
+    "name": "manumedina_",
+    "_id": "ms6pxqopl",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 2350,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 9,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "manumedina_ interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "alexascholzen2": {
+    "name": "alexascholzen2",
+    "_id": "jmjn9a833",
+    "status": null,
+    "tasks": [
+      { "description": "5 probeprüfung", "_id": "723", "active": false },
+      { "description": " 100-200", "_id": "e15", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 350,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 5,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "alexascholzen2 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "aialix": {
+    "name": "aialix",
+    "_id": "065gto1ye",
+    "status": null,
+    "tasks": [
+      { "description": "Obesity", "_id": "273", "active": false },
+      { "description": "Cómic", "_id": "4be", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 100,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 2,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "aialix interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "noaavc": {
+    "name": "noaavc",
+    "_id": "3ipyjp6qp",
+    "status": null,
+    "tasks": [
+      { "description": "Tema 2.2. TOM", "_id": "fb8", "active": false },
+      { "description": "Tema 2.2. TOM", "_id": "1a2", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 100,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "noaavc interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "aalbaagil": {
+    "name": "aalbaagil",
+    "_id": "gicm9ipzs",
+    "status": null,
+    "tasks": [{ "description": "T2.2. TOM", "_id": "836", "active": false }],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "aalbaagil interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "condrocita": {
+    "name": "condrocita",
+    "_id": "4pigfwh7w",
+    "status": null,
+    "tasks": [
+      { "description": "Preguntas embrio", "_id": "8a1", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 900,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 13,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "condrocita interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "annapauli_": {
+    "name": "annapauli_",
+    "_id": "plq2abljh",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 200,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 4,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "annapauli_ interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "kiallyh": {
+    "name": "kiallyh",
+    "_id": "3meuqm33b",
+    "status": null,
+    "tasks": [
+      { "description": "Pedir turno medico", "_id": "39f", "active": false },
+      {
+        "description": "Armar planificación semana intensif",
+        "_id": "68a",
+        "active": false
+      },
+      {
+        "description": "Hacer guía Fisica 2025",
+        "_id": "716",
+        "active": false
+      },
+      {
+        "description": "Que Chenz Haga Emote comiendo pochoclos",
+        "_id": "aec",
+        "active": false
+      },
+      { "description": "Geometría trabajo", "_id": "e87", "active": false },
+      { "description": "Tp ***biental", "_id": "2ee", "active": false },
+      { "description": "Correcciones tps", "_id": "f70", "active": false },
+      {
+        "description": "Trabajo final didactica",
+        "_id": "0d3",
+        "active": false
+      },
+      { "description": "Trabajo fractales", "_id": "20a", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 1950,
+        "birth": "25-09",
+        "sign": "Libra ♎︎",
+        "nationality": "Argentina",
+        "instagram": "",
+        "croquetastotal": 16,
+        "studyfor": "Profe de Mate y Física ♥",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "kiallyh interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "lulib96": {
+    "name": "lulib96",
+    "_id": "ur7divsi3",
+    "status": null,
+    "tasks": [
+      { "description": "Unidad 3 perio", "_id": "d81", "active": false },
+      { "description": "Unidad 4 perio", "_id": "653", "active": false },
+      { "description": "Unidad 5 perio", "_id": "537", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 3350,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 67,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "lulib96 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "dtmaximo": {
+    "name": "dtmaximo",
+    "_id": "s526100ni",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 0,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "dtmaximo interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "camigq_": {
+    "name": "camigq_",
+    "_id": "2c2hacqla",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 100,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 2,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "camigq_ interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "connieg_01": {
+    "name": "connieg_01",
+    "_id": "nrmyzyzi3",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "connieg_01 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "candelajmc": {
+    "name": "candelajmc",
+    "_id": "6cjqlaw3q",
+    "status": null,
+    "tasks": [{ "description": "Cap 4", "_id": "536", "active": false }],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 300,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 4,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "candelajmc interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "nixi_lab": {
+    "name": "nixi_lab",
+    "_id": "qo91vdsrw",
+    "status": null,
+    "tasks": [
+      { "description": "Organize", "_id": "e0f", "active": false },
+      { "description": "Journal", "_id": "0c5", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 100,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "nixi_lab interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "belen_l25": {
+    "name": "belen_l25",
+    "_id": "0e3vc2yfx",
+    "status": null,
+    "tasks": [
+      { "description": " nuevos horarios.", "_id": "50e", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "belen_l25 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "rodrih76": {
+    "name": "rodrih76",
+    "_id": "jrslovd7x",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 1550,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 3,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "rodrih76 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "valplanetaria": {
+    "name": "valplanetaria",
+    "_id": "mpejuya4o",
+    "status": null,
+    "tasks": [
+      {
+        "description": "IPC: Resumen Clase 1 y 2",
+        "_id": "bf8",
+        "active": false
+      },
+      {
+        "description": "IPC: Guía de Ejercicios 1 y 2",
+        "_id": "7ea",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 200,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 4,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "valplanetaria interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "cocoo__0": {
+    "name": "cocoo__0",
+    "_id": "gefwqh7hu",
+    "status": null,
+    "tasks": [
+      {
+        "description": "TAKE A BATHH!! showerr timw 🚿 🧼",
+        "_id": "91b",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "cocoo__0 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "tinchocomiquir": {
+    "name": "tinchocomiquir",
+    "_id": "8bbs4dwj2",
+    "status": null,
+    "tasks": [
+      {
+        "description": "Repasar U3: familia logicas",
+        "_id": "49e",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 150,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 4,
+        "studyfor": "Ingenieria Electrica",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "tinchocomiquir interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "clarifornia_": {
+    "name": "clarifornia_",
+    "_id": "fdgz1vngk",
+    "status": null,
+    "tasks": [
+      { "description": "T estudiar SIP", "_id": "fd4", "active": false },
+      { "description": "4 temas alemán", "_id": "941", "active": false },
+      { "description": "Entender PCV", "_id": "471", "active": false },
+      { "description": "1,2,3,4 AT", "_id": "799", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 6100,
+        "birth": "09-04",
+        "sign": "Aries ♈︎",
+        "nationality": "Española",
+        "instagram": "",
+        "croquetastotal": 15,
+        "studyfor": "Master de geodesia y ciencias de geoinformatica",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "clarifornia_ interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "lucianadiaaz": {
+    "name": "lucianadiaaz",
+    "_id": "im2p151qa",
+    "status": null,
+    "tasks": [{ "description": "Ets", "_id": "60c", "active": false }],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "lucianadiaaz interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "valentttinaaa": {
+    "name": "valentttinaaa",
+    "_id": "6catgsmxr",
+    "status": null,
+    "tasks": [
+      { "description": "Terminar digestivo", "_id": "f8f", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 250,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 5,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "valentttinaaa interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "olivathedev": {
+    "name": "olivathedev",
+    "_id": "gomixctxc",
+    "status": null,
+    "tasks": [
+      {
+        "description": "Pruebas de salida de servicios externos desde PRO",
+        "_id": "c61",
+        "active": false
+      },
+      {
+        "description": "Corrección de test unitarios",
+        "_id": "a60",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 300,
+        "birth": "24-12",
+        "sign": "Capricornio ♑︎",
+        "nationality": "España",
+        "instagram": "Oliva.sw",
+        "croquetastotal": 11,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "olivathedev interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "abrilvarela90876": {
+    "name": "abrilvarela90876",
+    "_id": "rvxcshjwa",
+    "status": null,
+    "tasks": [
+      { "description": "Kant: ilustración", "_id": "0e9", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "abrilvarela90876 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "lorearacami": {
+    "name": "lorearacami",
+    "_id": "f4h41o8ib",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 700,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 8,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "lorearacami interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "kennyjacobson": {
+    "name": "kennyjacobson",
+    "_id": "0u3oxlell",
+    "status": null,
+    "tasks": [
+      {
+        "description": "- create parser for vrbo data",
+        "_id": "038",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "kennyjacobson interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "julyoongi": {
+    "name": "julyoongi",
+    "_id": "5x4cdlucl",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "julyoongi interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "lycammm": {
+    "name": "lycammm",
+    "_id": "z0oqy7xwl",
+    "status": null,
+    "tasks": [
+      { "description": "Apuntes heme-onco", "_id": "362", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "lycammm interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "pochoclito_99": {
+    "name": "pochoclito_99",
+    "_id": "gp61vgkkh",
+    "status": null,
+    "tasks": [
+      { "description": "Resumir auditoria", "_id": "dc3", "active": false },
+      {
+        "description": "Mirar video de ganancias",
+        "_id": "2cc",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 1400,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 18,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "pochoclito_99 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "rosaa_6": {
+    "name": "rosaa_6",
+    "_id": "812hvt3f5",
+    "status": null,
+    "tasks": [
+      {
+        "description": "Leer consecuencias  rev industrial",
+        "_id": "e95",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "rosaa_6 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "fungissss": {
+    "name": "fungissss",
+    "_id": "0b9vc96wu",
+    "status": null,
+    "tasks": [
+      {
+        "description": "Relación pregunta, objetivos, hipótesis, análisis",
+        "_id": "d66",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "fungissss interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "moree_acostaa": {
+    "name": "moree_acostaa",
+    "_id": "ous7u8n22",
+    "status": null,
+    "tasks": [
+      { "description": "4 ej. financiera", "_id": "722", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "moree_acostaa interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "isa11___": {
+    "name": "isa11___",
+    "_id": "xjbc8m3a9",
+    "status": null,
+    "tasks": [{ "description": "Casoclinico1", "_id": "860", "active": false }],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 150,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "isa11___ interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "justiii19": {
+    "name": "justiii19",
+    "_id": "fyqe52atc",
+    "status": null,
+    "tasks": [
+      { "description": "Resumen reino plantas", "_id": "f91", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 350,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "justiii19 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "mandarinaskb": {
+    "name": "mandarinaskb",
+    "_id": "03a3x4htg",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 150,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "mandarinaskb interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "sofiasamira30": {
+    "name": "sofiasamira30",
+    "_id": "m7av5ao0y",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 750,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 8,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "sofiasamira30 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "agussana": {
+    "name": "agussana",
+    "_id": "zc783ap5a",
+    "status": null,
+    "tasks": [
+      {
+        "description": "Repaso de unidades 1 y 2",
+        "_id": "a3e",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "agussana interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "giann_art": {
+    "name": "giann_art",
+    "_id": "rkam6xrwa",
+    "status": null,
+    "tasks": [
+      { "description": "Leer texto Galasso", "_id": "d94", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "giann_art interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "anabesh": {
+    "name": "anabesh",
+    "_id": "aoao109as",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 350,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 2,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "anabesh interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "julix7de": {
+    "name": "julix7de",
+    "_id": "sze3emuu0",
+    "status": null,
+    "tasks": [
+      {
+        "description": "Terminar pares craneales",
+        "_id": "116",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "julix7de interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "lourdesarii": {
+    "name": "lourdesarii",
+    "_id": "74pcdhm4y",
+    "status": null,
+    "tasks": [
+      { "description": "Repasar U5", "_id": "bdd", "active": false },
+      { "description": "Repasar U1", "_id": "89f", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 100,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "lourdesarii interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "paulam3_": {
+    "name": "paulam3_",
+    "_id": "rjyjtpi1b",
+    "status": null,
+    "tasks": [
+      { "description": "Acabar estudiar t.2", "_id": "e41", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "paulam3_ interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "aprendeinclusion": {
+    "name": "aprendeinclusion",
+    "_id": "b9tcpuh7e",
+    "status": null,
+    "tasks": [
+      { "description": "Ej 2 reflexión", "_id": "0d8", "active": false },
+      { "description": "Informe social", "_id": "b3b", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 150,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "aprendeinclusion interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "crispycillo": {
+    "name": "crispycillo",
+    "_id": "azj1xgzok",
+    "status": null,
+    "tasks": [
+      {
+        "description": "Wait for Once Human to install",
+        "_id": "8ee",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "crispycillo interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "azulmonique": {
+    "name": "azulmonique",
+    "_id": "qbru46j60",
+    "status": null,
+    "tasks": [
+      { "description": "Ud2", "_id": "dc8", "active": false },
+      { "description": "Corregir test tema 20", "_id": "6bd", "active": false },
+      { "description": "Creatividad y pasión", "_id": "d86", "active": false },
+      {
+        "description": "Ensayo educación antirracista",
+        "_id": "40c",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 500,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 2,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "azulmonique interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "teremedstudy": {
+    "name": "teremedstudy",
+    "_id": "u6hrl3ood",
+    "status": null,
+    "tasks": [
+      { "description": "Temas repaso pedia", "_id": "288", "active": false },
+      { "description": "Repaso nefro", "_id": "f6b", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 100,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "teremedstudy interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "ladybug1912": {
+    "name": "ladybug1912",
+    "_id": "akgx69h98",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 2,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "ladybug1912 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "sofiicstudy": {
+    "name": "sofiicstudy",
+    "_id": "qfy84b4tr",
+    "status": null,
+    "tasks": [{ "description": "Winnicott", "_id": "805", "active": false }],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "sofiicstudy interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "reinadesalsa": {
+    "name": "reinadesalsa",
+    "_id": "5ncvmlwtk",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "reinadesalsa interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "kiaranerea1": {
+    "name": "kiaranerea1",
+    "_id": "54expa2qx",
+    "status": null,
+    "tasks": [
+      {
+        "description": "Volver hacer resumen de conocimiento y repasar",
+        "_id": "90c",
+        "active": false
+      },
+      { "description": "Vocabulario ingles", "_id": "b30", "active": false },
+      { "description": "Lectura y escritura", "_id": "e2e", "active": false },
+      { "description": "Reoaso matematicas", "_id": "a27", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 350,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 2,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "kiaranerea1 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "agosbongiorno": {
+    "name": "agosbongiorno",
+    "_id": "7ellqow5h",
+    "status": null,
+    "tasks": [
+      { "description": "Miocardiopatias", "_id": "e77", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "agosbongiorno interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "emanuwlly": {
+    "name": "emanuwlly",
+    "_id": "wbvgnq8mo",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 3550,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 11,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "emanuwlly interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "agutjda": {
+    "name": "agutjda",
+    "_id": "dxoqo433n",
+    "status": null,
+    "tasks": [{ "description": "Parietal", "_id": "9eb", "active": false }],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "agutjda interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "laurentkeys": {
+    "name": "laurentkeys",
+    "_id": "dqn77sn46",
+    "status": null,
+    "tasks": [{ "description": " c", "_id": "e15", "active": false }],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "laurentkeys interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "jannina_ly": {
+    "name": "jannina_ly",
+    "_id": "9jo90b0wr",
+    "status": null,
+    "tasks": [{ "description": "2a-2g", "_id": "dd2", "active": false }],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "jannina_ly interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "laurino": {
+    "name": "laurino",
+    "_id": "xyskraa2z",
+    "status": null,
+    "tasks": [
+      { "description": "Same building coll", "_id": "c71", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "Argentina",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "laurino interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "eteria_psy": {
+    "name": "eteria_psy",
+    "_id": "iogd6snho",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 300,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "eteria_psy interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "rodri_tesla7": {
+    "name": "rodri_tesla7",
+    "_id": "fbnes6paf",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 1300,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "rodri_tesla7 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "aleeegriastudy": {
+    "name": "aleeegriastudy",
+    "_id": "1f3envj77",
+    "status": null,
+    "tasks": [
+      { "description": "Exámenes 2022", "_id": "f62", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "aleeegriastudy interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "gorocho_god157": {
+    "name": "gorocho_god157",
+    "_id": "3eek0r5z3",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 0,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "gorocho_god157 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "meli1939": {
+    "name": "meli1939",
+    "_id": "b810tl0ll",
+    "status": null,
+    "tasks": [
+      {
+        "description": "Diseñar cartel aus. pres.",
+        "_id": "815",
+        "active": false
+      },
+      { "description": "Diseñar castillo num.", "_id": "48b", "active": false },
+      { "description": "Diseñar num. 1.20", "_id": "a20", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 1200,
+        "birth": "06-08",
+        "sign": "Leo ♌︎",
+        "nationality": "Argentina",
+        "instagram": "",
+        "croquetastotal": 34,
+        "studyfor": "Diseño grafico",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "meli1939 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "euflorica2": {
+    "name": "euflorica2",
+    "_id": "u9qmwwzjk",
+    "status": null,
+    "tasks": [
+      { "description": "Repaso beowulf", "_id": "164", "active": false },
+      { "description": "RJ 6", "_id": "3ff", "active": false },
+      { "description": "Vida de Shakespeare", "_id": "51d", "active": false },
+      { "description": "Types of drama", "_id": "569", "active": false },
+      { "description": "Revisar exam", "_id": "a87", "active": false },
+      { "description": "Revisar PPP Andy", "_id": "94b", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 1000,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 6,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "euflorica2 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "meme_c3": {
+    "name": "meme_c3",
+    "_id": "z8krshzv6",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 2,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "meme_c3 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "yiman69": {
+    "name": "yiman69",
+    "_id": "98lenbfiz",
+    "status": null,
+    "tasks": [
+      {
+        "description": "Creation of album 3 songs",
+        "_id": "324",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 650,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "yiman69 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "milena_suarez0": {
+    "name": "milena_suarez0",
+    "_id": "cl2s93pur",
+    "status": null,
+    "tasks": [
+      { "description": "Unidad indopacífico", "_id": "0ed", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 100,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "milena_suarez0 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "valenm07": {
+    "name": "valenm07",
+    "_id": "sbpni8kcf",
+    "status": null,
+    "tasks": [
+      { "description": "Repaso pedagogía", "_id": "9e4", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "valenm07 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "justilinaa": {
+    "name": "justilinaa",
+    "_id": "wez33by1c",
+    "status": null,
+    "tasks": [
+      { "description": "Acomodar resumen", "_id": "e1b", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 200,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "justilinaa interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "galletaderroz": {
+    "name": "galletaderroz",
+    "_id": "3vtqtucy0",
+    "status": null,
+    "tasks": [{ "description": "Resumir", "_id": "43a", "active": false }],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "galletaderroz interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "jotacbe": {
+    "name": "jotacbe",
+    "_id": "xhhoprjwx",
+    "status": null,
+    "tasks": [
+      {
+        "description": "Definir stories AD y HM",
+        "_id": "308",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "jotacbe interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "lorenalewer": {
+    "name": "lorenalewer",
+    "_id": "v93000jvi",
+    "status": null,
+    "tasks": [
+      {
+        "description": "Resumen de analisis de circuitos",
+        "_id": "e14",
+        "active": false
+      },
+      { "description": "Display 7 segmentos", "_id": "708", "active": false },
+      {
+        "description": "Astable en baquelita virgen",
+        "_id": "502",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 150,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 2,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "lorenalewer interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "cocoo___0": {
+    "name": "cocoo___0",
+    "_id": "5gpwrobel",
+    "status": null,
+    "tasks": [{ "description": "Hindi prep", "_id": "a2f", "active": false }],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "cocoo___0 interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "ulfhilda": {
+    "name": "ulfhilda",
+    "_id": "zjqnmwkao",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 250,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 2,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "ulfhilda interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "yo_poli": {
+    "name": "yo_poli",
+    "_id": "pyahyh4jj",
+    "status": null,
+    "tasks": [{ "description": "Razón", "_id": "5c0", "active": false }],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 50,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "yo_poli interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "la_maribel": {
+    "name": "la_maribel",
+    "_id": "9i92hh76h",
+    "status": null,
+    "tasks": [],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 100,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "la_maribel interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "somatostatina": {
+    "name": "somatostatina",
+    "_id": "jczcacpd5",
+    "status": null,
+    "tasks": [
+      {
+        "description": "Salir a tomar aire porque me explotan las neuronas :3",
+        "_id": "538",
+        "active": false
+      }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 200,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 0,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "somatostatina interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "olmediito": {
+    "name": "olmediito",
+    "_id": "ijp71xerw",
+    "status": null,
+    "tasks": [
+      { "description": "ALTAS", "_id": "1e8", "active": false },
+      { "description": "BAJAS", "_id": "0cd", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-02-24T15:22:41.226Z",
+    "personaldata": [
+      {
+        "points": 400,
+        "birth": "",
+        "sign": "",
+        "nationality": "",
+        "instagram": "",
+        "croquetastotal": 1,
+        "studyfor": "",
+        "oppositionfor": ""
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "olmediito interactuó por última vez: 24/2/2025, 12:22:41"
+  },
+  "cuartodechenz": {
+    "name": "cuartodechenz",
+    "_id": "m7xkl9nz-3tq",
+    "status": null,
+    "tasks": [],
+    "exams": [
+      {
+        "dateExam": " 10-03",
+        "typeExam": " REC",
+        "titleExam": " prueba de examaen correcto",
+        "_id": "mo8"
+      },
+      {
+        "dateExam": " 10-03",
+        "typeExam": " REC",
+        "titleExam": " Vamos para alla",
+        "_id": "okd"
+      },
+      {
+        "dateExam": " 10-09",
+        "typeExam": " REC",
+        "titleExam": " nuevo examen",
+        "_id": "kh7"
+      },
+      {
+        "dateExam": " 10-09",
+        "typeExam": " REC",
+        "titleExam": " este es nmi examen",
+        "_id": "72k"
+      }
+    ],
+    "lastTime": "2025-03-07T19:24:34.270Z",
+    "personaldata": [
+      {
+        "points": 214,
+        "instagram": "luciano.a.ontiveros",
+        "studyfor": " Conquistarte"
+      }
+    ],
+    "tag": "mod",
+    "mensaje": "cuartodechenz interactuó por última vez: 7/3/2025 16:24:34."
+  },
+  "antonellavrl_": {
+    "name": "antonellavrl_",
+    "_id": "m7xlmvlc-5a2",
+    "status": null,
+    "tasks": [
+      { "description": "1", "_id": "uzs", "active": false },
+      { "description": "2", "_id": "plo", "active": false },
+      { "description": "3", "_id": "kxi", "active": false },
+      { "description": "4", "_id": "ar6", "active": false },
+      { "description": "5", "_id": "ym8", "active": false },
+      { "description": "6", "_id": "fn7", "active": false }
+    ],
+    "exams": [],
+    "lastTime": "2025-03-07T19:10:37.503Z",
+    "personaldata": [{ "points": 12 }],
+    "tag": "none",
+    "mensaje": "antonellavrl_ interactuó por última vez: 7/3/2025 16:10:37."
+  }
 }

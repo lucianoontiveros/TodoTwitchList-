@@ -10,13 +10,13 @@ export const handleTimer = (
     timeoutRef.current = setTimeout(() => {
       setIsInfoUserVisible(false);
       setCurrentUser(null);
-    }, 5000); // Extiende 5 segundos
+    }, 3000); // Extiende 5 segundos
   } else {
     prevUser.current = username;
     clearTimeout(timeoutRef.current);
     timeoutRef.current = setTimeout(() => {
       setIsInfoUserVisible(false);
       setCurrentUser(null);
-    }, 30000); // Temporizador normal
+    }, 50000); // Temporizador normal
   }
 };

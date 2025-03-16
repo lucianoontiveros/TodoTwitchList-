@@ -23,16 +23,55 @@ const InfoUser_component = ({ user, username }) => {
       switch (user.tag) {
         case "sub":
           newClasses.container = "sus_fondo infoUSer_containers";
+          switch (user.name) {
+            case "antonellavrl_":
+              newClasses.container =
+                "antonellavrl_ infoUSer_containers amarrillo_fondo";
+              break;
+            case "summertime0805":
+              newClasses.container =
+                "summertime0805 infoUSer_containers magenta_fondo";
+              break;
+            case "gominola_opositora":
+              newClasses.container =
+                "gominola_opositora infoUSer_containers azul_fondo";
+              break;
+            case "chinita098":
+              newClasses.container =
+                "chinita098 infoUSer_containers rojo_fondo";
+              break;
+            case "agos__________":
+              newClasses.container =
+                "agos__________ infoUSer_containers blanco_fondo";
+              break;
+            case "jana10dv":
+              newClasses.container = "jana10dv infoUSer_containers aqua_fondo";
+              break;
+            case "mont_opo":
+              newClasses.container = "mont_opo infoUSer_containers crema_fondo";
+              break;
+          }
           break;
+
         case "vip":
           newClasses.container = "vip_fondo infoUSer_containers";
+          switch (user.name) {
+            case "sofiaantok":
+              newClasses.container =
+                "sofiaantok infoUSer_containers amarrillo_fondo";
+              break;
+          }
           break;
         case "mod":
           newClasses.container = "mod_fondo infoUSer_containers";
-
+          switch (user.name) {
+            case "camm_sss":
+              newClasses.container = "camm_sss infoUSer_containers orange_fondo";
+              break;
+          }
           break;
         case "prime":
-          newClasses.container = "prime_fondo infoUSer_containers rojo-naranja";
+          newClasses.container = "prime_fondo infoUSer_containers";
           break;
         default:
           break;
