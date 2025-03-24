@@ -24,6 +24,10 @@ const InfoUser_component = ({ user, username }) => {
         case "sub":
           newClasses.container = "sus_fondo infoUSer_containers";
           switch (user.name) {
+            case "mandaariina":
+              newClasses.container =
+                "mandaariina infoUSer_containers crema_fondo";
+              break;
             case "antonellavrl_":
               newClasses.container =
                 "antonellavrl_ infoUSer_containers amarrillo_fondo";
