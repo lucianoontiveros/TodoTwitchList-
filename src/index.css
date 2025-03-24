@@ -127,3 +127,12 @@ body {
   color: #f87b33;
 }
 
+.mandaariina {
+  background: url("/img/mandaariina.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #f87b33;
+}
+

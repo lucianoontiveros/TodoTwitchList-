@@ -68,8 +68,11 @@ const InfoUser_component = ({ user, username }) => {
             case "camm_sss":
               newClasses.container = "camm_sss infoUSer_containers orange_fondo";
               break;
-              case "mont_opo":
+            case "mont_opo":
               newClasses.container = "mont_opo infoUSer_containers crema_fondo";
+              break;
+            case "mandaariina":
+              newClasses.container = "mandaariina infoUSer_containers orange_fondo";
               break;
           }
           break;
