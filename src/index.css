@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap");
 @import "tailwindcss";
 body {
-  font-family: 'Sawarabi Gothic', sans-serif;
+  font-family: "Sawarabi Gothic", sans-serif;
 }
 
 .vip_fondo {
@@ -127,3 +127,11 @@ body {
   color: #f87b33;
 }
 
+.mandaariina {
+  background: url("/img/mandaariina.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #f2955e;
+}

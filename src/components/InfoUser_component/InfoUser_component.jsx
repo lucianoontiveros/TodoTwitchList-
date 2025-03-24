@@ -24,6 +24,10 @@ const InfoUser_component = ({ user, username }) => {
         case "sub":
           newClasses.container = "sus_fondo infoUSer_containers";
           switch (user.name) {
+            case "mandaariina":
+              newClasses.container =
+                "mandaariina infoUSer_containers crema_fondo";
+              break;
             case "antonellavrl_":
               newClasses.container =
                 "antonellavrl_ infoUSer_containers amarrillo_fondo";
@@ -66,10 +70,15 @@ const InfoUser_component = ({ user, username }) => {
           newClasses.container = "mod_fondo infoUSer_containers";
           switch (user.name) {
             case "camm_sss":
-              newClasses.container = "camm_sss infoUSer_containers orange_fondo";
+              newClasses.container =
+                "camm_sss infoUSer_containers orange_fondo";
               break;
-              case "mont_opo":
+            case "mont_opo":
               newClasses.container = "mont_opo infoUSer_containers crema_fondo";
+              break;
+            case "mandaariina":
+              newClasses.container =
+                "mandaariina infoUSer_containers crema_fondo";
               break;
           }
           break;
