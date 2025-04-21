@@ -54,6 +54,9 @@ const InfoUser_component = ({ user, username }) => {
             case "mont_opo":
               newClasses.container = "mont_opo infoUSer_containers crema_fondo";
               break;
+            case "antof253":
+              newClasses.container = "antof253 infoUSer_containers crema_fondo";
+              break;
           }
           break;
 
@@ -79,6 +82,9 @@ const InfoUser_component = ({ user, username }) => {
             case "mandaariina":
               newClasses.container =
                 "mandaariina infoUSer_containers crema_fondo";
+              break;
+            case "cuartodechenz":
+              newClasses.container = "antof253 infoUSer_containers crema_fondo";
               break;
           }
           break;

@@ -135,3 +135,12 @@ body {
   border-radius: 1em;
   color: #f2955e;
 }
+
+.antof253 {
+  background: url("/img/antof253.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #d9936a;
+}
