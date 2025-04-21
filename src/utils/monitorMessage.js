@@ -99,7 +99,24 @@ export const monitorMessage = (
       break;
     case "cambiarusuario":
       if (username === "cuartodechenz") {
-        changeNameUser(channel, arg, username);
+        const argsSplit = taskLowercase.split("-");
+        console.log(argsSplit);
+        if (argsSplit.length !== 2) {
+          console.log(
+            "Formato incorrecto. Usa: !cambiarusuario viejoUsuario - nuevoUsuario"
+          );
+          break;
+        }
+
+        const oldUser = argsSplit[0].trim();
+        const newUser = argsSplit[1].trim();
+
+        if (!oldUser || !newUser) {
+          console.log("Ambos nombres de usuario deben estar presentes.");
+          break;
+        }
+
+        changeNameUser(channel, oldUser, newUser);
       }
       break;
 
