@@ -144,3 +144,12 @@ body {
   border-radius: 1em;
   color: #d9936a;
 }
+
+.rsofiaa {
+  background: url("/img/rsofiaa.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #c8ecf4;
+}
