@@ -153,3 +153,12 @@ body {
   border-radius: 1em;
   color: #c8ecf4;
 }
+
+.wandazk {
+  background: url("/img/wandazk.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #f0f2ac;
+}
