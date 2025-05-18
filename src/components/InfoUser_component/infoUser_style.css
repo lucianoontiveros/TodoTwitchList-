@@ -6,7 +6,8 @@
   gap: 1rem;
   padding: 1rem;
   box-sizing: border-box;
-  font-family: 'Sawarabi Gothic', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif;
+  font-family: "Sawarabi Gothic", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Apple Color Emoji", "Noto Color Emoji", sans-serif;
   font-optical-sizing: auto;
   background-color: rgba(84, 108, 111, 0.5);
   border-radius: 1em;
@@ -415,16 +416,16 @@
 /* VERDE : Propiedades para el fondo y colores de tareas  */
 
 .verde_fondo .task-header {
-  color: #BCD955;
+  color: #bcd955;
 }
 
 .verde_fondo .task-list {
-  color: #BCD955;
+  color: #bcd955;
 }
 
 .verde_fondo .task-item {
   max-width: 26.99em;
-  color: #BCD955;
+  color: #bcd955;
 }
 
 .verde_fondo .task-list .task-item {
@@ -433,9 +434,8 @@
 
 .verde_fondo .task-item .task-id {
   font-size: medium;
-  background-color: #BCD955;
+  background-color: #bcd955;
 }
-
 
 /* ORANGE : Propiedades para el fondo y colores de tareas  */
 
@@ -459,4 +459,35 @@
 .orange_fondo .task-item .task-id {
   font-size: medium;
   background-color: #f87b33;
+}
+
+/* YELLLOW: Propiedades para el fondo y colores de tareas  */
+.amarrillo_patito_fondo {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #f0f2ac;
+}
+
+.amarrillo_patito_fondo .task-header {
+  color: #f0f2ac;
+}
+
+.amarrillo_patito_fondo .task-list {
+  color: #f0f2ac;
+}
+
+.amarrillo_patito_fondo .task-item {
+  max-width: 26.99em;
+  color: #f0f2ac;
+}
+
+.amarrillo_patito_fondo .task-list .task-item {
+  width: 100%;
+}
+
+.amarrillo_patito_fondo .task-item .task-id {
+  font-size: medium;
+  background-color: #f0f2ac;
 }
