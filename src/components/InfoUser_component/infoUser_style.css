@@ -491,3 +491,65 @@
   font-size: medium;
   background-color: #f0f2ac;
 }
+
+/* lAVANDA: Propiedades para el fondo y colores de tareas  */
+.lavanda_fondo {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #BCA7D9;
+}
+
+.lavanda_fondo .task-header {
+  color: #BCA7D9;
+}
+
+.lavanda_fondo .task-list {
+  color: #BCA7D9;
+}
+
+.lavanda_fondo .task-item {
+  max-width: 26.99em;
+  color: #BCA7D9;
+}
+
+.lavanda_fondo .task-list .task-item {
+  width: 100%;
+}
+
+.lavanda_fondo .task-item .task-id {
+  font-size: medium;
+  background-color: #af8ae4;
+}
+
+/* CELESTE: Propiedades para el fondo y colores de tareas  */
+.celeste_fondo {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #5697BF;
+}
+
+.celeste_fondo .task-header {
+  color: #5697BF;
+}
+
+.celeste_fondo .task-list {
+  color: #5697BF;
+}
+
+.celeste_fondo .task-item {
+  max-width: 26.99em;
+  color: #5697BF;
+}
+
+.celeste_fondo .task-list .task-item {
+  width: 100%;
+}
+
+.celeste_fondo .task-item .task-id {
+  font-size: medium;
+  background-color: #5697BF;
+}
