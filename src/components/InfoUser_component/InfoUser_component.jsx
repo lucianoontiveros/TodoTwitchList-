@@ -64,6 +64,14 @@ const InfoUser_component = ({ user, username }) => {
               newClasses.container =
                 "wandazk infoUSer_containers amarrillo_patito_fondo";
               break;
+            case "olmediito":
+              newClasses.container =
+                "olmediito infoUSer_containers lavanda_fondo";
+              break;
+            case "liln1k":
+              newClasses.container =
+                "liln1k infoUSer_containers amarrillo_fondo";
+              break;
           }
           break;
 
@@ -92,8 +100,9 @@ const InfoUser_component = ({ user, username }) => {
               break;
             case "cuartodechenz":
               newClasses.container =
-                "wandazk infoUSer_containers amarrillo_patito_fondo";
+                "liln1k infoUSer_containers amarrillo_fondo";
               break;
+              
           }
           break;
         case "prime":

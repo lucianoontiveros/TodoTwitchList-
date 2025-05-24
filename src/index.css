@@ -162,3 +162,22 @@ body {
   border-radius: 1em;
   color: #f0f2ac;
 }
+
+.olmediito {
+  background: url("/img/olmediito.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #BCA7D9;
+}
+
+.liln1k {
+  background: url("/img/liln1k.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #fcd34d;
+}
+
