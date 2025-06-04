@@ -181,3 +181,13 @@ body {
   color: #fcd34d;
 }
 
+.condrocita {
+  background: url("/img/Condrocita.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #F2BDD0;
+}
+
+

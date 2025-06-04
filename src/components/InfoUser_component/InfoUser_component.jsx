@@ -72,6 +72,10 @@ const InfoUser_component = ({ user, username }) => {
               newClasses.container =
                 "liln1k infoUSer_containers amarrillo_fondo";
               break;
+              case "Condrocita":
+              newClasses.container =
+                "condrocita infoUSer_containers rosa_fondo";
+              break;
           }
           break;
 
@@ -100,7 +104,7 @@ const InfoUser_component = ({ user, username }) => {
               break;
             case "cuartodechenz":
               newClasses.container =
-                "liln1k infoUSer_containers amarrillo_fondo";
+                "condrocita infoUSer_containers rosa_fondo";
               break;
               
           }
