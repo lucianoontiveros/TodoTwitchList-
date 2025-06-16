@@ -584,3 +584,36 @@
   font-size: medium;
   background-color: #F2BDD0;
 }
+
+
+
+/* lila: Propiedades para el fondo y colores de tareas  */
+.lila_fondo {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #CCBBF2;
+}
+
+.lila_fondo .task-header {
+  color: #CCBBF2;
+}
+
+.lila_fondo .task-list {
+  color: #CCBBF2;
+}
+
+.lila_fondo .task-item {
+  max-width: 26.99em;
+  color: #CCBBF2;
+}
+
+.lila_fondo .task-list .task-item {
+  width: 100%;
+}
+
+.lila_fondo .task-item .task-id {
+  font-size: medium;
+  background-color: #CCBBF2;
+}

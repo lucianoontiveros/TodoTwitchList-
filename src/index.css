@@ -190,4 +190,12 @@ body {
   color: #F2BDD0;
 }
 
+.kakarotita_ {
+  background: url("/img/kakarotita_.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #CCBBF2;
+}
 
