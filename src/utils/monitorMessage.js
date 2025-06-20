@@ -57,10 +57,12 @@ export const monitorMessage = (
   if (self || !message.startsWith("!")) return;
   const username = tags.username;
 
+  // Validar comando
   const commandVerify = validateCommand(message.toLowerCase().split(" ")[0]);
   if (!commandVerify) return;
-
-  // Validar comando
+ // Validar usuario
+ foundOrCreateUser(username, tags.badges);
+ 
 
   // promps que extraemos del comando
   const command = message.toLowerCase().split(" ")[0].slice(1);
@@ -88,6 +90,7 @@ export const monitorMessage = (
     ? "prime"
     : "none";
 
+    foundOrCreateUser(username, isTag);
   // Manejo de comandos
   switch (command) {
     // Administrar usuarios

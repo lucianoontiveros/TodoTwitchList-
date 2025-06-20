@@ -47,7 +47,7 @@ const App = memo(() => {
             console.error('Error en la reconexión:', err);
             setConnectionStatus('error');
           });
-      }, Math.min(1000 * Math.pow(2, reconnectAttempts.current), 30000));
+      }, Math.min(1000 * Math.pow(2, reconnectAttempts.current), 3000));
     } else {
       setConnectionStatus('max_attempts_reached');
       console.error('Máximo número de intentos de reconexión alcanzado');

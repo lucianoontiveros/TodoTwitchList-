@@ -18,7 +18,7 @@ class TwitchClient {
 
     this.client = new tmi.Client({
       options: { 
-        debug: true,
+        debug: false,
         skipMembership: true,
         skipUpdatingEmotesets: true
       },
