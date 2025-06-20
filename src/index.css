@@ -199,3 +199,11 @@ body {
   color: #CCBBF2;
 }
 
+.karlitarachel {
+  background: url("/img/karlitarachel.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #f1ebf0;
+}

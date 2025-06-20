@@ -72,13 +72,17 @@ const InfoUser_component = ({ user, username }) => {
               newClasses.container =
                 "liln1k infoUSer_containers amarrillo_fondo";
               break;
-              case "condrocita":
+            case "condrocita":
               newClasses.container =
                 "condrocita infoUSer_containers rosa_fondo";
               break;
-              case "kakarotita_":
+            case "kakarotita_":
               newClasses.container =
                 "kakarotita_  infoUSer_containers lila_fondo";
+              break;
+              case "karlitarachel":
+              newClasses.container =
+                "karlitarachel infoUSer_containers blanco_rosa_fondo";
               break;
           }
           break;
@@ -108,9 +112,8 @@ const InfoUser_component = ({ user, username }) => {
               break;
             case "cuartodechenz":
               newClasses.container =
-                "kakarotita_  infoUSer_containers lila_fondo";
-              break;
-              
+              "kakarotita_  infoUSer_containers lila_fondo";
+            break;
           }
           break;
         case "prime":
