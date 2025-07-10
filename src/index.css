@@ -169,7 +169,7 @@ body {
   background-size: cover;
   background-position: bottom;
   border-radius: 1em;
-  color: #BCA7D9;
+  color: #bca7d9;
 }
 
 .liln1k {
@@ -187,7 +187,7 @@ body {
   background-size: cover;
   background-position: bottom;
   border-radius: 1em;
-  color: #F2BDD0;
+  color: #f2bdd0;
 }
 
 .kakarotita_ {
@@ -196,7 +196,16 @@ body {
   background-size: cover;
   background-position: bottom;
   border-radius: 1em;
-  color: #CCBBF2;
+  color: #ccbbf2;
+}
+
+.kakarotita_ {
+  background: url("/img/kakarotita_.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #ccbbf2;
 }
 
 .karlitarachel {
@@ -206,4 +215,13 @@ body {
   background-position: bottom;
   border-radius: 1em;
   color: #f1ebf0;
+}
+
+.ruidodemate_rocio {
+  background: url("/img/ruidodemate_rocio.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #f2a663;
 }

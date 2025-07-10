@@ -560,20 +560,20 @@
   background-size: cover;
   background-position: bottom;
   border-radius: 1em;
-  color: #F2BDD0;
+  color: #f2bdd0;
 }
 
 .rosa_fondo .task-header {
-  color: #F2BDD0;
+  color: #f2bdd0;
 }
 
 .rosa_fondo .task-list {
-  color: #F2BDD0;
+  color: #f2bdd0;
 }
 
 .rosa_fondo .task-item {
   max-width: 26.99em;
-  color: #F2BDD0;
+  color: #f2bdd0;
 }
 
 .rosa_fondo .task-list .task-item {
@@ -582,10 +582,8 @@
 
 .rosa_fondo .task-item .task-id {
   font-size: medium;
-  background-color: #F2BDD0;
+  background-color: #f2bdd0;
 }
-
-
 
 /* LILA: Propiedades para el fondo y colores de tareas  */
 .lila_fondo {
@@ -593,20 +591,20 @@
   background-size: cover;
   background-position: bottom;
   border-radius: 1em;
-  color: #CCBBF2;
+  color: #ccbbf2;
 }
 
 .lila_fondo .task-header {
-  color: #CCBBF2;
+  color: #ccbbf2;
 }
 
 .lila_fondo .task-list {
-  color: #CCBBF2;
+  color: #ccbbf2;
 }
 
 .lila_fondo .task-item {
   max-width: 26.99em;
-  color: #CCBBF2;
+  color: #ccbbf2;
 }
 
 .lila_fondo .task-list .task-item {
@@ -615,10 +613,8 @@
 
 .lila_fondo .task-item .task-id {
   font-size: medium;
-  background-color: #CCBBF2;
+  background-color: #ccbbf2;
 }
-
-
 
 /* BLANCO_ROSA: Propiedades para el fondo y colores de tareas  */
 
@@ -652,3 +648,34 @@
   background-color: #f1ebf0;
 }
 
+/* NARANJA: Propiedades para el fondo y colores de tareas  */
+
+.naranja_fondo {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #f2a663;
+}
+
+.naranja_fondo .task-header {
+  color: #f2a663;
+}
+
+.naranja_fondo .task-list {
+  color: #f2a663;
+}
+
+.naranja_fondo .task-item {
+  max-width: 26.99em;
+  color: #f2a663;
+}
+
+.naranja_fondo .task-list .task-item {
+  width: 100%;
+}
+
+.naranja_fondo .task-item .task-id {
+  font-size: medium;
+  background-color: #f2a663;
+}

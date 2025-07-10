@@ -80,9 +80,13 @@ const InfoUser_component = ({ user, username }) => {
               newClasses.container =
                 "kakarotita_  infoUSer_containers lila_fondo";
               break;
-              case "karlitarachel":
+            case "karlitarachel":
               newClasses.container =
                 "karlitarachel infoUSer_containers blanco_rosa_fondo";
+              break;
+            case "ruidodemate_rocio":
+              newClasses.container =
+                "ruidodemate_rocio infoUSer_containers blanco_rosa_fondo";
               break;
           }
           break;
@@ -112,7 +116,7 @@ const InfoUser_component = ({ user, username }) => {
               break;
             case "cuartodechenz":
               newClasses.container =
-                "karlitarachel infoUSer_containers blanco_rosa_fondo";
+                "ruidodemate_rocio infoUSer_containers naranja_fondo";
               break;
           }
           break;
