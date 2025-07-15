@@ -225,3 +225,12 @@ body {
   border-radius: 1em;
   color: #f2a663;
 }
+
+.crissworkoutt {
+  background: url("/img/crissworkoutt.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #f2bdd0;
+}
