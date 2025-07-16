@@ -234,3 +234,22 @@ body {
   border-radius: 1em;
   color: #f2bdd0;
 }
+
+.sofamb1 {
+  background: url("/img/sofamb1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #98B5B9;
+}
+
+.macacuelloo {
+  background: url("/img/macacuelloo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #f2bdd0;
+}
+

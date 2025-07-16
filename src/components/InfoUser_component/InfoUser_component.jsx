@@ -92,6 +92,12 @@ const InfoUser_component = ({ user, username }) => {
               newClasses.container =
               "crissworkoutt infoUSer_containers rosa_fondo ";
               break;
+            case "sofamb1":
+              newClasses.container = "sofamb1 infoUSer_containers azul_gris_fondo ";              
+              break;
+            case "macacuelloo":
+              newClasses.container = "macacuelloo infoUSer_containers rosa_fondo ";
+              break;
           }
           break;
 
@@ -120,7 +126,7 @@ const InfoUser_component = ({ user, username }) => {
               break;
             case "cuartodechenz":
               newClasses.container =
-              "crissworkoutt infoUSer_containers rosa_fondo ";
+              "sofamb1 infoUSer_containers azul_gris_fondo ";
               break;
           }
           break;
