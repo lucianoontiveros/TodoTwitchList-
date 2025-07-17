@@ -688,20 +688,20 @@
   background-size: cover;
   background-position: bottom;
   border-radius: 1em;
-  color: #98B5B9;
+  color: #8AA6A6;
 }
 
 .azul_gris_fondo .task-header {
-  color: #98B5B9;
+  color: #8AA6A6;
 }
 
 .azul_gris_fondo .task-list {
-  color: #98B5B9;
+  color: #8AA6A6;
 }
 
 .azul_gris_fondo .task-item {
   max-width: 26.99em;
-  color: #98B5B9;
+  color: #8AA6A6;
 }
 
 .azul_gris_fondo .task-list .task-item {
@@ -710,5 +710,5 @@
 
 .azul_gris_fondo .task-item .task-id {
   font-size: medium;
-  background-color: #98B5B9;
+  background-color: #8AA6A6;
 }
