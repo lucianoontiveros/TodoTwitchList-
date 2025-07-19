@@ -712,3 +712,132 @@
   font-size: medium;
   background-color: #8AA6A6;
 }
+
+
+/* CLARIDAD: Propiedades para el fondo y colores de tareas  */
+
+.claridad_fondo {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #F2CD5E;
+}
+
+.claridad_fondo .task-header {
+  color: #F2CD5E;
+}
+
+.claridad_fondo .task-list {
+  color: #F2CD5E;
+}
+
+.claridad_fondo .task-item {
+  max-width: 26.99em;
+  color: #F2CD5E;
+}
+
+.claridad_fondo .task-list .task-item {
+  width: 100%;
+}
+
+.claridad_fondo .task-item .task-id {
+  font-size: medium;
+  background-color: #F2CD5E;
+}
+
+/* PROPOSITO: Propiedades para el fondo y colores de tareas  */
+
+.proposito_fondo {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #E9D9C8;
+}
+
+.proposito_fondo .task-header {
+  color: #E9D9C8;
+}
+
+.proposito_fondo .task-list {
+  color: #E9D9C8;
+}
+
+.proposito_fondo .task-item {
+  max-width: 26.99em;
+  color: #E9D9C8;
+}
+
+.proposito_fondo .task-list .task-item {
+  width: 100%;
+}
+
+.proposito_fondo .task-item .task-id {
+  font-size: medium;
+  background-color: #E9D9C8;
+}
+
+/* ESFUERZO: Propiedades para el fondo y colores de tareas  */
+
+.esfuerzo_fondo {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #A9D4D9;
+}
+
+.esfuerzo_fondo .task-header {
+  color: #A9D4D9;
+}
+
+.esfuerzo_fondo .task-list {
+  color: #A9D4D9;
+}
+
+.esfuerzo_fondo .task-item {
+  max-width: 26.99em;
+  color: #A9D4D9;
+}
+
+.esfuerzo_fondo .task-list .task-item {
+  width: 100%;
+}
+
+.esfuerzo_fondo .task-item .task-id {
+  font-size: medium;
+  background-color: #A9D4D9;
+}
+
+/* CONSTANCIA: Propiedades para el fondo y colores de tareas  */
+
+.constancia_fondo {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #F2D4AE;
+}
+
+.constancia_fondo .task-header {
+  color: #F2D4AE;
+}
+
+.constancia_fondo .task-list {
+  color: #F2D4AE;
+}
+
+.constancia_fondo .task-item {
+  max-width: 26.99em;
+  color: #F2D4AE;
+}
+
+.constancia_fondo .task-list .task-item {
+  width: 100%;
+}
+
+.constancia_fondo .task-item .task-id {
+  font-size: medium;
+  background-color: #F2D4AE;
+}

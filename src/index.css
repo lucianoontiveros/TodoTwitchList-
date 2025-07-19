@@ -253,3 +253,47 @@ body {
   color: #f2bdd0;
 }
 
+.bleisny {
+  background: url("/img/bleisny.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #bcd955;
+}
+
+.claridad {
+  background: url("/img/claridad.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #F2CD5E;
+}
+
+.proposito {
+  background: url("/img/proposito.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #E9D9C8;
+}
+
+.esfuerzo {
+  background: url("/img/esfuerzo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #A9D4D9;
+}
+
+.constancia {
+  background: url("/img/constancia.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #F2D4AE;
+}

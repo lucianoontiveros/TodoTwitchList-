@@ -98,6 +98,9 @@ const InfoUser_component = ({ user, username }) => {
             case "macacuelloo":
               newClasses.container = "macacuelloo infoUSer_containers rosa_fondo ";
               break;
+            case "bleisny":
+              newClasses.container = "bleisny infoUSer_containers verde_fondo ";
+              break;  
           }
           break;
 
@@ -126,7 +129,7 @@ const InfoUser_component = ({ user, username }) => {
               break;
             case "cuartodechenz":
               newClasses.container =
-              "sofamb1 infoUSer_containers azul_gris_fondo ";
+              "bleisny infoUSer_containers verde_fondo";
               break;
           }
           break;
