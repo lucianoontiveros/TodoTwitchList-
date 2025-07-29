@@ -111,6 +111,10 @@ const InfoUser_component = ({ user, username }) => {
               newClasses.container =
                 "sofiaantok infoUSer_containers amarrillo_fondo";
               break;
+              case "Flavia_2025_":
+                newClasses.container =
+                  "Flavia_2025_ infoUSer_containers flavia_fondo";
+                break;
           }
           break;
         case "mod":
@@ -129,7 +133,7 @@ const InfoUser_component = ({ user, username }) => {
               break;
             case "cuartodechenz":
               newClasses.container =
-              "bleisny infoUSer_containers verde_fondo";
+              "Flavia_2025_ infoUSer_containers flavia_fondo";
               break;
           }
           break;

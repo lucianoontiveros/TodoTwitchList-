@@ -841,3 +841,36 @@
   font-size: medium;
   background-color: #F2D4AE;
 }
+
+
+/* ROSA: Propiedades para el fondo y colores de tareas  */
+
+.flavia_fondo {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #F257A0;
+}
+
+.flavia_fondo .task-header {
+  color: #F257A0;
+}
+
+.flavia_fondo .task-list {
+  color: #F257A0;
+}
+
+.flavia_fondo .task-item {
+  max-width: 26.99em;
+  color: #F257A0;
+}
+
+.flavia_fondo .task-list .task-item {
+  width: 100%;
+}
+
+.flavia_fondo .task-item .task-id {
+  font-size: medium;
+  background-color: #F257A0;
+}
