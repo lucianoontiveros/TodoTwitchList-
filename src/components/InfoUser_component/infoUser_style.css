@@ -873,4 +873,38 @@
 .flavia_fondo .task-item .task-id {
   font-size: medium;
   background-color: #F257A0;
+}¨
+
+
+/* MOSTAZA: Propiedades para el fondo y colores de tareas  */
+
+
+.mostaza_fondo {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #D9A74A;
+}
+
+.mostaza_fondo .task-header {
+  color: #D9A74A;
+}
+
+.mostaza_fondo .task-list {
+  color: #D9A74A;
+}
+
+.mostaza_fondo .task-item {
+  max-width: 26.99em;
+  color: #D9A74A;
+}
+
+.mostaza_fondo .task-list .task-item {
+  width: 100%;
+}
+
+.mostaza_fondo .task-item .task-id {
+  font-size: medium;
+  background-color: #D9A74A;
 }

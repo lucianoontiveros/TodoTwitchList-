@@ -306,3 +306,12 @@ body {
   border-radius: 1em;
   color: #F257A0;
 }
+
+.mariong898 {
+  background: url("/img/mariong898.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #D9A74A;
+}
