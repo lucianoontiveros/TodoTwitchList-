@@ -3,7 +3,8 @@ import Tasklist_component from "../Tasklist_component/TaskList_component";
 
 const InfoUser_component = ({ user, username }) => {
   const [clases, setClases] = useState({});
-
+  console.log(user);
+  console.log(username);
   useEffect(() => {
     try {
       if (!user || !user.tag) return; // Validación antes de asignar clases
@@ -90,20 +91,23 @@ const InfoUser_component = ({ user, username }) => {
               break;
             case "crissworkoutt":
               newClasses.container =
-              "crissworkoutt infoUSer_containers rosa_fondo ";
+                "crissworkoutt infoUSer_containers rosa_fondo ";
               break;
             case "sofamb1":
-              newClasses.container = "sofamb1 infoUSer_containers azul_gris_fondo ";              
+              newClasses.container =
+                "sofamb1 infoUSer_containers azul_gris_fondo ";
               break;
             case "macacuelloo":
-              newClasses.container = "macacuelloo infoUSer_containers rosa_fondo ";
+              newClasses.container =
+                "macacuelloo infoUSer_containers rosa_fondo ";
               break;
             case "bleisny":
               newClasses.container = "bleisny infoUSer_containers verde_fondo ";
-              break;  
+              break;
             case "mariong898":
-              newClasses.container = "mariong898 infoUSer_containers mostaza_fondo";
-              break;  
+              newClasses.container =
+                "mariong898 infoUSer_containers mostaza_fondo";
+              break;
           }
           break;
 
@@ -115,13 +119,16 @@ const InfoUser_component = ({ user, username }) => {
                 "sofiaantok infoUSer_containers amarrillo_fondo";
               break;
             case "flavia_2025_":
-              newClasses.container = "flavia_2025_ infoUSer_containers flavia_fondo";
-            break;
+              newClasses.container =
+                "flavia_2025_ infoUSer_containers flavia_fondo";
+              break;
             case "mariong898":
-              newClasses.container = "mariong898 infoUSer_containers mostaza_fondo";
-              break; 
+              newClasses.container =
+                "mariong898 infoUSer_containers mostaza_fondo";
+              break;
           }
           break;
+
         case "mod":
           newClasses.container = "mod_fondo infoUSer_containers";
           switch (user.name) {
@@ -138,10 +145,11 @@ const InfoUser_component = ({ user, username }) => {
               break;
             case "cuartodechenz":
               newClasses.container =
-              "mariong898  infoUSer_containers mostaza_fondo";
+                "mariong898  infoUSer_containers mostaza_fondo";
               break;
           }
           break;
+
         case "prime":
           newClasses.container = "prime_fondo infoUSer_containers";
           break;
