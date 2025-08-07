@@ -680,7 +680,6 @@
   background-color: #f2a663;
 }
 
-
 /* AZUL GRIS: Propiedades para el fondo y colores de tareas  */
 
 .azul_gris_fondo {
@@ -688,20 +687,20 @@
   background-size: cover;
   background-position: bottom;
   border-radius: 1em;
-  color: #8AA6A6;
+  color: #8aa6a6;
 }
 
 .azul_gris_fondo .task-header {
-  color: #8AA6A6;
+  color: #8aa6a6;
 }
 
 .azul_gris_fondo .task-list {
-  color: #8AA6A6;
+  color: #8aa6a6;
 }
 
 .azul_gris_fondo .task-item {
   max-width: 26.99em;
-  color: #8AA6A6;
+  color: #8aa6a6;
 }
 
 .azul_gris_fondo .task-list .task-item {
@@ -710,9 +709,8 @@
 
 .azul_gris_fondo .task-item .task-id {
   font-size: medium;
-  background-color: #8AA6A6;
+  background-color: #8aa6a6;
 }
-
 
 /* CLARIDAD: Propiedades para el fondo y colores de tareas  */
 
@@ -721,20 +719,20 @@
   background-size: cover;
   background-position: bottom;
   border-radius: 1em;
-  color: #F2CD5E;
+  color: #f2cd5e;
 }
 
 .claridad_fondo .task-header {
-  color: #F2CD5E;
+  color: #f2cd5e;
 }
 
 .claridad_fondo .task-list {
-  color: #F2CD5E;
+  color: #f2cd5e;
 }
 
 .claridad_fondo .task-item {
   max-width: 26.99em;
-  color: #F2CD5E;
+  color: #f2cd5e;
 }
 
 .claridad_fondo .task-list .task-item {
@@ -743,7 +741,7 @@
 
 .claridad_fondo .task-item .task-id {
   font-size: medium;
-  background-color: #F2CD5E;
+  background-color: #f2cd5e;
 }
 
 /* PROPOSITO: Propiedades para el fondo y colores de tareas  */
@@ -753,20 +751,20 @@
   background-size: cover;
   background-position: bottom;
   border-radius: 1em;
-  color: #E9D9C8;
+  color: #e9d9c8;
 }
 
 .proposito_fondo .task-header {
-  color: #E9D9C8;
+  color: #e9d9c8;
 }
 
 .proposito_fondo .task-list {
-  color: #E9D9C8;
+  color: #e9d9c8;
 }
 
 .proposito_fondo .task-item {
   max-width: 26.99em;
-  color: #E9D9C8;
+  color: #e9d9c8;
 }
 
 .proposito_fondo .task-list .task-item {
@@ -775,7 +773,7 @@
 
 .proposito_fondo .task-item .task-id {
   font-size: medium;
-  background-color: #E9D9C8;
+  background-color: #e9d9c8;
 }
 
 /* ESFUERZO: Propiedades para el fondo y colores de tareas  */
@@ -785,20 +783,20 @@
   background-size: cover;
   background-position: bottom;
   border-radius: 1em;
-  color: #A9D4D9;
+  color: #a9d4d9;
 }
 
 .esfuerzo_fondo .task-header {
-  color: #A9D4D9;
+  color: #a9d4d9;
 }
 
 .esfuerzo_fondo .task-list {
-  color: #A9D4D9;
+  color: #a9d4d9;
 }
 
 .esfuerzo_fondo .task-item {
   max-width: 26.99em;
-  color: #A9D4D9;
+  color: #a9d4d9;
 }
 
 .esfuerzo_fondo .task-list .task-item {
@@ -807,7 +805,7 @@
 
 .esfuerzo_fondo .task-item .task-id {
   font-size: medium;
-  background-color: #A9D4D9;
+  background-color: #a9d4d9;
 }
 
 /* CONSTANCIA: Propiedades para el fondo y colores de tareas  */
@@ -817,20 +815,20 @@
   background-size: cover;
   background-position: bottom;
   border-radius: 1em;
-  color: #F2D4AE;
+  color: #f2d4ae;
 }
 
 .constancia_fondo .task-header {
-  color: #F2D4AE;
+  color: #f2d4ae;
 }
 
 .constancia_fondo .task-list {
-  color: #F2D4AE;
+  color: #f2d4ae;
 }
 
 .constancia_fondo .task-item {
   max-width: 26.99em;
-  color: #F2D4AE;
+  color: #f2d4ae;
 }
 
 .constancia_fondo .task-list .task-item {
@@ -839,9 +837,8 @@
 
 .constancia_fondo .task-item .task-id {
   font-size: medium;
-  background-color: #F2D4AE;
+  background-color: #f2d4ae;
 }
-
 
 /* ROSA: Propiedades para el fondo y colores de tareas  */
 
@@ -850,20 +847,20 @@
   background-size: cover;
   background-position: bottom;
   border-radius: 1em;
-  color: #F257A0;
+  color: #f257a0;
 }
 
 .flavia_fondo .task-header {
-  color: #F257A0;
+  color: #f257a0;
 }
 
 .flavia_fondo .task-list {
-  color: #F257A0;
+  color: #f257a0;
 }
 
 .flavia_fondo .task-item {
   max-width: 26.99em;
-  color: #F257A0;
+  color: #f257a0;
 }
 
 .flavia_fondo .task-list .task-item {
@@ -872,8 +869,9 @@
 
 .flavia_fondo .task-item .task-id {
   font-size: medium;
-  background-color: #F257A0;
-}¨
+  background-color: #f257a0;
+}
+¨
 
 
 /* MOSTAZA: Propiedades para el fondo y colores de tareas  */
@@ -884,20 +882,20 @@
   background-size: cover;
   background-position: bottom;
   border-radius: 1em;
-  color: #D9A74A;
+  color: #d9a74a;
 }
 
 .mostaza_fondo .task-header {
-  color: #D9A74A;
+  color: #d9a74a;
 }
 
 .mostaza_fondo .task-list {
-  color: #D9A74A;
+  color: #d9a74a;
 }
 
 .mostaza_fondo .task-item {
   max-width: 26.99em;
-  color: #D9A74A;
+  color: #d9a74a;
 }
 
 .mostaza_fondo .task-list .task-item {
@@ -906,5 +904,5 @@
 
 .mostaza_fondo .task-item .task-id {
   font-size: medium;
-  background-color: #D9A74A;
+  background-color: #d9a74a;
 }
