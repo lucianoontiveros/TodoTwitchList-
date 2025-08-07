@@ -60,8 +60,6 @@ export const monitorMessage = (
   // Validar comando
   const commandVerify = validateCommand(message.toLowerCase().split(" ")[0]);
   if (!commandVerify) return;
- // Validar usuario
- foundOrCreateUser(username, tags.badges);
  
 
   // promps que extraemos del comando

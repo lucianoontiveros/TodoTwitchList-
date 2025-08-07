@@ -91,22 +91,21 @@ const InfoUser_component = ({ user, username }) => {
               break;
             case "crissworkoutt":
               newClasses.container =
-                "crissworkoutt infoUSer_containers rosa_fondo ";
+                "crissworkoutt infoUSer_containers rosa_fondo";
               break;
             case "sofamb1":
               newClasses.container =
-                "sofamb1 infoUSer_containers azul_gris_fondo ";
+                "sofamb1 infoUSer_containers azul_gris_fondo";
               break;
             case "macacuelloo":
               newClasses.container =
-                "macacuelloo infoUSer_containers rosa_fondo ";
+                "macacuelloo infoUSer_containers rosa_fondo";
               break;
             case "bleisny":
               newClasses.container = "bleisny infoUSer_containers verde_fondo ";
               break;
             case "mariong898":
-              newClasses.container =
-                "mariong898 infoUSer_containers mostaza_fondo";
+              newClasses.container = "mariong898 infoUSer_containers mostaza_fondo";
               break;
           }
           break;
@@ -115,16 +114,13 @@ const InfoUser_component = ({ user, username }) => {
           newClasses.container = "vip_fondo infoUSer_containers";
           switch (user.name) {
             case "sofiaantok":
-              newClasses.container =
-                "sofiaantok infoUSer_containers amarrillo_fondo";
+              newClasses.container = "sofiaantok infoUSer_containers amarrillo_fondo";
               break;
             case "flavia_2025_":
-              newClasses.container =
-                "flavia_2025_ infoUSer_containers flavia_fondo";
+              newClasses.container = "flavia_2025_ infoUSer_containers flavia_fondo";
               break;
             case "mariong898":
-              newClasses.container =
-                "mariong898 infoUSer_containers mostaza_fondo";
+              newClasses.container = "mariong898 infoUSer_containers mostaza_fondo";
               break;
           }
           break;
@@ -133,19 +129,16 @@ const InfoUser_component = ({ user, username }) => {
           newClasses.container = "mod_fondo infoUSer_containers";
           switch (user.name) {
             case "camm_sss":
-              newClasses.container =
-                "camm_sss infoUSer_containers orange_fondo";
+              newClasses.container = "camm_sss infoUSer_containers orange_fondo";
               break;
             case "mont_opo":
               newClasses.container = "mont_opo infoUSer_containers crema_fondo";
               break;
             case "mandaariina":
-              newClasses.container =
-                "mandaariina infoUSer_containers crema_fondo";
+              newClasses.container = "mandaariina infoUSer_containers crema_fondo";
               break;
             case "cuartodechenz":
-              newClasses.container =
-                "mariong898  infoUSer_containers mostaza_fondo";
+              newClasses.container = "mariong898  infoUSer_containers mostaza_fondo";
               break;
           }
           break;
@@ -153,9 +146,11 @@ const InfoUser_component = ({ user, username }) => {
         case "prime":
           newClasses.container = "prime_fondo infoUSer_containers";
           break;
+
         default:
           break;
       }
+
 
       setClases(newClasses);
     } catch (error) {
