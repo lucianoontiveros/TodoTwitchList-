@@ -103,7 +103,7 @@ const InfoUser_component = ({ user, username }) => {
               break;  
             case "mariong898":
               newClasses.container = "mariong898 infoUSer_containers mostaza_fondo";
-              break;
+              break;  
           }
           break;
 
