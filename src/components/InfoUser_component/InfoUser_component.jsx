@@ -3,8 +3,7 @@ import Tasklist_component from "../Tasklist_component/TaskList_component";
 
 const InfoUser_component = ({ user, username }) => {
   const [clases, setClases] = useState({});
-  console.log(user);
-  console.log(username);
+
   useEffect(() => {
     try {
       if (!user || !user.tag) return; // Validación antes de asignar clases
@@ -142,14 +141,13 @@ const InfoUser_component = ({ user, username }) => {
 
         case "prime":
           newClasses.container = "prime_fondo infoUSer_containers";
-          break;
+        break;
 
         default:
-          break;
+        break;
       }
-
-
       setClases(newClasses);
+
     } catch (error) {
       console.error("Error al asignar clases:", error);
     }
