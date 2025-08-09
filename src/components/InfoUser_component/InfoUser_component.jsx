@@ -1,156 +1,80 @@
 import React, { useEffect, useState } from "react";
 import Tasklist_component from "../Tasklist_component/TaskList_component";
 
+// Mapeo de clases por tag y nombre
+const tagBaseClasses = {
+  sub: "sus_fondo infoUSer_containers",
+  vip: "vip_fondo infoUSer_containers",
+  mod: "mod_fondo infoUSer_containers",
+  prime: "prime_fondo infoUSer_containers",
+};
+
+const userSpecificClasses = {
+  sub: {
+    mandaariina: "mandaariina infoUSer_containers crema_fondo",
+    antonellavrl_: "antonellavrl_ infoUSer_containers amarrillo_fondo",
+    summertime0805: "summertime0805 infoUSer_containers magenta_fondo",
+    gominola_opositora: "gominola_opositora infoUSer_containers azul_fondo",
+    chinita098: "chinita098 infoUSer_containers rojo_fondo",
+    agos__________: "agos__________ infoUSer_containers blanco_fondo",
+    jana10dv: "jana10dv infoUSer_containers aqua_fondo",
+    mont_opo: "mont_opo infoUSer_containers crema_fondo",
+    antof253: "antof253 infoUSer_containers crema_fondo",
+    rsofiaa: "rsofiaa infoUSer_containers blanco_fondo",
+    wandazk: "wandazk infoUSer_containers amarrillo_patito_fondo",
+    olmediito: "olmediito infoUSer_containers lavanda_fondo",
+    liln1k: "liln1k infoUSer_containers amarrillo_fondo",
+    condrocita: "condrocita infoUSer_containers rosa_fondo",
+    kakarotita_: "kakarotita_  infoUSer_containers lila_fondo",
+    karlitarachel: "karlitarachel infoUSer_containers blanco_rosa_fondo",
+    ruidodemate_rocio: "ruidodemate_rocio infoUSer_containers naranja_fondo",
+    crissworkoutt: "crissworkoutt infoUSer_containers rosa_fondo",
+    sofamb1: "sofamb1 infoUSer_containers azul_gris_fondo",
+    macacuelloo: "macacuelloo infoUSer_containers rosa_fondo",
+    bleisny: "bleisny infoUSer_containers verde_fondo ",
+    mariong898: "mariong898 mostaza_fondo",
+  },
+  vip: {
+    sofiaantok: "sofiaantok infoUSer_containers amarrillo_fondo",
+    flavia_2025_: "flavia_2025_ flavia_fondo infoUSer_containers",
+  },
+  mod: {
+    camm_sss: "camm_sss infoUSer_containers orange_fondo",
+    mont_opo: "mont_opo infoUSer_containers crema_fondo",
+    mandaariina: "mandaariina infoUSer_containers crema_fondo",
+    cuartodechenz: "wandazk infoUSer_containers amarrillo_patito_fondo",
+  },
+};
+
 const InfoUser_component = ({ user, username }) => {
   const [clases, setClases] = useState({});
 
   useEffect(() => {
-    try {
-      if (!user || !user.tag) return; // Validación antes de asignar clases
+    if (!user || !user.tag) return;
 
-      let newClasses = {
-        container: "user_fondo infoUSer_containers",
-        info_items: "p-[0.2em]",
-        info_title: "flex justify-center items-start px-[1em] text-center",
-        info_title_h2:
-          "m-3 text-3xl h-[1.5em] w-[12em] rounded-[0.2em] bg-black",
-        info_header: "flex flex-row flex-wrap",
-        info_header_div: "px-[1em] m-[0.3em] rounded-[1em] bg-black",
-        task_container: "flex flex-col justify-center",
-        task_header: "task-header",
-      };
+    // Valores base comunes
+    let newClasses = {
+      container: "user_fondo infoUSer_containers",
+      info_items: "p-[0.2em]",
+      info_title: "flex justify-center items-start px-[1em] text-center",
+      info_title_h2: "m-3 text-3xl h-[1.5em] w-[12em] rounded-[0.2em] bg-black",
+      info_header: "flex flex-row flex-wrap",
+      info_header_div: "px-[1em] m-[0.3em] rounded-[1em] bg-black",
+      task_container: "flex flex-col justify-center",
+      task_header: "task-header",
+    };
 
-      switch (user.tag) {
-        case "sub":
-          newClasses.container = "sus_fondo infoUSer_containers";
-          switch (user.name) {
-            case "mandaariina":
-              newClasses.container =
-                "mandaariina infoUSer_containers crema_fondo";
-              break;
-            case "antonellavrl_":
-              newClasses.container =
-                "antonellavrl_ infoUSer_containers amarrillo_fondo";
-              break;
-            case "summertime0805":
-              newClasses.container =
-                "summertime0805 infoUSer_containers magenta_fondo";
-              break;
-            case "gominola_opositora":
-              newClasses.container =
-                "gominola_opositora infoUSer_containers azul_fondo";
-              break;
-            case "chinita098":
-              newClasses.container =
-                "chinita098 infoUSer_containers rojo_fondo";
-              break;
-            case "agos__________":
-              newClasses.container =
-                "agos__________ infoUSer_containers blanco_fondo";
-              break;
-            case "jana10dv":
-              newClasses.container = "jana10dv infoUSer_containers aqua_fondo";
-              break;
-            case "mont_opo":
-              newClasses.container = "mont_opo infoUSer_containers crema_fondo";
-              break;
-            case "antof253":
-              newClasses.container = "antof253 infoUSer_containers crema_fondo";
-              break;
-            case "rsofiaa":
-              newClasses.container = "rsofiaa infoUSer_containers blanco_fondo";
-              break;
-            case "wandazk":
-              newClasses.container =
-                "wandazk infoUSer_containers amarrillo_patito_fondo";
-              break;
-            case "olmediito":
-              newClasses.container =
-                "olmediito infoUSer_containers lavanda_fondo";
-              break;
-            case "liln1k":
-              newClasses.container =
-                "liln1k infoUSer_containers amarrillo_fondo";
-              break;
-            case "condrocita":
-              newClasses.container =
-                "condrocita infoUSer_containers rosa_fondo";
-              break;
-            case "kakarotita_":
-              newClasses.container =
-                "kakarotita_  infoUSer_containers lila_fondo";
-              break;
-            case "karlitarachel":
-              newClasses.container =
-                "karlitarachel infoUSer_containers blanco_rosa_fondo";
-              break;
-            case "ruidodemate_rocio":
-              newClasses.container =
-                "ruidodemate_rocio infoUSer_containers naranja_fondo";
-              break;
-            case "crissworkoutt":
-              newClasses.container =
-                "crissworkoutt infoUSer_containers rosa_fondo";
-              break;
-            case "sofamb1":
-              newClasses.container =
-                "sofamb1 infoUSer_containers azul_gris_fondo";
-              break;
-            case "macacuelloo":
-              newClasses.container =
-                "macacuelloo infoUSer_containers rosa_fondo";
-              break;
-            case "bleisny":
-              newClasses.container = "bleisny infoUSer_containers verde_fondo ";
-              break;
-            case "mariong898":
-              newClasses.container = "mariong898 mostaza_fondo";
-              break;
-          }
-          break;
-
-        case "vip":
-          newClasses.container = "vip_fondo infoUSer_containers";
-          switch (user.name) {
-            case "sofiaantok":
-              newClasses.container = "sofiaantok infoUSer_containers amarrillo_fondo";
-              break;
-            case "flavia_2025_":
-              newClasses.container = "flavia_2025_ flavia_fondo infoUSer_containers ";
-              break;
-          }
-          break;
-
-        case "mod":
-          newClasses.container = "mod_fondo infoUSer_containers";
-          switch (user.name) {
-            case "camm_sss":
-              newClasses.container = "camm_sss infoUSer_containers orange_fondo";
-              break;
-            case "mont_opo":
-              newClasses.container = "mont_opo infoUSer_containers crema_fondo";
-              break;
-            case "mandaariina":
-              newClasses.container = "mandaariina infoUSer_containers crema_fondo";
-              break;
-            case "cuartodechenz":
-              newClasses.container = "mariong898 mostaza_fondo";
-              break;
-          }
-          break;
-
-        case "prime":
-          newClasses.container = "prime_fondo infoUSer_containers";
-        break;
-
-        default:
-        break;
-      }
-      setClases(newClasses);
-
-    } catch (error) {
-      console.error("Error al asignar clases:", error);
+    // Si el tag existe, asigna su clase base
+    if (tagBaseClasses[user.tag]) {
+      newClasses.container = tagBaseClasses[user.tag];
     }
+
+    // Si hay una clase específica para el usuario, sobrescribe
+    if (userSpecificClasses[user.tag]?.[user.name]) {
+      newClasses.container = userSpecificClasses[user.tag][user.name];
+    }
+
+    setClases(newClasses);
   }, [user]);
 
   return (
@@ -162,57 +86,46 @@ const InfoUser_component = ({ user, username }) => {
           </div>
 
           <div className={clases.info_header}>
-            {(() => {
-              try {
-                return (
-                  <>
-                    {user?.personaldata?.[0]?.birth && (
-                      <div className={clases.info_header_div}>
-                        🎂 Cumple: {user.personaldata[0].birth}
-                      </div>
-                    )}
-                    {user?.personaldata?.[0]?.sign && (
-                      <div className={clases.info_header_div}>
-                        Signo zodiacal: {user.personaldata[0].sign}
-                      </div>
-                    )}
-                    {user?.tasks?.length > 0 && (
-                      <div className={clases.info_header_div}>
-                        📋 Tareas: {user.tasks.length}
-                      </div>
-                    )}
-                    {user?.exams?.length > 0 && (
-                      <div className={clases.info_header_div}>
-                        📅 Exámenes: {user.exams.length}
-                      </div>
-                    )}
-                    {user?.personaldata?.[0]?.nationality && (
-                      <div className={clases.info_header_div}>
-                        🪪 Nacionalidad: {user.personaldata[0].nationality}
-                      </div>
-                    )}
-                    {user?.personaldata?.[0]?.oppositionfor && (
-                      <div className={clases.info_header_div}>
-                        📄 Oposito: {user.personaldata[0]?.oppositionfor}
-                      </div>
-                    )}
-                    {user?.personaldata?.[0]?.studyfor && (
-                      <div className={clases.info_header_div}>
-                        📓 Estudio: {user.personaldata[0]?.studyfor}
-                      </div>
-                    )}
-                    {user?.personaldata?.[0]?.instagram && (
-                      <div className={clases.info_header_div}>
-                        📷 Instagram: {user.personaldata[0].instagram}
-                      </div>
-                    )}
-                  </>
-                );
-              } catch (error) {
-                console.error("Error al renderizar datos del usuario:", error);
-                return null;
-              }
-            })()}
+            {user?.personaldata?.[0]?.birth && (
+              <div className={clases.info_header_div}>
+                🎂 Cumple: {user.personaldata[0].birth}
+              </div>
+            )}
+            {user?.personaldata?.[0]?.sign && (
+              <div className={clases.info_header_div}>
+                Signo zodiacal: {user.personaldata[0].sign}
+              </div>
+            )}
+            {user?.tasks?.length > 0 && (
+              <div className={clases.info_header_div}>
+                📋 Tareas: {user.tasks.length}
+              </div>
+            )}
+            {user?.exams?.length > 0 && (
+              <div className={clases.info_header_div}>
+                📅 Exámenes: {user.exams.length}
+              </div>
+            )}
+            {user?.personaldata?.[0]?.nationality && (
+              <div className={clases.info_header_div}>
+                🪪 Nacionalidad: {user.personaldata[0].nationality}
+              </div>
+            )}
+            {user?.personaldata?.[0]?.oppositionfor && (
+              <div className={clases.info_header_div}>
+                📄 Oposito: {user.personaldata[0]?.oppositionfor}
+              </div>
+            )}
+            {user?.personaldata?.[0]?.studyfor && (
+              <div className={clases.info_header_div}>
+                📓 Estudio: {user.personaldata[0]?.studyfor}
+              </div>
+            )}
+            {user?.personaldata?.[0]?.instagram && (
+              <div className={clases.info_header_div}>
+                📷 Instagram: {user.personaldata[0].instagram}
+              </div>
+            )}
           </div>
         </div>
 
