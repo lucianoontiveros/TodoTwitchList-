@@ -1222,6 +1222,11 @@ body {
 
 .mariong898 {
   background: url("/img/mariong898.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 43em;
+  width: 29em;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
