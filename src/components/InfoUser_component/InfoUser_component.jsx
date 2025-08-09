@@ -104,7 +104,7 @@ const InfoUser_component = ({ user, username }) => {
               newClasses.container = "bleisny infoUSer_containers verde_fondo ";
               break;
             case "mariong898":
-              newClasses.container = "mariong898 infoUSer_containers mostaza_fondo";
+              newClasses.container = "mariong898 mostaza_fondo infoUSer_containers";
               break;
           }
           break;
@@ -116,7 +116,7 @@ const InfoUser_component = ({ user, username }) => {
               newClasses.container = "sofiaantok infoUSer_containers amarrillo_fondo";
               break;
             case "flavia_2025_":
-              newClasses.container = "flavia_2025_ infoUSer_containers flavia_fondo";
+              newClasses.container = "flavia_2025_ flavia_fondo infoUSer_containers ";
               break;
           }
           break;
