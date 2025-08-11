@@ -33,6 +33,7 @@ const userSpecificClasses = {
     macacuelloo: "macacuelloo infoUSer_containers rosa_fondo",
     bleisny: "bleisny infoUSer_containers verde_fondo ",
     mariong898: "infoUSer_containers mariong898 mostaza_fondo",
+    valenm07: "valenm07 infoUSer_containers liln1k",
   },
   vip: {
     sofiaantok: "sofiaantok infoUSer_containers amarrillo_fondo",

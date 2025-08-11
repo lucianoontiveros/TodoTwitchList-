@@ -1233,3 +1233,13 @@ body {
   border-radius: 1em !important;
   color: #d9a74a !important;
 }
+
+.valenm07 {
+  background: url("/img/valenm07.png") !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: bottom !important;
+  border-radius: 1em !important;
+  color: #d9a74a !important;
+}
+
