@@ -36,13 +36,13 @@ const userSpecificClasses = {
   },
   vip: {
     sofiaantok: "sofiaantok infoUSer_containers amarrillo_fondo",
-    flavia_2025_: "flavia_2025_ flavia_fondo infoUSer_containers",
+    flavia_2025_: "infoUSer_containers flavia_2025_ flavia_fondo",
   },
   mod: {
     camm_sss: "camm_sss infoUSer_containers orange_fondo",
     mont_opo: "mont_opo infoUSer_containers crema_fondo",
     mandaariina: "mandaariina infoUSer_containers crema_fondo",
-    cuartodechenz: "wandazk infoUSer_containers amarrillo_patito_fondo",
+    cuartodechenz: "infoUSer_containers flavia_2025_ flavia_fondo",
   },
 };
 
@@ -64,15 +64,16 @@ const InfoUser_component = ({ user, username }) => {
       task_header: "task-header",
     };
 
-    // Si el tag existe, asigna su clase base
-    if (tagBaseClasses[user.tag]) {
-      newClasses.container = tagBaseClasses[user.tag];
-    }
+    const tagKey = String(user.tag).trim().toLowerCase();
+const nameKey = String(user.name).trim().toLowerCase();
 
-    // Si hay una clase específica para el usuario, sobrescribe
-    if (userSpecificClasses[user.tag]?.[user.name]) {
-      newClasses.container = userSpecificClasses[user.tag][user.name];
-    }
+if (tagBaseClasses[tagKey]) {
+  newClasses.container = tagBaseClasses[tagKey];
+}
+
+if (userSpecificClasses[tagKey]?.[nameKey]) {
+  newClasses.container = userSpecificClasses[tagKey][nameKey];
+}
 
     setClases(newClasses);
   }, [user]);
