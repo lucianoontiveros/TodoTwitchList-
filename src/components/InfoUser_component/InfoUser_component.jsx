@@ -67,13 +67,13 @@ const InfoUser_component = ({ user, username }) => {
     const tagKey = String(user.tag).trim().toLowerCase();
 const nameKey = String(user.name).trim().toLowerCase();
 
-if (tagBaseClasses[tagKey]) {
+if (userSpecificClasses[tagKey]?.[nameKey]) {
+  newClasses.container = userSpecificClasses[tagKey][nameKey];
+} else {
   newClasses.container = tagBaseClasses[tagKey];
 }
 
-if (userSpecificClasses[tagKey]?.[nameKey]) {
-  newClasses.container = userSpecificClasses[tagKey][nameKey];
-}
+
 
     setClases(newClasses);
   }, [user]);
