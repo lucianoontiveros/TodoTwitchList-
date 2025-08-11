@@ -42,7 +42,6 @@ const userSpecificClasses = {
     camm_sss: "camm_sss infoUSer_containers orange_fondo",
     mont_opo: "mont_opo infoUSer_containers crema_fondo",
     mandaariina: "mandaariina infoUSer_containers crema_fondo",
-    cuartodechenz: "infoUSer_containers flavia_2025_ flavia_fondo",
   },
 };
 
