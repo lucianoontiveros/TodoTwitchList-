@@ -64,18 +64,26 @@ const InfoUser_component = ({ user, username }) => {
       task_header: "task-header",
     };
 
-    const tagKey = String(user.tag).trim().toLowerCase();
+
+const tagKey = String(user.tag).trim().toLowerCase();
 const nameKey = String(user.name).trim().toLowerCase();
 
-if (userSpecificClasses[tagKey]?.[nameKey]) {
-  newClasses.container = userSpecificClasses[tagKey][nameKey];
-} else {
+// Asigna clase por tag
+if (tagBaseClasses[tagKey]) {
   newClasses.container = tagBaseClasses[tagKey];
 }
 
+// Si el nombre contiene "mariong", usa estilos de mariong898
+if (nameKey.includes("mariong")) {
+  newClasses.container = userSpecificClasses[tagKey]?.["mariong898"] 
+    || newClasses.container;
+}
+// Sino, usa la clase específica normal
+else if (userSpecificClasses[tagKey]?.[nameKey]) {
+  newClasses.container = userSpecificClasses[tagKey][nameKey];
+}
 
-
-    setClases(newClasses);
+  setClases(newClasses);
   }, [user]);
 
   return (
