@@ -37,6 +37,7 @@ const userSpecificClasses = {
   vip: {
     sofiaantok: "sofiaantok infoUSer_containers amarrillo_fondo",
     flavia_2025_: "infoUSer_containers flavia_2025_ flavia_fondo",
+    mariong898: "mariong898 mostaza_fondo",
   },
   mod: {
     camm_sss: "camm_sss infoUSer_containers orange_fondo",
