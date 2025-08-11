@@ -32,12 +32,11 @@ const userSpecificClasses = {
     sofamb1: "sofamb1 infoUSer_containers azul_gris_fondo",
     macacuelloo: "macacuelloo infoUSer_containers rosa_fondo",
     bleisny: "bleisny infoUSer_containers verde_fondo ",
-    mariong898: "mariong898 mostaza_fondo",
+    mariong898: "infoUSer_containers mariong898 mostaza_fondo",
   },
   vip: {
     sofiaantok: "sofiaantok infoUSer_containers amarrillo_fondo",
     flavia_2025_: "infoUSer_containers flavia_2025_ flavia_fondo",
-    mariong898: "mariong898 mostaza_fondo",
   },
   mod: {
     camm_sss: "camm_sss infoUSer_containers orange_fondo",
@@ -65,26 +64,26 @@ const InfoUser_component = ({ user, username }) => {
       task_header: "task-header",
     };
 
+    const tagKey = String(user.tag).trim().toLowerCase();
+    const nameKey = String(user.name).trim().toLowerCase();
 
-const tagKey = String(user.tag).trim().toLowerCase();
-const nameKey = String(user.name).trim().toLowerCase();
+    // Asigna clase por tag
+    if (tagBaseClasses[tagKey]) {
+      newClasses.container = tagBaseClasses[tagKey];
+    }
 
-// Asigna clase por tag
-if (tagBaseClasses[tagKey]) {
-  newClasses.container = tagBaseClasses[tagKey];
-}
+    // Si el nombre contiene "mariong", usa estilos de mariong898
+    if (nameKey.includes("mariong")) {
+      newClasses.container = userSpecificClasses[tagKey]?.["mariong898"] 
+        || newClasses.container;
+    }
+    // Sino, usa la clase específica normal
+    else if (userSpecificClasses[tagKey]?.[nameKey]) {
+      newClasses.container = userSpecificClasses[tagKey][nameKey];
+    }
 
-// Si el nombre contiene "mariong", usa estilos de mariong898
-if (nameKey.includes("mariong")) {
-  newClasses.container = userSpecificClasses[tagKey]?.["mariong898"] 
-    || newClasses.container;
-}
-// Sino, usa la clase específica normal
-else if (userSpecificClasses[tagKey]?.[nameKey]) {
-  newClasses.container = userSpecificClasses[tagKey][nameKey];
-}
-
-  setClases(newClasses);
+  
+    setClases(newClasses);
   }, [user]);
 
   return (
