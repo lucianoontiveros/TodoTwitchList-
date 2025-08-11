@@ -33,7 +33,7 @@ const userSpecificClasses = {
     macacuelloo: "macacuelloo infoUSer_containers rosa_fondo",
     bleisny: "bleisny infoUSer_containers verde_fondo ",
     mariong898: "infoUSer_containers mariong898 mostaza_fondo",
-    valenm07: "valenm07 infoUSer_containers liln1k",
+    valenm07: "valenm07 infoUSer_containers claridad_fondo",
   },
   vip: {
     sofiaantok: "sofiaantok infoUSer_containers amarrillo_fondo",
@@ -43,14 +43,17 @@ const userSpecificClasses = {
     camm_sss: "camm_sss infoUSer_containers orange_fondo",
     mont_opo: "mont_opo infoUSer_containers crema_fondo",
     mandaariina: "mandaariina infoUSer_containers crema_fondo",
+    cuartodechenz: "valenm07 infoUSer_containers claridad_fondo",
+
   },
 };
 
 const InfoUser_component = ({ user, username }) => {
-  const [clases, setClases] = useState({});
+  const [clases, setClases] = useState([]);
 
   useEffect(() => {
     if (!user || !user.tag) return;
+
 
     // Valores base comunes
     let newClasses = {
@@ -67,15 +70,20 @@ const InfoUser_component = ({ user, username }) => {
     const tagKey = String(user.tag).trim().toLowerCase();
     const nameKey = String(user.name).trim().toLowerCase();
 
+
+        // Si el nombre contiene "mariong", usa estilos de mariong898
+
+    if (nameKey.includes("marion")) {
+      newClasses.container = "infoUSer_containers mariong898 mostaza_fondo";
+      return setClases(newClasses);
+    }
+
     // Asigna clase por tag
     if (tagBaseClasses[tagKey]) {
       newClasses.container = tagBaseClasses[tagKey];
     }
 
-    // Si el nombre contiene "mariong", usa estilos de mariong898
-    if (nameKey.includes("mariong")) {
-      newClasses.container = "infoUSer_containers mariong898 mostaza_fondo";
-    }
+    
     // Sino, usa la clase específica normal
     else if (userSpecificClasses[tagKey]?.[nameKey]) {
       newClasses.container = userSpecificClasses[tagKey][nameKey];

@@ -1212,34 +1212,29 @@ body {
 }
 
 .flavia_2025_ {
-  background: url("/img/Flavia_2025_.jpeg") !important;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
-  background-position: bottom !important;
-  border-radius: 1em !important;
-  color: #f257a0 !important;
+  background: url("/img/Flavia_2025_.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #f257a0;
 }
 
 .mariong898 {
-  background: url("/img/mariong898.png") !important;
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: space-between !important;
-  height: 43em !important;
-  width: 29em !important;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
-  background-position: bottom !important;
-  border-radius: 1em !important;
-  color: #d9a74a !important;
+  background: url("/img/mariong898.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #d9a74a;
 }
 
 .valenm07 {
-  background: url("/img/valenm07.png") !important;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
-  background-position: bottom !important;
-  border-radius: 1em !important;
-  color: #d9a74a !important;
+  background: url("/img/valenm07.png"); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #fcd34d;
 }
 
