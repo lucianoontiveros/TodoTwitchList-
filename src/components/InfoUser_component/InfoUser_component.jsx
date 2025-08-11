@@ -74,15 +74,13 @@ const InfoUser_component = ({ user, username }) => {
 
     // Si el nombre contiene "mariong", usa estilos de mariong898
     if (nameKey.includes("mariong")) {
-      newClasses.container = userSpecificClasses[tagKey]?.["mariong898"] 
-        || newClasses.container;
+      newClasses.container = "infoUSer_containers mariong898 mostaza_fondo";
     }
     // Sino, usa la clase específica normal
     else if (userSpecificClasses[tagKey]?.[nameKey]) {
       newClasses.container = userSpecificClasses[tagKey][nameKey];
     }
 
-  
     setClases(newClasses);
   }, [user]);
 
