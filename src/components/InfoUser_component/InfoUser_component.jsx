@@ -37,7 +37,9 @@ const userSpecificClasses = {
     flavia_2025_: "infoUSer_containers flavia_2025_",
   },
   vip: {
+    mariong898: "infoUSer_containers mariong898",
     sofiaantok: "infoUSer_containers sofiaantok",
+    flavia_2025_: "infoUSer_containers flavia_2025_",
     
   },
   mod: {
@@ -68,33 +70,34 @@ const InfoUser_component = ({ user, username }) => {
       task_header: "task-header",
     };
 
-    const normalizedName = user.name?.toLowerCase().trim();
-
-    console.log("Nombre normalizado:", normalizedName);
-    console.log("Nombre original:", user.name);
+    const normalizedName = user.name?.toLowerCase().trim() || '';
     
-    const usernameNormalize = user.name?.toLowerCase().trim();
-    console.log("Tipo de usernameNormalize:", typeof usernameNormalize);
-    console.log("Tipo de user.tag:", typeof user.tag);
-    console.log("user.tag:",  user.tag);
-
-
-    // Comparación directa
-    if (usernameNormalize ===user.name) {
-      console.log("El nombre coincide con 'normalize'");
-    } else {
-      console.log("El nombre NO coincide con 'normalize'");
+    console.log('=== DEPURACIÓN DE CLASES ===');
+    console.log('Nombre original:', `"${user.name}"`);
+    console.log('Nombre normalizado:', `"${normalizedName}"`);
+    console.log('Tag del usuario:', `"${user.tag}"`);
+    
+    // Verificar si el usuario está en userSpecificClasses
+    console.log('Clases específicas disponibles para este tag:', Object.keys(userSpecificClasses[user.tag] || {}));
+    console.log('El usuario tiene clase específica?', !!userSpecificClasses[user.tag]?.[normalizedName]);
+    
+    if (userSpecificClasses[user.tag]?.[normalizedName]) {
+      console.log('Clase específica encontrada:', userSpecificClasses[user.tag][normalizedName]);
     }
-    // Asigna clase por tag
-    if (tagBaseClasses[user.tag]) {
+    // Primero intentamos encontrar una clase específica para el usuario
+    if (userSpecificClasses[user.tag]?.[normalizedName]) {
+      console.log(`Clase específica encontrada para ${normalizedName} (${user.tag}):`, userSpecificClasses[user.tag][normalizedName]);
+      newClasses.container = userSpecificClasses[user.tag][normalizedName];
+    } 
+    // Si no hay clase específica, usamos la clase base del tag
+    else if (tagBaseClasses[user.tag]) {
+      console.log(`Usando clase base para tag ${user.tag}`);
       newClasses.container = tagBaseClasses[user.tag];
-      // Sino, usa la clase específica normal
-      if (userSpecificClasses[user.tag]?.[normalizedName]) {
-        console.log(userSpecificClasses[user.tag][normalizedName])
-        newClasses.container = userSpecificClasses[user.tag][normalizedName];
-      }
-      setClases(newClasses);
     }
+    
+    // Verificación final
+    console.log('Clase final asignada:', newClasses.container);
+    setClases(newClasses);
 
     
 
