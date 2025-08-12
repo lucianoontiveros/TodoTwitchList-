@@ -78,6 +78,11 @@ const InfoUser_component = ({ user, username }) => {
       return setClases(newClasses);
     }
 
+    if (nameKey.includes("flavia_")) {
+      newClasses.container = "infoUSer_containers flavia_2025_ flavia_fondo";
+      return setClases(newClasses);
+    }
+
     // Asigna clase por tag
     if (tagBaseClasses[tagKey]) {
       newClasses.container = tagBaseClasses[tagKey];
