@@ -49,7 +49,7 @@ const userSpecificClasses = {
 };
 
 const InfoUser_component = ({ user, username }) => {
-  const [clases, setClases] = useState([]);
+  const [clases, setClases] = useState({});
 
   useEffect(() => {
     if (!user || !user.tag) return;
@@ -67,21 +67,23 @@ const InfoUser_component = ({ user, username }) => {
       task_header: "task-header",
     };
 
+    console.log(user);
     const tagKey = String(user.tag).trim().toLowerCase();
     const nameKey = String(user.name).trim().toLowerCase();
-
+    console.log(tagKey);
+    console.log(nameKey);
 
 
     // Asigna clase por tag
     if (tagBaseClasses[tagKey]) {
       newClasses.container = tagBaseClasses[tagKey];
+      // Sino, usa la clase específica normal
+      if (userSpecificClasses[tagKey]?.[nameKey]) {
+        newClasses.container = userSpecificClasses[tagKey][nameKey];
+      }
     }
 
     
-    // Sino, usa la clase específica normal
-    else if (userSpecificClasses[tagKey]?.[nameKey]) {
-      newClasses.container = userSpecificClasses[tagKey][nameKey];
-    }
 
     setClases(newClasses);
   }, [user]);
