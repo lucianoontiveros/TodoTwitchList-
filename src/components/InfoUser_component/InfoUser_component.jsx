@@ -71,17 +71,6 @@ const InfoUser_component = ({ user, username }) => {
     const nameKey = String(user.name).trim().toLowerCase();
 
 
-        // Si el nombre contiene "mariong", usa estilos de mariong898
-
-    if (nameKey.includes("marion")) {
-      newClasses.container = "infoUSer_containers mariong898 mostaza_fondo";
-      return setClases(newClasses);
-    }
-
-    if (nameKey.includes("flavia_")) {
-      newClasses.container = "infoUSer_containers flavia_2025_ flavia_fondo";
-      return setClases(newClasses);
-    }
 
     // Asigna clase por tag
     if (tagBaseClasses[tagKey]) {
