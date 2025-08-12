@@ -35,6 +35,8 @@ const userSpecificClasses = {
     mariong898: "infoUSer_containers mariong898",
     valenm07: "infoUSer_containers valenm07",
     flavia_2025_: "infoUSer_containers flavia_2025_",
+    cuartodechenz: "infoUSer_containers prime_fondo",
+
   },
   vip: {
     mariong898: "infoUSer_containers mariong898",
