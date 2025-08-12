@@ -38,15 +38,14 @@ const userSpecificClasses = {
   },
   vip: {
     sofiaantok: "infoUSer_containers sofiaantok",
-    mariong898: "infoUSer_containers mariong898",
-    valenm07: "infoUSer_containers valenm07",
-    flavia_2025_: "infoUSer_containers flavia_2025_",
+    
   },
   mod: {
     agos__________: "infoUSer_containers agos__________",
     camm_sss: "infoUSer_containers camm_ssss",
     mont_opo: "infoUSer_containers mont_opo",
     mandaariina: "infoUSer_containers mandaariina",
+    cuartodechenz: "infoUSer_containers prime_fondo",
   },
 };
 
@@ -69,13 +68,30 @@ const InfoUser_component = ({ user, username }) => {
       task_header: "task-header",
     };
 
+    const normalizedName = user.name?.toLowerCase().trim();
 
+    console.log("Nombre normalizado:", normalizedName);
+    console.log("Nombre original:", user.name);
+    
+    const usernameNormalize = user.name?.toLowerCase().trim();
+    console.log("Tipo de usernameNormalize:", typeof usernameNormalize);
+    console.log("Tipo de user.tag:", typeof user.tag);
+    console.log("user.tag:",  user.tag);
+
+
+    // Comparación directa
+    if (usernameNormalize ===user.name) {
+      console.log("El nombre coincide con 'normalize'");
+    } else {
+      console.log("El nombre NO coincide con 'normalize'");
+    }
     // Asigna clase por tag
     if (tagBaseClasses[user.tag]) {
       newClasses.container = tagBaseClasses[user.tag];
       // Sino, usa la clase específica normal
-      if (userSpecificClasses[user.tag]?.[user.name]) {
-        newClasses.container = userSpecificClasses[user.tag][user.name];
+      if (userSpecificClasses[user.tag]?.[normalizedName]) {
+        console.log(userSpecificClasses[user.tag][normalizedName])
+        newClasses.container = userSpecificClasses[user.tag][normalizedName];
       }
       setClases(newClasses);
     }
