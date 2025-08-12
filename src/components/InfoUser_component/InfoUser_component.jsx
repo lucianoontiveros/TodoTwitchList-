@@ -4,46 +4,47 @@ import Tasklist_component from "../Tasklist_component/TaskList_component";
 // Mapeo de clases por tag y nombre
 const tagBaseClasses = {
   sub: "sus_fondo infoUSer_containers",
-  vip: "vip_fondo infoUSer_containers",
   mod: "mod_fondo infoUSer_containers",
+  vip: "vip_fondo infoUSer_containers",
   prime: "prime_fondo infoUSer_containers",
 };
 
 const userSpecificClasses = {
   sub: {
-    mandaariina: "mandaariina infoUSer_containers crema_fondo",
-    antonellavrl_: "antonellavrl_ infoUSer_containers amarrillo_fondo",
-    summertime0805: "summertime0805 infoUSer_containers magenta_fondo",
-    gominola_opositora: "gominola_opositora infoUSer_containers azul_fondo",
-    chinita098: "chinita098 infoUSer_containers rojo_fondo",
-    agos__________: "agos__________ infoUSer_containers blanco_fondo",
-    jana10dv: "jana10dv infoUSer_containers aqua_fondo",
-    mont_opo: "mont_opo infoUSer_containers crema_fondo",
-    antof253: "antof253 infoUSer_containers crema_fondo",
-    rsofiaa: "rsofiaa infoUSer_containers blanco_fondo",
-    wandazk: "wandazk infoUSer_containers amarrillo_patito_fondo",
-    olmediito: "olmediito infoUSer_containers lavanda_fondo",
-    liln1k: "liln1k infoUSer_containers amarrillo_fondo",
-    condrocita: "condrocita infoUSer_containers rosa_fondo",
-    kakarotita_: "kakarotita_  infoUSer_containers lila_fondo",
-    karlitarachel: "karlitarachel infoUSer_containers blanco_rosa_fondo",
-    ruidodemate_rocio: "ruidodemate_rocio infoUSer_containers naranja_fondo",
-    crissworkoutt: "crissworkoutt infoUSer_containers rosa_fondo",
-    sofamb1: "sofamb1 infoUSer_containers azul_gris_fondo",
-    macacuelloo: "macacuelloo infoUSer_containers rosa_fondo",
-    bleisny: "bleisny infoUSer_containers verde_fondo ",
-    mariong898: "infoUSer_containers mariong898 mostaza_fondo",
-    valenm07: "valenm07 infoUSer_containers claridad_fondo",
+    mandaariina: "infoUSer_containers mandaariina",
+    antonellavrl_: "infoUSer_containers antonellavrl_",
+    summertime0805: "infoUSer_containers summertime0805",
+    gominola_opositora: "infoUSer_containers gominola_opositora",
+    chinita098: "infoUSer_containers chinita098",
+    agos__________: "infoUSer_containers agos__________",
+    jana10dv: "infoUSer_containers jana10dv",
+    mont_opo: "infoUSer_containers mont_opo",
+    antof253: "infoUSer_containers antof253",
+    rsofiaa: "infoUSer_containers rsofiaa",
+    wandazk: "infoUSer_containers wandazk",
+    olmediito: "infoUSer_containers olmediito",
+    liln1k: "infoUSer_containers liln1k",
+    condrocita: "infoUSer_containers condrocita",
+    kakarotita_: "infoUSer_containers kakarotita_",
+    karlitarachel: "infoUSer_containers karlitarachel",
+    ruidodemate_rocio: "infoUSer_containers ruidodemate_rocio",
+    crissworkoutt: "infoUSer_containers crissworkoutt",
+    sofamb1: "infoUSer_containers sofamb1",
+    macacuelloo: "infoUSer_containers macacuelloo",
+    bleisny: "infoUSer_containers bleisny",
+    mariong898: "infoUSer_containers mariong898",
+    valenm07: "infoUSer_containers valenm07",
+    flavia_2025_: "infoUSer_containers flavia_2025_",
   },
   vip: {
-    sofiaantok: "sofiaantok infoUSer_containers amarrillo_fondo",
-    flavia_2025_: "infoUSer_containers flavia_2025_ flavia_fondo",
+    sofiaantok: "infoUSer_containers sofiaantok",
   },
   mod: {
-    camm_sss: "camm_sss infoUSer_containers orange_fondo",
-    mont_opo: "mont_opo infoUSer_containers crema_fondo",
-    mandaariina: "mandaariina infoUSer_containers crema_fondo",
-    cuartodechenz: "valenm07 infoUSer_containers claridad_fondo",
+    agos__________: "infoUSer_containers agos__________",
+    camm_sss: "infoUSer_containers camm_ssss",
+    mont_opo: "infoUSer_containers mont_opo",
+    mandaariina: "infoUSer_containers mandaariina",
+    cuartodechenz: "infoUSer_containers valenm07 ",
 
   },
 };
@@ -67,25 +68,19 @@ const InfoUser_component = ({ user, username }) => {
       task_header: "task-header",
     };
 
-    console.log(user);
-    const tagKey = String(user.tag).trim().toLowerCase();
-    const nameKey = String(user.name).trim().toLowerCase();
-    console.log(tagKey);
-    console.log(nameKey);
-
 
     // Asigna clase por tag
-    if (tagBaseClasses[tagKey]) {
-      newClasses.container = tagBaseClasses[tagKey];
+    if (tagBaseClasses[user.tag]) {
+      newClasses.container = tagBaseClasses[user.tag];
       // Sino, usa la clase específica normal
-      if (userSpecificClasses[tagKey]?.[nameKey]) {
-        newClasses.container = userSpecificClasses[tagKey][nameKey];
+      if (userSpecificClasses[user.tag]?.[user.name]) {
+        newClasses.container = userSpecificClasses[user.tag][user.name];
       }
+      setClases(newClasses);
     }
 
     
 
-    setClases(newClasses);
   }, [user]);
 
   return (

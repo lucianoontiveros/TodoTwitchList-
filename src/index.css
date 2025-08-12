@@ -71,6 +71,14 @@ body {
   justify-content: center;
 }
 
+.task-item {
+  max-width: 26.99em;
+}
+
+.task-header .task-list .task-item {
+  width: 100%;
+}
+
 .data {
   display: flex;
   flex-direction: row;
@@ -239,806 +247,9 @@ body {
   background-color: rgb(18, 226, 237);
 }
 
-/* YELLLOW: Propiedades para el fondo y colores de tareas  */
-.amarrillo_fondo {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: #fcd34d;
-}
+/* Usuarios premium: Propiedades para el fondo y colores de tareas  */
 
-.amarrillo_fondo .task-header {
-  color: #fcd34d;
-}
-
-.amarrillo_fondo .task-list {
-  color: #fcd34d;
-}
-
-.amarrillo_fondo .task-item {
-  max-width: 26.99em;
-  color: #fcd34d;
-}
-
-.amarrillo_fondo .task-list .task-item {
-  width: 100%;
-}
-
-.amarrillo_fondo .task-item .task-id {
-  font-size: medium;
-  background-color: #fcd34d;
-}
-
-/* MAGENTA: Propiedades para el fondo y colores de tareas  */
-.magenta_fondo {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: #f36cdd;
-}
-
-.magenta_fondo .task-header {
-  color: #f36cdd;
-}
-
-.magenta_fondo .task-list {
-  color: #f36cdd;
-}
-
-.magenta_fondo .task-item {
-  max-width: 26.99em;
-  color: #f36cdd;
-}
-
-.magenta_fondo .task-list .task-item {
-  width: 100%;
-}
-
-.magenta_fondo .task-item .task-id {
-  font-size: medium;
-  background-color: #e41ac3;
-}
-
-/* AZUL: Propiedades para el fondo y colores de tareas  */
-
-.azul_fondo .task-header {
-  color: #15d4ff;
-}
-
-.azul_fondo .task-list {
-  color: #15d4ff;
-}
-
-.azul_fondo .task-item {
-  max-width: 26.99em;
-  color: #15d4ff;
-}
-
-.azul_fondo .task-list .task-item {
-  width: 100%;
-}
-
-.azul_fondo .task-item .task-id {
-  font-size: medium;
-  background-color: #12a0ec;
-}
-
-/* ROJO : Propiedades para el fondo y colores de tareas  */
-
-.rojo_fondo .task-header {
-  color: #ff8181;
-}
-
-.rojo_fondo .task-list {
-  color: #ff8181;
-}
-
-.rojo_fondo .task-item {
-  max-width: 26.99em;
-  color: #ff8181;
-}
-
-.rojo_fondo .task-list .task-item {
-  width: 100%;
-}
-
-.rojo_fondo .task-item .task-id {
-  font-size: medium;
-  background-color: #ff8181;
-}
-
-/* BLANCO : Propiedades para el fondo y colores de tareas  */
-
-.blanco_fondo .task-header {
-  color: #c8ecf4;
-}
-
-.blanco_fondo .task-list {
-  color: #c8ecf4;
-}
-
-.blanco_fondo .task-item {
-  max-width: 26.99em;
-  color: #c8ecf4;
-}
-
-.blanco_fondo .task-list .task-item {
-  width: 100%;
-}
-
-.blanco_fondo .task-item .task-id {
-  font-size: medium;
-  background-color: #c8ecf4;
-}
-
-/* AQUA : Propiedades para el fondo y colores de tareas  */
-
-.aqua_fondo .task-header {
-  color: #2ceded;
-}
-
-.aqua_fondo .task-list {
-  color: #2ceded;
-}
-
-.aqua_fondo .task-item {
-  max-width: 26.99em;
-  color: #2ceded;
-}
-
-.aqua_fondo .task-list .task-item {
-  width: 100%;
-}
-
-.aqua_fondo .task-item .task-id {
-  font-size: medium;
-  background-color: #2ceded;
-}
-
-/* CREMA : Propiedades para el fondo y colores de tareas  */
-
-.crema_fondo .task-header {
-  color: #f2955e;
-}
-
-.crema_fondo .task-list {
-  color: #f2955e;
-}
-
-.crema_fondo .task-item {
-  max-width: 26.99em;
-  color: #f2955e;
-}
-
-.crema_fondo .task-list .task-item {
-  width: 100%;
-}
-
-.crema_fondo .task-item .task-id {
-  font-size: medium;
-  background-color: #f2955e;
-}
-
-/* VERDE : Propiedades para el fondo y colores de tareas  */
-
-.verde_fondo .task-header {
-  color: #bcd955;
-}
-
-.verde_fondo .task-list {
-  color: #bcd955;
-}
-
-.verde_fondo .task-item {
-  max-width: 26.99em;
-  color: #bcd955;
-}
-
-.verde_fondo .task-list .task-item {
-  width: 100%;
-}
-
-.verde_fondo .task-item .task-id {
-  font-size: medium;
-  background-color: #bcd955;
-}
-
-/* ORANGE : Propiedades para el fondo y colores de tareas  */
-
-.orange_fondo .task-header {
-  color: #f87b33;
-}
-
-.orange_fondo .task-list {
-  color: #f87b33;
-}
-
-.orange_fondo .task-item {
-  max-width: 26.99em;
-  color: #f87b33;
-}
-
-.orange_fondo .task-list .task-item {
-  width: 100%;
-}
-
-.orange_fondo .task-item .task-id {
-  font-size: medium;
-  background-color: #f87b33;
-}
-
-/* YELLLOW: Propiedades para el fondo y colores de tareas  */
-.amarrillo_patito_fondo {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: #f0f2ac;
-}
-
-.amarrillo_patito_fondo .task-header {
-  color: #f0f2ac;
-}
-
-.amarrillo_patito_fondo .task-list {
-  color: #f0f2ac;
-}
-
-.amarrillo_patito_fondo .task-item {
-  max-width: 26.99em;
-  color: #f0f2ac;
-}
-
-.amarrillo_patito_fondo .task-list .task-item {
-  width: 100%;
-}
-
-.amarrillo_patito_fondo .task-item .task-id {
-  font-size: medium;
-  background-color: #f0f2ac;
-}
-
-/* lAVANDA: Propiedades para el fondo y colores de tareas  */
-.lavanda_fondo {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: #bca7d9;
-}
-
-.lavanda_fondo .task-header {
-  color: #bca7d9;
-}
-
-.lavanda_fondo .task-list {
-  color: #bca7d9;
-}
-
-.lavanda_fondo .task-item {
-  max-width: 26.99em;
-  color: #bca7d9;
-}
-
-.lavanda_fondo .task-list .task-item {
-  width: 100%;
-}
-
-.lavanda_fondo .task-item .task-id {
-  font-size: medium;
-  background-color: #af8ae4;
-}
-
-/* CELESTE: Propiedades para el fondo y colores de tareas  */
-.celeste_fondo {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: #5697bf;
-}
-
-.celeste_fondo .task-header {
-  color: #5697bf;
-}
-
-.celeste_fondo .task-list {
-  color: #5697bf;
-}
-
-.celeste_fondo .task-item {
-  max-width: 26.99em;
-  color: #5697bf;
-}
-
-.celeste_fondo .task-list .task-item {
-  width: 100%;
-}
-
-.celeste_fondo .task-item .task-id {
-  font-size: medium;
-  background-color: #5697bf;
-}
-
-/* ROSA: Propiedades para el fondo y colores de tareas  */
-.rosa_fondo {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: #f2bdd0;
-}
-
-.rosa_fondo .task-header {
-  color: #f2bdd0;
-}
-
-.rosa_fondo .task-list {
-  color: #f2bdd0;
-}
-
-.rosa_fondo .task-item {
-  max-width: 26.99em;
-  color: #f2bdd0;
-}
-
-.rosa_fondo .task-list .task-item {
-  width: 100%;
-}
-
-.rosa_fondo .task-item .task-id {
-  font-size: medium;
-  background-color: #f2bdd0;
-}
-
-/* LILA: Propiedades para el fondo y colores de tareas  */
-.lila_fondo {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: #ccbbf2;
-}
-
-.lila_fondo .task-header {
-  color: #ccbbf2;
-}
-
-.lila_fondo .task-list {
-  color: #ccbbf2;
-}
-
-.lila_fondo .task-item {
-  max-width: 26.99em;
-  color: #ccbbf2;
-}
-
-.lila_fondo .task-list .task-item {
-  width: 100%;
-}
-
-.lila_fondo .task-item .task-id {
-  font-size: medium;
-  background-color: #ccbbf2;
-}
-
-/* BLANCO_ROSA: Propiedades para el fondo y colores de tareas  */
-
-.blanco_rosa_fondo {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: #f1ebf0;
-}
-
-.blanco_rosa_fondo .task-header {
-  color: #f1ebf0;
-}
-
-.blanco_rosa_fondo .task-list {
-  color: #f1ebf0;
-}
-
-.blanco_rosa_fondo .task-item {
-  max-width: 26.99em;
-  color: #f1ebf0;
-}
-
-.blanco_rosa_fondo .task-list .task-item {
-  width: 100%;
-}
-
-.blanco_rosa_fondo .task-item .task-id {
-  font-size: medium;
-  background-color: #f1ebf0;
-}
-
-/* NARANJA: Propiedades para el fondo y colores de tareas  */
-
-.naranja_fondo {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: #f2a663;
-}
-
-.naranja_fondo .task-header {
-  color: #f2a663;
-}
-
-.naranja_fondo .task-list {
-  color: #f2a663;
-}
-
-.naranja_fondo .task-item {
-  max-width: 26.99em;
-  color: #f2a663;
-}
-
-.naranja_fondo .task-list .task-item {
-  width: 100%;
-}
-
-.naranja_fondo .task-item .task-id {
-  font-size: medium;
-  background-color: #f2a663;
-}
-
-/* AZUL GRIS: Propiedades para el fondo y colores de tareas  */
-
-.azul_gris_fondo {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: #8aa6a6;
-}
-
-.azul_gris_fondo .task-header {
-  color: #8aa6a6;
-}
-
-.azul_gris_fondo .task-list {
-  color: #8aa6a6;
-}
-
-.azul_gris_fondo .task-item {
-  max-width: 26.99em;
-  color: #8aa6a6;
-}
-
-.azul_gris_fondo .task-list .task-item {
-  width: 100%;
-}
-
-.azul_gris_fondo .task-item .task-id {
-  font-size: medium;
-  background-color: #8aa6a6;
-}
-
-/* CLARIDAD: Propiedades para el fondo y colores de tareas  */
-
-.claridad_fondo {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: #f2cd5e;
-}
-
-.claridad_fondo .task-header {
-  color: #f2cd5e;
-}
-
-.claridad_fondo .task-list {
-  color: #f2cd5e;
-}
-
-.claridad_fondo .task-item {
-  max-width: 26.99em;
-  color: #f2cd5e;
-}
-
-.claridad_fondo .task-list .task-item {
-  width: 100%;
-}
-
-.claridad_fondo .task-item .task-id {
-  font-size: medium;
-  background-color: #f2cd5e;
-}
-
-/* PROPOSITO: Propiedades para el fondo y colores de tareas  */
-
-.proposito_fondo {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: #e9d9c8;
-}
-
-.proposito_fondo .task-header {
-  color: #e9d9c8;
-}
-
-.proposito_fondo .task-list {
-  color: #e9d9c8;
-}
-
-.proposito_fondo .task-item {
-  max-width: 26.99em;
-  color: #e9d9c8;
-}
-
-.proposito_fondo .task-list .task-item {
-  width: 100%;
-}
-
-.proposito_fondo .task-item .task-id {
-  font-size: medium;
-  background-color: #e9d9c8;
-}
-
-/* ESFUERZO: Propiedades para el fondo y colores de tareas  */
-
-.esfuerzo_fondo {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: #a9d4d9;
-}
-
-.esfuerzo_fondo .task-header {
-  color: #a9d4d9;
-}
-
-.esfuerzo_fondo .task-list {
-  color: #a9d4d9;
-}
-
-.esfuerzo_fondo .task-item {
-  max-width: 26.99em;
-  color: #a9d4d9;
-}
-
-.esfuerzo_fondo .task-list .task-item {
-  width: 100%;
-}
-
-.esfuerzo_fondo .task-item .task-id {
-  font-size: medium;
-  background-color: #a9d4d9;
-}
-
-/* CONSTANCIA: Propiedades para el fondo y colores de tareas  */
-
-.constancia_fondo {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: #f2d4ae;
-}
-
-.constancia_fondo .task-header {
-  color: #f2d4ae;
-}
-
-.constancia_fondo .task-list {
-  color: #f2d4ae;
-}
-
-.constancia_fondo .task-item {
-  max-width: 26.99em;
-  color: #f2d4ae;
-}
-
-.constancia_fondo .task-list .task-item {
-  width: 100%;
-}
-
-.constancia_fondo .task-item .task-id {
-  font-size: medium;
-  background-color: #f2d4ae;
-}
-
-/* ROSA: Propiedades para el fondo y colores de tareas  */
-
-.flavia_fondo {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: #f257a0;
-}
-
-.flavia_fondo .task-header {
-  color: #f257a0;
-}
-
-.flavia_fondo .task-list {
-  color: #f257a0;
-}
-
-.flavia_fondo .task-item {
-  max-width: 26.99em;
-  color: #f257a0;
-}
-
-.flavia_fondo .task-list .task-item {
-  width: 100%;
-}
-
-.flavia_fondo .task-item .task-id {
-  font-size: medium;
-  background-color: #f257a0;
-}
-¨
-
-
-/* MOSTAZA: Propiedades para el fondo y colores de tareas  */
-
-
-.mostaza_fondo {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: #d9a74a;
-}
-
-.mostaza_fondo .task-header {
-  color: #d9a74a;
-}
-
-.mostaza_fondo .task-list {
-  color: #d9a74a;
-}
-
-.mostaza_fondo .task-item {
-  max-width: 26.99em;
-  color: #d9a74a;
-}
-
-.mostaza_fondo .task-list .task-item {
-  width: 100%;
-}
-
-.mostaza_fondo .task-item .task-id {
-  font-size: medium;
-  background-color: #d9a74a;
-}
-
-/* FONDOS */
-
-.vip_fondo {
-  background: url("/img/vip_fondo.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: rgb(222, 74, 151);
-}
-
-.mod_fondo {
-  background: url("/img/mod_fondo.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: #86efac;
-}
-
-.prime_fondo {
-  background: url("/img/prime_fondo.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: rgb(77, 209, 242);
-}
-
-.sus_fondo {
-  background: url("/img/sus_fondo.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: rgb(206, 143, 243);
-}
-.user_fondo {
-  background: url("/img/viewer.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: rgb(143, 247, 236);
-}
-
-.antonellavrl_ {
-  background: url("/img/antonellavrl_.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: #fcd34d;
-}
-.summertime0805 {
-  background: url("/img/summertime0805.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: #f36cdd;
-}
-
-.gominola_opositora {
-  background: url("/img/gominola_opositora.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
-  border-radius: 1em;
-  color: #15d4ff;
-}
-.chinita098 {
-  background: url("/img/chinita098.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: #ff8181;
-}
-
-.agos__________ {
-  background: url("/img/agos__________.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: #c8ecf4;
-}
-
-.sofiaantok {
-  background: url("/img/sofiaantok.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: #fcd34d;
-}
-
-.jana10dv {
-  background: url("/img/jana10dv.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: #2ceded;
-}
-
-.mont_opo {
-  background: url("/img/mont_opo.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: #f2955e;
-}
-
-.camm_sss {
-  background: url("/img/camm_sss.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: #f87b33;
-}
+/* -------------------------------------------------------- */
 
 .mandaariina {
   background: url("/img/mandaariina.jpg");
@@ -1049,6 +260,200 @@ body {
   color: #f2955e;
 }
 
+.mandaariina .task-item {
+  color: #f2955e;
+}
+
+.mandaariina .task-item .task-id {
+  font-size: medium;
+  background-color: #f2955e;
+}
+
+/* -------------------------------------------------------- */
+
+.antonellavrl_ {
+  background: url("/img/antonellavrl_.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #fcd34d;
+}
+
+.antonellavrl_ .task-item {
+  color: #fcd34d;
+}
+
+.antonellavrl_ .task-item .task-id {
+  font-size: medium;
+  background-color: #fcd34d;
+}
+
+/* -------------------------------------------------------- */
+
+.summertime0805 {
+  background: url("/img/summertime0805.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #f36cdd;
+}
+
+.summertime0805 .task-item {
+  color: #f36cdd;
+}
+
+.summertime0805 .task-item .task-id {
+  font-size: medium;
+  background-color: #e41ac3;
+}
+
+/* -------------------------------------------------------- */
+
+.gominola_opositora {
+  background: url("/img/gominola_opositora.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  border-radius: 1em;
+  color: #15d4ff;
+}
+
+.gominola_opositora .task-item {
+  color: #15d4ff;
+}
+
+.gominola_opositora .task-item .task-id {
+  font-size: medium;
+  background-color: #12a0ec;
+}
+
+/* -------------------------------------------------------- */
+
+.chinita098 {
+  background: url("/img/chinita098.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #ff8181;
+}
+
+.chinita098 .task-item {
+  color: #ff8181;
+}
+
+.chinita098 .task-item .task-id {
+  font-size: medium;
+  background-color: #ff8181;
+}
+
+/* -------------------------------------------------------- */
+
+.agos__________ {
+  background: url("/img/agos__________.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #c8ecf4;
+}
+
+.agos__________ .task-item {
+  color: #c8ecf4;
+}
+
+.agos__________ .task-item .task-id {
+  font-size: medium;
+  background-color: #c8ecf4;
+}
+
+/* -------------------------------------------------------- */
+
+.sofiaantok {
+  background: url("/img/sofiaantok.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #fcd34d;
+}
+
+
+.sofiaantok .task-item {
+  color: #fcd34d;
+}
+
+.sofiaantok .task-item .task-id {
+  font-size: medium;
+  background-color: #fcd34d;
+}
+
+/* -------------------------------------------------------- */
+
+.jana10dv {
+  background: url("/img/jana10dv.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #2ceded;
+}
+
+.jana10dv .task-item {
+  color: #2ceded;
+}
+
+.jana10dv .task-item .task-id {
+  font-size: medium;
+  background-color: #2ceded;
+}
+
+/* -------------------------------------------------------- */
+
+.mont_opo {
+  background: url("/img/mont_opo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #f2955e;
+}
+
+
+.mont_opo .task-item {
+  color: #f2955e;
+}
+
+.mont_opo .task-item .task-id {
+  font-size: medium;
+  background-color: #f2955e;
+}
+
+/* -------------------------------------------------------- */
+
+
+.camm_sss {
+  background: url("/img/camm_sss.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #f87b33;
+}
+
+.camm_sss .task-item {
+  color: #f87b33;
+}
+
+.camm_sss .task-item .task-id {
+  font-size: medium;
+  background-color: #f87b33;
+}
+
+/* -------------------------------------------------------- */
+
 .antof253 {
   background: url("/img/antof253.jpeg");
   background-repeat: no-repeat;
@@ -1057,6 +462,17 @@ body {
   border-radius: 1em;
   color: #d9936a;
 }
+
+.antof253 .task-item {
+  color: #f2955e;
+}
+
+.antof253 .task-item .task-id {
+  font-size: medium;
+  background-color: #f2955e;
+}
+
+/* -------------------------------------------------------- */
 
 .rsofiaa {
   background: url("/img/rsofiaa.jpg");
@@ -1067,6 +483,17 @@ body {
   color: #c8ecf4;
 }
 
+.rsofiaa .task-item {
+  color: #c8ecf4;
+}
+
+.rsofiaa .task-item .task-id {
+  font-size: medium;
+  background-color: #c8ecf4;
+}
+
+/* -------------------------------------------------------- */
+
 .wandazk {
   background: url("/img/wandazk.png");
   background-repeat: no-repeat;
@@ -1075,6 +502,18 @@ body {
   border-radius: 1em;
   color: #f0f2ac;
 }
+
+.wandazk .task-item {
+  color: #f0f2ac;
+}
+
+.wandazk .task-item .task-id {
+  font-size: medium;
+  background-color: #f0f2ac;
+}
+
+/* -------------------------------------------------------- */
+
 
 .olmediito {
   background: url("/img/olmediito.png");
@@ -1085,6 +524,17 @@ body {
   color: #bca7d9;
 }
 
+.olmediito .task-item {
+  color: #bca7d9;
+}
+
+.olmediito .task-item .task-id {
+  font-size: medium;
+  background-color: #af8ae4;
+}
+
+/* -------------------------------------------------------- */
+
 .liln1k {
   background: url("/img/liln1k.jpg");
   background-repeat: no-repeat;
@@ -1093,6 +543,17 @@ body {
   border-radius: 1em;
   color: #fcd34d;
 }
+
+.olmediito .task-item {
+  color: #fcd34d;
+}
+
+.olmediito .task-item .task-id {
+  font-size: medium;
+  background-color: #fcd34d;
+}
+
+/* -------------------------------------------------------- */
 
 .condrocita {
   background: url("/img/Condrocita.jpg");
@@ -1103,14 +564,17 @@ body {
   color: #f2bdd0;
 }
 
-.kakarotita_ {
-  background: url("/img/kakarotita_.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: #ccbbf2;
+.olmediito .task-item {
+  color: #f2bdd0;
 }
+
+.olmediito .task-item .task-id {
+  font-size: medium;
+  background-color: #f2bdd0;
+}
+
+/* -------------------------------------------------------- */
+
 
 .kakarotita_ {
   background: url("/img/kakarotita_.jpg");
@@ -1120,6 +584,18 @@ body {
   border-radius: 1em;
   color: #ccbbf2;
 }
+
+.kakarotita_ .task-item {
+  color: #ccbbf2;
+}
+
+.kakarotita_ .task-item .task-id {
+  font-size: medium;
+  background-color: #ccbbf2;
+}
+
+/* -------------------------------------------------------- */
+
 
 .karlitarachel {
   background: url("/img/karlitarachel.jpg");
@@ -1130,6 +606,18 @@ body {
   color: #f1ebf0;
 }
 
+
+.karlitarachel .task-item {
+  color: #f1ebf0;
+}
+
+.karlitarachel .task-item .task-id {
+  font-size: medium;
+  background-color: #f1ebf0;
+}
+
+/* -------------------------------------------------------- */
+
 .ruidodemate_rocio {
   background: url("/img/ruidodemate_rocio.png");
   background-repeat: no-repeat;
@@ -1138,6 +626,17 @@ body {
   border-radius: 1em;
   color: #f2a663;
 }
+
+.ruidodemate_rocio .task-item {
+  color: #f2a663;
+}
+
+.ruidodemate_rocio .task-item .task-id {
+  font-size: medium;
+  background-color: #f2a663;
+}
+
+/* -------------------------------------------------------- */
 
 .crissworkoutt {
   background: url("/img/crissworkoutt.png");
@@ -1148,6 +647,17 @@ body {
   color: #f2bdd0;
 }
 
+.crissworkoutt .task-item {
+  color: #f2bdd0;
+}
+
+.crissworkoutt .task-item .task-id {
+  font-size: medium;
+  background-color: #f2bdd0;
+}
+
+/* -------------------------------------------------------- */
+
 .sofamb1 {
   background: url("/img/sofamb1.jpg");
   background-repeat: no-repeat;
@@ -1156,6 +666,17 @@ body {
   border-radius: 1em;
   color: #8aa6a6;
 }
+
+.sofamb1 .task-item {
+  color: #8aa6a6;
+}
+
+.sofamb1 .task-item .task-id {
+  font-size: medium;
+  background-color: #8aa6a6;
+}
+
+/* -------------------------------------------------------- */
 
 .macacuelloo {
   background: url("/img/macacuelloo.jpg");
@@ -1166,6 +687,17 @@ body {
   color: #f2bdd0;
 }
 
+.macacuelloo .task-item {
+  color: #f2bdd0;
+}
+
+.macacuelloo .task-item .task-id {
+  font-size: medium;
+  background-color: #f2bdd0;
+}
+
+/* -------------------------------------------------------- */
+
 .bleisny {
   background: url("/img/bleisny.png");
   background-repeat: no-repeat;
@@ -1174,6 +706,78 @@ body {
   border-radius: 1em;
   color: #bcd955;
 }
+
+.bleisny .task-item {
+  color: #bcd955;
+}
+
+.bleisny .task-item .task-id {
+  font-size: medium;
+  background-color: #bcd955;
+}
+
+/* -------------------------------------------------------- */
+
+.flavia_2025_ {
+  background: url("/img/Flavia_2025_.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #f257a0;
+}
+
+
+.flavia_2025_ .task-item {
+  color: #f257a0;
+}
+
+.flavia_2025_ .task-item .task-id {
+  font-size: medium;
+  background-color: #f257a0;
+}
+
+/* -------------------------------------------------------- */
+
+.mariong898 {
+  background: url("/img/mariong898.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #d9a74a;
+}
+
+.mariong898 .task-item {
+  color: #d9a74a
+}
+
+.mariong898 .task-item .task-id {
+  font-size: medium;
+  background-color: #d9a74a;
+}
+
+/* -------------------------------------------------------- */
+
+.valenm07 {
+  background: url("/img/valenm07.png"); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #b75eeb;
+}
+
+.valenm07 .task-item {
+  color: #b75eeb;
+}
+
+.valenm07 .task-item .task-id {
+  font-size: medium;
+  background-color: #b75eeb;
+}
+
+/* -------------------------------------------------------- */
 
 .claridad {
   background: url("/img/claridad.png");
@@ -1209,32 +813,5 @@ body {
   background-position: bottom;
   border-radius: 1em;
   color: #f2d4ae;
-}
-
-.flavia_2025_ {
-  background: url("/img/Flavia_2025_.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: #f257a0;
-}
-
-.mariong898 {
-  background: url("/img/mariong898.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: #d9a74a;
-}
-
-.valenm07 {
-  background: url("/img/valenm07.png"); 
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: #fcd34d;
 }
 
