@@ -38,14 +38,15 @@ const userSpecificClasses = {
   },
   vip: {
     sofiaantok: "infoUSer_containers sofiaantok",
+    mariong898: "infoUSer_containers mariong898",
+    valenm07: "infoUSer_containers valenm07",
+    flavia_2025_: "infoUSer_containers flavia_2025_",
   },
   mod: {
     agos__________: "infoUSer_containers agos__________",
     camm_sss: "infoUSer_containers camm_ssss",
     mont_opo: "infoUSer_containers mont_opo",
     mandaariina: "infoUSer_containers mandaariina",
-    cuartodechenz: "infoUSer_containers valenm07 ",
-
   },
 };
 
