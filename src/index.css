@@ -21,7 +21,15 @@ body {
   border-radius: 1em;
 }
 
-.infoUSer_containers {
+.infoUser_containers {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 43em;
+  width: 29em;
+}
+
+.specificClasses_containers {
   display: flex;
   flex-direction: column;
   justify-content: space-between;

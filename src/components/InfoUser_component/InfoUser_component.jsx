@@ -3,57 +3,57 @@ import Tasklist_component from "../Tasklist_component/TaskList_component";
 
 // Mapeo de clases por tag y nombre
 const tagBaseClasses = {
-  sub: "sus_fondo infoUSer_containers",
-  mod: "mod_fondo infoUSer_containers",
-  vip: "vip_fondo infoUSer_containers",
-  prime: "prime_fondo infoUSer_containers",
+  sub: "sus_fondo infoUser_containers",
+  mod: "mod_fondo infoUser_containers",
+  vip: "vip_fondo infoUser_containers",
+  prime: "prime_fondo infoUser_containers",
 };
 
 const userSpecificClasses = {
   sub: {
-    mandaariina: "infoUSer_containers mandaariina",
-    antonellavrl_: "infoUSer_containers antonellavrl_",
-    summertime0805: "infoUSer_containers summertime0805",
-    gominola_opositora: "infoUSer_containers gominola_opositora",
-    chinita098: "infoUSer_containers chinita098",
-    agos__________: "infoUSer_containers agos__________",
-    jana10dv: "infoUSer_containers jana10dv",
-    mont_opo: "infoUSer_containers mont_opo",
-    antof253: "infoUSer_containers antof253",
-    rsofiaa: "infoUSer_containers rsofiaa",
-    wandazk: "infoUSer_containers wandazk",
-    olmediito: "infoUSer_containers olmediito",
-    liln1k: "infoUSer_containers liln1k",
-    condrocita: "infoUSer_containers condrocita",
-    kakarotita_: "infoUSer_containers kakarotita_",
-    karlitarachel: "infoUSer_containers karlitarachel",
-    ruidodemate_rocio: "infoUSer_containers ruidodemate_rocio",
-    crissworkoutt: "infoUSer_containers crissworkoutt",
-    sofamb1: "infoUSer_containers sofamb1",
-    macacuelloo: "infoUSer_containers macacuelloo",
-    bleisny: "infoUSer_containers bleisny",
-    mariong898: "infoUSer_containers mariong898",
-    valenm07: "infoUSer_containers valenm07",
-    flavia_2025_: "infoUSer_containers flavia_2025_",
-    cuartodechenz: "infoUSer_containers prime_fondo",
+    mandaariina: "specificClasses_containers mandaariina",
+    antonellavrl_: "specificClasses_containers antonellavrl_",
+    summertime0805: "specificClasses_containers summertime0805",
+    gominola_opositora: "specificClasses_containers gominola_opositora",
+    chinita098: "specificClasses_containers chinita098",
+    agos__________: "specificClasses_containers agos__________",
+    jana10dv: "specificClasses_containers jana10dv",
+    mont_opo: "specificClasses_containers mont_opo",
+    antof253: "specificClasses_containers antof253",
+    rsofiaa: "specificClasses_containers rsofiaa",
+    wandazk: "specificClasses_containers wandazk",
+    olmediito: "specificClasses_containers olmediito",
+    liln1k: "specificClasses_containers liln1k",
+    condrocita: "specificClasses_containers condrocita",
+    kakarotita_: "specificClasses_containers kakarotita_",
+    karlitarachel: "specificClasses_containers karlitarachel",
+    ruidodemate_rocio: "specificClasses_containers ruidodemate_rocio",
+    crissworkoutt: "specificClasses_containers crissworkoutt",
+    sofamb1: "specificClasses_containers sofamb1",
+    macacuelloo: "specificClasses_containers macacuelloo",
+    bleisny: "specificClasses_containers bleisny",
+    mariong898: "specificClasses_containers mariong898",
+    valenm07: "specificClasses_containers valenm07",
+    flavia_2025_: "specificClasses_containers flavia_2025_",
+    cuartodechenz: "specificClasses_containers prime_fondo",
 
   },
   vip: {
-    mariong898: "infoUSer_containers mariong898",
-    sofiaantok: "infoUSer_containers sofiaantok",
-    flavia_2025_: "infoUSer_containers flavia_2025_",
-    sofamb1: "infoUSer_containers sofamb1",
-    karlitarachel: "infoUSer_containers karlitarachel",
+    mariong898: "specificClasses_containers mariong898",
+    sofiaantok: "specificClasses_containers sofiaantok",
+    flavia_2025_: "specificClasses_containers flavia_2025_",
+    sofamb1: "specificClasses_containers sofamb1",
+    karlitarachel: "specificClasses_containers karlitarachel",
 
 
     
   },
   mod: {
-    agos__________: "infoUSer_containers agos__________",
-    camm_sss: "infoUSer_containers camm_ssss",
-    mont_opo: "infoUSer_containers mont_opo",
-    mandaariina: "infoUSer_containers mandaariina",
-    cuartodechenz: "infoUSer_containers prime_fondo",
+    agos__________: "specificClasses_containers agos__________",
+    camm_sss: "specificClasses_containers camm_ssss",
+    mont_opo: "specificClasses_containers mont_opo",
+    mandaariina: "specificClasses_containers mandaariina",
+    cuartodechenz: "specificClasses_containers prime_fondo",
   },
 };
 
@@ -66,7 +66,7 @@ const InfoUser_component = ({ user, username }) => {
 
     // Valores base comunes
     let newClasses = {
-      container: "user_fondo infoUSer_containers",
+      container: "user_fondo infoUser_containers",
       info_items: "p-[0.2em]",
       info_title: "flex justify-center items-start px-[1em] text-center",
       info_title_h2: "m-3 text-3xl h-[1.5em] w-[12em] rounded-[0.2em] bg-black",
@@ -86,6 +86,10 @@ const InfoUser_component = ({ user, username }) => {
     // Verificar si el usuario está en userSpecificClasses
     console.log('Clases específicas disponibles para este tag:', Object.keys(userSpecificClasses[user.tag] || {}));
     console.log('El usuario tiene clase específica?', !!userSpecificClasses[user.tag]?.[normalizedName]);
+
+    if(user.name == "mariong898"){
+      newClasses.container = "infoUser_containers mariong898";
+    }
     
     if (userSpecificClasses[user.tag]?.[normalizedName]) {
       console.log('Clase específica encontrada:', userSpecificClasses[user.tag][normalizedName]);
@@ -95,15 +99,13 @@ const InfoUser_component = ({ user, username }) => {
       console.log(`Clase específica encontrada para ${normalizedName} (${user.tag}):`, userSpecificClasses[user.tag][normalizedName]);
       newClasses.container = userSpecificClasses[user.tag][normalizedName];
     } 
-
-    if(user.name == "mariong898"){
-      newClasses.container = "infoUSer_containers mariong898";
-    }
     // Si no hay clase específica, usamos la clase base del tag
-    else if (tagBaseClasses[user.tag]) {
+       else if (tagBaseClasses[user.tag]) {
       console.log(`Usando clase base para tag ${user.tag}`);
       newClasses.container = tagBaseClasses[user.tag];
     }
+
+    
     
     // Verificación final
     console.log('Clase final asignada:', newClasses.container);
