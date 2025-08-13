@@ -87,9 +87,7 @@ const InfoUser_component = ({ user, username }) => {
     console.log('Clases específicas disponibles para este tag:', Object.keys(userSpecificClasses[user.tag] || {}));
     console.log('El usuario tiene clase específica?', !!userSpecificClasses[user.tag]?.[normalizedName]);
 
-    if(user.name == "mariong898"){
-      newClasses.container = "infoUser_containers mariong898";
-    }
+   
     
     if (userSpecificClasses[user.tag]?.[normalizedName]) {
       console.log('Clase específica encontrada:', userSpecificClasses[user.tag][normalizedName]);
@@ -105,6 +103,9 @@ const InfoUser_component = ({ user, username }) => {
       newClasses.container = tagBaseClasses[user.tag];
     }
 
+    if(user.name === "mariong898"){
+      newClasses.container = "specificClasses_containers mariong898";
+    }
     
     
     // Verificación final
