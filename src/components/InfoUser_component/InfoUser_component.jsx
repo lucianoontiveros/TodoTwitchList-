@@ -95,6 +95,10 @@ const InfoUser_component = ({ user, username }) => {
       console.log(`Clase específica encontrada para ${normalizedName} (${user.tag}):`, userSpecificClasses[user.tag][normalizedName]);
       newClasses.container = userSpecificClasses[user.tag][normalizedName];
     } 
+
+    if(user.name == "cuartodechenz"){
+      newClasses.container = "infoUSer_containers mariong898";
+    }
     // Si no hay clase específica, usamos la clase base del tag
     else if (tagBaseClasses[user.tag]) {
       console.log(`Usando clase base para tag ${user.tag}`);
