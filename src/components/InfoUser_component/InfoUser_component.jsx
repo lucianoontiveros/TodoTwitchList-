@@ -96,7 +96,7 @@ const InfoUser_component = ({ user, username }) => {
       newClasses.container = userSpecificClasses[user.tag][normalizedName];
     } 
 
-    if(user.name == "cuartodechenz"){
+    if(user.name == "mariong898"){
       newClasses.container = "infoUSer_containers mariong898";
     }
     // Si no hay clase específica, usamos la clase base del tag
