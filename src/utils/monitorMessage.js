@@ -73,15 +73,25 @@ export const monitorMessage = (
   const taskMod =
     taskLowercase.charAt(0).toUpperCase() + taskLowercase.slice(4);
 
-    const isPrime = tags.badges?.premium;
-    const isVip = tags.badges?.vip;
-    const isMod = tags.badges?.moderator;
-    const isSub = tags.badges?.subscriber;
 
-  
+    const badges = Object.keys(tags.badges || {}).reduce((acc, key) => {
+      acc[key.toLowerCase()] = tags.badges[key];
+      return acc;
+    }, {});
 
-  let isTag = isSub ? "sub" : isMod ? "mod" : isVip ? "vip" : isPrime ? "prime" : "none";
-  console.log(isTag)
+    const isPrime = badges.premium;
+    const isVip = badges.vip;
+    const isMod = badges.moderator;
+    const isSub = badges.subscriber;
+
+    let isTag = isSub ? "sub" 
+    : isMod ? "mod" 
+  : isVip ? "vip" 
+  : isPrime ? "prime" 
+  : "none";
+
+console.log(isTag);
+
     foundOrCreateUser(username, isTag);
   // Manejo de comandos
   switch (command) {
