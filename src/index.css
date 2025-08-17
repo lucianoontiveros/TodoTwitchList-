@@ -388,7 +388,6 @@ body {
   color: #fcd34d;
 }
 
-
 .sofiaantok .task-item {
   color: #fcd34d;
 }
@@ -429,7 +428,6 @@ body {
   color: #f2955e;
 }
 
-
 .mont_opo .task-item {
   color: #f2955e;
 }
@@ -440,7 +438,6 @@ body {
 }
 
 /* -------------------------------------------------------- */
-
 
 .camm_sss {
   background: url("/img/camm_sss.jpeg");
@@ -522,7 +519,6 @@ body {
 
 /* -------------------------------------------------------- */
 
-
 .olmediito {
   background: url("/img/olmediito.png");
   background-repeat: no-repeat;
@@ -552,11 +548,11 @@ body {
   color: #fcd34d;
 }
 
-.olmediito .task-item {
+.liln1k .task-item {
   color: #fcd34d;
 }
 
-.olmediito .task-item .task-id {
+.liln1k .task-item .task-id {
   font-size: medium;
   background-color: #fcd34d;
 }
@@ -572,17 +568,16 @@ body {
   color: #f2bdd0;
 }
 
-.olmediito .task-item {
+.condrocita .task-item {
   color: #f2bdd0;
 }
 
-.olmediito .task-item .task-id {
+.condrocita .task-item .task-id {
   font-size: medium;
   background-color: #f2bdd0;
 }
 
 /* -------------------------------------------------------- */
-
 
 .kakarotita_ {
   background: url("/img/kakarotita_.jpg");
@@ -604,7 +599,6 @@ body {
 
 /* -------------------------------------------------------- */
 
-
 .karlitarachel {
   background: url("/img/karlitarachel.jpg");
   background-repeat: no-repeat;
@@ -613,7 +607,6 @@ body {
   border-radius: 1em;
   color: #f1ebf0;
 }
-
 
 .karlitarachel .task-item {
   color: #f1ebf0;
@@ -735,7 +728,6 @@ body {
   color: #f257a0;
 }
 
-
 .flavia_2025_ .task-item {
   color: #f257a0;
 }
@@ -757,7 +749,7 @@ body {
 }
 
 .mariong898 .task-item {
-  color: #d9a74a
+  color: #d9a74a;
 }
 
 .mariong898 .task-item .task-id {
@@ -768,7 +760,7 @@ body {
 /* -------------------------------------------------------- */
 
 .valenm07 {
-  background: url("/img/valenm07.png"); 
+  background: url("/img/valenm07.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
