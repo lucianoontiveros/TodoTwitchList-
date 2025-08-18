@@ -21,7 +21,7 @@ const UserList_component = memo(({ currentUser }) => {
         element.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
         setTimeout(() => {
           element.style.backgroundColor = '';
-        }, 200);
+        }, 10000);
       }
     } catch (err) {
       console.error('Error al copiar datos:', err);

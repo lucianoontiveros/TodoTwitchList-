@@ -4,6 +4,129 @@ body {
   font-family: "Sawarabi Gothic", sans-serif;
 }
 
+/* FONDOS */
+
+.maincontainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 45rem;
+  width: 31.25rem;
+  gap: 1rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  font-family: "Sawarabi Gothic", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+  font-optical-sizing: auto;
+  background-color: rgba(84, 108, 111, 0.5);
+  border-radius: 1em;
+}
+
+.infoUser_containers {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 43em;
+  width: 29em;
+}
+
+.specificClasses_containers {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 43em;
+  width: 29em;
+}
+
+.info_items {
+  padding: 0.2em;
+}
+
+.info_title {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Alinea al principio (arriba) */
+  padding: 0 1em;
+  text-align: center;
+}
+
+.info_title h2 {
+  font-size: 3em;
+  height: 1.5em;
+  width: 12em;
+  border-radius: 0.2em;
+  background-color: black;
+}
+
+.info_header {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(120px, 1fr)
+  ); /* Columnas dinámicas */
+  gap: 0.5em;
+}
+
+.info_header div {
+  padding: 0.5em;
+  border-radius: 1em;
+  background-color: black;
+  text-align: center;
+}
+
+.task-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.task-item {
+  max-width: 26.99em;
+}
+
+.task-header .task-list .task-item {
+  width: 100%;
+}
+
+.data {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 0.7em;
+}
+
+/* MODERADORES: Propiedades para el fondo y colores de tareas  */
+.mod_fondo {
+  background: url("/img/mod_fondo.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #86efac;
+}
+
+.mod_fondo .task-header {
+  color: #86efac;
+}
+
+.mod_fondo .task-list {
+  color: #86efac;
+}
+
+.mod_fondo .task-item {
+  max-width: 26.99em;
+  color: #86efac;
+}
+
+.mod_fondo .task-list .task-item {
+  width: 100%;
+}
+
+.mod_fondo .task-item .task-id {
+  background-color: #4ade80;
+}
+
+/* VIP: Propiedades para el fondo y colores de tareas  */
+
 .vip_fondo {
   background: url("/img/vip_fondo.jpeg");
   background-repeat: no-repeat;
@@ -13,14 +136,28 @@ body {
   color: rgb(222, 74, 151);
 }
 
-.mod_fondo {
-  background: url("/img/mod_fondo.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: #86efac;
+.vip_fondo .task-header {
+  color: rgb(222, 74, 151);
 }
+
+.vip_fondo .task-list {
+  color: rgb(222, 74, 151);
+}
+
+.vip_fondo .task-item {
+  max-width: 26.99em;
+  color: rgb(222, 74, 151);
+}
+
+.vip_fondo .task-list .task-item {
+  width: 100%;
+}
+
+.vip_fondo .task-item .task-id {
+  background-color: #db2777;
+}
+
+/* PRIME: Propiedades para el fondo y colores de tareas  */
 
 .prime_fondo {
   background: url("/img/prime_fondo.jpeg");
@@ -31,6 +168,29 @@ body {
   color: rgb(77, 209, 242);
 }
 
+.prime_fondo .task-header {
+  color: rgb(77, 209, 242);
+}
+
+.prime_fondo .task-list {
+  color: rgb(77, 209, 242);
+}
+
+.prime_fondo .task-item {
+  max-width: 26.99em;
+  color: rgb(77, 209, 242);
+}
+
+.prime_fondo .task-list .task-item {
+  width: 100%;
+}
+
+.prime_fondo .task-item .task-id {
+  background-color: #00b1f7;
+}
+
+/* SUS: Propiedades para el fondo y colores de tareas  */
+
 .sus_fondo {
   background: url("/img/sus_fondo.jpeg");
   background-repeat: no-repeat;
@@ -39,6 +199,31 @@ body {
   border-radius: 1em;
   color: rgb(206, 143, 243);
 }
+
+.sus_fondo .task-header {
+  color: rgb(206, 143, 243);
+}
+
+.sus_fondo .task-list {
+  color: rgb(206, 143, 243);
+}
+
+.sus_fondo .task-item {
+  max-width: 26.99em;
+  color: rgb(206, 143, 243);
+}
+
+.sus_fondo .task-list .task-item {
+  width: 100%;
+}
+
+.sus_fondo .task-item .task-id {
+  font-size: medium;
+  background-color: rgb(171, 46, 243);
+}
+
+/* VIEWER: Propiedades para el fondo y colores de tareas  */
+
 .user_fondo {
   background: url("/img/viewer.jpeg");
   background-repeat: no-repeat;
@@ -48,84 +233,31 @@ body {
   color: rgb(143, 247, 236);
 }
 
-.antonellavrl_ {
-  background: url("/img/antonellavrl_.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: #fcd34d;
-}
-.summertime0805 {
-  background: url("/img/summertime0805.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: #f36cdd;
+.user_fondo .task-header {
+  color: rgb(143, 247, 236);
 }
 
-.gominola_opositora {
-  background: url("/img/gominola_opositora.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
-  border-radius: 1em;
-  color: #15d4ff;
-}
-.chinita098 {
-  background: url("/img/chinita098.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: #ff8181;
+.user_fondo .task-list {
+  color: rgb(143, 247, 236);
 }
 
-.agos__________ {
-  background: url("/img/agos__________.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: #c8ecf4;
+.user_fondo .task-item {
+  max-width: 26.99em;
+  color: rgb(143, 247, 236);
 }
 
-.sofiaantok {
-  background: url("/img/sofiaantok.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: #fcd34d;
+.user_fondo .task-list .task-item {
+  width: 100%;
 }
 
-.jana10dv {
-  background: url("/img/jana10dv.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: #2ceded;
+.user_fondo .task-item .task-id {
+  font-size: medium;
+  background-color: rgb(18, 226, 237);
 }
 
-.mont_opo {
-  background: url("/img/mont_opo.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: #f2955e;
-}
+/* Usuarios premium: Propiedades para el fondo y colores de tareas  */
 
-.camm_sss {
-  background: url("/img/camm_sss.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1em;
-  color: #f87b33;
-}
+/* -------------------------------------------------------- */
 
 .mandaariina {
   background: url("/img/mandaariina.jpg");
@@ -136,6 +268,197 @@ body {
   color: #f2955e;
 }
 
+.mandaariina .task-item {
+  color: #f2955e;
+}
+
+.mandaariina .task-item .task-id {
+  font-size: medium;
+  background-color: #f2955e;
+}
+
+/* -------------------------------------------------------- */
+
+.antonellavrl_ {
+  background: url("/img/antonellavrl_.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #fcd34d;
+}
+
+.antonellavrl_ .task-item {
+  color: #fcd34d;
+}
+
+.antonellavrl_ .task-item .task-id {
+  font-size: medium;
+  background-color: #fcd34d;
+}
+
+/* -------------------------------------------------------- */
+
+.summertime0805 {
+  background: url("/img/summertime0805.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #f36cdd;
+}
+
+.summertime0805 .task-item {
+  color: #f36cdd;
+}
+
+.summertime0805 .task-item .task-id {
+  font-size: medium;
+  background-color: #e41ac3;
+}
+
+/* -------------------------------------------------------- */
+
+.gominola_opositora {
+  background: url("/img/gominola_opositora.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  border-radius: 1em;
+  color: #15d4ff;
+}
+
+.gominola_opositora .task-item {
+  color: #15d4ff;
+}
+
+.gominola_opositora .task-item .task-id {
+  font-size: medium;
+  background-color: #12a0ec;
+}
+
+/* -------------------------------------------------------- */
+
+.chinita098 {
+  background: url("/img/chinita098.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #ff8181;
+}
+
+.chinita098 .task-item {
+  color: #ff8181;
+}
+
+.chinita098 .task-item .task-id {
+  font-size: medium;
+  background-color: #ff8181;
+}
+
+/* -------------------------------------------------------- */
+
+.agos__________ {
+  background: url("/img/agos__________.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #c8ecf4;
+}
+
+.agos__________ .task-item {
+  color: #c8ecf4;
+}
+
+.agos__________ .task-item .task-id {
+  font-size: medium;
+  background-color: #c8ecf4;
+}
+
+/* -------------------------------------------------------- */
+
+.sofiaantok {
+  background: url("/img/sofiaantok.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #fcd34d;
+}
+
+.sofiaantok .task-item {
+  color: #fcd34d;
+}
+
+.sofiaantok .task-item .task-id {
+  font-size: medium;
+  background-color: #fcd34d;
+}
+
+/* -------------------------------------------------------- */
+
+.jana10dv {
+  background: url("/img/jana10dv.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #2ceded;
+}
+
+.jana10dv .task-item {
+  color: #2ceded;
+}
+
+.jana10dv .task-item .task-id {
+  font-size: medium;
+  background-color: #2ceded;
+}
+
+/* -------------------------------------------------------- */
+
+.mont_opo {
+  background: url("/img/mont_opo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #f2955e;
+}
+
+.mont_opo .task-item {
+  color: #f2955e;
+}
+
+.mont_opo .task-item .task-id {
+  font-size: medium;
+  background-color: #f2955e;
+}
+
+/* -------------------------------------------------------- */
+
+.camm_sss {
+  background: url("/img/camm_sss.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #f87b33;
+}
+
+.camm_sss .task-item {
+  color: #f87b33;
+}
+
+.camm_sss .task-item .task-id {
+  font-size: medium;
+  background-color: #f87b33;
+}
+
+/* -------------------------------------------------------- */
+
 .antof253 {
   background: url("/img/antof253.jpeg");
   background-repeat: no-repeat;
@@ -144,6 +467,17 @@ body {
   border-radius: 1em;
   color: #d9936a;
 }
+
+.antof253 .task-item {
+  color: #f2955e;
+}
+
+.antof253 .task-item .task-id {
+  font-size: medium;
+  background-color: #f2955e;
+}
+
+/* -------------------------------------------------------- */
 
 .rsofiaa {
   background: url("/img/rsofiaa.jpg");
@@ -154,6 +488,17 @@ body {
   color: #c8ecf4;
 }
 
+.rsofiaa .task-item {
+  color: #c8ecf4;
+}
+
+.rsofiaa .task-item .task-id {
+  font-size: medium;
+  background-color: #c8ecf4;
+}
+
+/* -------------------------------------------------------- */
+
 .wandazk {
   background: url("/img/wandazk.png");
   background-repeat: no-repeat;
@@ -163,14 +508,36 @@ body {
   color: #f0f2ac;
 }
 
+.wandazk .task-item {
+  color: #f0f2ac;
+}
+
+.wandazk .task-item .task-id {
+  font-size: medium;
+  background-color: #f0f2ac;
+}
+
+/* -------------------------------------------------------- */
+
 .olmediito {
   background: url("/img/olmediito.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
   border-radius: 1em;
-  color: #BCA7D9;
+  color: #bca7d9;
 }
+
+.olmediito .task-item {
+  color: #bca7d9;
+}
+
+.olmediito .task-item .task-id {
+  font-size: medium;
+  background-color: #af8ae4;
+}
+
+/* -------------------------------------------------------- */
 
 .liln1k {
   background: url("/img/liln1k.jpg");
@@ -181,3 +548,269 @@ body {
   color: #fcd34d;
 }
 
+.liln1k .task-item {
+  color: #fcd34d;
+}
+
+.liln1k .task-item .task-id {
+  font-size: medium;
+  background-color: #fcd34d;
+}
+
+/* -------------------------------------------------------- */
+
+.condrocita {
+  background: url("/img/Condrocita.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #f2bdd0;
+}
+
+.condrocita .task-item {
+  color: #f2bdd0;
+}
+
+.condrocita .task-item .task-id {
+  font-size: medium;
+  background-color: #f2bdd0;
+}
+
+/* -------------------------------------------------------- */
+
+.kakarotita_ {
+  background: url("/img/kakarotita_.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #ccbbf2;
+}
+
+.kakarotita_ .task-item {
+  color: #ccbbf2;
+}
+
+.kakarotita_ .task-item .task-id {
+  font-size: medium;
+  background-color: #ccbbf2;
+}
+
+/* -------------------------------------------------------- */
+
+.karlitarachel {
+  background: url("/img/karlitarachel.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #f1ebf0;
+}
+
+.karlitarachel .task-item {
+  color: #f1ebf0;
+}
+
+.karlitarachel .task-item .task-id {
+  font-size: medium;
+  background-color: #f1ebf0;
+}
+
+/* -------------------------------------------------------- */
+
+.ruidodemate_rocio {
+  background: url("/img/ruidodemate_rocio.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #f2a663;
+}
+
+.ruidodemate_rocio .task-item {
+  color: #f2a663;
+}
+
+.ruidodemate_rocio .task-item .task-id {
+  font-size: medium;
+  background-color: #f2a663;
+}
+
+/* -------------------------------------------------------- */
+
+.crissworkoutt {
+  background: url("/img/crissworkoutt.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #f2bdd0;
+}
+
+.crissworkoutt .task-item {
+  color: #f2bdd0;
+}
+
+.crissworkoutt .task-item .task-id {
+  font-size: medium;
+  background-color: #f2bdd0;
+}
+
+/* -------------------------------------------------------- */
+
+.sofamb1 {
+  background: url("/img/sofamb1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #8aa6a6;
+}
+
+.sofamb1 .task-item {
+  color: #8aa6a6;
+}
+
+.sofamb1 .task-item .task-id {
+  font-size: medium;
+  background-color: #8aa6a6;
+}
+
+/* -------------------------------------------------------- */
+
+.macacuelloo {
+  background: url("/img/macacuelloo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #f2bdd0;
+}
+
+.macacuelloo .task-item {
+  color: #f2bdd0;
+}
+
+.macacuelloo .task-item .task-id {
+  font-size: medium;
+  background-color: #f2bdd0;
+}
+
+/* -------------------------------------------------------- */
+
+.bleisny {
+  background: url("/img/bleisny.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #bcd955;
+}
+
+.bleisny .task-item {
+  color: #bcd955;
+}
+
+.bleisny .task-item .task-id {
+  font-size: medium;
+  background-color: #bcd955;
+}
+
+/* -------------------------------------------------------- */
+
+.flavia_2025_ {
+  background: url("/img/flavia_2025_.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #f257a0;
+}
+
+.flavia_2025_ .task-item {
+  color: #f257a0;
+}
+
+.flavia_2025_ .task-item .task-id {
+  font-size: medium;
+  background-color: #f257a0;
+}
+
+/* -------------------------------------------------------- */
+
+.mariong898 {
+  background: url("/img/mariong898.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #d9a74a;
+}
+
+.mariong898 .task-item {
+  color: #d9a74a;
+}
+
+.mariong898 .task-item .task-id {
+  font-size: medium;
+  background-color: #d9a74a;
+}
+
+/* -------------------------------------------------------- */
+
+.valenm07 {
+  background: url("/img/valenm07.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #b75eeb;
+}
+
+.valenm07 .task-item {
+  color: #b75eeb;
+}
+
+.valenm07 .task-item .task-id {
+  font-size: medium;
+  background-color: #b75eeb;
+}
+
+/* -------------------------------------------------------- */
+
+.claridad {
+  background: url("/img/claridad.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #f2cd5e;
+}
+
+.proposito {
+  background: url("/img/proposito.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #e9d9c8;
+}
+
+.esfuerzo {
+  background: url("/img/esfuerzo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #a9d4d9;
+}
+
+.constancia {
+  background: url("/img/constancia.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 1em;
+  color: #f2d4ae;
+}

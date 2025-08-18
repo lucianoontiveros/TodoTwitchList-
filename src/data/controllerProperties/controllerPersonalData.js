@@ -84,7 +84,7 @@ const getUserInfo = (user, channel) => {
       : ""
   }
   ${personalData.birth ? `- Fecha de nacimiento: ${personalData.birth}` : ""}
-  ${personalData.points ? `- Puntos: ${personalData.points}` : ""}
+ 
   ${personalData.instagram ? `- Instagram: ${personalData.instagram}` : ""}
   ${
     personalData.oppositionfor

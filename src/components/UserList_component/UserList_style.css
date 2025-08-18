@@ -6,8 +6,6 @@
   margin: 0;
 }
 
-
-
 .contenedor {
   display: grid;
   grid-template-columns: 1fr;

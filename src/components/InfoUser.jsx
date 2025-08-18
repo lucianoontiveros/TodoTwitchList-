@@ -15,7 +15,7 @@ const InfoUser = memo(({ username }) => {
 
       if (!userData) {
         console.warn(`No se encontraron datos para el usuario: ${username}`);
-        setError('Usuario no encontrado');
+        setError("Usuario no encontrado");
         setUser(null);
         return;
       }
@@ -23,8 +23,8 @@ const InfoUser = memo(({ username }) => {
       setUser(userData);
       setError(null);
     } catch (err) {
-      console.error('Error al obtener datos del usuario:', err);
-      setError('Error al cargar datos');
+      console.error("Error al obtener datos del usuario:", err);
+      setError("Error al cargar datos");
       setUser(null);
     }
   }, [username]);
@@ -70,6 +70,6 @@ const InfoUser = memo(({ username }) => {
   );
 });
 
-InfoUser.displayName = 'InfoUser';
+InfoUser.displayName = "InfoUser";
 
 export default InfoUser;

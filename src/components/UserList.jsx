@@ -19,7 +19,7 @@ const UserList = () => {
           username,
           ...storedUsers[username],
         }))
-        .filter(user => user.tasks && user.tasks.length > 0); // Solo mostrar usuarios con tareas
+        .filter((user) => user.tasks && user.tasks.length > 0); // Solo mostrar usuarios con tareas
 
       userListRef.current = userList;
       setUsers(userList);
@@ -29,7 +29,7 @@ const UserList = () => {
         setCurrentUserIndex(0);
       }
     } catch (error) {
-      console.error('Error loading users:', error);
+      console.error("Error loading users:", error);
     }
   }, [currentUserIndex]);
 
@@ -42,11 +42,11 @@ const UserList = () => {
     if (userListRef.current.length <= 1) return; // No iniciar intervalo si hay 0 o 1 usuario
 
     intervalRef.current = setInterval(() => {
-      setCurrentUserIndex(prevIndex => {
+      setCurrentUserIndex((prevIndex) => {
         const nextIndex = (prevIndex + 1) % userListRef.current.length;
         if (nextIndex === 0) {
           // Si volvemos al inicio, incrementar el contador de ciclos
-          setCycleCount(prev => prev + 1);
+          setCycleCount((prev) => prev + 1);
           if (cycleCount >= 1) {
             // Después de completar un ciclo, recargar usuarios
             loadUsers();
@@ -70,23 +70,25 @@ const UserList = () => {
 
     // Evento para manejar cambios en localStorage
     const handleStorageChange = (e) => {
-      if (e.key === 'users') {
+      if (e.key === "users") {
         loadUsers();
         startInterval();
       }
     };
 
-    window.addEventListener('storage', handleStorageChange);
+    window.addEventListener("storage", handleStorageChange);
 
     return () => {
       cleanup?.();
-      window.removeEventListener('storage', handleStorageChange);
+      window.removeEventListener("storage", handleStorageChange);
     };
   }, [loadUsers, startInterval]);
 
   // Si no hay usuarios con tareas, mostrar mensaje
   if (users.length === 0) {
-    return <div className="no-users">No hay usuarios con tareas pendientes.</div>;
+    return (
+      <div className="no-users">No hay usuarios con tareas pendientes.</div>
+    );
   }
 
   // Obtener el usuario actual

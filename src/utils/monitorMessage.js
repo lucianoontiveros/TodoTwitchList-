@@ -57,10 +57,10 @@ export const monitorMessage = (
   if (self || !message.startsWith("!")) return;
   const username = tags.username;
 
+  // Validar comando
   const commandVerify = validateCommand(message.toLowerCase().split(" ")[0]);
   if (!commandVerify) return;
-
-  // Validar comando
+ 
 
   // promps que extraemos del comando
   const command = message.toLowerCase().split(" ")[0].slice(1);
@@ -73,21 +73,26 @@ export const monitorMessage = (
   const taskMod =
     taskLowercase.charAt(0).toUpperCase() + taskLowercase.slice(4);
 
-  const isSub = tags.badges?.subscriber;
-  const isVip = tags.badges?.vip;
-  const isMod = tags.badges?.moderator;
-  const isPrime = tags.badges?.premium;
 
-  const isTag = isSub
-    ? "sub"
-    : isVip
-    ? "vip"
-    : isMod
-    ? "mod"
-    : isPrime
-    ? "prime"
-    : "none";
+    const badges = Object.keys(tags.badges || {}).reduce((acc, key) => {
+      acc[key.toLowerCase()] = tags.badges[key];
+      return acc;
+    }, {});
 
+    const isPrime = badges.premium;
+    const isVip = badges.vip;
+    const isMod = badges.moderator;
+    const isSub = badges.subscriber;
+
+    let isTag = isSub ? "sub" 
+    : isMod ? "mod" 
+  : isVip ? "vip" 
+  : isPrime ? "prime" 
+  : "none";
+
+console.log(isTag);
+
+    foundOrCreateUser(username, isTag);
   // Manejo de comandos
   switch (command) {
     // Administrar usuarios
