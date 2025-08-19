@@ -73,6 +73,5 @@ export const susBackgrounds = {
     viewer : viewer,
     vip_fondo : vip_fondo,
     wandazk : wandazk,
-    cuartodechenz: mariong898,
     
   };
