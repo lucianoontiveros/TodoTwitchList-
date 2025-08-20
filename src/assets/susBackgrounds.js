@@ -34,6 +34,8 @@ import valenm07 from "./valenm07.png";
 import viewer from "./viewer.jpeg";
 import vip_fondo from "./vip_fondo.jpeg";
 import wandazk from "./wandazk.png";
+import mmmericina from "./mmmericina.png";
+import Mariong898 from "./mariong898.png";
 
 
  
@@ -73,5 +75,6 @@ export const susBackgrounds = {
     viewer : viewer,
     vip_fondo : vip_fondo,
     wandazk : wandazk,
-    
+    mmmericina : mmmericina,
+    Mariong898 : Mariong898,
   };
