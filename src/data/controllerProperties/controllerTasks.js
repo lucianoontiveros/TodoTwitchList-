@@ -48,17 +48,37 @@ const MESSAGES = {
 const examID = () => Math.random().toString(36).substring(2, 5);
 
 const reviewListTask = (user, channel) => {
-  let task = users[user].tasks;
-  if (task.length === 0) {
-    sendMessage(MESSAGES.noTasks(user), channel);
-  } else {
-    task.forEach((usertTask) =>
-      sendMessage(
-        MESSAGES.tasksList(user, usertTask.description, usertTask._id),
-        channel
-      )
-    );
-    addDataPoints(user);
+  try {
+    // Asegurarse de que el usuario existe
+    if (!users[user]) {
+      console.error(`Usuario no encontrado: ${user}`);
+      return;
+    }
+    
+    // Asegurarse de que tasks sea un array
+    if (!Array.isArray(users[user].tasks)) {
+      console.log(`Reparando tasks para el usuario ${user}`);
+      users[user].tasks = [];
+    }
+    
+    const tasks = users[user].tasks;
+    
+    if (tasks.length === 0) {
+      sendMessage(MESSAGES.noTasks(user), channel);
+    } else {
+      tasks.forEach((userTask) => {
+        if (userTask && userTask.description && userTask._id) {
+          sendMessage(
+            MESSAGES.tasksList(user, userTask.description, userTask._id),
+            channel
+          );
+        }
+      });
+      addDataPoints(user);
+    }
+  } catch (error) {
+    console.error(`Error en reviewListTask para el usuario ${user}:`, error);
+    sendMessage(`❌ Ocurrió un error al revisar las tareas de ${user}`, channel);
   }
 };
 
@@ -115,8 +135,28 @@ const addTaskUser = (user, addTask, channel, tag) => {
 };
 
 const reviewListTaskUser = (user, channel, tag) => {
-  foundOrCreateUser(user, tag);
-  reviewListTask(user, channel);
+  try {
+    // Asegurarse de que el usuario existe
+    foundOrCreateUser(user, tag);
+    
+    // Verificar nuevamente que el usuario existe después de crearlo
+    if (!users[user]) {
+      console.error(`No se pudo crear/find el usuario: ${user}`);
+      sendMessage(`❌ No se pudo acceder a las tareas de @${user}`, channel);
+      return;
+    }
+    
+    // Verificar que tasks sea un array
+    if (!Array.isArray(users[user].tasks)) {
+      users[user].tasks = [];
+      console.log(`Se inicializó el array de tareas para el usuario: ${user}`);
+    }
+    
+    reviewListTask(user, channel);
+  } catch (error) {
+    console.error(`Error en reviewListTaskUser para ${user}:`, error);
+    sendMessage(`❌ Ocurrió un error al revisar las tareas de @${user}`, channel);
+  }
 };
 
 const readyTaskUser = (user, ID, channel) => {

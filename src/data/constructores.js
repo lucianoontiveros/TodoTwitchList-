@@ -3,7 +3,7 @@ class Viewer {
     this.name = name;
     this._id = null;
     this.status = null;
-    this.tasks = [];
+    this.tasks = []; // Asegurar que siempre sea un array
     this.exams = [];
     this.lastTime = "";
     this.personaldata = [];
@@ -20,8 +20,8 @@ class Viewer {
   }
 
   // Setter para mensaje
-  mensaje() {
-    return (this._mensaje = value);
+  set mensaje(value) {
+    this._mensaje = value;
   }
 
   registerID() {

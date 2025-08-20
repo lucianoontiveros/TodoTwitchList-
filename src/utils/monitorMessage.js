@@ -44,7 +44,10 @@ import {
   saveLocalStorageFile,
 } from "../data/LocalStorage/controllerLocalStorage";
 
-export const monitorMessage = (
+import { repairBrokenUsers } from "./repairUsers";
+import client from "../data/controllerClientTwitch/clientTwitch";
+
+export const monitorMessage = async (
   channel,
   tags,
   message,
@@ -185,6 +188,44 @@ console.log(isTag);
       break;
     case "info":
       getUserInfo(otherUsername, channel);
+      break;
+
+    // Comando para reparar usuarios (solo para el streamer)
+    case "reparar":
+      console.log(`Comando reparar recibido de ${username}`);
+      if (username === "cuartodechenz") {  // Asegurarse que solo el streamer puede usarlo
+        try {
+          console.log("Iniciando reparación de usuarios...");
+          await client.say(channel, "🔧 Iniciando reparación de usuarios...");
+          
+          const result = await repairBrokenUsers();
+          console.log("Resultado de la reparación:", result);
+          
+          if (result.repaired) {
+            const message = `✅ Reparación completada. Se repararon ${result.count} usuarios.`;
+            console.log(message);
+            await client.say(channel, message);
+            
+            // Mostrar los usuarios reparados en grupos para no exceder el límite de caracteres
+            const chunkSize = 5;
+            for (let i = 0; i < result.users.length; i += chunkSize) {
+              const chunk = result.users.slice(i, i + chunkSize);
+              await client.say(channel, `📋 Reparados: ${chunk.join(', ')}`);
+            }
+          } else {
+            const message = "ℹ️ No se encontraron usuarios que requieran reparación.";
+            console.log(message);
+            await client.say(channel, message);
+          }
+        } catch (error) {
+          const errorMsg = `❌ Error al reparar usuarios: ${error.message}`;
+          console.error(errorMsg, error);
+          await client.say(channel, errorMsg);
+        }
+      } else {
+        console.log(`Usuario no autorizado intentó usar !reparar: ${username}`);
+        await client.say(channel, "❌ Solo el streamer puede usar este comando.");
+      }
       break;
 
     // Administrar lista de examenes
