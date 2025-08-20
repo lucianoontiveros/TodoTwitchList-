@@ -38,6 +38,10 @@ const InfoUser_component = ({ user, username }) => {
       backgroundImage = tagBaseBackgrounds[tagLower] || tagBaseBackgrounds.viewer;
     }
 
+    if (normalizedName.includes("marion")) {
+      backgroundImage = susBackgrounds.mariong898;
+    }
+
     // Estilos finales
     setStyles({
       backgroundImage: `url(${backgroundImage})`,
