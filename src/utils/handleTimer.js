@@ -5,18 +5,15 @@ export const handleTimer = (
   setIsInfoUserVisible,
   setCurrentUser
 ) => {
-  if (prevUser.current === username) {
-    clearTimeout(timeoutRef.current);
-    timeoutRef.current = setTimeout(() => {
-      setIsInfoUserVisible(false);
-      setCurrentUser(null);
-    }, 3000); // Extiende 5 segundos
-  } else {
-    prevUser.current = username;
-    clearTimeout(timeoutRef.current);
-    timeoutRef.current = setTimeout(() => {
-      setIsInfoUserVisible(false);
-      setCurrentUser(null);
-    }, 50000); // Temporizador normal
-  }
+  // Actualizar el usuario actual
+  prevUser.current = username;
+  
+  // Limpiar cualquier temporizador existente
+  clearTimeout(timeoutRef.current);
+  
+  // Configurar el temporizador para ocultar la interfaz después de 10 segundos
+  timeoutRef.current = setTimeout(() => {
+    setIsInfoUserVisible(false);
+    setCurrentUser(null);
+  }, 10000); // Siempre 10 segundos para cualquier interacción
 };
