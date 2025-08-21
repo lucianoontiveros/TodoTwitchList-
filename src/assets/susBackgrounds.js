@@ -36,7 +36,7 @@ import vip_fondo from "./vip_fondo.jpeg";
 import wandazk from "./wandazk.png";
 import mmmericina from "./mmmericina.png";
 import Mariong898 from "./mariong898.png";
-
+import micaaavllr from "./micaaavllr.jpeg";
 
  
 export const susBackgrounds = {
@@ -77,4 +77,5 @@ export const susBackgrounds = {
     wandazk : wandazk,
     mmmericina : mmmericina,
     Mariong898 : Mariong898,
+    micaaavllr : micaaavllr,
   };
