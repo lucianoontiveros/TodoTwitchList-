@@ -794,3 +794,21 @@ margin-bottom: 0.1em;
   font-size: medium;
   background-color: #F2D272;
 }
+
+/* -------------------------------------------------------- */
+.cuartodechenz {
+  color: #F2D272;
+}
+
+.cuartodechenz .task-header-title {
+  color: #F2D272;
+}
+
+.cuartodechenz .task-item {
+  color: #F2D272;
+}
+
+.cuartodechenz .task-item .task-id {
+  font-size: medium;
+  background-color: #F2D272;
+}

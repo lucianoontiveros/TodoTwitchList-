@@ -37,7 +37,7 @@ import wandazk from "./wandazk.png";
 import mmmericina from "./mmmericina.png";
 import Mariong898 from "./mariong898.png";
 import micaaavllr from "./micaaavllr.jpeg";
-
+import cuartodechenz from "./cuartodechenz.png";
  
 export const susBackgrounds = {
     agos__________ : agos__________,
@@ -78,4 +78,5 @@ export const susBackgrounds = {
     mmmericina : mmmericina,
     Mariong898 : Mariong898,
     micaaavllr : micaaavllr,
+    cuartodechenz: cuartodechenz,
   };

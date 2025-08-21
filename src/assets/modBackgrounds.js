@@ -5,7 +5,7 @@ import mandaariina from "./mandaariina.jpg";
 import mont_opo from "./mont_opo.png";
 import mariong898 from "./mariong898.png";
 import mmmericina from "./mmmericina.png";
-import micaaavllr from "./micaaavllr.jpeg";
+import cuartodechenz from "./cuartodechenz.png";
 
  
 export const modBackgrounds = {
@@ -15,5 +15,5 @@ export const modBackgrounds = {
   mandaariina: mandaariina,
   cuartodechenz: mmmericina,
   mariong898 : mariong898,
-  cuartodechenz: micaaavllr,
+  cuartodechenz: cuartodechenz,
 };
