@@ -77,15 +77,32 @@ export const monitorMessage = async (
     taskLowercase.charAt(0).toUpperCase() + taskLowercase.slice(4);
 
 
-    const badges = Object.keys(tags.badges || {}).reduce((acc, key) => {
-      acc[key.toLowerCase()] = tags.badges[key];
-      return acc;
-    }, {});
+    // Parsear los badges, manejando tanto string como objeto
+    const badges = {};
+    if (tags.badges) {
+      if (typeof tags.badges === 'string') {
+        // Formato antiguo: "moderator/1,subscriber/12"
+        tags.badges.split(',').forEach(badge => {
+          const [name, version] = badge.split('/');
+          if (name && version) {
+            badges[name.toLowerCase()] = version;
+          }
+        });
+      } else if (typeof tags.badges === 'object') {
+        // Formato nuevo: { moderator: '1', subscriber: '12' }
+        Object.entries(tags.badges).forEach(([name, version]) => {
+          if (name && version) {
+            badges[name.toLowerCase()] = version;
+          }
+        });
+      }
+    }
 
-    const isPrime = badges.premium;
-    const isVip = badges.vip;
-    const isMod = badges.moderator;
-    const isSub = badges.subscriber;
+    const isPrime = badges.premium !== undefined;
+    const isVip = badges.vip !== undefined;
+    const isMod = badges.moderator !== undefined;
+    const isBroadcaster = badges.broadcaster !== undefined;
+    const isSub = badges.subscriber !== undefined || isBroadcaster;
 
     let isTag = isSub ? "sub" 
     : isMod ? "mod" 
