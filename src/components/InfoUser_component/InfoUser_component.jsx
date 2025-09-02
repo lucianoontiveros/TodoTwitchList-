@@ -17,7 +17,7 @@ const tagBaseBackgrounds = {
 
 const InfoUser_component = ({ user, username }) => {
   const [styles, setStyles] = useState({});
-  const [stylesTasks, setStylesTasks] = useState(`infoUser_containers ${user?.tag}`);
+  const [stylesTasks, setStylesTasks] = useState();
 
 
   useEffect(() => {
