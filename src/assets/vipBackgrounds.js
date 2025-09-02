@@ -4,7 +4,7 @@ import karlitarachel from "./karlitarachel.jpg";
 import mariong898 from "./mariong898.png";
 import sofamb1 from "./sofamb1.jpg";
 import sofiaantok from "./sofiaantok.png";
-
+import summertime0805 from "./summertime0805.png";
 
 
  
@@ -14,4 +14,5 @@ export const vipBackgrounds = {
   flavia_2025_: flavia_2025_,
   sofamb1: sofamb1,
   karlitarachel: karlitarachel,
+  summertime0805 : summertime0805,
 };

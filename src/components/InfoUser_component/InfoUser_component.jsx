@@ -9,14 +9,16 @@ import { modBackgrounds } from "../../assets/modBackgrounds";
 // Fondos base por rol
 const tagBaseBackgrounds = {
   sub: susBackgrounds.sus_fondo,
-  mod: modBackgrounds.mod_fondo,
-  vip: vipBackgrounds.vip_fondo,
+  mod: susBackgrounds.mod_fondo,
+  vip: susBackgrounds.vip_fondo,
   prime: susBackgrounds.prime_fondo, // este lo puedes mover si lo separas
   viewer: susBackgrounds.viewer,
 };
 
 const InfoUser_component = ({ user, username }) => {
   const [styles, setStyles] = useState({});
+  const [stylesTasks, setStylesTasks] = useState(`infoUser_containers ${user?.tag}`);
+
 
   useEffect(() => {
     if (!user || !user.tag) return;
@@ -32,6 +34,9 @@ const InfoUser_component = ({ user, username }) => {
 
     // 1. Fondo personalizado si existe
     let backgroundImage = backgroundSets[normalizedName];
+    if (backgroundImage) {
+      setStylesTasks(`infoUser_containers ${user?.name}`);
+    }
 
     // 2. Fondo base del rol si no hay personalizado
     if (!backgroundImage) {
@@ -51,7 +56,7 @@ const InfoUser_component = ({ user, username }) => {
 
   return (
     <div className="maincontainer">
-      <div className={`infoUser_containers ${user?.tag} ${user?.name} `} style={styles}>
+      <div className={stylesTasks} style={styles}>
         <div className="container_header ">
           <div className="header_user">
             <h2>

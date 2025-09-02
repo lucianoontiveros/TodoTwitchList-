@@ -13,7 +13,5 @@ export const modBackgrounds = {
   camm_sss: camm_sss,
   mont_opo: mont_opo,
   mandaariina: mandaariina,
-  cuartodechenz: mmmericina,
   mariong898 : mariong898,
-  cuartodechenz: cuartodechenz,
 };
