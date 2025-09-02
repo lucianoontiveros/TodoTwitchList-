@@ -41,6 +41,7 @@ const InfoUser_component = ({ user, username }) => {
     // 2. Fondo base del rol si no hay personalizado
     if (!backgroundImage) {
       backgroundImage = tagBaseBackgrounds[tagLower] || tagBaseBackgrounds.viewer;
+      setStylesTasks(`infoUser_containers ${user?.tag}`);
     }
 
 
