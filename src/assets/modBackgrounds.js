@@ -6,6 +6,11 @@ import mont_opo from "./mont_opo.png";
 import mariong898 from "./mariong898.png";
 import mmmericina from "./mmmericina.png";
 import cuartodechenz from "./cuartodechenz.png";
+import sub from "./sus_fondo.jpeg";
+import none from "./viewer.jpeg";
+import mod from "./mod_fondo.jpeg";
+import vip from "./vip_fondo.jpeg";
+import prime from "./prime_fondo.jpeg";
 
  
 export const modBackgrounds = {

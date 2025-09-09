@@ -179,20 +179,20 @@ margin-bottom: 0.1em;
   background-size: cover;
   background-position: bottom;
   border-radius: 1em;
-  color: rgb(206, 143, 243);
+  color: #F2DCDE;
 }
 
 .sub .task-header {
-  color: rgb(206, 143, 243);
+  color: #F2DCDE;
 }
 
 .sub .task-list {
-  color: rgb(206, 143, 243);
+  color: #F2DCDE;
 }
 
 .sub .task-item {
   max-width: 26.99em;
-  color: rgb(206, 143, 243);
+  color: #F2DCDE;
 }
 
 .sub .task-list .task-item {
