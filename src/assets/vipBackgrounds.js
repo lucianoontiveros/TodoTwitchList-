@@ -2,7 +2,7 @@
 import flavia_2025_ from "./flavia_2025_.jpeg";
 import karlitarachel from "./karlitarachel.jpg";
 import mariong898 from "./mariong898.png";
-import sofamb1 from "./sofamb1.jpg";
+import sofamb1 from "./sofamb1.jpeg";
 import sofiaantok from "./sofiaantok.png";
 import summertime0805 from "./summertime0805.png";
 

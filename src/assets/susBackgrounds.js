@@ -26,7 +26,7 @@ import prime_fondo from "./prime_fondo.jpeg";
 import proposito from "./proposito.png";
 import rsofiaa from "./rsofiaa.jpg";
 import ruidodemate_rocio from "./ruidodemate_rocio.png";
-import sofamb1 from "./sofamb1.jpg";
+import sofamb1 from "./sofamb1.jpeg";
 import sofiaantok from "./sofiaantok.png";
 import summertime0805 from "./summertime0805.png";
 import sus_fondo from "./sus_fondo.jpeg";
