@@ -38,6 +38,7 @@ import mmmericina from "./mmmericina.png";
 import Mariong898 from "./mariong898.png";
 import micaaavllr from "./micaaavllr.jpeg";
 import cuartodechenz from "./cuartodechenz.png";
+import misucarla_ from "./misucarla_.png";
  
 export const susBackgrounds = {
     agos__________ : agos__________,
@@ -74,6 +75,7 @@ export const susBackgrounds = {
     Mariong898 : Mariong898,
     micaaavllr : micaaavllr,
     cuartodechenz: cuartodechenz,
+    misucarla_ : misucarla_,
 
     sus_fondo : sus_fondo,
     vip_fondo : vip_fondo,

@@ -11,7 +11,7 @@ import none from "./viewer.jpeg";
 import mod from "./mod_fondo.jpeg";
 import vip from "./vip_fondo.jpeg";
 import prime from "./prime_fondo.jpeg";
-
+import misucarla_ from "./misucarla_.png";
  
 export const modBackgrounds = {
   agos__________: agos__________,
@@ -19,5 +19,5 @@ export const modBackgrounds = {
   mont_opo: mont_opo,
   mandaariina: mandaariina,
   mariong898 : mariong898,
-  cuartodechenz: cuartodechenz,
+  cuartodechenz: misucarla_,
 };

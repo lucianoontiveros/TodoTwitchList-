@@ -812,3 +812,20 @@ margin-bottom: 0.1em;
   font-size: medium;
   background-color: #F2D272;
 }
+/* -------------------------------------------------------- */
+.misucarla_ {
+  color: #c9eb81;
+}
+
+.misucarla_ .task-header-title {
+  color: #c9eb81;
+}
+
+.misucarla_ .task-item {
+  color: #c9eb81;
+}
+
+.misucarla_ .task-item .task-id {
+  font-size: medium;
+  background-color: #c9eb81;
+}
