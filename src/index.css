@@ -829,3 +829,81 @@ margin-bottom: 0.1em;
   font-size: medium;
   background-color: #c9eb81;
 }
+
+/* -------------------------------------------------------- */
+.medicensosoxp {
+  color: #F1F2C2;
+}
+
+.medicensosoxp .task-header-title {
+  color: #F1F2C2;
+}
+
+.medicensosoxp .task-item {
+  color: #F1F2C2;
+}
+
+.medicensosoxp .task-item .task-id {
+  font-size: medium;
+  background-color: #F1F2C2;
+}
+
+/* -------------------------------------------------------- */
+
+.rocio_adm {
+  color: #f59444;
+}
+
+.rocio_adm .task-header-title {
+  color: #f59444;
+}
+
+.rocio_adm .task-item {
+  color: #f59444;
+}
+
+.rocio_adm .task-item .task-id {
+  font-size: medium;
+  background-color: #f59444;
+}
+
+/* -------------------------------------------------------- */
+
+.romatwch {
+  color: #F2A7B5;
+}
+
+.romatwch .task-header-title {
+  color: #F2A7B5;
+}
+
+.romatwch .task-item {
+  color: #F2A7B5;
+}
+
+.romatwch .task-item .task-id {
+  font-size: medium;
+  background-color: #F2A7B5;
+}
+
+/* -------------------------------------------------------- */
+
+.Cande_pl {
+  color: #9bf272;
+}
+
+.Cande_pl .task-header-title {
+  color: #9bf272;
+}
+
+.Cande_pl .task-item {
+  color: #9bf272;
+}
+
+.Cande_pl .task-item .task-id {
+  font-size: medium;
+  background-color: #9bf272;
+}
+
+/* -------------------------------------------------------- */
+

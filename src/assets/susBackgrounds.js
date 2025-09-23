@@ -39,6 +39,10 @@ import Mariong898 from "./mariong898.png";
 import micaaavllr from "./micaaavllr.jpeg";
 import cuartodechenz from "./cuartodechenz.png";
 import misucarla_ from "./misucarla_.png";
+import rocio_adm from "./rocio_adm.jpeg";
+import romatwch from "./romatwch.jpg";
+import Cande_pl from "./Cande_pl.jpg";
+import medicensosoxp from "./medicensosoxp.png";
  
 export const susBackgrounds = {
     agos__________ : agos__________,
@@ -76,6 +80,10 @@ export const susBackgrounds = {
     micaaavllr : micaaavllr,
     cuartodechenz: cuartodechenz,
     misucarla_ : misucarla_,
+    rocio_adm : rocio_adm,
+    medicensosoxp : medicensosoxp,
+    romatwch : romatwch,
+    Cande_pl : Cande_pl,
 
     sus_fondo : sus_fondo,
     vip_fondo : vip_fondo,
