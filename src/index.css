@@ -907,3 +907,21 @@ margin-bottom: 0.1em;
 
 /* -------------------------------------------------------- */
 
+.butterflylander {
+  color: aqua;
+}
+
+.butterflylander .task-header-title {
+  color: aqua;
+}
+
+.butterflylander .task-item {
+  color: aqua;
+}
+
+.butterflylander .task-item .task-id {
+  font-size: medium;
+  background-color: aqua;
+}
+
+/* -------------------------------------------------------- */

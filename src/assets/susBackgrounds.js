@@ -43,6 +43,7 @@ import rocio_adm from "./rocio_adm.jpeg";
 import romatwch from "./romatwch.jpg";
 import Cande_pl from "./Cande_pl.jpg";
 import medicensosoxp from "./medicensosoxp.png";
+import butterflylander from "./butterflylander.jpeg";
  
 export const susBackgrounds = {
     agos__________ : agos__________,
@@ -84,6 +85,7 @@ export const susBackgrounds = {
     medicensosoxp : medicensosoxp,
     romatwch : romatwch,
     Cande_pl : Cande_pl,
+    butterflylander : butterflylander,
 
     sus_fondo : sus_fondo,
     vip_fondo : vip_fondo,
