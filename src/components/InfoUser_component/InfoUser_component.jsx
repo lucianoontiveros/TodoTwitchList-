@@ -44,8 +44,12 @@ const InfoUser_component = ({ user, username }) => {
       setStylesTasks(`infoUser_containers ${user?.tag}`);
     }
 
+    // Hace 10 horas que revisando modulo por modulo. 
+    // Para mi el error estaba en este try.catch que me estaba ocultando algún pecado que deje allí
+    // aca hay la trazabilidad, no es ninguna  falsa sensación de estabilidad
+    // bueno... no queda más que ejecutar 
 
-    // Estilos finales
+
     setStyles({
       backgroundImage: `url(${backgroundImage})`,
       backgroundRepeat: "no-repeat",

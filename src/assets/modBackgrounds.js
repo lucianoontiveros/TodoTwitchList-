@@ -17,6 +17,9 @@ import romatwch from "./romatwch.jpg";
 import medicensosoxp from "./medicensosoxp.png";
 import rocio_adm from "./rocio_adm.jpeg";
 import butterflylander from "./butterflylander.jpeg";
+import camiichan15 from "./camiichan15.png"
+import lulaluzz from "./lulaluzz.jpeg"
+import andirivero1312 from "./andirivero1312.jpg"
 
  
 export const modBackgrounds = {
@@ -26,5 +29,5 @@ export const modBackgrounds = {
   mandaariina: mandaariina,
   mariong898 : mariong898,
   Cande_pl : Cande_pl,
-  cuartodechenz: butterflylander,
+  cuartodechenz: andirivero1312,
 };

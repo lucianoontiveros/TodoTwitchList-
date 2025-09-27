@@ -44,6 +44,9 @@ import romatwch from "./romatwch.jpg";
 import Cande_pl from "./Cande_pl.jpg";
 import medicensosoxp from "./medicensosoxp.png";
 import butterflylander from "./butterflylander.jpeg";
+import camiichan15 from "./camiichan15.png"
+import lulaluzz from "./lulaluzz.jpeg"
+import andirivero1312 from "./andirivero1312.jpg"
  
 export const susBackgrounds = {
     agos__________ : agos__________,
@@ -86,6 +89,9 @@ export const susBackgrounds = {
     romatwch : romatwch,
     Cande_pl : Cande_pl,
     butterflylander : butterflylander,
+    camiichan15 : camiichan15,
+    lulaluzz : lulaluzz,
+    andirivero1312 : andirivero1312,
 
     sus_fondo : sus_fondo,
     vip_fondo : vip_fondo,

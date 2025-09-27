@@ -795,24 +795,7 @@ margin-bottom: 0.1em;
   background-color: #F2D272;
 }
 
-/* -------------------------------------------------------- */
-.cuartodechenz {
-  color: #F2D272;
-}
 
-.cuartodechenz .task-header-title {
-  color: #F2D272;
-}
-
-.cuartodechenz .task-item {
-  color: #F2D272;
-}
-
-.cuartodechenz .task-item .task-id {
-  font-size: medium;
-  background-color: #F2D272;
-}
-/* -------------------------------------------------------- */
 .misucarla_ {
   color: #c9eb81;
 }
@@ -924,4 +907,80 @@ margin-bottom: 0.1em;
   background-color: #f9fcfc;
 }
 
+/* -------------------------------------------------------- */
+
+.camiichan15 {
+  color: #EF2EF2;
+}
+
+.camiichan15 .task-header-title {
+  color: #EF2EF2;
+}
+
+.camiichan15 .task-item {
+  color: #EF2EF2;
+}
+
+.camiichan15 .task-item .task-id {
+  font-size: medium;
+  background-color: #EF2EF2;
+}
+
+/* -------------------------------------------------------- */
+
+.lulaluzz {
+  color: #D9D9D9;
+}
+
+.lulaluzz .task-header-title {
+  color: #D9D9D9;
+}
+
+.lulaluzz .task-item {
+  color: #D9D9D9;
+}
+
+.lulaluzz .task-item .task-id {
+  font-size: medium;
+  background-color: #D9D9D9;
+}
+
+/* -------------------------------------------------------- */
+
+.andirivero1312 {
+  color: #f1f1f1;
+}
+
+.andirivero1312 .task-header-title {
+  color: #f1f1f1;
+}
+
+.andirivero1312 .task-item {
+  color: #f1f1f1;
+}
+
+.andirivero1312 .task-item .task-id {
+  font-size: medium;
+  background-color: #f1f1f1;
+}
+
+/* -------------------------------------------------------- */
+
+/* -------------------------------------------------------- */
+.cuartodechenz {
+  color: #F2D272;
+}
+
+.cuartodechenz .task-header-title {
+  color: #F2D272;
+}
+
+.cuartodechenz .task-item {
+  color: #F2D272;
+}
+
+.cuartodechenz .task-item .task-id {
+  font-size: medium;
+  background-color: #F2D272;
+}
 /* -------------------------------------------------------- */
