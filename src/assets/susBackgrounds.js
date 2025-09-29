@@ -10,7 +10,7 @@ import condrocita from "./condrocita.jpg";
 import constancia from "./constancia.png";
 import crissworkoutt from "./crissworkoutt.png";
 import esfuerzo from "./esfuerzo.png";
-import flavia_2025_ from "./flavia_2025_.jpeg";
+import fla_vius_ from "./fla_vius_.jpeg";
 import gominola_opositora from "./gominola_opositora.jpg";
 import jana10dv from "./jana10dv.png";
 import kakarotita_ from "./kakarotita_.jpg";
@@ -60,7 +60,7 @@ export const susBackgrounds = {
     constancia : constancia,
     crissworkoutt : crissworkoutt,
     esfuerzo : esfuerzo,
-    flavia_2025_ : flavia_2025_,
+    fla_vius_ : fla_vius_,
     gominola_opositora : gominola_opositora,
     jana10dv : jana10dv,
     kakarotita_ : kakarotita_,
