@@ -41,7 +41,7 @@ import cuartodechenz from "./cuartodechenz.png";
 import misucarla_ from "./misucarla_.png";
 import rocio_adm from "./rocio_adm.jpeg";
 import romatwch from "./romatwch.jpg";
-import Cande_pl from "./Cande_pl.jpg";
+import cande_pl from "./cande_pl.jpg";
 import medicensosoxp from "./medicensosoxp.png";
 import butterflylander from "./butterflylander.jpeg";
 import camiichan15 from "./camiichan15.png"
@@ -87,7 +87,7 @@ export const susBackgrounds = {
     rocio_adm : rocio_adm,
     medicensosoxp : medicensosoxp,
     romatwch : romatwch,
-    Cande_pl : Cande_pl,
+    cande_pl : cande_pl,
     butterflylander : butterflylander,
     camiichan15 : camiichan15,
     lulaluzz : lulaluzz,
