@@ -12,7 +12,7 @@ import mod from "./mod_fondo.jpeg";
 import vip from "./vip_fondo.jpeg";
 import prime from "./prime_fondo.jpeg";
 import sofamb1 from "./sofamb1.jpeg";
-import cande_pl from "./cande_pl.jpg";
+import cande_pl from "./cande_pl.png";
 import romatwch from "./romatwch.jpg";
 import medicensosoxp from "./medicensosoxp.png";
 import rocio_adm from "./rocio_adm.jpeg";
