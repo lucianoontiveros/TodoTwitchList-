@@ -41,12 +41,12 @@ import cuartodechenz from "./cuartodechenz.png";
 import misucarla_ from "./misucarla_.png";
 import rocio_adm from "./rocio_adm.jpeg";
 import romatwch from "./romatwch.jpg";
-import cande_pl from "./cande_pl.jpg";
 import medicensosoxp from "./medicensosoxp.png";
 import butterflylander from "./butterflylander.jpeg";
 import camiichan15 from "./camiichan15.png"
 import lulaluzz from "./lulaluzz.jpeg"
 import andirivero1312 from "./andirivero1312.jpg"
+import cande_pl from "./cande_pl.jpg"
  
 export const susBackgrounds = {
     agos__________ : agos__________,
