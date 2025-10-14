@@ -47,6 +47,7 @@ import camiichan15 from "./camiichan15.png"
 import lulaluzz from "./lulaluzz.jpeg"
 import andirivero1312 from "./andirivero1312.jpg"
 import cande_pl from "./cande_pl.png"
+import serolae from "./serolae.jpg"
  
 export const susBackgrounds = {
     agos__________ : agos__________,
@@ -92,6 +93,7 @@ export const susBackgrounds = {
     camiichan15 : camiichan15,
     lulaluzz : lulaluzz,
     andirivero1312 : andirivero1312,
+    serolae : serolae,
     sus_fondo : sus_fondo,
     vip_fondo : vip_fondo,
     mod_fondo : mod_fondo,

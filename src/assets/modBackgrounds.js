@@ -20,6 +20,8 @@ import butterflylander from "./butterflylander.jpeg";
 import camiichan15 from "./camiichan15.png"
 import lulaluzz from "./lulaluzz.jpeg"
 import andirivero1312 from "./andirivero1312.jpg"
+import serolae from "./serolae.jpg"
+
 
  
 export const modBackgrounds = {
@@ -29,5 +31,5 @@ export const modBackgrounds = {
   mandaariina: mandaariina,
   mariong898 : mariong898,
   cande_pl : cande_pl,
-  cuartodechenz: cande_pl,
+  cuartodechenz: serolae,
 };

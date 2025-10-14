@@ -965,8 +965,26 @@ margin-bottom: 0.1em;
 }
 
 /* -------------------------------------------------------- */
+.serolae {
+  color: #F2CED5;
+}
+
+.serolae .task-header-title {
+  color: #F2CED5;
+}
+
+.serolae .task-item {
+  color: #F2CED5;
+}
+
+.serolae .task-item .task-id {
+  font-size: medium;
+  background-color: #F2CED5;
+}
+/* -------------------------------------------------------- */
 
 /* -------------------------------------------------------- */
+/* #F2D272 */
 .cuartodechenz {
   color: #F2D272;
 }
