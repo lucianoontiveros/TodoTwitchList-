@@ -160,7 +160,18 @@ console.log(isTag);
     case "v":
     case "marcar":
     case "check":
-      readyTaskUser(username, arg, channel, isTag);
+      // Soporte multi-ID: "!marcar 12;34;56"
+      if (arg && arg.includes(";")) {
+        const ids = arg
+          .split(";")
+          .map((s) => s.trim())
+          .filter((s) => s.length > 0);
+        ids.forEach((id) => {
+          readyTaskUser(username, id, channel, isTag);
+        });
+      } else {
+        readyTaskUser(username, arg, channel, isTag);
+      }
       break;
     case "done":
       completeFirstTask(username, channel);
@@ -169,7 +180,18 @@ console.log(isTag);
     case "eliminar":
     case "borrar":
     case "delete":
-      deleteTaskUser(username, arg, channel, isTag);
+      // Soporte multi-ID: "!eliminar 12;34;56"
+      if (arg && arg.includes(";")) {
+        const ids = arg
+          .split(";")
+          .map((s) => s.trim())
+          .filter((s) => s.length > 0);
+        ids.forEach((id) => {
+          deleteTaskUser(username, id, channel, isTag);
+        });
+      } else {
+        deleteTaskUser(username, arg, channel, isTag);
+      }
       break;
     case "modificar":
     case "cambiar":
