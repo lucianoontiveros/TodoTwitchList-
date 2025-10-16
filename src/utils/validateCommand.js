@@ -35,6 +35,7 @@ export const validateCommand = (message) => {
     "examdelete",
     "reviewexam",
     "deleteallexam",
+    "reparar", // Agregado el comando reparar
   ]);
 
   const command = message.slice(1).split(" ")[0].toLowerCase();

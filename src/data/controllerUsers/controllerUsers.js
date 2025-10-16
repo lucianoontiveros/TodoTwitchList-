@@ -67,8 +67,24 @@ const identifiedUser = (foundUserView, tag) => {
 const foundOrCreateUser = (foundUserView, tag) => {
   try {
     if (users[foundUserView]) {
-      identifiedUser(foundUserView, tag);
+      // Si el usuario existe, asegurarse de que tenga la estructura correcta
+      const user = users[foundUserView];
+      if (!user._id || !user.name || !user.tag) {
+        console.log(`Reparando estructura del usuario: ${foundUserView}`);
+        const newUser = new Viewer(foundUserView);
+        // Preservar datos existentes
+        Object.assign(newUser, user);
+        // Asegurar propiedades requeridas
+        if (!newUser._id) newUser.registerID();
+        if (!newUser.tag) newUser.tag = tag;
+        newUser.registerUser();
+        users[foundUserView] = newUser;
+        registrationUsers(users);
+      } else {
+        identifiedUser(foundUserView, tag);
+      }
     } else {
+      // Crear nuevo usuario
       const user = new Viewer(foundUserView);
       user.mensaje = MESSAGES.userGenerated(user.name);
       user.tag = tag;
@@ -76,8 +92,10 @@ const foundOrCreateUser = (foundUserView, tag) => {
       user.registerID();
       users[foundUserView] = user;
       registrationUsers(users);
+      console.log(`Nuevo usuario creado: ${foundUserView}`, user);
     }
   } catch (error) {
+    console.error('Error en foundOrCreateUser:', error);
     sendMessage(MESSAGES.userIDVerifyError(), error);
   }
 };

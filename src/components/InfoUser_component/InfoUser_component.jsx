@@ -1,145 +1,104 @@
 import React, { useEffect, useState } from "react";
 import Tasklist_component from "../Tasklist_component/TaskList_component";
 
-// Mapeo de clases por tag y nombre
-const tagBaseClasses = {
-  sub: "sus_fondo infoUser_containers",
-  mod: "mod_fondo infoUser_containers",
-  vip: "vip_fondo infoUser_containers",
-  prime: "prime_fondo infoUser_containers",
-};
+// Importar fondos según rol
+import { susBackgrounds } from "../../assets/susBackgrounds";
+import { vipBackgrounds } from "../../assets/vipBackgrounds";
+import { modBackgrounds } from "../../assets/modBackgrounds";
 
-const userSpecificClasses = {
-  sub: {
-    mandaariina: "specificClasses_containers mandaariina",
-    antonellavrl_: "specificClasses_containers antonellavrl_",
-    summertime0805: "specificClasses_containers summertime0805",
-    gominola_opositora: "specificClasses_containers gominola_opositora",
-    chinita098: "specificClasses_containers chinita098",
-    agos__________: "specificClasses_containers agos__________",
-    jana10dv: "specificClasses_containers jana10dv",
-    mont_opo: "specificClasses_containers mont_opo",
-    antof253: "specificClasses_containers antof253",
-    rsofiaa: "specificClasses_containers rsofiaa",
-    wandazk: "specificClasses_containers wandazk",
-    olmediito: "specificClasses_containers olmediito",
-    liln1k: "specificClasses_containers liln1k",
-    condrocita: "specificClasses_containers condrocita",
-    kakarotita_: "specificClasses_containers kakarotita_",
-    karlitarachel: "specificClasses_containers karlitarachel",
-    ruidodemate_rocio: "specificClasses_containers ruidodemate_rocio",
-    crissworkoutt: "specificClasses_containers crissworkoutt",
-    sofamb1: "specificClasses_containers sofamb1",
-    macacuelloo: "specificClasses_containers macacuelloo",
-    bleisny: "specificClasses_containers bleisny",
-    mariong898: "specificClasses_containers mariong898",
-    valenm07: "specificClasses_containers valenm07",
-    flavia_2025_: "specificClasses_containers flavia_2025_",
-    cuartodechenz: "specificClasses_containers prime_fondo",
-
-  },
-  vip: {
-    mariong898: "specificClasses_containers mariong898",
-    sofiaantok: "specificClasses_containers sofiaantok",
-    flavia_2025_: "specificClasses_containers flavia_2025_",
-    sofamb1: "specificClasses_containers sofamb1",
-    karlitarachel: "specificClasses_containers karlitarachel",
-
-  },
-  mod: {
-    agos__________: "specificClasses_containers agos__________",
-    camm_sss: "specificClasses_containers camm_sss",
-    mont_opo: "specificClasses_containers mont_opo",
-    mandaariina: "specificClasses_containers mandaariina",
-    cuartodechenz: "specificClasses_containers crissworkoutt",
-
-  },
+// Fondos base por rol
+const tagBaseBackgrounds = {
+  sub: susBackgrounds.sus_fondo,
+  mod: susBackgrounds.mod_fondo,
+  vip: susBackgrounds.vip_fondo,
+  prime: susBackgrounds.prime_fondo, // este lo puedes mover si lo separas
+  viewer: susBackgrounds.viewer,
 };
 
 const InfoUser_component = ({ user, username }) => {
-  const [clases, setClases] = useState({});
+  const [styles, setStyles] = useState({});
+  const [stylesTasks, setStylesTasks] = useState();
+
 
   useEffect(() => {
     if (!user || !user.tag) return;
-  
+
     const tagLower = user.tag.toLowerCase().trim();
-    const normalizedName = user.name?.toLowerCase().trim() || '';
-  
-    let newClasses = {
-      container: "user_fondo infoUser_containers",
-      info_items: "p-[0.2em]",
-      info_title: "flex justify-center items-start px-[1em] text-center",
-      info_title_h2: "m-3 text-3xl h-[1.5em] w-[12em] rounded-[0.2em] bg-black",
-      info_header: "flex flex-row flex-wrap",
-      info_header_div: "px-[1em] m-[0.3em] rounded-[1em] bg-black",
-      task_container: "flex flex-col justify-center",
-      task_header: "task-header",
-    };
-  
-    console.log("Nombre original:", user.name);
-    console.log("Normalizado:", normalizedName);
-    console.log("Tag original:", user.tag);
-    console.log("Tag normalizado:", tagLower);
-  
-    // Verificar si hay clase específica
-    if (userSpecificClasses[tagLower]?.[normalizedName]) {
-      console.log("Clase específica encontrada");
-      newClasses.container = userSpecificClasses[tagLower][normalizedName];
-    } else if (tagBaseClasses[tagLower]) {
-      console.log("Usando clase base del tag");
-      newClasses.container = tagBaseClasses[tagLower];
+    const normalizedName = user.name?.toLowerCase().trim() || "";
+
+    // Selección del objeto según rol
+    let backgroundSets = {};
+    if (tagLower === "sub") backgroundSets = susBackgrounds;
+    if (tagLower === "vip") backgroundSets = vipBackgrounds;
+    if (tagLower === "mod") backgroundSets = modBackgrounds;
+
+    // 1. Fondo personalizado si existe
+    let backgroundImage = backgroundSets[normalizedName];
+    if (backgroundImage) {
+      setStylesTasks(`infoUser_containers ${user?.name}`);
     }
-  
-    setClases(newClasses);
+
+    // 2. Fondo base del rol si no hay personalizado
+    if (!backgroundImage) {
+      backgroundImage = tagBaseBackgrounds[tagLower] || tagBaseBackgrounds.viewer;
+      setStylesTasks(`infoUser_containers ${user?.tag}`);
+    }
+
+    // Hace 10 horas que revisando modulo por modulo. 
+    // Para mi el error estaba en este try.catch que me estaba ocultando algún pecado que deje allí
+    // aca hay la trazabilidad, no es ninguna  falsa sensación de estabilidad
+    // bueno... no queda más que ejecutar 
+
+
+    setStyles({
+      backgroundImage: `url(${backgroundImage})`,
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "cover",
+      backgroundPosition: "bottom",
+      borderRadius: "1em",
+    });
   }, [user]);
-  
 
   return (
     <div className="maincontainer">
-      <div className={clases.container}>
-        <div className={clases.info_items}>
-          <div className={clases.info_title}>
-            <h2 className={clases.info_title_h2}>{username}</h2>
+      <div className={stylesTasks} style={styles}>
+        <div className="container_header ">
+          <div className="header_user">
+            <h2>
+              {username}
+            </h2>
           </div>
 
-          <div className={clases.info_header}>
+          <div className="header_info">
             {user?.personaldata?.[0]?.birth && (
-              <div className={clases.info_header_div}>
-                🎂 Cumple: {user.personaldata[0].birth}
-              </div>
+              <div className="">🎂 Cumple: {user.personaldata[0].birth}</div>
             )}
             {user?.personaldata?.[0]?.sign && (
-              <div className={clases.info_header_div}>
-                Signo zodiacal: {user.personaldata[0].sign}
-              </div>
+              <div className="">Signo zodiacal: {user.personaldata[0].sign}</div>
             )}
             {user?.tasks?.length > 0 && (
-              <div className={clases.info_header_div}>
-                📋 Tareas: {user.tasks.length}
-              </div>
+              <div className="">📋 Tareas: {user.tasks.length}</div>
             )}
             {user?.exams?.length > 0 && (
-              <div className={clases.info_header_div}>
-                📅 Exámenes: {user.exams.length}
-              </div>
+              <div className="">📅 Exámenes: {user.exams.length}</div>
             )}
             {user?.personaldata?.[0]?.nationality && (
-              <div className={clases.info_header_div}>
+              <div className="">
                 🪪 Nacionalidad: {user.personaldata[0].nationality}
               </div>
             )}
             {user?.personaldata?.[0]?.oppositionfor && (
-              <div className={clases.info_header_div}>
+              <div className="">
                 📄 Oposito: {user.personaldata[0]?.oppositionfor}
               </div>
             )}
             {user?.personaldata?.[0]?.studyfor && (
-              <div className={clases.info_header_div}>
+              <div className="">
                 📓 Estudio: {user.personaldata[0]?.studyfor}
               </div>
             )}
             {user?.personaldata?.[0]?.instagram && (
-              <div className={clases.info_header_div}>
+              <div className="">
                 📷 Instagram: {user.personaldata[0].instagram}
               </div>
             )}

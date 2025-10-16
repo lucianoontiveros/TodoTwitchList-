@@ -44,7 +44,10 @@ import {
   saveLocalStorageFile,
 } from "../data/LocalStorage/controllerLocalStorage";
 
-export const monitorMessage = (
+import { repairBrokenUsers } from "./repairUsers";
+import client from "../data/controllerClientTwitch/clientTwitch";
+
+export const monitorMessage = async (
   channel,
   tags,
   message,
@@ -74,15 +77,32 @@ export const monitorMessage = (
     taskLowercase.charAt(0).toUpperCase() + taskLowercase.slice(4);
 
 
-    const badges = Object.keys(tags.badges || {}).reduce((acc, key) => {
-      acc[key.toLowerCase()] = tags.badges[key];
-      return acc;
-    }, {});
+    // Parsear los badges, manejando tanto string como objeto
+    const badges = {};
+    if (tags.badges) {
+      if (typeof tags.badges === 'string') {
+        // Formato antiguo: "moderator/1,subscriber/12"
+        tags.badges.split(',').forEach(badge => {
+          const [name, version] = badge.split('/');
+          if (name && version) {
+            badges[name.toLowerCase()] = version;
+          }
+        });
+      } else if (typeof tags.badges === 'object') {
+        // Formato nuevo: { moderator: '1', subscriber: '12' }
+        Object.entries(tags.badges).forEach(([name, version]) => {
+          if (name && version) {
+            badges[name.toLowerCase()] = version;
+          }
+        });
+      }
+    }
 
-    const isPrime = badges.premium;
-    const isVip = badges.vip;
-    const isMod = badges.moderator;
-    const isSub = badges.subscriber;
+    const isPrime = badges.premium !== undefined;
+    const isVip = badges.vip !== undefined;
+    const isMod = badges.moderator !== undefined;
+    const isBroadcaster = badges.broadcaster !== undefined;
+    const isSub = badges.subscriber !== undefined || isBroadcaster;
 
     let isTag = isSub ? "sub" 
     : isMod ? "mod" 
@@ -185,6 +205,44 @@ console.log(isTag);
       break;
     case "info":
       getUserInfo(otherUsername, channel);
+      break;
+
+    // Comando para reparar usuarios (solo para el streamer)
+    case "reparar":
+      console.log(`Comando reparar recibido de ${username}`);
+      if (username === "cuartodechenz") {  // Asegurarse que solo el streamer puede usarlo
+        try {
+          console.log("Iniciando reparación de usuarios...");
+          await client.say(channel, "🔧 Iniciando reparación de usuarios...");
+          
+          const result = await repairBrokenUsers();
+          console.log("Resultado de la reparación:", result);
+          
+          if (result.repaired) {
+            const message = `✅ Reparación completada. Se repararon ${result.count} usuarios.`;
+            console.log(message);
+            await client.say(channel, message);
+            
+            // Mostrar los usuarios reparados en grupos para no exceder el límite de caracteres
+            const chunkSize = 5;
+            for (let i = 0; i < result.users.length; i += chunkSize) {
+              const chunk = result.users.slice(i, i + chunkSize);
+              await client.say(channel, `📋 Reparados: ${chunk.join(', ')}`);
+            }
+          } else {
+            const message = "ℹ️ No se encontraron usuarios que requieran reparación.";
+            console.log(message);
+            await client.say(channel, message);
+          }
+        } catch (error) {
+          const errorMsg = `❌ Error al reparar usuarios: ${error.message}`;
+          console.error(errorMsg, error);
+          await client.say(channel, errorMsg);
+        }
+      } else {
+        console.log(`Usuario no autorizado intentó usar !reparar: ${username}`);
+        await client.say(channel, "❌ Solo el streamer puede usar este comando.");
+      }
       break;
 
     // Administrar lista de examenes
