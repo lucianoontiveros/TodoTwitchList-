@@ -12,6 +12,7 @@ export const validateCommand = (message) => {
     "v",
     "marcar",
     "check",
+    "done",
     "x",
     "eliminar",
     "borrar",

@@ -17,6 +17,7 @@ import {
   modifyTaskUser,
   deleteAllListTaskUser,
   readyListAllListUser,
+  completeFirstTask,
 } from "../data/controllerProperties/controllerTasks";
 
 import {
@@ -160,6 +161,9 @@ console.log(isTag);
     case "marcar":
     case "check":
       readyTaskUser(username, arg, channel, isTag);
+      break;
+    case "done":
+      completeFirstTask(username, channel);
       break;
     case "x":
     case "eliminar":
