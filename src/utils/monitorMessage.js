@@ -160,17 +160,22 @@ console.log(isTag);
     case "v":
     case "marcar":
     case "check":
-      // Soporte multi-ID: "!marcar 12;34;56"
-      if (arg && arg.includes(";")) {
-        const ids = arg
+      // Soporte multi-ID con espacios opcionales: "!marcar 12; 34; 56;"
+      {
+        const idsText = taskLowercase.trim();
+        const ids = idsText
           .split(";")
           .map((s) => s.trim())
           .filter((s) => s.length > 0);
-        ids.forEach((id) => {
-          readyTaskUser(username, id, channel, isTag);
-        });
-      } else {
-        readyTaskUser(username, arg, channel, isTag);
+
+        if (ids.length > 1) {
+          ids.forEach((id) => {
+            readyTaskUser(username, id, channel, isTag);
+          });
+        } else {
+          const singleId = ids[0] ?? arg; // fallback al primer argumento
+          readyTaskUser(username, singleId, channel, isTag);
+        }
       }
       break;
     case "done":
@@ -180,17 +185,22 @@ console.log(isTag);
     case "eliminar":
     case "borrar":
     case "delete":
-      // Soporte multi-ID: "!eliminar 12;34;56"
-      if (arg && arg.includes(";")) {
-        const ids = arg
+      // Soporte multi-ID con espacios opcionales: "!eliminar 12; 34; 56;"
+      {
+        const idsText = taskLowercase.trim();
+        const ids = idsText
           .split(";")
           .map((s) => s.trim())
           .filter((s) => s.length > 0);
-        ids.forEach((id) => {
-          deleteTaskUser(username, id, channel, isTag);
-        });
-      } else {
-        deleteTaskUser(username, arg, channel, isTag);
+
+        if (ids.length > 1) {
+          ids.forEach((id) => {
+            deleteTaskUser(username, id, channel, isTag);
+          });
+        } else {
+          const singleId = ids[0] ?? arg; // fallback al primer argumento
+          deleteTaskUser(username, singleId, channel, isTag);
+        }
       }
       break;
     case "modificar":
