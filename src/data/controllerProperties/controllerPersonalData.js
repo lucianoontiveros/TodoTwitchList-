@@ -222,6 +222,23 @@ const addCroquetasTotal = (user, croquetas, channel) => {
   sendMensaje(MESSAGE.addCroquetasUser(user, croquetas), channel);
 };
 
+// Sumar croquetas a un usuario sin consumir puntos
+const grantCroquetas = (user, amount, channel) => {
+  try {
+    // Asegurar usuario y estructura
+    foundOrCreateUser(user, users[user]?.tag || "none");
+    reviewPersonalData(user);
+
+    // Calcular nuevo total
+    const current = users[user].personaldata[0].croquetastotal || 0;
+    const next = current + (Number.isFinite(amount) ? amount : 0);
+
+    // Actualizar y avisar
+    addCroquetasTotal(user, next, channel);
+    registrationUsers(users);
+  } catch (e) {}
+};
+
 const giveCroquetas = (user, channel) => {
   reviewPersonalData(user);
   if (users[user].personaldata[0].points !== 0) {
@@ -242,4 +259,5 @@ export {
   addCroquetasTotal,
   giveCroquetas,
   bonusPoint,
+  grantCroquetas,
 };

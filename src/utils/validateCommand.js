@@ -28,7 +28,7 @@ export const validateCommand = (message) => {
     "instagram",
     "opositopara",
     "estudiopara",
-    "croqueta",
+    "giveCroquetas",
     "nacionalidad",
     "datos",
     "info",
@@ -37,6 +37,8 @@ export const validateCommand = (message) => {
     "reviewexam",
     "deleteallexam",
     "reparar", // Agregado el comando reparar
+    "croquetas50",
+    "dar50",
   ]);
 
   const command = message.slice(1).split(" ")[0].toLowerCase();

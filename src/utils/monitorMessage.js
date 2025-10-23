@@ -35,6 +35,7 @@ import {
   addOppositionfor,
   addStudyFor,
   giveCroquetas,
+  grantCroquetas,
 } from "../data/controllerProperties/controllerPersonalData";
 
 // Importaciones de utilidad con el localStorage
@@ -242,6 +243,28 @@ console.log(isTag);
     case "info":
       getUserInfo(otherUsername, channel);
       break;
+
+    // Otorgar 50 croquetas a un usuario (solo streamer)
+    case "croquetas50":
+    case "dar50": {
+      if (username !== "cuartodechenz") {
+        await client.say(channel, "❌ Solo el streamer puede usar este comando.");
+        break;
+      }
+      const targetRaw = (arg || taskLowercase).trim();
+      const target = targetRaw.replace(/^@/, "");
+      if (!target) {
+        await client.say(channel, "Uso: !croquetas50 <usuario> | !dar50 <usuario>");
+        break;
+      }
+      try {
+        grantCroquetas(target, 50, channel);
+        await client.say(channel, `🍪 Se otorgaron 50 croquetas a @${target}.`);
+      } catch (e) {
+        await client.say(channel, "❌ No se pudo otorgar croquetas.");
+      }
+      break;
+    }
 
     // Comando para reparar usuarios (solo para el streamer)
     case "reparar":
