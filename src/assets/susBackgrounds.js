@@ -48,6 +48,8 @@ import lulaluzz from "./lulaluzz.jpeg"
 import andirivero1312 from "./andirivero1312.jpg"
 import cande_pl from "./cande_pl.png"
 import serolae from "./serolae.jpg"
+import pablinn12lp from "./pablinn12lp.jpg"
+import valetpwk from "./valetpwk.jpeg"
  
 export const susBackgrounds = {
     agos__________ : agos__________,
