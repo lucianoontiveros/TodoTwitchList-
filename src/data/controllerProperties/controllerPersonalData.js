@@ -13,7 +13,7 @@ class PersonalData {
     this.instagram;
     this.oppositionfor;
     this.studyfor;
-    this.croquetastotal;
+    this.croquetastotal = 0;
   }
 }
 
@@ -46,11 +46,11 @@ const MESSAGE = {
     `${user}, 😐 no tiene puntos. Puede generar los mismos registrando y gestionando tus tareas y examenes`,
 };
 
-const reviewPersonalData = (user) => {
+const reviewPersonalData = (user, channel) => {
   if (!users[user]?.personaldata?.length) {
     const personalDataUser = new PersonalData();
     users[user] = { ...users[user], personaldata: [personalDataUser] }; // Evitar mutaciones directas
-    sendMensaje(MESSAGE.addConfirmDataUser(user));
+    if (channel) sendMensaje(MESSAGE.addConfirmDataUser(user), channel);
     registrationUsers(users);
   }
 };
@@ -227,7 +227,7 @@ const grantCroquetas = (user, amount, channel) => {
   try {
     // Asegurar usuario y estructura
     foundOrCreateUser(user, users[user]?.tag || "none");
-    reviewPersonalData(user);
+    reviewPersonalData(user, channel);
 
     // Calcular nuevo total
     const current = users[user].personaldata[0].croquetastotal || 0;
@@ -240,8 +240,8 @@ const grantCroquetas = (user, amount, channel) => {
 };
 
 const giveCroquetas = (user, channel) => {
-  reviewPersonalData(user);
-  if (users[user].personaldata[0].points !== 0) {
+  reviewPersonalData(user, channel);
+  if (users[user].personaldata[0].points > 0) {
     let croquetas = users[user].personaldata[0].croquetastotal + 1 || 1;
     addCroquetasTotal(user, croquetas, channel);
     updatePersonalData(user, "points", users[user].personaldata[0].points - 1);

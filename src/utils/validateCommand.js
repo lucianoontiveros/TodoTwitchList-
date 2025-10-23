@@ -28,6 +28,7 @@ export const validateCommand = (message) => {
     "instagram",
     "opositopara",
     "estudiopara",
+    "croqueta",
     "giveCroquetas",
     "nacionalidad",
     "datos",
