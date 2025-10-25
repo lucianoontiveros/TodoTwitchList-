@@ -96,6 +96,8 @@ export const susBackgrounds = {
     lulaluzz : lulaluzz,
     andirivero1312 : andirivero1312,
     serolae : serolae,
+    valetpwk: valetpwk,
+    pablinn12lp : pablinn12lp,
     sus_fondo : sus_fondo,
     vip_fondo : vip_fondo,
     mod_fondo : mod_fondo,
