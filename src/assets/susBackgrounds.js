@@ -50,6 +50,7 @@ import cande_pl from "./cande_pl.png"
 import serolae from "./serolae.jpg"
 import pablinn12lp from "./pablinn12lp.jpg"
 import valetpwk from "./valetpwk.jpeg"
+import polarizemile from "./polarizemile.jpeg";
  
 export const susBackgrounds = {
     agos__________ : agos__________,
@@ -98,6 +99,8 @@ export const susBackgrounds = {
     serolae : serolae,
     valetpwk: valetpwk,
     pablinn12lp : pablinn12lp,
+    polarizemile : polarizemile,
+
     sus_fondo : sus_fondo,
     vip_fondo : vip_fondo,
     mod_fondo : mod_fondo,

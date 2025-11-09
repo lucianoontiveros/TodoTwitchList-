@@ -1003,7 +1003,7 @@ margin-bottom: 0.1em;
 /* -------------------------------------------------------- */
 
 .pablinn12lp {
-  color: #BFB8AE ;
+  color: #BFB8AE;
 }
 
 .pablinn12lp .task-header-title {
@@ -1018,6 +1018,26 @@ margin-bottom: 0.1em;
   font-size: medium;
   background-color: #BFB8AE ;
 }
+
+/* -------------------------------------------------------- */
+
+.polarizeMile {
+  color: #F2B077;
+}
+
+.polarizeMile .task-header-title {
+  color: #F2B077;
+}
+
+.polarizeMile .task-item {
+  color: #F2B077;
+}
+
+.polarizeMile .task-item .task-id {
+  font-size: medium;
+  background-color: #F2B077;
+}
+/* -------------------------------------------------------- */
 
 /* -------------------------------------------------------- */
 /* #F2D272 */

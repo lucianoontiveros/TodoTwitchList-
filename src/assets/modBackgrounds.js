@@ -24,6 +24,7 @@ import serolae from "./serolae.jpg"
 import pablinn12lp from "./pablinn12lp.jpg"
 import valetpwk from "./valetpwk.jpeg"
 import wandazk from "./wandazk.png";
+import polarizemile from "./polarizemile.jpeg";
 
 
  
@@ -34,5 +35,5 @@ export const modBackgrounds = {
   mandaariina: mandaariina,
   mariong898 : mariong898,
   cande_pl : cande_pl,
-  cuartodechenz: pablinn12lp,
+  cuartodechenz: polarizemile,
 };
