@@ -76,6 +76,31 @@ margin-bottom: 0.1em;
   font-size: 0.7em;
 }
 
+/* Animación base reutilizable */
+.hidden-section {
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Si querés que parezca más cinematográfico */
+.fade-in {
+  filter: blur(0);
+  transform: translateY(0) scale(1);
+}
+
+.hidden-section {
+  filter: blur(8px);
+  transform: translateY(20px) scale(0.98);
+}
+
+
 /* MODERADORES: Propiedades para el fondo y colores de tareas  */
 .mod {
   background: url("/img/mod_fondo.jpeg");
