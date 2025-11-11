@@ -1065,6 +1065,26 @@ margin-bottom: 0.1em;
 /* -------------------------------------------------------- */
 
 /* -------------------------------------------------------- */
+
+.diaaazm {
+  color: #F2C2CF;
+}
+
+.diaaazm .task-header-title {
+  color: #F2C2CF;
+}
+
+.diaaazm .task-item {
+  color: #F2C2CF;
+}
+
+.diaaazm .task-item .task-id {
+  font-size: medium;
+  background-color: #F2C2CF;
+}
+/* -------------------------------------------------------- */
+
+/* -------------------------------------------------------- */
 /* #F2D272 */
 .cuartodechenz {
   color: #F2D272;
