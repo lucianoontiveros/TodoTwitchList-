@@ -18,14 +18,14 @@ class TwitchClient {
 
     this.client = new tmi.Client({
       options: { 
-        debug: true,
+        debug: false, // Cambiado a false para reducir logs
         skipMembership: true,
         skipUpdatingEmotesets: true
       },
       connection: {
         secure: true,
-        reconnect: true,
-        timeout: 20000
+        reconnect: false, // Deshabilitar reconexión automática de tmi.js
+        timeout: 30000
       },
       identity: {
         username,
@@ -35,58 +35,87 @@ class TwitchClient {
     });
 
     this.keepAliveInterval = null;
+    this.isConnected = false;
     this.setupEventHandlers();
   }
 
   setupEventHandlers() {
     this.client.on('connected', (address, port) => {
       console.log(`Bot conectado a ${address}:${port}`);
+      this.isConnected = true;
       this.startKeepAlive();
     });
 
     this.client.on('disconnected', (reason) => {
       console.log('Bot desconectado:', reason);
+      this.isConnected = false;
+      this.stopKeepAlive();
     });
 
     this.client.on('error', (error) => {
       console.error('Error en el bot:', error);
+      this.isConnected = false;
     });
   }
 
   startKeepAlive() {
+    this.stopKeepAlive();
+    
+    this.keepAliveInterval = setInterval(() => {
+      if (this.isConnected) {
+        fetch(KEEP_ALIVE_URL)
+          .then(() => console.log('Keep-alive ping enviado'))
+          .catch(err => console.error('Error en keep-alive:', err));
+      }
+    }, 270000);
+  }
+
+  stopKeepAlive() {
     if (this.keepAliveInterval) {
       clearInterval(this.keepAliveInterval);
+      this.keepAliveInterval = null;
     }
-
-    this.keepAliveInterval = setInterval(() => {
-      fetch(KEEP_ALIVE_URL)
-        .then(() => console.log('Keep-alive ping enviado'))
-        .catch(err => console.error('Error en keep-alive:', err));
-    }, 270000); // 4.5 minutos
   }
 
   checkConnection() {
-    return this.client.readyState() === 'OPEN';
+    return this.isConnected && this.client.readyState() === 'OPEN';
   }
-}
 
-let twitchClient;
-
-try {
-  twitchClient = new TwitchClient();
-  if (!twitchClient.client) {
-    throw new Error('Cliente Twitch no inicializado correctamente');
-  }
-} catch (error) {
-  console.error('Error al inicializar el cliente Twitch:', error);
-  twitchClient = {
-    client: {
-      connect: () => Promise.resolve(),
-      on: () => {},
-      off: () => {},
-      readyState: () => 'CLOSED'
+  disconnect() {
+    this.stopKeepAlive();
+    this.isConnected = false;
+    if (this.client) {
+      this.client.disconnect();
     }
-  };
+  }
 }
 
-export default twitchClient.client;
+// Singleton pattern para evitar múltiples instancias
+let twitchClientInstance = null;
+
+export const getTwitchClient = () => {
+  if (!twitchClientInstance) {
+    try {
+      twitchClientInstance = new TwitchClient();
+      if (!twitchClientInstance.client) {
+        throw new Error('Cliente Twitch no inicializado correctamente');
+      }
+    } catch (error) {
+      console.error('Error al inicializar el cliente Twitch:', error);
+      twitchClientInstance = {
+        client: {
+          connect: () => Promise.resolve(),
+          on: () => {},
+          removeListener: () => {},
+          disconnect: () => {},
+          readyState: () => 'CLOSED'
+        },
+        isConnected: false,
+        disconnect: () => {}
+      };
+    }
+  }
+  return twitchClientInstance;
+};
+
+export default getTwitchClient().client;

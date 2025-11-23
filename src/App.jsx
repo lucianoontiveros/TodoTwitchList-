@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef, useCallback, memo } from "react";
-import client from "./data/controllerClientTwitch/clientTwitch.js";
+import { getTwitchClient } from "./data/controllerClientTwitch/clientTwitch.js";
 
 // Importación de componentes
 import UserList from "./components/UserList";
@@ -12,13 +12,21 @@ const App = memo(() => {
   const [currentUser, setCurrentUser] = useState(null);
   const [isInfoUserVisible, setIsInfoUserVisible] = useState(false);
   const [connectionStatus, setConnectionStatus] = useState("connecting");
+  
   const prevUser = useRef(null);
   const timeoutRef = useRef(null);
   const reconnectAttempts = useRef(0);
-  const maxReconnectAttempts = 5;
+  const messageHandlerRef = useRef(null);
+  const maxReconnectAttempts = 3;
+  const reconnectTimeoutRef = useRef(null);
+
+  // Obtener instancia única del cliente
+  const twitchClient = getTwitchClient();
 
   // Manejador de mensajes memoizado
   const handleMessage = useCallback((channel, tags, message, self) => {
+    if (self) return;
+    
     try {
       monitorMessage(
         channel,
@@ -35,64 +43,102 @@ const App = memo(() => {
     }
   }, []);
 
-  // Manejador de reconexión
-  const handleReconnect = useCallback(() => {
-    if (reconnectAttempts.current < maxReconnectAttempts) {
-      reconnectAttempts.current += 1;
-      console.log(
-        `Intento de reconexión ${reconnectAttempts.current}/${maxReconnectAttempts}`
-      );
+  // Limpiar todos los timeouts y reconexiones
+  const cleanupAll = useCallback(() => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
+    if (reconnectTimeoutRef.current) {
+      clearTimeout(reconnectTimeoutRef.current);
+      reconnectTimeoutRef.current = null;
+    }
+    if (messageHandlerRef.current && twitchClient.client) {
+      twitchClient.client.removeListener("message", messageHandlerRef.current);
+    }
+  }, [twitchClient]);
 
-      setTimeout(() => {
-        client.connect().catch((err) => {
-          console.error("Error en la reconexión:", err);
-          setConnectionStatus("error");
-        });
-      }, Math.min(1000 * Math.pow(2, reconnectAttempts.current), 3000));
-    } else {
+  // Manejador de reconexión con mejor control
+  const handleReconnect = useCallback(() => {
+    cleanupAll();
+    
+    if (reconnectAttempts.current >= maxReconnectAttempts) {
       setConnectionStatus("max_attempts_reached");
       console.error("Máximo número de intentos de reconexión alcanzado");
+      return;
     }
-  }, []);
+
+    reconnectAttempts.current += 1;
+    console.log(`Intento de reconexión ${reconnectAttempts.current}/${maxReconnectAttempts}`);
+
+    reconnectTimeoutRef.current = setTimeout(() => {
+      twitchClient.client.connect().catch((err) => {
+        console.error("Error en la reconexión:", err);
+        if (reconnectAttempts.current < maxReconnectAttempts) {
+          handleReconnect();
+        } else {
+          setConnectionStatus("error");
+        }
+      });
+    }, Math.min(3000 * reconnectAttempts.current, 10000));
+  }, [cleanupAll, twitchClient]);
 
   useEffect(() => {
-    // Configurar manejadores de eventos del cliente
-    const setupClientHandlers = () => {
-      client.on("message", handleMessage);
+    let isMounted = true;
 
-      client.on("connected", () => {
+    const setupClientHandlers = () => {
+      // Registrar handler una sola vez
+      messageHandlerRef.current = handleMessage;
+      twitchClient.client.on("message", messageHandlerRef.current);
+
+      const connectedHandler = () => {
+        if (!isMounted) return;
         setConnectionStatus("connected");
         reconnectAttempts.current = 0;
-      });
+      };
 
-      client.on("disconnected", () => {
+      const disconnectedHandler = () => {
+        if (!isMounted) return;
         setConnectionStatus("disconnected");
         handleReconnect();
-      });
+      };
 
-      client.on("error", (err) => {
+      const errorHandler = (err) => {
+        if (!isMounted) return;
         console.error("Error en la conexión:", err);
         setConnectionStatus("error");
-      });
+      };
+
+      twitchClient.client.on("connected", connectedHandler);
+      twitchClient.client.on("disconnected", disconnectedHandler);
+      twitchClient.client.on("error", errorHandler);
+
+      // Retornar funciones de limpieza
+      return () => {
+        twitchClient.client.removeListener("connected", connectedHandler);
+        twitchClient.client.removeListener("disconnected", disconnectedHandler);
+        twitchClient.client.removeListener("error", errorHandler);
+      };
     };
 
     // Iniciar conexión
-    setupClientHandlers();
-    client.connect().catch((err) => {
+    const cleanupHandlers = setupClientHandlers();
+    
+    twitchClient.client.connect().catch((err) => {
+      if (!isMounted) return;
       console.error("Error en la conexión inicial:", err);
       setConnectionStatus("error");
       handleReconnect();
     });
 
-    // Limpieza
+    // Limpieza completa al desmontar
     return () => {
-      client.removeListener("message", handleMessage);
-      client.disconnect();
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-      }
+      isMounted = false;
+      cleanupAll();
+      cleanupHandlers();
+      twitchClient.disconnect();
     };
-  }, [handleMessage, handleReconnect]);
+  }, [handleMessage, handleReconnect, cleanupAll, twitchClient]);
 
   // Renderizado condicional basado en el estado de conexión
   if (
