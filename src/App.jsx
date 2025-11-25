@@ -138,7 +138,7 @@ const App = memo(() => {
       cleanupHandlers();
       twitchClient.disconnect();
     };
-  }, [handleMessage, handleReconnect, cleanupAll, twitchClient]);
+  }, []);
 
   // Renderizado condicional basado en el estado de conexión
   if (
