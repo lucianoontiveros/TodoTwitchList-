@@ -24,7 +24,7 @@ class TwitchClient {
       },
       connection: {
         secure: true,
-        reconnect: false, // Deshabilitar reconexión automática de tmi.js
+        reconnect: true, // Deshabilitar reconexión automática de tmi.js
         timeout: 30000
       },
       identity: {
