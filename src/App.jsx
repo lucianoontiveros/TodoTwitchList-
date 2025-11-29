@@ -23,8 +23,8 @@ const App = memo(() => {
   // Obtener instancia única del cliente
   const twitchClient = getTwitchClient();
 
-   /* useEffect(() => {
-    const REFRESH_TIME_MINUTES = 1; // Cambialo: 5, 10, 15...
+    useEffect(() => {
+    const REFRESH_TIME_MINUTES = 30; // Cambialo: 5, 10, 15...
     console.log("Me ejecute");
     const interval = setInterval(() => {
       console.log("Auto-refresh OBS source");
@@ -32,7 +32,7 @@ const App = memo(() => {
     }, REFRESH_TIME_MINUTES * 60 * 1000);
 
     return () => clearInterval(interval);
-    }, []); */
+    }, []); 
 
   // Manejador de mensajes memoizado
   const handleMessage = useCallback((channel, tags, message, self) => {
