@@ -26,7 +26,7 @@ import valetpwk from "./valetpwk.jpeg"
 import wandazk from "./wandazk.png";
 import polarizemile from "./polarizemile.jpeg";
 import diaaazm from "./diaaazm.jpg";
-import boniataereunarat from "./boniataereunarat.jpeg";
+import boniataereunarata from "./boniataereunarata.jpeg";
 
 
  
@@ -37,5 +37,5 @@ export const modBackgrounds = {
   mandaariina: mandaariina,
   mariong898 : mariong898,
   cande_pl : cande_pl,
-  cuartodechenz : boniataereunarat,
+  cuartodechenz : boniataereunarata,
 };

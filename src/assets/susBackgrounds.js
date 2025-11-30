@@ -52,7 +52,7 @@ import pablinn12lp from "./pablinn12lp.jpg"
 import valetpwk from "./valetpwk.jpeg"
 import polarizemile from "./polarizemile.jpeg";
 import diaaazm from "./diaaazm.jpg";
-import boniataereunarat from "./boniataereunarat.jpeg";
+import boniataereunarata from "./boniataereunarata.jpeg";
  
 export const susBackgrounds = {
     agos__________ : agos__________,
@@ -103,7 +103,7 @@ export const susBackgrounds = {
     pablinn12lp : pablinn12lp,
     polarizemile : polarizemile,
     diaaazm : diaaazm,
-    boniataereunarat : boniataereunarat,
+    boniataereunarata : boniataereunarata,
     
     sus_fondo : sus_fondo,
     vip_fondo : vip_fondo,
