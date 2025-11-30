@@ -27,6 +27,7 @@ import wandazk from "./wandazk.png";
 import polarizemile from "./polarizemile.jpeg";
 import diaaazm from "./diaaazm.jpg";
 import boniataereunarata from "./boniataereunarata.jpeg";
+import hyant08 from "./hyant08.jpg"
 
 
  
@@ -37,5 +38,5 @@ export const modBackgrounds = {
   mandaariina: mandaariina,
   mariong898 : mariong898,
   cande_pl : cande_pl,
-  cuartodechenz : boniataereunarata,
+  cuartodechenz : hyant08,
 };

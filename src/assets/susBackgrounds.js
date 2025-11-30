@@ -53,6 +53,7 @@ import valetpwk from "./valetpwk.jpeg"
 import polarizemile from "./polarizemile.jpeg";
 import diaaazm from "./diaaazm.jpg";
 import boniataereunarata from "./boniataereunarata.jpeg";
+import hyant08 from "./hyant08.jpg"
  
 export const susBackgrounds = {
     agos__________ : agos__________,
@@ -104,6 +105,7 @@ export const susBackgrounds = {
     polarizemile : polarizemile,
     diaaazm : diaaazm,
     boniataereunarata : boniataereunarata,
+    hyant08: hyant08,
     
     sus_fondo : sus_fondo,
     vip_fondo : vip_fondo,
