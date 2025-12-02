@@ -1124,6 +1124,24 @@ margin-bottom: 0.1em;
 }
 /* -------------------------------------------------------- */
 
+
+.luluprcl {
+  color: #fea486;
+}
+
+.luluprcl .task-header-title {
+  color: #fea486;
+}
+
+.luluprcl .task-item {
+  color: #fea486;
+}
+
+.luluprcl .task-item .task-id {
+  font-size: medium;
+  background-color: #fea486;
+}
+/* -------------------------------------------------------- */
 /* -------------------------------------------------------- */
 /* #F2D272 */
 .cuartodechenz {

@@ -54,6 +54,7 @@ import polarizemile from "./polarizemile.jpeg";
 import diaaazm from "./diaaazm.jpg";
 import boniataereunarata from "./boniataereunarata.jpeg";
 import hyant08 from "./hyant08.jpg"
+import luluprcl from "./luluprcl.jpg"
  
 export const susBackgrounds = {
     agos__________ : agos__________,
