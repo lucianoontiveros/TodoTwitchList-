@@ -107,7 +107,7 @@ export const susBackgrounds = {
     diaaazm : diaaazm,
     boniataereunarata : boniataereunarata,
     hyant08: hyant08,
-    luluprcl: lulaluzz
+    luluprcl: luluprcl,
     
     sus_fondo : sus_fondo,
     vip_fondo : vip_fondo,
