@@ -48,6 +48,13 @@ import lulaluzz from "./lulaluzz.jpeg"
 import andirivero1312 from "./andirivero1312.jpg"
 import cande_pl from "./cande_pl.png"
 import serolae from "./serolae.jpg"
+import pablinn12lp from "./pablinn12lp.jpg"
+import valetpwk from "./valetpwk.jpeg"
+import polarizemile from "./polarizemile.jpeg";
+import diaaazm from "./diaaazm.jpg";
+import boniataereunarata from "./boniataereunarata.jpeg";
+import hyant08 from "./hyant08.jpg"
+import luluprcl from "./luluprcl.jpg"
  
 export const susBackgrounds = {
     agos__________ : agos__________,
@@ -94,6 +101,14 @@ export const susBackgrounds = {
     lulaluzz : lulaluzz,
     andirivero1312 : andirivero1312,
     serolae : serolae,
+    valetpwk: valetpwk,
+    pablinn12lp : pablinn12lp,
+    polarizemile : polarizemile,
+    diaaazm : diaaazm,
+    boniataereunarata : boniataereunarata,
+    hyant08: hyant08,
+    luluprcl: luluprcl,
+    
     sus_fondo : sus_fondo,
     vip_fondo : vip_fondo,
     mod_fondo : mod_fondo,

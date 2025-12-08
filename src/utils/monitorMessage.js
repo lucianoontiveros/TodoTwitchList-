@@ -17,6 +17,7 @@ import {
   modifyTaskUser,
   deleteAllListTaskUser,
   readyListAllListUser,
+  completeFirstTask,
 } from "../data/controllerProperties/controllerTasks";
 
 import {
@@ -34,6 +35,7 @@ import {
   addOppositionfor,
   addStudyFor,
   giveCroquetas,
+  grantCroquetas,
 } from "../data/controllerProperties/controllerPersonalData";
 
 // Importaciones de utilidad con el localStorage
@@ -159,13 +161,48 @@ console.log(isTag);
     case "v":
     case "marcar":
     case "check":
-      readyTaskUser(username, arg, channel, isTag);
+      // Soporte multi-ID con espacios opcionales: "!marcar 12; 34; 56;"
+      {
+        const idsText = taskLowercase.trim();
+        const ids = idsText
+          .split(";")
+          .map((s) => s.trim())
+          .filter((s) => s.length > 0);
+
+        if (ids.length > 1) {
+          ids.forEach((id) => {
+            readyTaskUser(username, id, channel, isTag);
+          });
+        } else {
+          const singleId = ids[0] ?? arg; // fallback al primer argumento
+          readyTaskUser(username, singleId, channel, isTag);
+        }
+      }
+      break;
+    case "done":
+      completeFirstTask(username, channel);
       break;
     case "x":
     case "eliminar":
     case "borrar":
     case "delete":
-      deleteTaskUser(username, arg, channel, isTag);
+      // Soporte multi-ID con espacios opcionales: "!eliminar 12; 34; 56;"
+      {
+        const idsText = taskLowercase.trim();
+        const ids = idsText
+          .split(";")
+          .map((s) => s.trim())
+          .filter((s) => s.length > 0);
+
+        if (ids.length > 1) {
+          ids.forEach((id) => {
+            deleteTaskUser(username, id, channel, isTag);
+          });
+        } else {
+          const singleId = ids[0] ?? arg; // fallback al primer argumento
+          deleteTaskUser(username, singleId, channel, isTag);
+        }
+      }
       break;
     case "modificar":
     case "cambiar":
@@ -206,6 +243,28 @@ console.log(isTag);
     case "info":
       getUserInfo(otherUsername, channel);
       break;
+
+    // Otorgar 50 croquetas a un usuario (solo streamer)
+    case "croquetas50":
+    case "dar50": {
+      if (username !== "cuartodechenz") {
+        await client.say(channel, "❌ Solo el streamer puede usar este comando.");
+        break;
+      }
+      const targetRaw = (arg || taskLowercase).trim();
+      const target = targetRaw.replace(/^@/, "");
+      if (!target) {
+        await client.say(channel, "Uso: !croquetas50 <usuario> | !dar50 <usuario>");
+        break;
+      }
+      try {
+        grantCroquetas(target, 50, channel);
+        await client.say(channel, `🍪 Se otorgaron 50 croquetas a @${target}.`);
+      } catch (e) {
+        await client.say(channel, "❌ No se pudo otorgar croquetas.");
+      }
+      break;
+    }
 
     // Comando para reparar usuarios (solo para el streamer)
     case "reparar":
