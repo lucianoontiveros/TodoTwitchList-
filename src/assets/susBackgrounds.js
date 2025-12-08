@@ -19,20 +19,15 @@ import liln1k from "./liln1k.jpg";
 import macacuelloo from "./macacuelloo.jpg";
 import mandaariina from "./mandaariina.jpg";
 import mariong898 from "./mariong898.png";
-import mod_fondo from "./mod_fondo.jpeg";
 import mont_opo from "./mont_opo.png";
 import olmediito from "./olmediito.png";
-import prime_fondo from "./prime_fondo.jpeg";
 import proposito from "./proposito.png";
 import rsofiaa from "./rsofiaa.jpg";
 import ruidodemate_rocio from "./ruidodemate_rocio.png";
 import sofamb1 from "./sofamb1.jpeg";
 import sofiaantok from "./sofiaantok.png";
 import summertime0805 from "./summertime0805.png";
-import sus_fondo from "./sus_fondo.jpeg";
 import valenm07 from "./valenm07.png";
-import viewer from "./viewer.jpeg";
-import vip_fondo from "./vip_fondo.jpeg";
 import wandazk from "./wandazk.png";
 import mmmericina from "./mmmericina.png";
 import Mariong898 from "./mariong898.png";
@@ -55,6 +50,14 @@ import diaaazm from "./diaaazm.jpg";
 import boniataereunarata from "./boniataereunarata.jpeg";
 import hyant08 from "./hyant08.jpg"
 import luluprcl from "./luluprcl.jpg"
+
+// clasificación por defecto
+import viewer from "./viewer.png";
+import vip_fondo from "./vip_fondo.png";
+import prime_fondo from "./prime_fondo.png";
+import sus_fondo from "./sus_fondo.png";
+import mod_fondo from "./mod_fondo.png";
+
  
 export const susBackgrounds = {
     agos__________ : agos__________,
