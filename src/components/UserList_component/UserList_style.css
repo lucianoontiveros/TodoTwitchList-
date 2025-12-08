@@ -1,18 +1,68 @@
 @import url('https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap');
 
+@keyframes shadowPulse {
+  0% {
+    opacity: 1; 
+    box-shadow: 0 0 10px 5px rgba(14, 242, 223, 0.989);
+  }
+  50% {
+    opacity: 1; 
+    box-shadow: 0 0 20px 10px rgba(14, 242, 223, 0.7);
+  }
+  100% {
+    opacity: 1; 
+    box-shadow: 0 0 10px 5px rgba(14, 242, 223, 0.989);
+  }
+}
+
 :root {
-  height: 45rem;
-  width: 31.25rem;
+  /* Dimensiones principales */
+  --container-height: 45rem;
+  --container-width: 31.25rem;
+  
+  /* Colores */
+  --color-primary: rgba(247, 246, 245, 0.989);
+  --color-text-light: rgba(255, 255, 255, 0.989);
+  --color-bg-dark: rgb(12, 14, 14);
+  --color-card-bg: rgba(2, 17, 19, 0.774);
+  
+  /* Sombras */
+  --shadow-primary: 0 0.4em 0.6em var(--color-primary);
+  
+  /* Bordes */
+  --border-radius-sm: 1.23rem;
+  --border-radius-md: 2em;
+  --border-radius-tag: 20px;
+  --border-primary: 0.125rem solid var(--color-primary);
+  
+  /* Espaciados */
+  --spacing-xs: 0.2em;
+  --spacing-sm: 0.5em;
+  --spacing-md: 0.625em;
+  --spacing-lg: 1em;
+  --spacing-xl: 2em;
+  
+  /* Tamaños de fuente */
+  --font-size-sm: 0.875em;
+  --font-size-md: 1rem;
+  --font-size-lg: 2rem;
+  
+  /* Anchos */
+  --title-min-width: 25rem;
+  
+  /* Dimensiones del contenedor */
+  height: var(--container-height);
+  width: var(--container-width);
   margin: 0;
 }
 
 .contenedor {
   display: grid;
   grid-template-columns: 1fr;
-  height: 45rem;
-  width: 31.25rem;
-  gap: 1rem;
-  padding: 1rem;
+  height: var(--container-height);
+  width: var(--container-width);
+  gap: var(--spacing-lg);
+  padding: var(--spacing-lg);
   box-sizing: border-box;
   font-optical-sizing: auto;
 }
@@ -23,33 +73,35 @@
   align-self: flex-end;
   width: auto;
   justify-content: flex-end;
-  background-color: rgba(2, 17, 19, 0.774);
-  color: rgba(226, 238, 237, 0.989);
-  padding: 1rem;
-  border-radius: 2em;
-  box-shadow: 0 0.4em 0.6em rgba(14, 242, 223, 0.989);
-  
+  background-color: var(--color-card-bg);
+  color: var(--color-text-light);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-primary);
+  animation: shadowPulse 3s infinite ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
+}
 
+.card:hover {
+  animation: shadowPulse 1.5s infinite ease-in-out;
 }
 
 .title_container {
   display: flex;
   justify-content: center;
   flex-direction: row;
-
 }
 
 .title_container strong {
-  font-size: 2rem;
+  font-size: var(--font-size-lg);
   font-weight: 800;
   text-align: center;
-  border-radius: 1.23rem;
-  min-width: 25rem;
-  margin: 0.625em;
-  padding: 0.625em;
-  background-color: rgb(12, 14, 14);
-  box-shadow: 0 0.4em 0.6em rgba(14, 242, 223, 0.989);
-
+  border-radius: var(--border-radius-sm);
+  min-width: var(--title-min-width);
+  margin: var(--spacing-md);
+  padding: var(--spacing-md);
+  background-color: var(--color-bg-dark);
+  box-shadow: var(--shadow-primary);
 }
 
 .tags_container {
@@ -57,32 +109,33 @@
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  padding-top: 0.5em;
-  border-top: 0.125rem solid rgba(14, 242, 223, 0.989);
+  padding-top: var(--spacing-sm);
+  border-top: var(--border-primary);
 }
 
 .tags_container p {
   margin: 5px;
   text-align: center;
-  border-radius: 20px;
-  font-size: 0.875em;
+  border-radius: var(--border-radius-tag);
+  font-size: var(--font-size-sm);
   font-weight: 600;
-  padding: 0.625em;
-  background-color: rgb(12, 14, 14);
+  padding: var(--spacing-md);
+  background-color: var(--color-bg-dark);
 }
 
 .tags_container p strong {
-  padding-left: 0.2em;
+  padding-left: var(--spacing-xs);
 }
 
 .info_conection_container {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  padding: 0.625em;
-  margin-top: 1em;
-  border-top: 0.125rem solid rgba(14, 242, 223, 0.989);
+  padding: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+  border-top: var(--border-primary);
 }
+
 .info_conection_container p strong {
   margin-left: 2px;
 }

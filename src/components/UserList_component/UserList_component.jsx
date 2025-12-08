@@ -1,6 +1,8 @@
 import React, { useCallback, useRef, memo } from "react";
 import TaskList_component from "../Tasklist_component/TaskList_component";
 import "../UserList_component/UserList_style.css";
+const gorrito = "./img/gorrito.png";
+
 
 const UserList_component = memo(({ currentUser }) => {
   const containerRef = useRef(null);
@@ -132,6 +134,8 @@ const UserList_component = memo(({ currentUser }) => {
                 'Fecha no disponible'}
             </strong>
           </p>
+          <img src={gorrito} alt="Gorrito" width="30" height="30" />
+
         </div>
       </div>
     </div>
