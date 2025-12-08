@@ -11,14 +11,20 @@ const tagBaseBackgrounds = {
   sub: susBackgrounds.sus_fondo,
   mod: susBackgrounds.mod_fondo,
   vip: susBackgrounds.vip_fondo,
-  prime: susBackgrounds.prime_fondo, // este lo puedes mover si lo separas
+  prime: susBackgrounds.prime_fondo,
   viewer: susBackgrounds.viewer,
 };
 
 const InfoUser_component = ({ user, username }) => {
   const [styles, setStyles] = useState({});
   const [stylesTasks, setStylesTasks] = useState();
+  const [showContent, setShowContent] = useState(false);
 
+  // Delay de 2 segundos para mostrar header_info y task-container juntos
+  useEffect(() => {
+    const timer = setTimeout(() => setShowContent(true), 2000);
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     if (!user || !user.tag) return;
@@ -26,29 +32,20 @@ const InfoUser_component = ({ user, username }) => {
     const tagLower = user.tag.toLowerCase().trim();
     const normalizedName = user.name?.toLowerCase().trim() || "";
 
-    // Selección del objeto según rol
     let backgroundSets = {};
     if (tagLower === "sub") backgroundSets = susBackgrounds;
     if (tagLower === "vip") backgroundSets = vipBackgrounds;
     if (tagLower === "mod") backgroundSets = modBackgrounds;
 
-    // 1. Fondo personalizado si existe
     let backgroundImage = backgroundSets[normalizedName];
     if (backgroundImage) {
       setStylesTasks(`infoUser_containers ${user?.name}`);
     }
 
-    // 2. Fondo base del rol si no hay personalizado
     if (!backgroundImage) {
       backgroundImage = tagBaseBackgrounds[tagLower] || tagBaseBackgrounds.viewer;
       setStylesTasks(`infoUser_containers ${user?.tag}`);
     }
-
-    // Hace 10 horas que revisando modulo por modulo. 
-    // Para mi el error estaba en este try.catch que me estaba ocultando algún pecado que deje allí
-    // aca hay la trazabilidad, no es ninguna  falsa sensación de estabilidad
-    // bueno... no queda más que ejecutar 
-
 
     setStyles({
       backgroundImage: `url(${backgroundImage})`,
@@ -62,50 +59,45 @@ const InfoUser_component = ({ user, username }) => {
   return (
     <div className="maincontainer">
       <div className={stylesTasks} style={styles}>
-        <div className="container_header ">
+        <div className="container_header">
           <div className="header_user">
-            <h2>
-              {username}
-            </h2>
+            <h2>{username}</h2>
           </div>
 
-          <div className="header_info">
+          <div
+            className={`header_info ${showContent ? "fade-in" : "hidden-section"}`}
+          >
             {user?.personaldata?.[0]?.birth && (
-              <div className="">🎂 Cumple: {user.personaldata[0].birth}</div>
+              <div>🎂 Cumple: {user.personaldata[0].birth}</div>
             )}
             {user?.personaldata?.[0]?.sign && (
-              <div className="">Signo zodiacal: {user.personaldata[0].sign}</div>
+              <div>Signo zodiacal: {user.personaldata[0].sign}</div>
             )}
             {user?.tasks?.length > 0 && (
-              <div className="">📋 Tareas: {user.tasks.length}</div>
+              <div>📋 Tareas: {user.tasks.length}</div>
             )}
             {user?.exams?.length > 0 && (
-              <div className="">📅 Exámenes: {user.exams.length}</div>
+              <div>📅 Exámenes: {user.exams.length}</div>
             )}
             {user?.personaldata?.[0]?.nationality && (
-              <div className="">
-                🪪 Nacionalidad: {user.personaldata[0].nationality}
-              </div>
+              <div>🪪 Nacionalidad: {user.personaldata[0].nationality}</div>
             )}
             {user?.personaldata?.[0]?.oppositionfor && (
-              <div className="">
-                📄 Oposito: {user.personaldata[0]?.oppositionfor}
-              </div>
+              <div>📄 Oposito: {user.personaldata[0]?.oppositionfor}</div>
             )}
             {user?.personaldata?.[0]?.studyfor && (
-              <div className="">
-                📓 Estudio: {user.personaldata[0]?.studyfor}
-              </div>
+              <div>📓 Estudio: {user.personaldata[0]?.studyfor}</div>
             )}
             {user?.personaldata?.[0]?.instagram && (
-              <div className="">
-                📷 Instagram: {user.personaldata[0].instagram}
-              </div>
+              <div>📷 Instagram: {user.personaldata[0].instagram}</div>
             )}
           </div>
         </div>
 
-        <div className="task-container">
+        {/* Task container con la misma animación */}
+        <div
+          className={`task-container ${showContent ? "fade-in" : "hidden-section"}`}
+        >
           {user?.tasks?.length > 0 && <Tasklist_component user={user} />}
           <div className="data">
             <p>ID: {user?._id || "Desconocido"}</p>

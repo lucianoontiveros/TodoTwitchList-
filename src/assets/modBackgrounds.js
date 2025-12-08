@@ -21,6 +21,13 @@ import camiichan15 from "./camiichan15.png"
 import lulaluzz from "./lulaluzz.jpeg"
 import andirivero1312 from "./andirivero1312.jpg"
 import serolae from "./serolae.jpg"
+import pablinn12lp from "./pablinn12lp.jpg"
+import valetpwk from "./valetpwk.jpeg"
+import wandazk from "./wandazk.png";
+import polarizemile from "./polarizemile.jpeg";
+import diaaazm from "./diaaazm.jpg";
+import boniataereunarata from "./boniataereunarata.jpeg";
+import luluprcl from "./luluprcl.jpg"
 
 
  
@@ -31,5 +38,5 @@ export const modBackgrounds = {
   mandaariina: mandaariina,
   mariong898 : mariong898,
   cande_pl : cande_pl,
-  cuartodechenz: serolae,
+  cuartodechenz : luluprcl,
 };

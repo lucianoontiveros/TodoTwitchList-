@@ -223,6 +223,32 @@ const readyListAllListUser = (user, channel, tag) => {
   registrationUsers(users);
 };
 
+const completeFirstTask = (user, channel) => {
+  // Verificar si el usuario existe y tiene tareas
+  if (!users[user] || !users[user].tasks || users[user].tasks.length === 0) {
+    sendMessage(MESSAGES.noTasks(user), channel);
+    return null;
+  }
+
+  // Obtener la primera tarea
+  const firstTask = users[user].tasks[0];
+  
+  // Marcar como completada
+  users[user].tasks = users[user].tasks.filter(task => task._id !== firstTask._id);
+  
+  // Guardar cambios
+  addDataPoints(user);
+  registrationUsers(users);
+  
+  // Enviar mensaje de confirmación (incluye ID)
+  sendMessage(
+    MESSAGES.readyTask(user, firstTask.description, firstTask._id),
+    channel
+  );
+  
+  return firstTask;
+};
+
 export {
   addTaskUser,
   reviewListTaskUser,
@@ -231,4 +257,6 @@ export {
   modifyTaskUser,
   deleteAllListTaskUser,
   readyListAllListUser,
+  completeFirstTask,
+  MESSAGES,
 };

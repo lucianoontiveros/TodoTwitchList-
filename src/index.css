@@ -76,6 +76,31 @@ margin-bottom: 0.1em;
   font-size: 0.7em;
 }
 
+/* Animación base reutilizable */
+.hidden-section {
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Si querés que parezca más cinematográfico */
+.fade-in {
+  filter: blur(0);
+  transform: translateY(0) scale(1);
+}
+
+.hidden-section {
+  filter: blur(8px);
+  transform: translateY(20px) scale(0.98);
+}
+
+
 /* MODERADORES: Propiedades para el fondo y colores de tareas  */
 .mod {
   background: url("/img/mod_fondo.jpeg");
@@ -983,7 +1008,139 @@ margin-bottom: 0.1em;
 }
 /* -------------------------------------------------------- */
 
+.valetpwk {
+  color: #D9B4BE ;
+}
+
+.valetpwk .task-header-title {
+  color: #D9B4BE ;
+}
+
+.valetpwk .task-item {
+  color: #D9B4BE ;
+}
+
+.valetpwk .task-item .task-id {
+  font-size: medium;
+  background-color: #D9B4BE ;
+}
+
 /* -------------------------------------------------------- */
+
+.pablinn12lp {
+  color: #BFB8AE;
+}
+
+.pablinn12lp .task-header-title {
+  color: #BFB8AE ;
+}
+
+.pablinn12lp .task-item {
+  color: #BFB8AE ;
+}
+
+.pablinn12lp .task-item .task-id {
+  font-size: medium;
+  background-color: #BFB8AE ;
+}
+
+/* -------------------------------------------------------- */
+
+.polarizemile {
+  color: #F2B077;
+}
+
+.polarizemile .task-header-title {
+  color: #F2B077;
+}
+
+.polarizemile .task-item {
+  color: #F2B077;
+}
+
+.polarizemile .task-item .task-id {
+  font-size: medium;
+  background-color: #F2B077;
+}
+/* -------------------------------------------------------- */
+
+/* -------------------------------------------------------- */
+
+.diaaazm {
+  color: #F2C2CF;
+}
+
+.diaaazm .task-header-title {
+  color: #F2C2CF;
+}
+
+.diaaazm .task-item {
+  color: #F2C2CF;
+}
+
+.diaaazm .task-item .task-id {
+  font-size: medium;
+  background-color: #F2C2CF;
+}
+/* -------------------------------------------------------- */
+
+/* -------------------------------------------------------- */
+
+.boniataereunarata {
+  color: #d4c5fc;
+}
+
+.boniataereunarata .task-header-title {
+  color: #d4c5fc;
+}
+
+.boniataereunarata .task-item {
+  color: #d4c5fc;
+}
+
+.boniataereunarata .task-item .task-id {
+  font-size: medium;
+  background-color: #d4c5fc;
+}
+/* -------------------------------------------------------- */
+
+/* -------------------------------------------------------- */
+
+.hyant08 {
+  color: #f2cd13;
+}
+
+.hyant08 .task-header-title {
+  color: #f2cd13;
+}
+
+.hyant08 .task-item {
+  color: #f2cd13;
+}
+
+.hyant08 .task-item .task-id {
+  font-size: medium;
+  background-color: #f2cd13;
+}
+/* -------------------------------------------------------- */
+.luluprcl {
+  color: #fea486;
+}
+
+.luluprcl .task-header-title {
+  color: #fea486;
+}
+
+.luluprcl .task-item {
+  color: #fea486;
+}
+
+.luluprcl .task-item .task-id {
+  font-size: medium;
+  background-color: #fea486;
+}
+/* -------------------------------------------------------- */
+
 /* #F2D272 */
 .cuartodechenz {
   color: #F2D272;
