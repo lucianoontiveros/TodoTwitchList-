@@ -1,5 +1,4 @@
-
-import fla_vius_ from "./fla_vius_.jpeg";
+import flan_vius_ from "./flan_vius_.jpeg";
 import karlitarachel from "./karlitarachel.jpg";
 import mariong898 from "./mariong898.png";
 import sofamb1 from "./sofamb1.jpeg";
@@ -13,12 +12,11 @@ import prime_fondo from "./prime_fondo.png";
 import sus_fondo from "./sus_fondo.png";
 import mod_fondo from "./mod_fondo.png";
 
- 
 export const vipBackgrounds = {
   mariong898: mariong898,
   sofiaantok: sofiaantok,
-  fla_vius_: fla_vius_,
+  flan_vius_: flan_vius_,
   sofamb1: sofamb1,
   karlitarachel: karlitarachel,
-  summertime0805 : summertime0805,
+  summertime0805: summertime0805,
 };
