@@ -21,7 +21,6 @@ import valetpwk from "./valetpwk.jpeg"
 import wandazk from "./wandazk.png";
 import polarizemile from "./polarizemile.jpeg";
 import diaaazm from "./diaaazm.jpg";
-import boniataereunarata from "./boniataereunarata.jpeg";
 import luluprcl from "./luluprcl.jpg"
 
 // clasificación por defecto
