@@ -132,7 +132,7 @@ body {
 /* VIP: Propiedades para el fondo y colores de tareas  */
 
 .vip {
-  background: url("/img/vip.png");
+  background: url("/img/vip_fondo.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -164,7 +164,7 @@ body {
 /* PRIME: Propiedades para el fondo y colores de tareas  */
 
 .prime {
-  background: url("/img/prime.png");
+  background: url("/img/prime_fondo.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -196,7 +196,7 @@ body {
 /* SUS: Propiedades para el fondo y colores de tareas  */
 
 .sub {
-  background: url("/img/sub.png");
+  background: url("/img/sus_fondo.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
