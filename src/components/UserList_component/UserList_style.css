@@ -21,10 +21,10 @@
   --container-width: 31.25rem;
   
   /* Colores */
-  --color-primary: rgba(247, 246, 245, 0.989);
+  --color-primary: rgba(14, 242, 223, 0.989);
   --color-text-light: rgba(255, 255, 255, 0.989);
   --color-bg-dark: rgb(12, 14, 14);
-  --color-card-bg: rgba(2, 17, 19, 0.774);
+  --color-card-bg: rgba(0, 52, 60, 1);
   
   /* Sombras */
   --shadow-primary: 0 0.4em 0.6em var(--color-primary);
