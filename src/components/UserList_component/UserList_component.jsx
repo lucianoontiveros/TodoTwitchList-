@@ -115,7 +115,7 @@ const UserList_component = memo(({ currentUser }) => {
           </p>
         </div>
 
-        {tasksLength > 0 && <TaskList_component user={currentUser} />}
+        {/* {tasksLength > 0 && <TaskList_component user={currentUser} />} */}
 
         <div 
           ref={containerRef}
