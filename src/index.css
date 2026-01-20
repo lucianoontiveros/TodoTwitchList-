@@ -1132,6 +1132,24 @@ body {
 }
 /* -------------------------------------------------------- */
 
+.agustttiina {
+  color: #f6f6f6;
+}
+
+.agustttiina .task-header-title {
+  color: #f6f6f6;
+}
+
+.agustttiina .task-item {
+  color: #f6f6f6;
+}
+
+.agustttiina .task-item .task-id {
+  font-size: medium;
+  background-color: #f6f6f6;
+}
+/* -------------------------------------------------------- */
+
 /* #F2D272 */
 .cuartodechenz {
   color: #f2d272;
