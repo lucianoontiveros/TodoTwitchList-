@@ -1,33 +1,56 @@
+:root {
+  /* Colores principales */
+  --color-bg-dark: rgb(12, 14, 14);
+  --color-bg-header: black;
+  --color-primary: rgba(14, 242, 223, 0.989);
+  --color-text-light: rgba(226, 238, 237, 0.989);
+  --border-radius-sm: 5px;
+  --border-radius-md: 1em;
+  --border-radius-lg: 1rem;
+  
+  /* Espaciados */
+  --spacing-xs: 0.2em;
+  --spacing-sm: 0.3em;
+  --spacing-md: 0.6em;
+  --spacing-lg: 1em;
+  
+  /* Tamaños */
+  --height-header: 2rem;
+  --height-item: 2em;
+  --width-id: 50px;
+  --max-width-description: 24.5em;
+}
+
 .task-header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 2rem;
-  margin: 1em 0.7em 0 0.7em;
-  background-color: black;
-  border-radius: 1em;
+  height: var(--height-header);
+  margin: var(--spacing-lg) 0.7em 0 0.7em;
+  background-color: var(--color-bg-header);
+  border-radius: var(--border-radius-md);
 }
 
 .task-list {
-  margin: 0em;
-  padding: 0.6em 0.9em;
+  margin: 0;
+  padding: var(--spacing-md) 0.9em;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
-  border-radius: 1rem solid azure;
-  color: rgba(226, 238, 237, 0.989);
+  border-radius: var(--border-radius-lg);
+  color: var(--color-text-light);
 }
 
 .task-item {
   display: flex;
-  height: 2em;
+  height: var(--height-item);
   justify-content: space-between;
   align-items: center;
-  margin-top: 0.2em;
-  padding: 0 0.2em;
-  background-color: rgb(12, 14, 14);
-  border-radius: 5px;
+  margin-top: var(--spacing-xs);
+  padding: 0 var(--spacing-xs);
+  background-color: var(--color-bg-dark);
+  border-radius: var(--border-radius-sm);
   min-width: 100%;
 }
 
@@ -35,17 +58,17 @@
   font-size: medium;
   font-weight: 500;
   padding-left: 15px;
-  max-width: 24.5em;
-  text-overflow: ellipsis; /* Si el texto es demasiado largo, se cortará con "..." */
-  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+  max-width: var(--max-width-description);
+  text-overflow: ellipsis;
+  white-space: nowrap;
   overflow: hidden;
 }
 
 .task-item .task-id {
   text-align: center;
-  width: 50px;
-  border-radius: 0.5em;
-  margin-right: 0.3em;
-  background-color: rgba(14, 242, 223, 0.989);
-  color: rgb(12, 14, 14);
+  width: var(--width-id);
+  border-radius: var(--border-radius-sm);
+  margin-right: var(--spacing-sm);
+  background-color: var(--color-primary);
+  color: var(--color-bg-dark);
 }

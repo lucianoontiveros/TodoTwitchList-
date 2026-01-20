@@ -6,11 +6,6 @@ import mont_opo from "./mont_opo.png";
 import mariong898 from "./mariong898.png";
 import mmmericina from "./mmmericina.png";
 import cuartodechenz from "./cuartodechenz.png";
-import sub from "./sus_fondo.jpeg";
-import none from "./viewer.jpeg";
-import mod from "./mod_fondo.jpeg";
-import vip from "./vip_fondo.jpeg";
-import prime from "./prime_fondo.jpeg";
 import sofamb1 from "./sofamb1.jpeg";
 import cande_pl from "./cande_pl.png";
 import romatwch from "./romatwch.jpg";
@@ -26,8 +21,14 @@ import valetpwk from "./valetpwk.jpeg"
 import wandazk from "./wandazk.png";
 import polarizemile from "./polarizemile.jpeg";
 import diaaazm from "./diaaazm.jpg";
-import boniataereunarata from "./boniataereunarata.jpeg";
 import luluprcl from "./luluprcl.jpg"
+
+// clasificación por defecto
+import sub from "./sus_fondo.png";
+import none from "./viewer.png";
+import mod from "./mod_fondo.png";
+import vip from "./vip_fondo.png";
+import prime from "./prime_fondo.png";
 
 
  
@@ -38,5 +39,4 @@ export const modBackgrounds = {
   mandaariina: mandaariina,
   mariong898 : mariong898,
   cande_pl : cande_pl,
-  cuartodechenz : luluprcl,
 };

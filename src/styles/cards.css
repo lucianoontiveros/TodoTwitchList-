@@ -1,11 +1,65 @@
+:root {
+  /* Colores base */
+  --color-bg-dark: #0e0e10;
+  --color-bg-card: #1f1f23;
+  --color-bg-header: rgba(0, 0, 0, 0.2);
+  --color-bg-progress: rgba(255, 255, 255, 0.2);
+  
+  /* Colores de texto */
+  --color-text-light: #ffffff;
+  --color-text-muted: rgba(255, 255, 255, 0.9);
+  --color-text-footer: rgba(255, 255, 255, 0.6);
+  
+  /* Colores de roles */
+  --color-role-broadcaster: #e91e63;
+  --color-role-moderator: #00b5ad;
+  --color-role-vip: #ffd700;
+  --color-role-subscriber: #9147ff;
+  --color-role-prime: #00a8c5;
+  
+  /* Gradientes de roles */
+  --gradient-broadcaster: linear-gradient(135deg, var(--color-role-broadcaster), #9c27b0);
+  --gradient-moderator: linear-gradient(135deg, var(--color-role-moderator), #009c95);
+  --gradient-vip: linear-gradient(135deg, var(--color-role-vip), #ffa500);
+  --gradient-subscriber: linear-gradient(135deg, var(--color-role-subscriber), #772ce8);
+  --gradient-prime: linear-gradient(135deg, var(--color-role-prime), #00c4e6);
+  
+  /* Bordes */
+  --border-color: rgba(255, 255, 255, 0.1);
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  
+  /* Sombras */
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.3);
+  
+  /* Dimensiones */
+  --card-width: 300px;
+  --card-min-height: 150px;
+  --card-max-height: 80vh;
+  --avatar-size: 32px;
+  
+  /* Espaciados */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 20px;
+  
+  /* Z-index */
+  --z-index-card: 1000;
+  --z-index-card-1: 1003;
+  --z-index-card-2: 1002;
+  --z-index-card-3: 1001;
+}
+
 /* Estilos para el contenedor de la aplicación */
 .app-container {
   position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background-color: #0e0e10;
-  color: #fff;
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-light);
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
@@ -17,97 +71,97 @@
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: 1000;
+  z-index: var(--z-index-card);
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 20px;
+  padding: var(--spacing-xl);
   box-sizing: border-box;
 }
 
 /* Estilos base para las tarjetas */
 .user-card {
   position: absolute;
-  width: 300px;
-  min-height: 150px;
-  max-height: 80vh;
-  background: #1f1f23;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  width: var(--card-width);
+  min-height: var(--card-min-height);
+  max-height: var(--card-max-height);
+  background: var(--color-bg-card);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-card);
   overflow: hidden;
   pointer-events: auto;
   transition: all 0.3s ease;
   transform-origin: right center;
   display: flex;
   flex-direction: column;
-  z-index: 1000;
+  z-index: var(--z-index-card);
 }
 
 /* Posicionamiento dinámico de las tarjetas */
 .user-card:nth-child(1) {
   transform: translateY(0) scale(1);
-  z-index: 1003;
-  right: 20px;
-  bottom: 20px;
+  z-index: var(--z-index-card-1);
+  right: var(--spacing-xl);
+  bottom: var(--spacing-xl);
 }
 
 .user-card:nth-child(2) {
   transform: translateY(20px) scale(0.95);
   opacity: 0.9;
-  z-index: 1002;
-  right: 20px;
+  z-index: var(--z-index-card-2);
+  right: var(--spacing-xl);
   bottom: 40px;
 }
 
 .user-card:nth-child(3) {
   transform: translateY(40px) scale(0.9);
   opacity: 0.8;
-  z-index: 1001;
-  right: 20px;
+  z-index: var(--z-index-card-3);
+  right: var(--spacing-xl);
   bottom: 60px;
 }
 
 /* Estilos para el encabezado de la tarjeta */
 .card-header {
-  padding: 12px 16px;
+  padding: var(--spacing-md) var(--spacing-lg);
   display: flex;
   align-items: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid var(--border-color);
+  background: var(--color-bg-header);
 }
 
 .card-avatar {
-  width: 32px;
-  height: 32px;
+  width: var(--avatar-size);
+  height: var(--avatar-size);
   border-radius: 50%;
-  margin-right: 12px;
-  background-color: #9147ff;
+  margin-right: var(--spacing-md);
+  background-color: var(--color-role-subscriber);
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  color: white;
+  color: var(--color-text-light);
   text-transform: uppercase;
 }
 
 .card-username {
   font-weight: 600;
   font-size: 14px;
-  color: #fff;
+  color: var(--color-text-light);
 }
 
 .card-role {
   font-size: 12px;
   opacity: 0.8;
-  margin-left: 8px;
+  margin-left: var(--spacing-sm);
   padding: 2px 6px;
-  border-radius: 4px;
+  border-radius: var(--border-radius-sm);
   text-transform: capitalize;
 }
 
 /* Estilos para el contenido de la tarjeta */
 .card-content {
-  padding: 16px;
+  padding: var(--spacing-lg);
   flex-grow: 1;
   overflow-y: auto;
   max-height: 200px;
@@ -117,15 +171,15 @@
   margin: 0;
   font-size: 14px;
   line-height: 1.5;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--color-text-muted);
 }
 
 /* Estilos para el pie de la tarjeta */
 .card-footer {
-  padding: 8px 16px;
+  padding: var(--spacing-sm) var(--spacing-lg);
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.6);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--color-text-footer);
+  border-top: 1px solid var(--border-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -137,7 +191,7 @@
   bottom: 0;
   left: 0;
   height: 4px;
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--color-bg-progress);
   width: 100%;
   overflow: hidden;
 }
@@ -145,7 +199,7 @@
 .progress-bar-fill {
   height: 100%;
   width: 100%;
-  background: #9147ff;
+  background: var(--color-role-subscriber);
   transform-origin: left;
   animation: progress 10s linear forwards;
 }
@@ -156,18 +210,18 @@
 }
 
 /* Estilos para los roles */
-.role-broadcaster { color: #e91e63; }
-.role-moderator { color: #00b5ad; }
-.role-vip { color: #ffd700; }
-.role-subscriber { color: #9147ff; }
-.role-prime { color: #00a8c5; }
+.role-broadcaster { color: var(--color-role-broadcaster); }
+.role-moderator { color: var(--color-role-moderator); }
+.role-vip { color: var(--color-role-vip); }
+.role-subscriber { color: var(--color-role-subscriber); }
+.role-prime { color: var(--color-role-prime); }
 
 /* Estilos para fondos según rol */
-.bg-broadcaster { background: linear-gradient(135deg, #e91e63, #9c27b0); }
-.bg-moderator { background: linear-gradient(135deg, #00b5ad, #009c95); }
-.bg-vip { background: linear-gradient(135deg, #ffd700, #ffa500); }
-.bg-subscriber { background: linear-gradient(135deg, #9147ff, #772ce8); }
-.bg-prime { background: linear-gradient(135deg, #00a8c5, #00c4e6); }
+.bg-broadcaster { background: var(--gradient-broadcaster); }
+.bg-moderator { background: var(--gradient-moderator); }
+.bg-vip { background: var(--gradient-vip); }
+.bg-subscriber { background: var(--gradient-subscriber); }
+.bg-prime { background: var(--gradient-prime); }
 
 /* Animaciones */
 @keyframes slideIn {

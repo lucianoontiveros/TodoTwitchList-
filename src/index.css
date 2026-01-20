@@ -26,7 +26,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   height: 43em;
-  width: 29em; 
+  width: 29em;
 }
 
 .container_header {
@@ -42,10 +42,9 @@ body {
   height: 3em;
   border-radius: 1em;
   text-align: center;
-
 }
 
-.header_user h2{
+.header_user h2 {
   padding: 0;
   margin-top: 0.1em;
   font-size: 1.5em;
@@ -59,15 +58,14 @@ body {
   flex-wrap: wrap;
 }
 
-.header_info div{
-font-size: 0.9em;
-background-color: black;
-padding: 0.5em;
-border-radius: 1em;
-margin-left: 0.1em;
-margin-bottom: 0.1em;
+.header_info div {
+  font-size: 0.9em;
+  background-color: black;
+  padding: 0.5em;
+  border-radius: 1em;
+  margin-left: 0.1em;
+  margin-bottom: 0.1em;
 }
-
 
 .data {
   display: flex;
@@ -100,10 +98,9 @@ margin-bottom: 0.1em;
   transform: translateY(20px) scale(0.98);
 }
 
-
 /* MODERADORES: Propiedades para el fondo y colores de tareas  */
 .mod {
-  background: url("/img/mod_fondo.jpeg");
+  background: url("/img/mod_fondo.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -135,7 +132,7 @@ margin-bottom: 0.1em;
 /* VIP: Propiedades para el fondo y colores de tareas  */
 
 .vip {
-  background: url("/img/vip.jpeg");
+  background: url("/img/vip_fondo.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -167,7 +164,7 @@ margin-bottom: 0.1em;
 /* PRIME: Propiedades para el fondo y colores de tareas  */
 
 .prime {
-  background: url("/img/prime.jpeg");
+  background: url("/img/prime_fondo.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -199,25 +196,25 @@ margin-bottom: 0.1em;
 /* SUS: Propiedades para el fondo y colores de tareas  */
 
 .sub {
-  background: url("/img/sub.jpeg");
+  background: url("/img/sus_fondo.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
   border-radius: 1em;
-  color: #F2DCDE;
+  color: #f2dcde;
 }
 
 .sub .task-header {
-  color: #F2DCDE;
+  color: #f2dcde;
 }
 
 .sub .task-list {
-  color: #F2DCDE;
+  color: #f2dcde;
 }
 
 .sub .task-item {
   max-width: 26.99em;
-  color: #F2DCDE;
+  color: #f2dcde;
 }
 
 .sub .task-list .task-item {
@@ -232,7 +229,7 @@ margin-bottom: 0.1em;
 /* VIEWER: Propiedades para el fondo y colores de tareas  */
 
 .none {
-  background: url("/img/viewer.jpeg");
+  background: url("/img/viewer.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -263,9 +260,6 @@ margin-bottom: 0.1em;
 }
 
 /* Usuarios premium: Propiedades para el fondo y colores de tareas  */
-
-
-
 
 /* Usuarios premium: Propiedades para el fondo y colores de tareas  */
 
@@ -518,7 +512,7 @@ margin-bottom: 0.1em;
 
 /* -------------------------------------------------------- */
 
-.olmediito {  
+.olmediito {
   color: #bca7d9;
 }
 
@@ -556,7 +550,7 @@ margin-bottom: 0.1em;
 
 /* -------------------------------------------------------- */
 
-.condrocita {         
+.condrocita {
   color: #f2bdd0;
 }
 
@@ -652,20 +646,20 @@ margin-bottom: 0.1em;
 /* -------------------------------------------------------- */
 
 .sofamb1 {
-  color: #F2C438;
-}   
+  color: #f2c438;
+}
 
 .sofamb1 .task-header-title {
-  color: #F2C438;
+  color: #f2c438;
 }
 
 .sofamb1 .task-item {
-  color: #F2C438;
+  color: #f2c438;
 }
 
 .sofamb1 .task-item .task-id {
   font-size: medium;
-  background-color: #F2C438;
+  background-color: #f2c438;
 }
 
 /* -------------------------------------------------------- */
@@ -708,19 +702,19 @@ margin-bottom: 0.1em;
 
 /* -------------------------------------------------------- */
 
-.fla_vius_ {
+.flan_vius_ {
   color: #f257a0;
 }
 
-.fla_vius_ .task-header-title {
+.flan_vius_ .task-header-title {
   color: #f257a0;
 }
 
-.fla_vius_ .task-item {
+.flan_vius_ .task-item {
   color: #f257a0;
 }
 
-.fla_vius_ .task-item .task-id {
+.flan_vius_ .task-item .task-id {
   font-size: medium;
   background-color: #f257a0;
 }
@@ -761,8 +755,6 @@ margin-bottom: 0.1em;
   background-color: #d9a74a;
 }
 
-
-
 /* -------------------------------------------------------- */
 
 .valenm07 {
@@ -785,41 +777,40 @@ margin-bottom: 0.1em;
 /* -------------------------------------------------------- */
 
 .mmmericina {
-  color:  #EBB9A8;
+  color: #ebb9a8;
 }
 
 .mmmericina .task-header-title {
-  color:  #EBB9A8;
+  color: #ebb9a8;
 }
 
 .mmmericina .task-item {
-  color:  #EBB9A8;
+  color: #ebb9a8;
 }
 
 .mmmericina .task-item .task-id {
   font-size: medium;
-  background-color:  #EBB9A8;
+  background-color: #ebb9a8;
 }
 
 /* -------------------------------------------------------- */
 
 .micaaavllr {
-  color: #F2D272;
+  color: #f2d272;
 }
 
 .micaaavllr .task-header-title {
-  color: #F2D272;
+  color: #f2d272;
 }
 
 .micaaavllr .task-item {
-  color: #F2D272;
+  color: #f2d272;
 }
 
 .micaaavllr .task-item .task-id {
   font-size: medium;
-  background-color: #F2D272;
+  background-color: #f2d272;
 }
-
 
 .misucarla_ {
   color: #c9eb81;
@@ -840,20 +831,20 @@ margin-bottom: 0.1em;
 
 /* -------------------------------------------------------- */
 .medicensosoxp {
-  color: #F1F2C2;
+  color: #f1f2c2;
 }
 
 .medicensosoxp .task-header-title {
-  color: #F1F2C2;
+  color: #f1f2c2;
 }
 
 .medicensosoxp .task-item {
-  color: #F1F2C2;
+  color: #f1f2c2;
 }
 
 .medicensosoxp .task-item .task-id {
   font-size: medium;
-  background-color: #F1F2C2;
+  background-color: #f1f2c2;
 }
 
 /* -------------------------------------------------------- */
@@ -878,20 +869,20 @@ margin-bottom: 0.1em;
 /* -------------------------------------------------------- */
 
 .romatwch {
-  color: #F2A7B5;
+  color: #f2a7b5;
 }
 
 .romatwch .task-header-title {
-  color: #F2A7B5;
+  color: #f2a7b5;
 }
 
 .romatwch .task-item {
-  color: #F2A7B5;
+  color: #f2a7b5;
 }
 
 .romatwch .task-item .task-id {
   font-size: medium;
-  background-color: #F2A7B5;
+  background-color: #f2a7b5;
 }
 
 /* -------------------------------------------------------- */
@@ -954,151 +945,151 @@ margin-bottom: 0.1em;
 /* -------------------------------------------------------- */
 
 .lulaluzz {
-  color: #D9D9D9;
+  color: #d9d9d9;
 }
 
 .lulaluzz .task-header-title {
-  color: #D9D9D9;
+  color: #d9d9d9;
 }
 
 .lulaluzz .task-item {
-  color: #D9D9D9;
+  color: #d9d9d9;
 }
 
 .lulaluzz .task-item .task-id {
   font-size: medium;
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
 }
 
 /* -------------------------------------------------------- */
 
 .andirivero1312 {
-  color: #AEA7D9;
+  color: #aea7d9;
 }
 
 .andirivero1312 .task-header-title {
-  color: #AEA7D9;
+  color: #aea7d9;
 }
 
 .andirivero1312 .task-item {
-  color: #AEA7D9;
+  color: #aea7d9;
 }
 
 .andirivero1312 .task-item .task-id {
   font-size: medium;
-  background-color: #AEA7D9;
+  background-color: #aea7d9;
 }
 
 /* -------------------------------------------------------- */
 .serolae {
-  color: #F2CED5;
+  color: #f2ced5;
 }
 
 .serolae .task-header-title {
-  color: #F2CED5;
+  color: #f2ced5;
 }
 
 .serolae .task-item {
-  color: #F2CED5;
+  color: #f2ced5;
 }
 
 .serolae .task-item .task-id {
   font-size: medium;
-  background-color: #F2CED5;
+  background-color: #f2ced5;
 }
 /* -------------------------------------------------------- */
 
 .valetpwk {
-  color: #D9B4BE ;
+  color: #d9b4be;
 }
 
 .valetpwk .task-header-title {
-  color: #D9B4BE ;
+  color: #d9b4be;
 }
 
 .valetpwk .task-item {
-  color: #D9B4BE ;
+  color: #d9b4be;
 }
 
 .valetpwk .task-item .task-id {
   font-size: medium;
-  background-color: #D9B4BE ;
+  background-color: #d9b4be;
 }
 
 /* -------------------------------------------------------- */
 
 .pablinn12lp {
-  color: #BFB8AE;
+  color: #bfb8ae;
 }
 
 .pablinn12lp .task-header-title {
-  color: #BFB8AE ;
+  color: #bfb8ae;
 }
 
 .pablinn12lp .task-item {
-  color: #BFB8AE ;
+  color: #bfb8ae;
 }
 
 .pablinn12lp .task-item .task-id {
   font-size: medium;
-  background-color: #BFB8AE ;
+  background-color: #bfb8ae;
 }
 
 /* -------------------------------------------------------- */
 
 .polarizemile {
-  color: #F2B077;
+  color: #f2b077;
 }
 
 .polarizemile .task-header-title {
-  color: #F2B077;
+  color: #f2b077;
 }
 
 .polarizemile .task-item {
-  color: #F2B077;
+  color: #f2b077;
 }
 
 .polarizemile .task-item .task-id {
   font-size: medium;
-  background-color: #F2B077;
+  background-color: #f2b077;
 }
 /* -------------------------------------------------------- */
 
 /* -------------------------------------------------------- */
 
 .diaaazm {
-  color: #F2C2CF;
+  color: #f2c2cf;
 }
 
 .diaaazm .task-header-title {
-  color: #F2C2CF;
+  color: #f2c2cf;
 }
 
 .diaaazm .task-item {
-  color: #F2C2CF;
+  color: #f2c2cf;
 }
 
 .diaaazm .task-item .task-id {
   font-size: medium;
-  background-color: #F2C2CF;
+  background-color: #f2c2cf;
 }
 /* -------------------------------------------------------- */
 
 /* -------------------------------------------------------- */
 
-.boniataereunarata {
+.boniatadelnorte {
   color: #d4c5fc;
 }
 
-.boniataereunarata .task-header-title {
+.boniatadelnorte .task-header-title {
   color: #d4c5fc;
 }
 
-.boniataereunarata .task-item {
+.boniatadelnorte .task-item {
   color: #d4c5fc;
 }
 
-.boniataereunarata .task-item .task-id {
+.boniatadelnorte .task-item .task-id {
   font-size: medium;
   background-color: #d4c5fc;
 }
@@ -1106,19 +1097,19 @@ margin-bottom: 0.1em;
 
 /* -------------------------------------------------------- */
 
-.hyant08 {
+.virhyant08 {
   color: #f2cd13;
 }
 
-.hyant08 .task-header-title {
+.virhyant08 .task-header-title {
   color: #f2cd13;
 }
 
-.hyant08 .task-item {
+.virhyant08 .task-item {
   color: #f2cd13;
 }
 
-.hyant08 .task-item .task-id {
+.virhyant08 .task-item .task-id {
   font-size: medium;
   background-color: #f2cd13;
 }
@@ -1143,19 +1134,19 @@ margin-bottom: 0.1em;
 
 /* #F2D272 */
 .cuartodechenz {
-  color: #F2D272;
+  color: #f2d272;
 }
 
 .cuartodechenz .task-header-title {
-  color: #F2D272;
+  color: #f2d272;
 }
 
 .cuartodechenz .task-item {
-  color: #F2D272;
+  color: #f2d272;
 }
 
 .cuartodechenz .task-item .task-id {
   font-size: medium;
-  background-color: #F2D272;
+  background-color: #f2d272;
 }
 /* -------------------------------------------------------- */

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+// Usar ruta absoluta desde la carpeta public para mejor compatibilidad en producción
 import Tasklist_component from "../Tasklist_component/TaskList_component";
 
 // Importar fondos según rol
