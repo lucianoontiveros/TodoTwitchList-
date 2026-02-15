@@ -97,25 +97,25 @@ const UserList_component = memo(({ currentUser }) => {
           </svg>
         </button>
 
-        <div className="title_container">
-          <strong>{currentUser?.username}</strong>
+        <div className="header-container">
+          <div className="title_container">
+            <strong>{currentUser?.username}</strong>
+          </div>
+          <div className="tags_container">
+            <p>
+              Tareas: <strong>{tasksLength}</strong>
+            </p>
+            <p>
+              Exámenes: <strong>{examsLength}</strong>
+            </p>
+            <p>
+              Puntos: <strong>{points}</strong>
+            </p>
+            <p>
+              Croquetas: <strong>{croquetas}</strong>
+            </p>
+          </div>
         </div>
-        <div className="tags_container">
-          <p>
-            Tareas: <strong>{tasksLength}</strong>
-          </p>
-          <p>
-            Exámenes: <strong>{examsLength}</strong>
-          </p>
-          <p>
-            Puntos: <strong>{points}</strong>
-          </p>
-          <p>
-            Croquetas: <strong>{croquetas}</strong>
-          </p>
-        </div>
-
-        {/* {tasksLength > 0 && <TaskList_component user={currentUser} />} */}
 
         <div 
           ref={containerRef}
@@ -124,14 +124,16 @@ const UserList_component = memo(({ currentUser }) => {
           title="Haz clic para copiar datos"
         >
           <p>
-            <strong>{currentUser?._id}</strong>
+            <strong>ID: </strong>
+            <span>{currentUser?._id}</span>
           </p>
           <p>
-            <strong>
+            <strong>Última conexión: </strong>
+            <span>
               {currentUser?.lastTime ? 
                 new Date(currentUser.lastTime).toLocaleString() : 
                 'Fecha no disponible'}
-            </strong>
+            </span>
           </p>
         </div>
       </div>
