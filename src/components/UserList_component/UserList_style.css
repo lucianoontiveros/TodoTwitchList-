@@ -108,7 +108,7 @@
 
 .title_container {
   display: flex;
-  flex: 0 0 400px; /* Un poco más de ancho */
+  flex: 0 0 30%; /* Un poco más de ancho */
   align-items: center;
   min-width: 0; /* Permite que el texto se trunque con ... si es necesario */
   justify-content: center;
