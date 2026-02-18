@@ -76,6 +76,7 @@
 .card {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
   width: 100%;
   background-color: var(--color-card-bg);
@@ -101,13 +102,17 @@
   width: 100%;
   height: 100%;
   gap: var(--spacing-md);
+  flex: 2; /* Ocupa más espacio */
+  min-width: 0; /* Permite que el contenedor se encoja si es necesario */
 }
 
 .title_container {
   display: flex;
-  flex: 0 0 200px;
+  flex: 0 0 400px; /* Un poco más de ancho */
   align-items: center;
+  min-width: 0; /* Permite que el texto se trunque con ... si es necesario */
   justify-content: center;
+  width: 900px;
   height: 60px;
   padding: 0 var(--spacing-md);
   margin: 0;
@@ -139,12 +144,13 @@
   display: flex;
   flex-direction: row;
   gap: var(--spacing-md);
-  flex: 1;
+  width: auto; /* Ancho automático según contenido */
+  flex: 0 0 auto; /* No crece ni se encoge */
   height: 100%;
   margin: 0;
-  padding: 0 var(--spacing-sm);
+  margin-right: 20px;
+  padding: 0 var(--spacing-md);
   align-items: center;
-  justify-content: flex-start;
   overflow-x: auto;
   scrollbar-width: thin;
   scrollbar-color: var(--color-primary) transparent;
