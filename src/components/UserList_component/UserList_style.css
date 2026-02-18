@@ -193,7 +193,7 @@
 }
 
 .info_conection_container {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
