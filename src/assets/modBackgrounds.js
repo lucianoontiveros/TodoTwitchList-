@@ -22,6 +22,7 @@ import wandazk from "./wandazk.png";
 import polarizemile from "./polarizemile.jpeg";
 import diaaazm from "./diaaazm.jpg";
 import luluprcl from "./luluprcl.jpg"
+import ellchambeador from "./ellchambeador.png"
 
 // clasificación por defecto
 import sub from "./sus_fondo.png";
@@ -39,4 +40,5 @@ export const modBackgrounds = {
   mandaariina: mandaariina,
   mariong898 : mariong898,
   cande_pl : cande_pl,
+  cuartodechenz : ellchambeador,
 };
