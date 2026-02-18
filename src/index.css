@@ -1150,6 +1150,24 @@ body {
 }
 /* -------------------------------------------------------- */
 
+.Ellchambeador {
+  color: #f6f6f6;
+}
+
+.Ellchambeador .task-header-title {
+  color: #f6f6f6;
+}
+
+.Ellchambeador .task-item {
+  color: #f6f6f6;
+}
+
+.Ellchambeador .task-item .task-id {
+  font-size: medium;
+  background-color: #f6f6f6;
+}
+/* -------------------------------------------------------- */
+
 /* #F2D272 */
 .cuartodechenz {
   color: #f2d272;
