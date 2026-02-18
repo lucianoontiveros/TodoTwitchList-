@@ -40,5 +40,5 @@ export const modBackgrounds = {
   mandaariina: mandaariina,
   mariong898 : mariong898,
   cande_pl : cande_pl,
-  cuartodechenz : ellchambeador,
+  cuartodechenz : cuartodechenz,
 };

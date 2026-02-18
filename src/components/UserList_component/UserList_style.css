@@ -71,6 +71,20 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
+  position: relative;
+  overflow: hidden;
+}
+
+.contenedor::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0.15; /* Ajusta la opacidad según necesites */
+  pointer-events: none;
 }
 
 .card {
@@ -79,7 +93,10 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: var(--color-card-bg);
+  background-image: url('/images/bambus.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: var(--color-text-light);
   padding: 0 var(--spacing-md);
   border-radius: var(--border-radius-md);
