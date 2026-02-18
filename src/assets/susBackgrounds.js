@@ -50,6 +50,7 @@ import boniatadelnorte from "./boniatadelnorte.jpeg";
 import virhyant08 from "./virhyant08.jpg";
 import luluprcl from "./luluprcl.jpg";
 import agustttiina from "./agustttiina.jpg";
+import ellchambeador from "./ellchambeador.png";
 
 // clasificación por defecto
 import viewer from "./viewer.png";
@@ -111,6 +112,7 @@ export const susBackgrounds = {
   virhyant08: virhyant08,
   luluprcl: luluprcl,
   agustttiina: agustttiina,
+  ellchambeador: ellchambeador,
 
   sus_fondo: sus_fondo,
   vip_fondo: vip_fondo,
