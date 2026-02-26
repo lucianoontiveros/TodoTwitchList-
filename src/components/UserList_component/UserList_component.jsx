@@ -52,7 +52,7 @@ const UserList_component = memo(({ currentUser }) => {
   return (
     <div className="contenedor">
       <div className="card" style={{ position: 'relative' }}>
-        <button 
+         <button 
           onClick={handleDeleteUser}
           style={{
             position: 'absolute',
@@ -95,7 +95,7 @@ const UserList_component = memo(({ currentUser }) => {
           >
             <path d="M18 6L6 18M6 6l12 12" />
           </svg>
-        </button>
+        </button> 
 
         <div className="header-container">
           <div className="title_container">
