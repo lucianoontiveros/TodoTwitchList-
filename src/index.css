@@ -1188,6 +1188,26 @@ body {
 }
 /* -------------------------------------------------------- */
 
+/* -------------------------------------------------------- */
+
+.julietavancini {
+  color: #b3d9ff;
+}
+
+.julietavancini .task-header-title {
+  color: #b3d9ff;
+}
+
+.julietavancini .task-item {
+  color: #b3d9ff;
+}
+
+.julietavancini .task-item .task-id {
+  font-size: medium;
+  background-color: #b3d9ff;
+}
+/* -------------------------------------------------------- */
+
 /* #F2D272 */
 .cuartodechenz {
   color: #f2d272;
