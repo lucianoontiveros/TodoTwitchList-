@@ -1208,6 +1208,26 @@ body {
 }
 /* -------------------------------------------------------- */
 
+/* -------------------------------------------------------- */
+
+.ldaiana_ {
+  color: #f6c3ca;
+}
+
+.ldaiana_ .task-header-title {
+  color: #f6c3ca;
+}
+
+.ldaiana_ .task-item {
+  color: #f6c3ca;
+}
+
+.ldaiana_ .task-item .task-id {
+  font-size: medium;
+  background-color: #f6c3ca;
+}
+/* -------------------------------------------------------- */
+
 /* #F2D272 */
 .cuartodechenz {
   color: #f2d272;
