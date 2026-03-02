@@ -54,7 +54,7 @@ import ellchambeador from "./ellchambeador.png"
 import somepassioncc from "./somepassioncc.jpg"
 import julietavancini from "./julietavancini.jpg"
 import ldaiana_ from "./ldaiana_.jpg"
-import lachaambeadora from "./lachaambeadora.jpg"
+import lachaambeadora from "./lachaambeadora.png"
 
 
 // clasificación por defecto
