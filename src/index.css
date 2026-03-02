@@ -1227,6 +1227,24 @@ body {
   background-color: #f6c3ca;
 }
 /* -------------------------------------------------------- */
+
+
+.lachaambeadora {
+  color: #b4dafe ;
+}
+
+.lachaambeadora .task-header-title {
+  color: #b4dafe ;
+}
+
+.lachaambeadora .task-item {
+  color: #b4dafe ;
+}
+
+.lachaambeadora .task-item .task-id {
+  font-size: medium;
+  background-color: #b4dafe ;
+}
 /* -------------------------------------------------------- */
 
 /* #F2D272 */

@@ -54,6 +54,7 @@ import ellchambeador from "./ellchambeador.png"
 import somepassioncc from "./somepassioncc.jpg"
 import julietavancini from "./julietavancini.jpg"
 import ldaiana_ from "./ldaiana_.jpg"
+import lachaambeadora from "./lachaambeadora.jpg"
 
 
 // clasificación por defecto
@@ -120,6 +121,7 @@ export const susBackgrounds = {
   somepassioncc : somepassioncc,
   julietavancini : julietavancini,
   ldaiana_ : ldaiana_,
+  lachaambeadora : lachaambeadora,
 
   sus_fondo: sus_fondo,
   vip_fondo: vip_fondo,
