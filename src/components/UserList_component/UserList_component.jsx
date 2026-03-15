@@ -14,10 +14,18 @@ const ExamTicker = () => {
         Object.entries(storedUsers).forEach(([username, userData]) => {
           if (userData.exams && userData.exams.length > 0) {
             userData.exams.forEach(exam => {
-              allExams.push({
-                username,
-                ...exam
-              });
+              // Filtrar solo exámenes a partir de hoy
+              const [day, month] = exam.dateExam.split("-").map(Number);
+              const today = new Date();
+              const examDate = new Date(today.getFullYear(), month - 1, day);
+              const todayWithoutTime = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+              
+              if (examDate >= todayWithoutTime) {
+                allExams.push({
+                  username,
+                  ...exam
+                });
+              }
             });
           }
         });
