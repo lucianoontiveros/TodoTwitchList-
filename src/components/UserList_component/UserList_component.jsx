@@ -1,7 +1,101 @@
-import React, { useCallback, useRef, memo } from "react";
+import React, { useCallback, useRef, memo, useState, useEffect } from "react";
 import TaskList_component from "../Tasklist_component/TaskList_component";
 import "../UserList_component/UserList_style.css";
 
+const ExamTicker = () => {
+  const [exams, setExams] = useState([]);
+
+  useEffect(() => {
+    const loadExams = () => {
+      try {
+        const storedUsers = JSON.parse(localStorage.getItem("users")) || {};
+        const allExams = [];
+        
+        Object.entries(storedUsers).forEach(([username, userData]) => {
+          if (userData.exams && userData.exams.length > 0) {
+            userData.exams.forEach(exam => {
+              allExams.push({
+                username,
+                ...exam
+              });
+            });
+          }
+        });
+        
+        setExams(allExams);
+      } catch (error) {
+        console.error('Error loading exams:', error);
+      }
+    };
+
+    loadExams();
+    
+    const handleStorageChange = (e) => {
+      if (e.key === "users") {
+        loadExams();
+      }
+    };
+
+    window.addEventListener('storage', handleStorageChange);
+    return () => window.removeEventListener('storage', handleStorageChange);
+  }, []);
+
+  const getExamColor = (examDate) => {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    
+    // Parsear fecha en formato dd-mm
+    const [day, month] = examDate.split("-").map(Number);
+    const exam = new Date(today.getFullYear(), month - 1, day);
+    exam.setHours(0, 0, 0, 0);
+    
+    const diffTime = exam - today;
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    
+    if (diffDays === 0 || diffDays === 1) {
+      return '#ef4444'; // Rojo: hoy o mañana
+    } else if (diffDays <= 3) {
+      return '#eab308'; // Amarillo: dentro de 3 días
+    } else {
+      return '#ffffff'; // Blanco: otros casos
+    }
+  };
+
+  const formatDate = (dateString) => {
+    // Formato dd-mm a dd/mm/aa
+    const [day, month] = dateString.split("-");
+    return `${day}/${month}/${new Date().getFullYear().toString().slice(-2)}`;
+  };
+
+  if (exams.length === 0) {
+    return null;
+  }
+
+  return (
+    <div className="exam-ticker">
+      <div className="ticker-content">
+        {exams.map((exam, index) => (
+          <span 
+            key={index} 
+            className="ticker-item"
+            style={{ color: getExamColor(exam.dateExam) }}
+          >
+            📅 {formatDate(exam.dateExam)} 👤 {exam.username} 📝 {exam.typeExam || 'Examen'}: {exam.titleExam || 'Sin nombre'}
+          </span>
+        ))}
+        {exams.map((exam, index) => (
+          <span 
+            key={`duplicate-${index}`} 
+            className="ticker-item"
+            style={{ color: getExamColor(exam.dateExam) }}
+          >
+            📅 {formatDate(exam.dateExam)} 👤 {exam.username} 📝 {exam.typeExam || 'Examen'}: {exam.titleExam || 'Sin nombre'}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 const UserList_component = memo(({ currentUser }) => {
   const containerRef = useRef(null);
@@ -51,6 +145,7 @@ const UserList_component = memo(({ currentUser }) => {
 
   return (
     <div className="contenedor">
+      
       <div className="card" style={{ position: 'relative' }}>
          <button 
           onClick={handleDeleteUser}
@@ -137,6 +232,7 @@ const UserList_component = memo(({ currentUser }) => {
           </p>
         </div>
       </div>
+      <ExamTicker />
     </div>
   );
 });
