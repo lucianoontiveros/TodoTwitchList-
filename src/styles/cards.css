@@ -73,7 +73,7 @@
   pointer-events: none;
   z-index: var(--z-index-card);
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   padding: var(--spacing-xl);
   box-sizing: border-box;
@@ -81,7 +81,7 @@
 
 /* Estilos base para las tarjetas */
 .user-card {
-  position: absolute;
+  position: relative;
   width: var(--card-width);
   min-height: var(--card-min-height);
   max-height: var(--card-max-height);
@@ -91,7 +91,7 @@
   overflow: hidden;
   pointer-events: auto;
   transition: all 0.3s ease;
-  transform-origin: right center;
+  transform-origin: center center;
   display: flex;
   flex-direction: column;
   z-index: var(--z-index-card);
@@ -101,24 +101,23 @@
 .user-card:nth-child(1) {
   transform: translateY(0) scale(1);
   z-index: var(--z-index-card-1);
-  right: var(--spacing-xl);
-  bottom: var(--spacing-xl);
+  position: relative;
 }
 
 .user-card:nth-child(2) {
   transform: translateY(20px) scale(0.95);
   opacity: 0.9;
   z-index: var(--z-index-card-2);
-  right: var(--spacing-xl);
-  bottom: 40px;
+  position: relative;
+  margin-top: 20px;
 }
 
 .user-card:nth-child(3) {
   transform: translateY(40px) scale(0.9);
   opacity: 0.8;
   z-index: var(--z-index-card-3);
-  right: var(--spacing-xl);
-  bottom: 60px;
+  position: relative;
+  margin-top: 40px;
 }
 
 /* Estilos para el encabezado de la tarjeta */
@@ -282,7 +281,7 @@
   .user-card:nth-child(2),
   .user-card:nth-child(3) {
     transform: none;
-    position: static;
+    position: relative;
     margin-bottom: 10px;
     opacity: 1;
   }

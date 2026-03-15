@@ -95,7 +95,7 @@
   width: 100%;
   background-image: url('/images/bambus.png');
   background-size: cover;
-  background-position: center;
+  background-position: to;
   background-repeat: no-repeat;
   color: var(--color-text-light);
   padding: 0 var(--spacing-md);
