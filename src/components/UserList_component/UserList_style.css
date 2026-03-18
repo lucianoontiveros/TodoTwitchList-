@@ -91,7 +91,7 @@
 
 .ticker-content {
   display: flex;
-  animation: scroll 120s linear infinite;
+  animation: scroll 150s linear infinite;
   white-space: nowrap;
   min-width: max-content;
 }
@@ -131,7 +131,8 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-image: url('/images/bambus.png');
+  /* background-image: url('/images/bambus.png'); */
+  background-color: var(--color-bg-dark); 
   background-size: cover;
   background-position: to;
   background-repeat: no-repeat;
