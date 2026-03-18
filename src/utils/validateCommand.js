@@ -37,6 +37,7 @@ export const validateCommand = (message) => {
     "examdelete",
     "reviewexam",
     "deleteallexam",
+    "summary", // Agregado el comando summary
     "reparar", // Agregado el comando reparar
     "croquetas50",
     "dar50",

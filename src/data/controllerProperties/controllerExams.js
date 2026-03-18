@@ -199,4 +199,59 @@ const deleteAllExams = (deletaAllExamUSer, channel, isTag) => {
   registrationUsers(users);
 };
 
-export { addExam, deleteExam, reviewExam, deleteAllExams };
+// Comando summary: mostrar todos los exámenes de todos los usuarios en próximos 30 días
+const summaryExams = (summaryUser, channel, isTag) => {
+  const allExams = [];
+  const today = new Date();
+  const thirtyDaysFromNow = new Date(today.getTime() + (30 * 24 * 60 * 60 * 1000));
+  
+  // Recorrer todos los usuarios y sus exámenes
+  Object.entries(users).forEach(([username, userData]) => {
+    if (userData.exams && userData.exams.length > 0) {
+      userData.exams.forEach(exam => {
+        // Parsear fecha del examen
+        const [day, month] = exam.dateExam.split("-").map(Number);
+        const examDate = new Date(today.getFullYear(), month - 1, day);
+        
+        // Verificar si el examen está dentro de los próximos 30 días
+        if (examDate >= today && examDate <= thirtyDaysFromNow) {
+          allExams.push({
+            username,
+            dateExam: exam.dateExam,
+            typeExam: exam.typeExam,
+            titleExam: exam.titleExam,
+            _id: exam._id,
+            examDateObj: examDate
+          });
+        }
+      });
+    }
+  });
+  
+  // Ordenar exámenes por fecha
+  allExams.sort((a, b) => a.examDateObj - b.examDateObj);
+  
+  // Enviar resumen
+  if (allExams.length === 0) {
+    sendMensaje(`📅 No hay exámenes programados en los próximos 30 días 😊`, channel);
+  } else {
+    sendMensaje(`📋 **RESUMEN DE EXÁMENES - Próximos 30 días** 📋`, channel);
+    sendMensaje(`📊 Total de exámenes: ${allExams.length}`, channel);
+    sendMensaje(`─`.repeat(50), channel);
+    
+    allExams.forEach((exam, index) => {
+      const daysUntil = Math.ceil((exam.examDateObj - today) / (1000 * 60 * 60 * 24));
+      const urgencyEmoji = daysUntil <= 3 ? "🔴" : daysUntil <= 7 ? "🟡" : "🟢";
+      
+      sendMensaje(
+        `${urgencyEmoji} ${index + 1}. 👤 ${exam.username} | 📅 ${exam.dateExam} (${daysUntil} días) | 📄 ${exam.typeExam} | 📑 ${exam.titleExam}`,
+        channel
+      );
+    });
+    
+    sendMensaje(`─`.repeat(50), channel);
+    sendMensaje(`🎯 ¡Mucha suerte en sus exámenes! 🎯`, channel);
+  }
+};
+
+export { addExam, deleteExam, reviewExam, deleteAllExams, summaryExams };

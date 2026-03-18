@@ -25,6 +25,7 @@ import {
   deleteExam,
   reviewExam,
   deleteAllExams,
+  summaryExams,
 } from "../data/controllerProperties/controllerExams";
 
 import {
@@ -317,17 +318,12 @@ console.log(isTag);
     case "deleteallexam":
       deleteAllExams(username, channel, isTag);
       break;
-
-    /* Administrar lista de examenes
-    case "guardar":
-      saveLocalStorageFile();
-      break;
-    case "cargar":
-      loadLocalStorageFromFile(jsonData);
+    case "summary":
+      summaryExams(username, channel, isTag);
       break;
 
     default:
-      break; */
+      break;
   }
 
   // Lógica de temporizador
