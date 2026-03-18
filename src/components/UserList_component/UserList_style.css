@@ -78,7 +78,7 @@
 /* Estilos para el ticker de exámenes */
 .exam-ticker {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: var(--color-bg-dark);
   border-radius: var(--border-radius-md);
   margin-top: 1em;
   margin-bottom: var(--spacing-md);
