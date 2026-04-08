@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef, useCallback } from "react";
-import { registrationUsers } from "../data/LocalStorage/controllerLocalStorage";
+// import { registrationUsers } from "../data/LocalStorage/controllerLocalStorage";
 import UserList_component from "./UserList_component/UserList_component";
 
 const UserList = () => {

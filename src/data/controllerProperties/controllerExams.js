@@ -86,6 +86,8 @@ const addExam = (addExamUser, dateExamUser, channel, isTag) => {
   foundOrCreateUser(addExamUser, isTag);
   const dateExam = dateExamUser.slice(0, 6);
   if (dateExam.length === 0) {
+    console.error('Fecha vacía proporcionada');
+    return;
   }
 
   // Validar formato de fecha
@@ -168,14 +170,14 @@ const reviewExam = (reviewExamUSer, channel, isTag) => {
 
   // Mostrar los exámenes restantes si hay
   if (validExams.length > 0) {
-    validExams.forEach((userExam) => {
+    validExams.forEach((exam) => {
       sendMensaje(
         MESSAGE.viewExam(
           reviewExamUSer,
-          userExam.dateExam,
-          userExam.typeExam,
-          userExam.titleExam,
-          userExam._id
+          exam.dateExam,
+          exam.typeExam,
+          exam.titleExam,
+          exam._id
         ),
         channel
       );
@@ -187,9 +189,7 @@ const reviewExam = (reviewExamUSer, channel, isTag) => {
 
 const deleteAllExams = (deletaAllExamUSer, channel, isTag) => {
   foundOrCreateUser(deletaAllExamUSer, isTag);
-  const deleteListExamsUser = users[deletaAllExamUSer].exams.map(
-    (userExam) => {}
-  );
+  const deleteListExamsUser = users[deletaAllExamUSer].exams;
   if (deleteListExamsUser.length === 0) {
     sendMensaje(MESSAGE.noExams(deletaAllExamUSer), channel);
   } else {
@@ -200,7 +200,7 @@ const deleteAllExams = (deletaAllExamUSer, channel, isTag) => {
 };
 
 // Comando summary: mostrar todos los exámenes de todos los usuarios en próximos 30 días
-const summaryExams = (summaryUser, channel, isTag) => {
+const summaryExams = (summaryUser, channel) => {
   const allExams = [];
   const today = new Date();
   const thirtyDaysFromNow = new Date(today.getTime() + (30 * 24 * 60 * 60 * 1000));
@@ -249,9 +249,89 @@ const summaryExams = (summaryUser, channel, isTag) => {
       );
     });
     
-    sendMensaje(`─`.repeat(50), channel);
-    sendMensaje(`🎯 ¡Mucha suerte en sus exámenes! 🎯`, channel);
+    sendMensaje(`·`.repeat(50), channel);
+    sendMensaje(`¡Mucha suerte en sus exámenes!`, channel);
   }
 };
 
-export { addExam, deleteExam, reviewExam, deleteAllExams, summaryExams };
+// Modificar fecha de examen
+const modifyExamDate = (modifyUser, examID, newDate, channel, isTag) => {
+  foundOrCreateUser(modifyUser, isTag);
+  
+  // Buscar el examen por ID
+  const examIndex = users[modifyUser].exams.findIndex(
+    (exam) => exam._id === examID
+  );
+  
+  if (examIndex === -1) {
+    sendMensaje(`No encontré examen con ID: ${examID}`, channel);
+    return;
+  }
+  
+  // Validar nueva fecha
+  if (!isValidDate(newDate)) {
+    sendMensaje(`${modifyUser} Fecha no válida. Use el formato dd-mm`, channel);
+    return;
+  }
+  
+  // Actualizar fecha
+  const oldDate = users[modifyUser].exams[examIndex].dateExam;
+  users[modifyUser].exams[examIndex].dateExam = newDate;
+  
+  // Reordenar exámenes por fecha
+  users[modifyUser].exams.sort((a, b) => {
+    const [dayA, monthA] = a.dateExam.split("-").map(Number);
+    const [dayB, monthB] = b.dateExam.split("-").map(Number);
+    
+    if (monthA === monthB) {
+      return dayA - dayB;
+    }
+    return monthA - monthB;
+  });
+  
+  // Filtrar exámenes pasados
+  users[modifyUser].exams = users[modifyUser].exams.filter(
+    (exam) => !isPastDate(exam.dateExam)
+  );
+  
+  sendMensaje(
+    `Fecha modificada: ${oldDate}  ${newDate} | ID: ${examID}`,
+    channel
+  );
+  
+  registrationUsers(users);
+};
+
+// Modificar descripción de examen
+const modifyExamDescription = (modifyUser, examID, newDescription, channel, isTag) => {
+  foundOrCreateUser(modifyUser, isTag);
+  
+  // Buscar el examen por ID
+  const examIndex = users[modifyUser].exams.findIndex(
+    (exam) => exam._id === examID
+  );
+  
+  if (examIndex === -1) {
+    sendMensaje(`No encontré examen con ID: ${examID}`, channel);
+    return;
+  }
+  
+  // Validar descripción
+  if (!newDescription || newDescription.trim().length === 0) {
+    sendMensaje(`${modifyUser} La descripción no puede estar vaca`, channel);
+    return;
+  }
+  
+  // Actualizar descripción
+  const oldDescription = users[modifyUser].exams[examIndex].titleExam;
+  users[modifyUser].exams[examIndex].titleExam = newDescription;
+  
+  sendMensaje(
+    `Descripcin modificada: ${oldDescription}  ${newDescription} | ID: ${examID}`,
+    channel
+  );
+  
+  registrationUsers(users);
+};
+
+export { addExam, deleteExam, reviewExam, deleteAllExams, summaryExams, modifyExamDate, modifyExamDescription };

@@ -23,7 +23,6 @@ export function useMessageHandler() {
       if (!username) return;
 
       // Prevenir procesamiento duplicado
-      const messageKey = `${username}-${message}-${Date.now()}`;
       if (isProcessing || 
           (lastProcessedMessage === message && lastProcessedUser === username)) {
         return;

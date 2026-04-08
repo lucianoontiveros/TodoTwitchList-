@@ -26,6 +26,8 @@ import {
   reviewExam,
   deleteAllExams,
   summaryExams,
+  modifyExamDate,
+  modifyExamDescription,
 } from "../data/controllerProperties/controllerExams";
 
 import {
@@ -38,14 +40,6 @@ import {
   giveCroquetas,
   grantCroquetas,
 } from "../data/controllerProperties/controllerPersonalData";
-
-// Importaciones de utilidad con el localStorage
-import jsonData from "../data/localStorageData.json";
-
-import {
-  loadLocalStorageFromFile,
-  saveLocalStorageFile,
-} from "../data/LocalStorage/controllerLocalStorage";
 
 import { repairBrokenUsers } from "./repairUsers";
 import client from "../data/controllerClientTwitch/clientTwitch";
@@ -261,8 +255,9 @@ console.log(isTag);
       try {
         grantCroquetas(target, 50, channel);
         await client.say(channel, `🍪 Se otorgaron 50 croquetas a @${target}.`);
-      } catch (e) {
-        await client.say(channel, "❌ No se pudo otorgar croquetas.");
+      } catch (error) {
+        console.error('Error otorgando croquetas:', error);
+        await client.say(channel, "No se pudo otorgar croquetas.");
       }
       break;
     }
@@ -307,19 +302,64 @@ console.log(isTag);
 
     // Administrar lista de examenes
     case "addexam":
+    case "agregarexamen":
       addExam(username, task, channel, isTag);
       break;
     case "examdelete":
+    case "eliminarexamen":
       deleteExam(username, arg, channel, isTag);
       break;
     case "reviewexam":
+    case "revisarexamen":
       reviewExam(username, channel, isTag);
       break;
     case "deleteallexam":
+    case "eliminartodosexamenes":
       deleteAllExams(username, channel, isTag);
       break;
     case "summary":
-      summaryExams(username, channel, isTag);
+    case "resumenexamenes":
+      summaryExams(username, channel);
+      break;
+    case "modifydateexam":
+    case "modificarfechaexamen":
+      // Formato: !modifydateexam ID nuevaFecha | !modificarfechaexamen ID nuevaFecha
+      // Ejemplo: !modifydateexam x7z 15-09 | !modificarfechaexamen x7z 15-09
+      let modifyArgs;
+      if (command === "modificarfechaexamen") {
+        // Para comandos en español, necesitamos extraer correctamente los argumentos
+        const fullMessage = message.toLowerCase().split(" ");
+        modifyArgs = fullMessage.slice(1); // Saltar el comando
+      } else {
+        modifyArgs = taskLowercase.trim().split(" ");
+      }
+      const examIdToModify = modifyArgs[0];
+      const newExamDate = modifyArgs[1];
+      if (examIdToModify && newExamDate) {
+        modifyExamDate(username, examIdToModify, newExamDate, channel, isTag);
+      } else {
+        client.say(channel, "Uso: !modifydateexam ID nuevaFecha | !modificarfechaexamen ID nuevaFecha");
+      }
+      break;
+    case "modifydescripexam":
+    case "modificardescripexamen":
+      // Formato: !modifydescripexam ID nuevaDescripcion | !modificardescripexamen ID nuevaDescripcion
+      // Ejemplo: !modifydescripexam x7z "Cálculo Avanzado" | !modificardescripexamen x7z "Cálculo Avanzado"
+      let descArgs;
+      if (command === "modificardescripexamen") {
+        // Para comandos en español, necesitamos extraer correctamente los argumentos
+        const fullMessage = message.toLowerCase().split(" ");
+        descArgs = fullMessage.slice(1); // Saltar el comando
+      } else {
+        descArgs = taskLowercase.trim().split(" ");
+      }
+      const examIdForDesc = descArgs[0];
+      const newDescription = descArgs.slice(1).join(" ").replace(/^["']|["']$/g, '');
+      if (examIdForDesc && newDescription) {
+        modifyExamDescription(username, examIdForDesc, newDescription, channel, isTag);
+      } else {
+        client.say(channel, "Uso: !modifydescripexam ID 'nueva descripción' | !modificardescripexamen ID 'nueva descripción'");
+      }
       break;
 
     default:
