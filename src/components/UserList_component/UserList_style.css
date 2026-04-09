@@ -79,11 +79,12 @@
 .exam-ticker {
   width: 100%;
   background-color: var(--color-bg-dark);
-  border-radius: var(--border-radius-md);
+  border-radius: 8px;
   margin-top: 1em;
   margin-bottom: var(--spacing-md);
   overflow: hidden;
-  box-shadow: var(--shadow-primary);
+  box-shadow: 0 0 8px 2px rgba(14, 242, 223, 0.989),
+              0 0 12px 4px rgba(14, 242, 223, 0.7);
   height: 30px;
   display: flex;
   align-items: center;
@@ -132,7 +133,7 @@
   align-items: center;
   width: 100%;
   /* background-image: url('/images/bambus.png'); */
-  background-color: var(--color-bg-dark); 
+  background-color: transparent; 
   background-size: cover;
   background-position: to;
   background-repeat: no-repeat;
