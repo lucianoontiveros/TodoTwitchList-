@@ -1272,6 +1272,26 @@ body {
 /* -------------------------------------------------------- */
 
 /* #F2D272 */
+.idaianax {
+  color: #4ef4bc;
+}
+
+.idaianax .task-header-title {
+  color: #4ef4bc;
+}
+
+.idaianax .task-item {
+  color: #4ef4bc;
+}
+
+.idaianax .task-item .task-id {
+  font-size: medium;
+  background-color: #4ef4bc;
+}
+/* -------------------------------------------------------- */
+
+
+/* #F2D272 */
 .cuartodechenz {
   color: #F2D272;
 }
