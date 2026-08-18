@@ -50,14 +50,13 @@ import boniatadelnorte from "./boniatadelnorte.jpeg";
 import virhyant08 from "./virhyant08.jpg";
 import luluprcl from "./luluprcl.jpg";
 import agustttiina from "./agustttiina.jpg";
-import ellchambeador from "./ellchambeador.png"
-import somepassioncc from "./somepassioncc.jpg"
-import julietavancini from "./julietavancini.jpg"
-import ldaiana_ from "./ldaiana_.jpg"
-import lachaambeadora from "./lachaambeadora.png"
-import anitta8 from "./anitta8.jpeg"
-import idaianax from "./idaianax.jpg"
-
+import ellchambeador from "./ellchambeador.png";
+import somepassioncc from "./somepassioncc.jpg";
+import julietavancini from "./julietavancini.jpg";
+import ldaiana_ from "./ldaiana_.jpg";
+import lachaambeadora from "./lachaambeadora.png";
+import anitta8 from "./anitta8.jpeg";
+import idaianax from "./idaianax.jpg";
 
 // clasificación por defecto
 import viewer from "./viewer.png";
@@ -120,12 +119,12 @@ export const susBackgrounds = {
   luluprcl: luluprcl,
   agustttiina: agustttiina,
   ellchambeador: ellchambeador,
-  somepassioncc : somepassioncc,
-  julietavancini : julietavancini,
-  ldaiana_ : ldaiana_,
-  lachaambeadora : lachaambeadora,
-  anitta8 : anitta8,
-  idaianax : idaianax,
+  somepassioncc: somepassioncc,
+  julietavancini: julietavancini,
+  ldaiana_: ldaiana_,
+  lachaambeadora: lachaambeadora,
+  anitta8: anitta8,
+  idaianax: idaianax,
 
   sus_fondo: sus_fondo,
   vip_fondo: vip_fondo,
