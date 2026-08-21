@@ -1270,7 +1270,6 @@ body {
 
 /* -------------------------------------------------------- */
 
-/* #F2D272 */
 .idaianax {
   color: #4ef4bc;
 }
@@ -1286,6 +1285,29 @@ body {
 .idaianax .task-item .task-id {
   font-size: medium;
   background-color: #4ef4bc;
+}
+/* -------------------------------------------------------- */
+
+/* #F2D272 */
+.nanchycita {
+  color: #80ffb7
+;
+}
+
+.nanchycita .task-header-title {
+  color: #80ffb7
+;
+}
+
+.nanchycita .task-item {
+  color: #80ffb7
+;
+}
+
+.nanchycita .task-item .task-id {
+  font-size: medium;
+  background-color: #80ffb7
+;
 }
 /* -------------------------------------------------------- */
 

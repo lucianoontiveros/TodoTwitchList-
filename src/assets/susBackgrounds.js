@@ -57,6 +57,7 @@ import ldaiana_ from "./ldaiana_.jpg";
 import lachaambeadora from "./lachaambeadora.png";
 import anitta8 from "./anitta8.jpeg";
 import idaianax from "./idaianax.jpg";
+import nanchycita from "./nanchycita.jpg"
 
 // clasificación por defecto
 import viewer from "./viewer.png";
@@ -125,6 +126,7 @@ export const susBackgrounds = {
   lachaambeadora: lachaambeadora,
   anitta8: anitta8,
   idaianax: idaianax,
+  nanchycita: nanchycita,
 
   sus_fondo: sus_fondo,
   vip_fondo: vip_fondo,

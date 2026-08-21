@@ -24,6 +24,7 @@ import luluprcl from "./luluprcl.jpg";
 import ellchambeador from "./ellchambeador.png";
 import anitta8 from "./anitta8.jpeg";
 import idaianax from "./idaianax.jpg";
+import nanchycita from "./nanchycita.jpg";
 
 // clasificación por defecto
 import sub from "./sus_fondo.png";
@@ -39,6 +40,6 @@ export const modBackgrounds = {
   mandaariina: mandaariina,
   mariong898: mariong898,
   cande_pl: cande_pl,
-  cuartodechenz: idaianax,
+  cuartodechenz: nanchycita,
   sofamb1: sofamb1,
 };
