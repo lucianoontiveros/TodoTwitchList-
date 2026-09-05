@@ -7,6 +7,7 @@ import {
   verifyIdUser,
   changeNameUser,
   deleteInactiveUsersTwoMonths,
+  testDeleteInactiveUsers,
 } from "../data/controllerUsers/controllerUsers";
 
 import {
@@ -269,15 +270,15 @@ console.log(isTag);
         try {
           console.log("Iniciando reparación de usuarios...");
           await client.say(channel, "🔧 Iniciando reparación de usuarios...");
-          
+
           const result = await repairBrokenUsers();
           console.log("Resultado de la reparación:", result);
-          
+
           if (result.repaired) {
             const message = `✅ Reparación completada. Se repararon ${result.count} usuarios.`;
             console.log(message);
             await client.say(channel, message);
-            
+
             // Mostrar los usuarios reparados en grupos para no exceder el límite de caracteres
             const chunkSize = 5;
             for (let i = 0; i < result.users.length; i += chunkSize) {
@@ -296,6 +297,43 @@ console.log(isTag);
         }
       } else {
         console.log(`Usuario no autorizado intentó usar !reparar: ${username}`);
+        await client.say(channel, "❌ Solo el streamer puede usar este comando.");
+      }
+      break;
+
+    // Comando de prueba para limpieza de usuarios inactivos (solo streamer)
+    case "testinactive":
+      console.log(`Comando testinactive recibido de ${username}`);
+      if (username === "cuartodechenz") {
+        try {
+          console.log("Ejecutando prueba de limpieza de usuarios inactivos (DRY-RUN)...");
+          await client.say(channel, "🔍 Ejecutando prueba de limpieza de usuarios inactivos (DRY-RUN)...");
+          testDeleteInactiveUsers(channel);
+        } catch (error) {
+          const errorMsg = `❌ Error en prueba de limpieza: ${error.message}`;
+          console.error(errorMsg, error);
+          await client.say(channel, errorMsg);
+        }
+      } else {
+        await client.say(channel, "❌ Solo el streamer puede usar este comando.");
+      }
+      break;
+
+    // Comando manual para borrar usuarios inactivos (solo streamer)
+    case "deleteinactive":
+      console.log(`Comando deleteinactive recibido de ${username}`);
+      if (username === "cuartodechenz") {
+        try {
+          console.log("Ejecutando limpieza de usuarios inactivos (90+ días)...");
+          await client.say(channel, "🗑️ Ejecutando limpieza de usuarios inactivos (90+ días)...");
+          deleteInactiveUsersTwoMonths();
+          await client.say(channel, "✅ Limpieza de usuarios inactivos completada.");
+        } catch (error) {
+          const errorMsg = `❌ Error en limpieza de usuarios: ${error.message}`;
+          console.error(errorMsg, error);
+          await client.say(channel, errorMsg);
+        }
+      } else {
         await client.say(channel, "❌ Solo el streamer puede usar este comando.");
       }
       break;
@@ -377,5 +415,5 @@ console.log(isTag);
 
   setCurrentUser(username);
   setIsInfoUserVisible(true);
-  deleteInactiveUsersTwoMonths();
+  // deleteInactiveUsersTwoMonths(); // Desactivado - ahora se usa comando manual !deleteinactive
 };

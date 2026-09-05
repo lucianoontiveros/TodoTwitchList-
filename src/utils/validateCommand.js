@@ -51,6 +51,8 @@ export const validateCommand = (message) => {
     "reparar", // Agregado el comando reparar
     "croquetas50",
     "dar50",
+    "testinactive", // Comando de prueba para limpieza de usuarios inactivos
+    "deleteinactive", // Comando manual para borrar usuarios inactivos (90+ días)
   ]);
 
   const command = message.slice(1).split(" ")[0].toLowerCase();

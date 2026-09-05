@@ -113,6 +113,22 @@ body {
   color: #86efac;
 }
 
+/* Base para usuarios específicos con colores personalizados */
+.user-custom-color {
+  --user-color: #ffffff;
+  color: var(--user-color);
+}
+
+.user-custom-color .task-header-title,
+.user-custom-color .task-item {
+  color: var(--user-color);
+}
+
+.user-custom-color .task-item .task-id {
+  font-size: medium;
+  background-color: var(--user-color);
+}
+
 .mod .task-header {
   color: #86efac;
 }
@@ -271,1061 +287,329 @@ body {
 /* -------------------------------------------------------- */
 
 .mandaariina {
-  color: #f2955e;
-}
-
-.mandaariina .task-header-title {
-  color: #f2955e;
-}
-
-.mandaariina .task-item {
-  color: #f2955e;
-}
-
-.mandaariina .task-item .task-id {
-  font-size: medium;
-  background-color: #f2955e;
+  --user-color: #f2955e;
 }
 
 /* -------------------------------------------------------- */
 
 .antonellavrl_ {
-  color: #fcd34d;
-}
-
-.antonellavrl_ .task-header-title {
-  color: #fcd34d;
-}
-
-.antonellavrl_ .task-item {
-  color: #fcd34d;
-}
-
-.antonellavrl_ .task-item .task-id {
-  font-size: medium;
-  background-color: #fcd34d;
+  --user-color: #fcd34d;
 }
 
 /* -------------------------------------------------------- */
 
 .summertime0805 {
-  color: #f36cdd;
-}
-
-.summertime0805 .task-header-title {
-  color: #f36cdd;
-}
-
-.summertime0805 .task-item {
-  color: #f36cdd;
-}
-
-.summertime0805 .task-item .task-id {
-  font-size: medium;
-  background-color: #e41ac3;
+  --user-color: #f36cdd;
 }
 
 /* -------------------------------------------------------- */
 
 .gominola_opositora {
-  color: #15d4ff;
-}
-
-.gominola_opositora .task-header-title {
-  color: #15d4ff;
-}
-
-.gominola_opositora .task-item {
-  color: #15d4ff;
-}
-
-.gominola_opositora .task-item .task-id {
-  font-size: medium;
-  background-color: #12a0ec;
+  --user-color: #15d4ff;
 }
 
 /* -------------------------------------------------------- */
 
 .chinita098 {
-  color: #ff8181;
-}
-
-.chinita098 .task-header-title {
-  color: #ff8181;
-}
-
-.chinita098 .task-item {
-  color: #ff8181;
-}
-
-.chinita098 .task-item .task-id {
-  font-size: medium;
-  background-color: #ff8181;
+  --user-color: #ff8181;
 }
 
 /* -------------------------------------------------------- */
 
 .agos__________ {
-  color: #c8ecf4;
-}
-
-.agos__________ .task-header-title {
-  color: #c8ecf4;
-}
-
-.agos__________ .task-item {
-  color: #c8ecf4;
-}
-
-.agos__________ .task-item .task-id {
-  font-size: medium;
-  background-color: #c8ecf4;
+  --user-color: #c8ecf4;
 }
 
 /* -------------------------------------------------------- */
 
 .sofiaantok {
-  color: #fcd34d;
-}
-
-.sofiaantok .task-header-title {
-  color: #fcd34d;
-}
-
-.sofiaantok .task-item {
-  color: #fcd34d;
-}
-
-.sofiaantok .task-item .task-id {
-  font-size: medium;
-  background-color: #fcd34d;
+  --user-color: #fcd34d;
 }
 
 /* -------------------------------------------------------- */
 
 .jana10dv {
-  color: #2ceded;
-}
-
-.jana10dv .task-header-title {
-  color: #2ceded;
-}
-
-.jana10dv .task-item {
-  color: #2ceded;
-}
-
-.jana10dv .task-item .task-id {
-  font-size: medium;
-  background-color: #2ceded;
+  --user-color: #2ceded;
 }
 
 /* -------------------------------------------------------- */
 
 .mont_opo {
-  color: #f2955e;
-}
-
-.mont_opo .task-header-title {
-  color: #f2955e;
-}
-
-.mont_opo .task-item {
-  color: #f2955e;
-}
-
-.mont_opo .task-item .task-id {
-  font-size: medium;
-  background-color: #f2955e;
+  --user-color: #f2955e;
 }
 
 /* -------------------------------------------------------- */
 
 .camm_sss {
-  color: #f87b33;
-}
-
-.camm_sss .task-header-title {
-  color: #f87b33;
-}
-
-.camm_sss .task-item {
-  color: #f87b33;
-}
-
-.camm_sss .task-item .task-id {
-  font-size: medium;
-  background-color: #f87b33;
+  --user-color: #f87b33;
 }
 
 /* -------------------------------------------------------- */
 
 .antof253 {
-  color: #d9936a;
-}
-
-.antof253 .task-header-title {
-  color: #d9936a;
-}
-
-.antof253 .task-item {
-  color: #d9936a;
-}
-
-.antof253 .task-item .task-id {
-  font-size: medium;
-  background-color: #f2955e;
+  --user-color: #d9936a;
 }
 
 /* -------------------------------------------------------- */
 
 .rsofiaa {
-  color: #c8ecf4;
-}
-
-.rsofiaa .task-header-title {
-  color: #c8ecf4;
-}
-
-.rsofiaa .task-item {
-  color: #c8ecf4;
-}
-
-.rsofiaa .task-item .task-id {
-  font-size: medium;
-  background-color: #c8ecf4;
+  --user-color: #c8ecf4;
 }
 
 /* -------------------------------------------------------- */
 
 .wandazk {
-  color: #f0f2ac;
-}
-
-.wandazk .task-header-title {
-  color: #f0f2ac;
-}
-
-.wandazk .task-item {
-  color: #f0f2ac;
-}
-
-.wandazk .task-item .task-id {
-  font-size: medium;
-  background-color: #f0f2ac;
+  --user-color: #f0f2ac;
 }
 
 /* -------------------------------------------------------- */
 
 .olmediito {
-  color: #bca7d9;
-}
-
-.olmediito .task-header-title {
-  color: #bca7d9;
-}
-
-.olmediito .task-item {
-  color: #bca7d9;
-}
-
-.olmediito .task-item .task-id {
-  font-size: medium;
-  background-color: #af8ae4;
+  --user-color: #bca7d9;
 }
 
 /* -------------------------------------------------------- */
 
 .liln1k {
-  color: #fcd34d;
-}
-
-.liln1k .task-header-title {
-  color: #fcd34d;
-}
-
-.liln1k .task-item {
-  color: #fcd34d;
-}
-
-.liln1k .task-item .task-id {
-  font-size: medium;
-  background-color: #fcd34d;
+  --user-color: #fcd34d;
 }
 
 /* -------------------------------------------------------- */
 
 .condrocita {
-  color: #f2bdd0;
-}
-
-.condrocita .task-header-title {
-  color: #f2bdd0;
-}
-
-.condrocita .task-item {
-  color: #f2bdd0;
-}
-
-.condrocita .task-item .task-id {
-  font-size: medium;
-  background-color: #f2bdd0;
+  --user-color: #f2bdd0;
 }
 
 /* -------------------------------------------------------- */
 
 .kakarotita_ {
-  color: #ccbbf2;
-}
-
-.kakarotita_ .task-header-title {
-  color: #ccbbf2;
-}
-
-.kakarotita_ .task-item {
-  color: #ccbbf2;
-}
-
-.kakarotita_ .task-item .task-id {
-  font-size: medium;
-  background-color: #ccbbf2;
+  --user-color: #ccbbf2;
 }
 
 /* -------------------------------------------------------- */
 
 .karlitarachel {
-  color: #f1ebf0;
-}
-
-.karlitarachel .task-header-title {
-  color: #f1ebf0;
-}
-
-.karlitarachel .task-item {
-  color: #f1ebf0;
-}
-
-.karlitarachel .task-item .task-id {
-  font-size: medium;
-  background-color: #f1ebf0;
+  --user-color: #f1ebf0;
 }
 
 /* -------------------------------------------------------- */
 
 .ruidodemate_rocio {
-  color: #f2a663;
-}
-
-.ruidodemate_rocio .task-header-title {
-  color: #f2a663;
-}
-
-.ruidodemate_rocio .task-item {
-  color: #f2a663;
-}
-
-.ruidodemate_rocio .task-item .task-id {
-  font-size: medium;
-  background-color: #f2a663;
+  --user-color: #f2a663;
 }
 
 /* -------------------------------------------------------- */
 
 .crissworkoutt {
-  color: #f2bdd0;
-}
-
-.crissworkoutt .task-header-title {
-  color: #f2bdd0;
-}
-
-.crissworkoutt .task-item {
-  color: #f2bdd0;
-}
-
-.crissworkoutt .task-item .task-id {
-  font-size: medium;
-  background-color: #f2bdd0;
+  --user-color: #f2bdd0;
 }
 
 /* -------------------------------------------------------- */
 
 .sofamb1 {
-  color: #f2c438;
-}
-
-.sofamb1 .task-header-title {
-  color: #f2c438;
-}
-
-.sofamb1 .task-item {
-  color: #f2c438;
-}
-
-.sofamb1 .task-item .task-id {
-  font-size: medium;
-  background-color: #f2c438;
+  --user-color: #f2c438;
 }
 
 /* -------------------------------------------------------- */
 
 .macacuelloo {
-  color: #f2bdd0;
-}
-
-.macacuelloo .task-header-title {
-  color: #f2bdd0;
-}
-
-.macacuelloo .task-item {
-  color: #f2bdd0;
-}
-
-.macacuelloo .task-item .task-id {
-  font-size: medium;
-  background-color: #f2bdd0;
+  --user-color: #f2bdd0;
 }
 
 /* -------------------------------------------------------- */
 
 .bleisny {
-  color: #bcd955;
-}
-
-.bleisny .task-header-title {
-  color: #bcd955;
-}
-
-.bleisny .task-item {
-  color: #bcd955;
-}
-
-.bleisny .task-item .task-id {
-  font-size: medium;
-  background-color: #bcd955;
+  --user-color: #bcd955;
 }
 
 /* -------------------------------------------------------- */
 
 .flan_vius_ {
-  color: #f257a0;
-}
-
-.flan_vius_ .task-header-title {
-  color: #f257a0;
-}
-
-.flan_vius_ .task-item {
-  color: #f257a0;
-}
-
-.flan_vius_ .task-item .task-id {
-  font-size: medium;
-  background-color: #f257a0;
+  --user-color: #f257a0;
 }
 
 /* -------------------------------------------------------- */
 .mariong898 {
-  color: #d9a74a;
-}
-
-.mariong898 .task-header-title {
-  color: #d9a74a;
-}
-
-.mariong898 .task-item {
-  color: #d9a74a;
-}
-
-.mariong898 .task-item .task-id {
-  font-size: medium;
-  background-color: #d9a74a;
+  --user-color: #d9a74a;
 }
 
 /* -------------------------------------------------------- */
 .Mariong898 {
-  color: #d9a74a;
-}
-
-.Mariong898 .task-header-title {
-  color: #d9a74a;
-}
-
-.Mariong898 .task-item {
-  color: #d9a74a;
-}
-
-.Mariong898 .task-item .task-id {
-  font-size: medium;
-  background-color: #d9a74a;
+  --user-color: #d9a74a;
 }
 
 /* -------------------------------------------------------- */
 
 .valenm07 {
-  color: #b75eeb;
-}
-
-.valenm07 .task-header-title {
-  color: #b75eeb;
-}
-
-.valenm07 .task-item {
-  color: #b75eeb;
-}
-
-.valenm07 .task-item .task-id {
-  font-size: medium;
-  background-color: #b75eeb;
+  --user-color: #b75eeb;
 }
 
 /* -------------------------------------------------------- */
 
 .mmmericina {
-  color: #ebb9a8;
-}
-
-.mmmericina .task-header-title {
-  color: #ebb9a8;
-}
-
-.mmmericina .task-item {
-  color: #ebb9a8;
-}
-
-.mmmericina .task-item .task-id {
-  font-size: medium;
-  background-color: #ebb9a8;
+  --user-color: #ebb9a8;
 }
 
 /* -------------------------------------------------------- */
 
 .micaaavllr {
-  color: #f2d272;
-}
-
-.micaaavllr .task-header-title {
-  color: #f2d272;
-}
-
-.micaaavllr .task-item {
-  color: #f2d272;
-}
-
-.micaaavllr .task-item .task-id {
-  font-size: medium;
-  background-color: #f2d272;
+  --user-color: #f2d272;
 }
 
 .misucarla_ {
-  color: #c9eb81;
-}
-
-.misucarla_ .task-header-title {
-  color: #c9eb81;
-}
-
-.misucarla_ .task-item {
-  color: #c9eb81;
-}
-
-.misucarla_ .task-item .task-id {
-  font-size: medium;
-  background-color: #c9eb81;
+  --user-color: #c9eb81;
 }
 
 /* -------------------------------------------------------- */
 .medicensosoxp {
-  color: #f1f2c2;
-}
-
-.medicensosoxp .task-header-title {
-  color: #f1f2c2;
-}
-
-.medicensosoxp .task-item {
-  color: #f1f2c2;
-}
-
-.medicensosoxp .task-item .task-id {
-  font-size: medium;
-  background-color: #f1f2c2;
+  --user-color: #f1f2c2;
 }
 
 /* -------------------------------------------------------- */
 
 .rocio_adm {
-  color: #f59444;
-}
-
-.rocio_adm .task-header-title {
-  color: #f59444;
-}
-
-.rocio_adm .task-item {
-  color: #f59444;
-}
-
-.rocio_adm .task-item .task-id {
-  font-size: medium;
-  background-color: #f59444;
+  --user-color: #f59444;
 }
 
 /* -------------------------------------------------------- */
 
 .romatwch {
-  color: #f2a7b5;
-}
-
-.romatwch .task-header-title {
-  color: #f2a7b5;
-}
-
-.romatwch .task-item {
-  color: #f2a7b5;
-}
-
-.romatwch .task-item .task-id {
-  font-size: medium;
-  background-color: #f2a7b5;
+  --user-color: #f2a7b5;
 }
 
 /* -------------------------------------------------------- */
 
 .cande_pl {
-  color: #9bf272;
-}
-
-.cande_pl .task-header-title {
-  color: #9bf272;
-}
-
-.cande_pl .task-item {
-  color: #9bf272;
-}
-
-.cande_pl .task-item .task-id {
-  font-size: medium;
-  background-color: #9bf272;
+  --user-color: #9bf272;
 }
 
 /* -------------------------------------------------------- */
 
 .butterflylander {
-  color: #f9fcfc;
-}
-
-.butterflylander .task-header-title {
-  color: #f9fcfc;
-}
-
-.butterflylander .task-item {
-  color: #f9fcfc;
-}
-
-.butterflylander .task-item .task-id {
-  font-size: medium;
-  background-color: #f9fcfc;
+  --user-color: #f9fcfc;
 }
 
 /* -------------------------------------------------------- */
 
 .camiichan15 {
-  color: #ec81c8;
-}
-
-.camiichan15 .task-header-title {
-  color: #ec81c8;
-}
-
-.camiichan15 .task-item {
-  color: #ec81c8;
-}
-
-.camiichan15 .task-item .task-id {
-  font-size: medium;
-  background-color: #ec81c8;
+  --user-color: #ec81c8;
 }
 
 /* -------------------------------------------------------- */
 
 .lulaluzz {
-  color: #d9d9d9;
-}
-
-.lulaluzz .task-header-title {
-  color: #d9d9d9;
-}
-
-.lulaluzz .task-item {
-  color: #d9d9d9;
-}
-
-.lulaluzz .task-item .task-id {
-  font-size: medium;
-  background-color: #d9d9d9;
+  --user-color: #d9d9d9;
 }
 
 /* -------------------------------------------------------- */
 
 .andirivero1312 {
-  color: #aea7d9;
-}
-
-.andirivero1312 .task-header-title {
-  color: #aea7d9;
-}
-
-.andirivero1312 .task-item {
-  color: #aea7d9;
-}
-
-.andirivero1312 .task-item .task-id {
-  font-size: medium;
-  background-color: #aea7d9;
+  --user-color: #aea7d9;
 }
 
 /* -------------------------------------------------------- */
 .serolae {
-  color: #f2ced5;
-}
-
-.serolae .task-header-title {
-  color: #f2ced5;
-}
-
-.serolae .task-item {
-  color: #f2ced5;
-}
-
-.serolae .task-item .task-id {
-  font-size: medium;
-  background-color: #f2ced5;
+  --user-color: #f2ced5;
 }
 /* -------------------------------------------------------- */
 
 .valetpwk {
-  color: #d9b4be;
-}
-
-.valetpwk .task-header-title {
-  color: #d9b4be;
-}
-
-.valetpwk .task-item {
-  color: #d9b4be;
-}
-
-.valetpwk .task-item .task-id {
-  font-size: medium;
-  background-color: #d9b4be;
+  --user-color: #d9b4be;
 }
 
 /* -------------------------------------------------------- */
 
 .pablinn12lp {
-  color: #bfb8ae;
-}
-
-.pablinn12lp .task-header-title {
-  color: #bfb8ae;
-}
-
-.pablinn12lp .task-item {
-  color: #bfb8ae;
-}
-
-.pablinn12lp .task-item .task-id {
-  font-size: medium;
-  background-color: #bfb8ae;
+  --user-color: #bfb8ae;
 }
 
 /* -------------------------------------------------------- */
 
 .polarizemile {
-  color: #f2b077;
-}
-
-.polarizemile .task-header-title {
-  color: #f2b077;
-}
-
-.polarizemile .task-item {
-  color: #f2b077;
-}
-
-.polarizemile .task-item .task-id {
-  font-size: medium;
-  background-color: #f2b077;
+  --user-color: #f2b077;
 }
 /* -------------------------------------------------------- */
 
 /* -------------------------------------------------------- */
 
 .diaaazm {
-  color: #f2c2cf;
-}
-
-.diaaazm .task-header-title {
-  color: #f2c2cf;
-}
-
-.diaaazm .task-item {
-  color: #f2c2cf;
-}
-
-.diaaazm .task-item .task-id {
-  font-size: medium;
-  background-color: #f2c2cf;
+  --user-color: #f2c2cf;
 }
 /* -------------------------------------------------------- */
 
 /* -------------------------------------------------------- */
 
 .boniatadelnorte {
-  color: #d4c5fc;
-}
-
-.boniatadelnorte .task-header-title {
-  color: #d4c5fc;
-}
-
-.boniatadelnorte .task-item {
-  color: #d4c5fc;
-}
-
-.boniatadelnorte .task-item .task-id {
-  font-size: medium;
-  background-color: #d4c5fc;
+  --user-color: #d4c5fc;
 }
 /* -------------------------------------------------------- */
 
 /* -------------------------------------------------------- */
 
 .virhyant08 {
-  color: #f2cd13;
-}
-
-.virhyant08 .task-header-title {
-  color: #f2cd13;
-}
-
-.virhyant08 .task-item {
-  color: #f2cd13;
-}
-
-.virhyant08 .task-item .task-id {
-  font-size: medium;
-  background-color: #f2cd13;
+  --user-color: #f2cd13;
 }
 /* -------------------------------------------------------- */
 .luluprcl {
-  color: #fea486;
-}
-
-.luluprcl .task-header-title {
-  color: #fea486;
-}
-
-.luluprcl .task-item {
-  color: #fea486;
-}
-
-.luluprcl .task-item .task-id {
-  font-size: medium;
-  background-color: #fea486;
+  --user-color: #fea486;
 }
 /* -------------------------------------------------------- */
 
 .agustttiina {
-  color: #f094d3;
-}
-
-.agustttiina .task-header-title {
-  color: #f094d3;
-}
-
-.agustttiina .task-item {
-  color: #f094d3;
-}
-
-.agustttiina .task-item .task-id {
-  font-size: medium;
-  background-color: #f094d3;
+  --user-color: #f094d3;
 }
 /* -------------------------------------------------------- */
 
 .ellchambeador {
-  color: #d4ddf7;
-}
-
-.ellchambeador .task-header-title {
-  color: #d4ddf7;
-}
-
-.ellchambeador .task-item {
-  color: #d4ddf7;
-}
-
-.ellchambeador .task-item .task-id {
-  font-size: medium;
-  background-color: #d4ddf7;
+  --user-color: #d4ddf7;
 }
 /* -------------------------------------------------------- */
 
 /* -------------------------------------------------------- */
 
 .somepassioncc {
-  color: #f5f9f9;
-}
-
-.somepassioncc .task-header-title {
-  color: #f5f9f9;
-}
-
-.somepassioncc .task-item {
-  color: #f5f9f9;
-}
-
-.somepassioncc .task-item .task-id {
-  font-size: medium;
-  background-color: #f5f9f9;
+  --user-color: #f5f9f9;
 }
 /* -------------------------------------------------------- */
 
 /* -------------------------------------------------------- */
 
 .julietavancini {
-  color: #b3d9ff;
-}
-
-.julietavancini .task-header-title {
-  color: #b3d9ff;
-}
-
-.julietavancini .task-item {
-  color: #b3d9ff;
-}
-
-.julietavancini .task-item .task-id {
-  font-size: medium;
-  background-color: #b3d9ff;
+  --user-color: #b3d9ff;
 }
 /* -------------------------------------------------------- */
 
 /* -------------------------------------------------------- */
 
 .ldaiana_ {
-  color: #f6c3ca;
-}
-
-.ldaiana_ .task-header-title {
-  color: #f6c3ca;
-}
-
-.ldaiana_ .task-item {
-  color: #f6c3ca;
-}
-
-.ldaiana_ .task-item .task-id {
-  font-size: medium;
-  background-color: #f6c3ca;
+  --user-color: #f6c3ca;
 }
 /* -------------------------------------------------------- */
 
 .lachaambeadora {
-  color: #b4dafe;
-}
-
-.lachaambeadora .task-header-title {
-  color: #b4dafe;
-}
-
-.lachaambeadora .task-item {
-  color: #b4dafe;
-}
-
-.lachaambeadora .task-item .task-id {
-  font-size: medium;
-  background-color: #b4dafe;
+  --user-color: #b4dafe;
 }
 /* -------------------------------------------------------- */
 
 .anitta8 {
-  color: #f2ced8;
-}
-
-.anitta8 .task-header-title {
-  color: #f2ced8;
-}
-
-.anitta8 .task-item {
-  color: #f2ced8;
-}
-
-.anitta8 .task-item .task-id {
-  font-size: medium;
-  background-color: #f2ced8;
+  --user-color: #f2ced8;
 }
 
 /* -------------------------------------------------------- */
 
 .idaianax {
-  color: #4ef4bc;
-}
-
-.idaianax .task-header-title {
-  color: #4ef4bc;
-}
-
-.idaianax .task-item {
-  color: #4ef4bc;
-}
-
-.idaianax .task-item .task-id {
-  font-size: medium;
-  background-color: #4ef4bc;
+  --user-color: #4ef4bc;
 }
 /* -------------------------------------------------------- */
 
 /* #F2D272 */
 .nanchycita {
-  color: #FFFFFF
-;
-}
-
-.nanchycita .task-header-title {
-  color: #FFFFFF
-;
-}
-
-.nanchycita .task-item {
-  color: #FFFFFF
-;
-}
-
-.nanchycita .task-item .task-id {
-  font-size: medium;
-  background-color: #FFFFFF
-;
+  --user-color: #FFFFFF;
 }
 /* -------------------------------------------------------- */
 
 /* #F2D272 */
 .cuartodechenz {
-  color: #f2d272;
-}
-
-.cuartodechenz .task-header-title {
-  color: #f2d272;
-}
-
-.cuartodechenz .task-item {
-  color: #f2d272;
-}
-
-.cuartodechenz .task-item .task-id {
-  font-size: medium;
-  background-color: #f2d272;
+  --user-color: #f2d272;
 }
 /* -------------------------------------------------------- */

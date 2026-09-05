@@ -148,17 +148,88 @@ const changeNameUser = (channel, oldUserView, newUserView) => {
   }
 };
 
-// Borrar usuarios inactivos por más de dos meses
-const deleteInactiveUsersTwoMonths = () => {
+// Flag para evitar ejecuciones concurrentes
+let isCleaningInactiveUsers = false;
+
+// Método de prueba (dry-run) - solo muestra qué usuarios se eliminarían sin borrarlos
+const testDeleteInactiveUsers = (channel) => {
   const currentTime = new Date().getTime();
-  const twoMonths = 60 * 60 * 24 * 30 * 2 * 1000;
+  const ninetyDays = 60 * 60 * 24 * 90 * 1000;
+  const thirtyDays = 60 * 60 * 24 * 30 * 1000;
+  const inactiveUsers = [];
+  const warningUsers = [];
+
+  Object.keys(users).forEach((username) => {
+    const user = users[username];
+    if (user.lastTime) {
+      const lastActiveTime = new Date(user.lastTime).getTime();
+      const daysInactive = Math.floor((currentTime - lastActiveTime) / (1000 * 60 * 60 * 24));
+
+      if (currentTime - lastActiveTime > ninetyDays) {
+        inactiveUsers.push({
+          username,
+          lastTime: new Date(user.lastTime).toLocaleString('es-ES'),
+          daysInactive
+        });
+      } else if (currentTime - lastActiveTime > thirtyDays) {
+        warningUsers.push({
+          username,
+          lastTime: new Date(user.lastTime).toLocaleString('es-ES'),
+          daysInactive
+        });
+      }
+    }
+  });
+
+  // Mostrar usuarios próximos a borrarse (30+ días)
+  if (warningUsers.length > 0) {
+    client.say(channel, `⚠️ ${warningUsers.length} usuarios próximos a borrarse (30+ días inactivos):`);
+    warningUsers.slice(0, 10).forEach((user) => {
+      client.say(channel, `👤 ${user.username} - Última actividad: ${user.lastTime} (${user.daysInactive} días)`);
+    });
+    if (warningUsers.length > 10) {
+      client.say(channel, `... y ${warningUsers.length - 10} más.`);
+    }
+  }
+
+  // Mostrar usuarios que se borrarían (90+ días)
+  if (inactiveUsers.length === 0) {
+    client.say(channel, "✅ No hay usuarios inactivos por más de 90 días.");
+  } else {
+    client.say(channel, `🚨 ${inactiveUsers.length} usuarios inactivos por más de 90 días (DRY-RUN - NO se borrarán):`);
+    inactiveUsers.slice(0, 10).forEach((user) => {
+      client.say(channel, `👤 ${user.username} - Última actividad: ${user.lastTime} (${user.daysInactive} días)`);
+    });
+    if (inactiveUsers.length > 10) {
+      client.say(channel, `... y ${inactiveUsers.length - 10} más. Total: ${inactiveUsers.length} usuarios.`);
+    }
+  }
+
+  if (warningUsers.length === 0 && inactiveUsers.length === 0) {
+    client.say(channel, "✅ No hay usuarios inactivos ni próximos a borrarse.");
+  }
+
+  return { inactiveUsers, warningUsers };
+};
+
+// Borrar usuarios inactivos por más de 90 días
+const deleteInactiveUsersTwoMonths = () => {
+  // Evitar ejecuciones concurrentes
+  if (isCleaningInactiveUsers) {
+    return;
+  }
+
+  isCleaningInactiveUsers = true;
+
+  const currentTime = new Date().getTime();
+  const ninetyDays = 60 * 60 * 24 * 90 * 1000;
   let usersDeleted = false;
 
   Object.keys(users).forEach((username) => {
     const user = users[username];
     if (user.lastTime) {
       const lastActiveTime = new Date(user.lastTime).getTime();
-      if (currentTime - lastActiveTime > twoMonths) {
+      if (currentTime - lastActiveTime > ninetyDays) {
         delete users[username];
         sendMessage("cuartodechenz", MESSAGES.userInactiveDeleted(username));
         usersDeleted = true;
@@ -167,6 +238,11 @@ const deleteInactiveUsersTwoMonths = () => {
   });
 
   registrationUsers(users);
+
+  // Resetear el flag después de un breve delay
+  setTimeout(() => {
+    isCleaningInactiveUsers = false;
+  }, 1000);
 };
 
 export {
@@ -175,4 +251,5 @@ export {
   verifyIdUser,
   changeNameUser,
   deleteInactiveUsersTwoMonths,
+  testDeleteInactiveUsers,
 };

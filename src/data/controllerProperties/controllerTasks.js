@@ -40,7 +40,7 @@ const MESSAGES = {
   exceededTask: (user, MAX_TASKS) =>
     `¡ @${user} ! superaste el limite de ${MAX_TASKS} preestablecidos. No podras agregar otras hasta terminar alguno de tus pendientes ❌📋`,
   limiteTask: (user, availableTasks, MAX_TASKS) =>
-    `¡ @${user} ! Solo pudiste agregar ${availableTasks} de las taras que querias registrar, por que superaste el limite de ${MAX_TASKS} preestablecidos ❌📋.`,
+    `¡ @${user} ! Solo pudiste agregar ${availableTasks} de las tareas que querias registrar, por que superaste el limite de ${MAX_TASKS} preestablecidos ❌📋.`,
 };
 
 // Funciones para dar soporte a funciones principales

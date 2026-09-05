@@ -161,6 +161,9 @@
   gap: var(--spacing-md);
   flex: 2; /* Ocupa más espacio */
   min-width: 0; /* Permite que el contenedor se encoja si es necesario */
+  background-color: var(--color-bg-dark);
+  border-radius: var(--border-radius-sm);
+  padding: 0 var(--spacing-md);
 }
 
 .title_container {
