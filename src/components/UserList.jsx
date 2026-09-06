@@ -68,7 +68,8 @@ const UserList = () => {
     loadUsers();
     const cleanup = startInterval();
 
-    // Evento para manejar cambios en localStorage
+    // Evento nativo del navegador: solo se dispara en OTRAS pestañas
+    // (útil si alguna vez tenés más de una pestaña abierta con la misma app)
     const handleStorageChange = (e) => {
       if (e.key === "users") {
         loadUsers();
@@ -76,11 +77,21 @@ const UserList = () => {
       }
     };
 
+    // Evento propio que "controllerLocalStorage.jsx" dispara cada vez que
+    // el bot guarda un cambio (nueva tarea, tarea marcada, usuario nuevo, etc.)
+    // Este SÍ se dispara en la misma pestaña, que es el caso real de la fuente de OBS.
+    const handleUsersUpdated = () => {
+      loadUsers();
+      startInterval();
+    };
+
     window.addEventListener("storage", handleStorageChange);
+    window.addEventListener("usersUpdated", handleUsersUpdated);
 
     return () => {
       cleanup?.();
       window.removeEventListener("storage", handleStorageChange);
+      window.removeEventListener("usersUpdated", handleUsersUpdated);
     };
   }, [loadUsers, startInterval]);
 

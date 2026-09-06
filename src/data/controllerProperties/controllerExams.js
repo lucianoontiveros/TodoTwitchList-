@@ -3,7 +3,7 @@ import {
   registrationUsers,
 } from "../LocalStorage/controllerLocalStorage";
 import { foundOrCreateUser } from "../controllerUsers/controllerUsers";
-import client from "../controllerClientTwitch/clientTwitch";
+import { sendChatMessage as sendMensaje } from "../../utils/sendChatMessage";
 
 class Exams {
   constructor(dateExam, typeExam, titleExam, examID) {
@@ -17,10 +17,6 @@ class Exams {
     return `${this.titleExam} tiene el ID: ${this._id}`;
   }
 }
-
-const sendMensaje = (message, channel) => {
-  client.say(channel, message);
-};
 
 const MESSAGE = {
   confirmAddExam: (user, dateExam, typeExam, titleExam) =>
@@ -86,7 +82,7 @@ const addExam = (addExamUser, dateExamUser, channel, isTag) => {
   foundOrCreateUser(addExamUser, isTag);
   const dateExam = dateExamUser.slice(0, 6);
   if (dateExam.length === 0) {
-    console.error('Fecha vacía proporcionada');
+    console.error("Fecha vacía proporcionada");
     return;
   }
 
@@ -203,16 +199,18 @@ const deleteAllExams = (deletaAllExamUSer, channel, isTag) => {
 const summaryExams = (summaryUser, channel) => {
   const allExams = [];
   const today = new Date();
-  const thirtyDaysFromNow = new Date(today.getTime() + (30 * 24 * 60 * 60 * 1000));
-  
+  const thirtyDaysFromNow = new Date(
+    today.getTime() + 30 * 24 * 60 * 60 * 1000
+  );
+
   // Recorrer todos los usuarios y sus exámenes
   Object.entries(users).forEach(([username, userData]) => {
     if (userData.exams && userData.exams.length > 0) {
-      userData.exams.forEach(exam => {
+      userData.exams.forEach((exam) => {
         // Parsear fecha del examen
         const [day, month] = exam.dateExam.split("-").map(Number);
         const examDate = new Date(today.getFullYear(), month - 1, day);
-        
+
         // Verificar si el examen está dentro de los próximos 30 días
         if (examDate >= today && examDate <= thirtyDaysFromNow) {
           allExams.push({
@@ -221,34 +219,41 @@ const summaryExams = (summaryUser, channel) => {
             typeExam: exam.typeExam,
             titleExam: exam.titleExam,
             _id: exam._id,
-            examDateObj: examDate
+            examDateObj: examDate,
           });
         }
       });
     }
   });
-  
+
   // Ordenar exámenes por fecha
   allExams.sort((a, b) => a.examDateObj - b.examDateObj);
-  
+
   // Enviar resumen
   if (allExams.length === 0) {
-    sendMensaje(`📅 No hay exámenes programados en los próximos 30 días 😊`, channel);
+    sendMensaje(
+      `📅 No hay exámenes programados en los próximos 30 días 😊`,
+      channel
+    );
   } else {
     sendMensaje(`📋 **RESUMEN DE EXÁMENES - Próximos 30 días** 📋`, channel);
     sendMensaje(`📊 Total de exámenes: ${allExams.length}`, channel);
     sendMensaje(`─`.repeat(50), channel);
-    
+
     allExams.forEach((exam, index) => {
-      const daysUntil = Math.ceil((exam.examDateObj - today) / (1000 * 60 * 60 * 24));
+      const daysUntil = Math.ceil(
+        (exam.examDateObj - today) / (1000 * 60 * 60 * 24)
+      );
       const urgencyEmoji = daysUntil <= 3 ? "🔴" : daysUntil <= 7 ? "🟡" : "🟢";
-      
+
       sendMensaje(
-        `${urgencyEmoji} ${index + 1}. 👤 ${exam.username} | 📅 ${exam.dateExam} (${daysUntil} días) | 📄 ${exam.typeExam} | 📑 ${exam.titleExam}`,
+        `${urgencyEmoji} ${index + 1}. 👤 ${exam.username} | 📅 ${
+          exam.dateExam
+        } (${daysUntil} días) | 📄 ${exam.typeExam} | 📑 ${exam.titleExam}`,
         channel
       );
     });
-    
+
     sendMensaje(`·`.repeat(50), channel);
     sendMensaje(`¡Mucha suerte en sus exámenes!`, channel);
   }
@@ -257,81 +262,95 @@ const summaryExams = (summaryUser, channel) => {
 // Modificar fecha de examen
 const modifyExamDate = (modifyUser, examID, newDate, channel, isTag) => {
   foundOrCreateUser(modifyUser, isTag);
-  
+
   // Buscar el examen por ID
   const examIndex = users[modifyUser].exams.findIndex(
     (exam) => exam._id === examID
   );
-  
+
   if (examIndex === -1) {
     sendMensaje(`No encontré examen con ID: ${examID}`, channel);
     return;
   }
-  
+
   // Validar nueva fecha
   if (!isValidDate(newDate)) {
     sendMensaje(`${modifyUser} Fecha no válida. Use el formato dd-mm`, channel);
     return;
   }
-  
+
   // Actualizar fecha
   const oldDate = users[modifyUser].exams[examIndex].dateExam;
   users[modifyUser].exams[examIndex].dateExam = newDate;
-  
+
   // Reordenar exámenes por fecha
   users[modifyUser].exams.sort((a, b) => {
     const [dayA, monthA] = a.dateExam.split("-").map(Number);
     const [dayB, monthB] = b.dateExam.split("-").map(Number);
-    
+
     if (monthA === monthB) {
       return dayA - dayB;
     }
     return monthA - monthB;
   });
-  
+
   // Filtrar exámenes pasados
   users[modifyUser].exams = users[modifyUser].exams.filter(
     (exam) => !isPastDate(exam.dateExam)
   );
-  
+
   sendMensaje(
     `Fecha modificada: ${oldDate}  ${newDate} | ID: ${examID}`,
     channel
   );
-  
+
   registrationUsers(users);
 };
 
 // Modificar descripción de examen
-const modifyExamDescription = (modifyUser, examID, newDescription, channel, isTag) => {
+const modifyExamDescription = (
+  modifyUser,
+  examID,
+  newDescription,
+  channel,
+  isTag
+) => {
   foundOrCreateUser(modifyUser, isTag);
-  
+
   // Buscar el examen por ID
   const examIndex = users[modifyUser].exams.findIndex(
     (exam) => exam._id === examID
   );
-  
+
   if (examIndex === -1) {
     sendMensaje(`No encontré examen con ID: ${examID}`, channel);
     return;
   }
-  
+
   // Validar descripción
   if (!newDescription || newDescription.trim().length === 0) {
     sendMensaje(`${modifyUser} La descripción no puede estar vaca`, channel);
     return;
   }
-  
+
   // Actualizar descripción
   const oldDescription = users[modifyUser].exams[examIndex].titleExam;
   users[modifyUser].exams[examIndex].titleExam = newDescription;
-  
+
   sendMensaje(
     `Descripcin modificada: ${oldDescription}  ${newDescription} | ID: ${examID}`,
     channel
   );
-  
+
   registrationUsers(users);
 };
 
-export { addExam, deleteExam, reviewExam, deleteAllExams, summaryExams, modifyExamDate, modifyExamDescription };
+export {
+  addExam,
+  deleteExam,
+  reviewExam,
+  deleteAllExams,
+  summaryExams,
+  modifyExamDate,
+  modifyExamDescription,
+};

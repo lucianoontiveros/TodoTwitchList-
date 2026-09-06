@@ -3,7 +3,7 @@ import {
   registrationUsers,
 } from "../LocalStorage/controllerLocalStorage";
 import { foundOrCreateUser } from "../controllerUsers/controllerUsers";
-import client from "../controllerClientTwitch/clientTwitch";
+import { sendChatMessage as sendMensaje } from "../../utils/sendChatMessage";
 class PersonalData {
   constructor() {
     this.sign;
@@ -16,10 +16,6 @@ class PersonalData {
     this.croquetastotal = 0;
   }
 }
-
-const sendMensaje = (message, channel) => {
-  client.say(channel, message);
-};
 
 const MESSAGE = {
   addConfirmDataUser: (user) =>
@@ -236,7 +232,9 @@ const grantCroquetas = (user, amount, channel) => {
     // Actualizar y avisar
     addCroquetasTotal(user, next, channel);
     registrationUsers(users);
-  } catch (e) {}
+  } catch (e) {
+    console.log(e);
+  }
 };
 
 const giveCroquetas = (user, channel) => {
