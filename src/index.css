@@ -9,8 +9,8 @@ body {
 .maincontainer {
   display: grid;
   grid-template-columns: 1fr;
-  height: 45rem;
-  width: 31.25rem;
+  height: 1920px;
+  width: 1080px;
   gap: 1rem;
   padding: 1rem;
   box-sizing: border-box;
@@ -30,8 +30,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 43em;
-  width: 29em;
+  height: 1880px;
+  width: 1040px;
 }
 
 .container_header {
@@ -44,15 +44,18 @@ body {
 .header_user {
   background-color: black;
   width: 80%;
-  height: 3em;
+  height: 5em;
   border-radius: 1em;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .header_user h2 {
-  padding: 0;
-  margin-top: 0.1em;
-  font-size: 1.5em;
+  padding: 0.5em;
+  margin: 0;
+  font-size: 2.5em;
 }
 
 .header_info {
@@ -64,19 +67,19 @@ body {
 }
 
 .header_info div {
-  font-size: 0.9em;
+  font-size: 1.5rem;
   background-color: black;
-  padding: 0.5em;
+  padding: 0.8em;
   border-radius: 1em;
-  margin-left: 0.1em;
-  margin-bottom: 0.1em;
+  margin-left: 0.2em;
+  margin-bottom: 0.2em;
 }
 
 .data {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  font-size: 0.7em;
+  font-size: 1.2rem;
 }
 
 /* Animación base reutilizable */

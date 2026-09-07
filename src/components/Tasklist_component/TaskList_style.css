@@ -7,18 +7,18 @@
   --border-radius-sm: 5px;
   --border-radius-md: 1em;
   --border-radius-lg: 1rem;
-  
+
   /* Espaciados */
   --spacing-xs: 0.2em;
   --spacing-sm: 0.3em;
   --spacing-md: 0.6em;
   --spacing-lg: 1em;
-  
-  /* Tamaños */
-  --height-header: 2rem;
-  --height-item: 2em;
-  --width-id: 50px;
-  --max-width-description: 24.5em;
+
+  /* Tamaños - ajustados para pantalla 1920x1080 */
+  --height-header: 4rem;
+  --height-item: 4em;
+  --width-id: 100px;
+  --max-width-description: 30em;
 }
 
 .task-header {
@@ -30,6 +30,11 @@
   margin: var(--spacing-lg) 0.7em 0 0.7em;
   background-color: var(--color-bg-header);
   border-radius: var(--border-radius-md);
+}
+
+.task-header-title {
+  font-size: 2.5rem;
+  font-weight: 700;
 }
 
 .task-list {
@@ -55,9 +60,9 @@
 }
 
 .task-item .task-description {
-  font-size: medium;
+  font-size: 2rem;
   font-weight: 500;
-  padding-left: 15px;
+  padding-left: 20px;
   max-width: var(--max-width-description);
   text-overflow: ellipsis;
   white-space: nowrap;
