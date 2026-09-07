@@ -180,10 +180,10 @@ const UserList_component = memo(({ currentUser }) => {
             position: "absolute",
             top: "10px",
             right: "10px",
-            width: "30px",
-            height: "30px",
-            backgroundColor: "transparent",
-            border: "none",
+            width: "32px",
+            height: "32px",
+            backgroundColor: "rgba(14, 242, 223, 0.1)",
+            border: "2px solid rgba(14, 242, 223, 0.5)",
             borderRadius: "50%",
             cursor: "pointer",
             display: "flex",
@@ -191,28 +191,30 @@ const UserList_component = memo(({ currentUser }) => {
             justifyContent: "center",
             zIndex: 1000,
             padding: 0,
+            transition: "all 0.3s ease",
+          }}
+          onMouseOver={(e) => {
+            e.currentTarget.style.backgroundColor = "rgba(239, 68, 68, 0.2)";
+            e.currentTarget.style.borderColor = "#ef4444";
+            e.currentTarget.querySelector('svg').style.stroke = "#ef4444";
+          }}
+          onMouseOut={(e) => {
+            e.currentTarget.style.backgroundColor = "rgba(14, 242, 223, 0.1)";
+            e.currentTarget.style.borderColor = "rgba(14, 242, 223, 0.5)";
+            e.currentTarget.querySelector('svg').style.stroke = "rgba(14, 242, 223, 0.8)";
           }}
         >
           <svg
-            width="20"
-            height="20"
+            width="18"
+            height="18"
             viewBox="0 0 24 24"
             fill="none"
-            stroke="rgba(14, 242, 223, 0.989)"
-            strokeWidth="2"
+            stroke="rgba(14, 242, 223, 0.8)"
+            strokeWidth="2.5"
             strokeLinecap="round"
             strokeLinejoin="round"
             style={{
-              opacity: 0.5,
               transition: "all 0.3s ease",
-            }}
-            onMouseOver={(e) => {
-              e.currentTarget.style.opacity = "1";
-              e.currentTarget.style.stroke = "#ef4444";
-            }}
-            onMouseOut={(e) => {
-              e.currentTarget.style.opacity = "0.5";
-              e.currentTarget.style.stroke = "rgba(14, 242, 223, 0.989)";
             }}
           >
             <path d="M18 6L6 18M6 6l12 12" />
