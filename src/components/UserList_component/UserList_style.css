@@ -61,7 +61,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 950px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: var(--spacing-md);
   box-sizing: border-box;
@@ -185,7 +185,7 @@
 }
 
 .title_container strong {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 800;
   text-align: center;
   white-space: nowrap;
@@ -235,7 +235,7 @@
   white-space: nowrap;
   text-align: center;
   border-radius: var(--border-radius-tag);
-  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  font-size: clamp(1.6rem, 1.5vw, 1.2rem);
   font-weight: 600;
   padding: 0 var(--spacing-sm);
   background-color: transparent;
