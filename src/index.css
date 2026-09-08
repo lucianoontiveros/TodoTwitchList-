@@ -53,9 +53,7 @@ body {
   box-sizing: border-box;
 }
 
-.header-container div {
-  font-size: 0.01em; 
-}
+
 
 .container_header {
   margin: 0.5em;
