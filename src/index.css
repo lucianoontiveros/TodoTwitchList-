@@ -9,7 +9,7 @@ body {
 .contenedor {
   display: flex;
   flex-direction: column;
-  max-width: 1200px;
+  
   margin: 0 auto;
   padding: var(--spacing-md);
   box-sizing: border-box;
@@ -24,15 +24,16 @@ body {
   overflow: hidden;
 }
 
+
+
 .maincontainer {
   display: grid;
+  margin-top: 10px;
   grid-template-columns: 1fr;
   gap: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: "Sawarabi Gothic", "Segoe UI Emoji", "Segoe UI Symbol",
     "Apple Color Emoji", "Noto Color Emoji", sans-serif;
-  font-optical-sizing: auto;
   background-color: rgba(84, 108, 111, 0.5);
   border-radius: 1em;
   position: fixed;
@@ -46,11 +47,14 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-background-color: black;
-  height: 1400px;
-  width: 900px;
+  height: 1080px;
+  width: 720px;
   padding: 1rem;
   box-sizing: border-box;
+}
+
+.header-container div {
+  font-size: 0.01em; 
 }
 
 .container_header {
