@@ -18,7 +18,7 @@
 :root {
   /* Dimensiones principales */
   --container-height: 20rem; /* Aumentar la altura para la barra */
-  --container-width: 95vw; /* Usar el ancho completo de la pantalla */
+  --container-width: 950px; /* Ancho máximo de 950px */
   --header-height: 120px; /* Altura fija para la barra */
 
   /* Colores */
@@ -43,13 +43,13 @@
   --spacing-lg: 1em;
   --spacing-xl: 2em;
 
-  /* Tamaños de fuente - aumentados para pantalla 1920x1080 */
-  --font-size-sm: 1.2em;
-  --font-size-md: 1.5rem;
-  --font-size-lg: 3rem;
+  /* Tamaños de fuente - ajustados para ancho 950px */
+  --font-size-sm: 1.1em;
+  --font-size-md: 1.3rem;
+  --font-size-lg: 2.2rem;
 
   /* Anchos */
-  --title-min-width: 25rem;
+  --title-min-width: 20rem;
 
   /* Dimensiones del contenedor */
   height: var(--container-height);
@@ -61,7 +61,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 95vw;
+  max-width: 950px;
   margin: 0 auto;
   padding: var(--spacing-md);
   box-sizing: border-box;
@@ -129,7 +129,7 @@
 .card {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   /* background-image: url('/images/bambus.png'); */
@@ -143,7 +143,7 @@
   box-shadow: none;
   animation: none;
   transition: all 0.3s ease-in-out;
-  height: 120px;
+  height: 100px;
   gap: var(--spacing-md);
 }
 
@@ -159,7 +159,7 @@
   width: 100%;
   height: 100%;
   gap: var(--spacing-md);
-  flex: 2; /* Ocupa más espacio */
+  flex: 1; /* Ocupa todo el espacio disponible */
   min-width: 0; /* Permite que el contenedor se encoja si es necesario */
   background-color: var(--color-bg-dark);
   border-radius: var(--border-radius-sm);
@@ -171,10 +171,10 @@
   display: flex;
   flex: 0 1 auto;
   align-items: center;
-  min-width: 200px;
-  max-width: 500px;
+  min-width: 150px;
+  max-width: 300px;
   justify-content: center;
-  height: 100px;
+  height: 85px;
   padding: 0 var(--spacing-md);
   margin: 0;
   background-color: transparent;
@@ -185,7 +185,7 @@
 }
 
 .title_container strong {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: 800;
   text-align: center;
   white-space: nowrap;
@@ -235,15 +235,15 @@
   white-space: nowrap;
   text-align: center;
   border-radius: var(--border-radius-tag);
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
   font-weight: 600;
-  padding: 0 var(--spacing-md);
+  padding: 0 var(--spacing-sm);
   background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100px;
-  min-width: clamp(180px, 25vw, 250px);
+  height: 75px;
+  min-width: clamp(100px, 15vw, 140px);
   transition: all 0.2s ease;
   overflow: hidden;
   text-overflow: ellipsis;
