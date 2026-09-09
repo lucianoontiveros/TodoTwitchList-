@@ -175,6 +175,7 @@ const UserList_component = memo(({ currentUser }) => {
         style={{ position: "relative" }}
       >
         <button
+          className="button_clear_user"
           onClick={handleDeleteUser}
           style={{
             position: "absolute",
@@ -196,12 +197,13 @@ const UserList_component = memo(({ currentUser }) => {
           onMouseOver={(e) => {
             e.currentTarget.style.backgroundColor = "rgba(239, 68, 68, 0.2)";
             e.currentTarget.style.borderColor = "#ef4444";
-            e.currentTarget.querySelector('svg').style.stroke = "#ef4444";
+            e.currentTarget.querySelector("svg").style.stroke = "#ef4444";
           }}
           onMouseOut={(e) => {
             e.currentTarget.style.backgroundColor = "rgba(14, 242, 223, 0.1)";
             e.currentTarget.style.borderColor = "rgba(14, 242, 223, 0.5)";
-            e.currentTarget.querySelector('svg').style.stroke = "rgba(14, 242, 223, 0.8)";
+            e.currentTarget.querySelector("svg").style.stroke =
+              "rgba(14, 242, 223, 0.8)";
           }}
         >
           <svg

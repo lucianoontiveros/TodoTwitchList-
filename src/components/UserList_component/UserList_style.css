@@ -167,6 +167,10 @@
   box-shadow: 0 0 5px 2px var(--color-primary), 0 0 8px 4px var(--color-primary);
 }
 
+.button_clear_user {
+  margin-right: 0.5em;
+}
+
 .title_container {
   display: flex;
   flex: 0 1 auto;
