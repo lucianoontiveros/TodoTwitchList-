@@ -4,6 +4,7 @@ import mariong898 from "./mariong898.png";
 import sofamb1 from "./sofamb1.jpeg";
 import sofiaantok from "./sofiaantok.png";
 import summertime0805 from "./summertime0805.png";
+import sandey27 from "./esfuerzo.png";
 
 // clasificación por defecto
 // import viewer from "./viewer.png";
@@ -19,4 +20,5 @@ export const vipBackgrounds = {
   sofamb1: sofamb1,
   karlitarachel: karlitarachel,
   summertime0805: summertime0805,
+  sandey27: sandey27,
 };

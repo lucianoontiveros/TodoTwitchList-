@@ -9,7 +9,7 @@ body {
 .contenedor {
   display: flex;
   flex-direction: column;
-  
+
   margin: 0 auto;
   padding: var(--spacing-md);
   box-sizing: border-box;
@@ -23,8 +23,6 @@ body {
   z-index: 1000;
   overflow: hidden;
 }
-
-
 
 .maincontainer {
   display: grid;
@@ -52,8 +50,6 @@ body {
   padding: 1rem;
   box-sizing: border-box;
 }
-
-
 
 .container_header {
   margin: 0.5em;
@@ -628,9 +624,13 @@ body {
 
 /* #F2D272 */
 .nanchycita {
-  --user-color: #FFFFFF;
+  --user-color: #ffffff;
 }
 /* -------------------------------------------------------- */
+
+.sandey27 {
+  --user-color: #db2777;
+}
 
 /* #F2D272 */
 .cuartodechenz {
