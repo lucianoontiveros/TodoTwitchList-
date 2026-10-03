@@ -97,6 +97,8 @@ const MESSAGE = {
     `🐶 @${user} puede pedir ${benefitName}.\n\n🦴 Croquetas: ${croquetas} / ${croquetasRequired} ✅\n⭐ Gestión: ${points} / ${pointsRequired} ✅`,
   benefitGranted: (benefitName, pointsCost) =>
     `⭐ -${pointsCost} puntos\n🦴 0 croquetas descontadas\n🎁 ${benefitName} concedido`,
+  grantCroquetasMessage: (user, amount, total) =>
+    `🐶 ${user} le entregó ${amount} croqueta${amount > 1 ? "s" : ""} a Brunito 🍪\n🦴 Total acumulado: ${total}`,
 };
 
 const reviewPersonalData = (user, channel) => {
@@ -137,7 +139,7 @@ const getUserInfo = (user, channel) => {
       : ""
   }
   ${personalData.birth ? `- Fecha de nacimiento: ${personalData.birth}` : ""}
- 
+
   ${personalData.instagram ? `- Instagram: ${personalData.instagram}` : ""}
   ${
     personalData.oppositionfor
@@ -147,7 +149,7 @@ const getUserInfo = (user, channel) => {
   ${personalData.studyfor ? `- Estudios: ${personalData.studyfor}` : ""}
   ${
     personalData.croquetastotal
-      ? `- Croquetas totales entregadas: ${personalData.croquetastotal}`
+      ? `- Croquetas: ${personalData.croquetastotal}`
       : ""
   }
   `;
@@ -270,11 +272,6 @@ const addStudyFor = (user, studyforUser, channel) => {
   sendMensaje(MESSAGE.addStudyForUser(user, studyforUser), channel);
 };
 
-const addCroquetasTotal = (user, croquetas, channel) => {
-  updatePersonalData(user, "croquetastotal", croquetas);
-  sendMensaje(MESSAGE.addCroquetasUser(user, croquetas), channel);
-};
-
 // Sumar croquetas a un usuario sin consumir puntos
 const grantCroquetas = (user, amount, channel) => {
   try {
@@ -286,8 +283,12 @@ const grantCroquetas = (user, amount, channel) => {
     const current = users[user].personaldata[0].croquetastotal || 0;
     const next = current + (Number.isFinite(amount) ? amount : 0);
 
-    // Actualizar y avisar
-    addCroquetasTotal(user, next, channel);
+    // Actualizar y avisar con mensaje correcto
+    updatePersonalData(user, "croquetastotal", next);
+    sendMensaje(
+      MESSAGE.grantCroquetasMessage(user, amount, next),
+      channel
+    );
     registrationUsers(users);
   } catch (e) {
     console.log(e);
@@ -413,7 +414,6 @@ export {
   addInstagram,
   addOppositionfor,
   addStudyFor,
-  addCroquetasTotal,
   giveCroquetas,
   bonusPoint,
   grantCroquetas,
