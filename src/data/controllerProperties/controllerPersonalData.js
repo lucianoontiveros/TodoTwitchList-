@@ -238,12 +238,33 @@ const grantCroquetas = (user, amount, channel) => {
 };
 
 const giveCroquetas = (user, channel) => {
-  reviewPersonalData(user, channel);
-  if (users[user].personaldata[0].points > 0) {
-    let croquetas = users[user].personaldata[0].croquetastotal + 1 || 1;
-    addCroquetasTotal(user, croquetas, channel);
-    updatePersonalData(user, "points", users[user].personaldata[0].points - 1);
-  } else sendMensaje(MESSAGE.noPoints(user), channel);
+  reviewPersonalData(user);
+
+  const personalData = users[user].personaldata[0];
+
+  // ¿Tiene puntos para canjear?
+  if (personalData.points <= 0) {
+    sendMensaje(MESSAGE.noPoints(user), channel);
+    return;
+  }
+
+  // Obtener valores actuales
+  const currentPoints = personalData.points;
+  const currentCroquetas = personalData.croquetastotal || 0;
+
+  // Canjear 1 punto → 1 croqueta
+  const newPoints = currentPoints - 1;
+  const newCroquetas = currentCroquetas + 1;
+
+  // Guardar cambios
+  updatePersonalData(user, "points", newPoints);
+  updatePersonalData(user, "croquetastotal", newCroquetas);
+
+  // Avisar
+  sendMensaje(
+    MESSAGE.addCroquetasUser(user, newCroquetas),
+    channel
+  );
 };
 
 export {
