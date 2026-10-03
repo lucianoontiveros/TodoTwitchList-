@@ -53,6 +53,8 @@ export const validateCommand = (message) => {
     "dar50",
     "testinactive", // Comando de prueba para limpieza de usuarios inactivos
     "deleteinactive", // Comando manual para borrar usuarios inactivos (90+ días)
+    "cambiarpomo", // Comando para reclamar pomo extra
+    "cambiarstream", // Comando para reclamar stream personalizado
   ]);
 
   const command = message.slice(1).split(" ")[0].toLowerCase();

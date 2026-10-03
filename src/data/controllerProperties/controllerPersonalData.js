@@ -4,6 +4,34 @@ import {
 } from "../LocalStorage/controllerLocalStorage";
 import { foundOrCreateUser } from "../controllerUsers/controllerUsers";
 import { sendChatMessage as sendMensaje } from "../../utils/sendChatMessage";
+
+// Configuración del bonus aleatorio de croquetas
+const CROQUETA_BONUS = {
+  // Probabilidades (deben sumar 1.0 o menos)
+  NORMAL_PROBABILITY: 0.90, // 90% probabilidad de +1 croqueta
+  BONUS_PROBABILITY: 0.09, // 9% probabilidad de +10 croquetas
+  GOLDEN_PROBABILITY: 0.01, // 1% probabilidad de +30 croquetas
+
+  // Cantidades
+  NORMAL_AMOUNT: 1,
+  BONUS_AMOUNT: 10,
+  GOLDEN_AMOUNT: 30,
+};
+
+// Definición de beneficios
+const BENEFITS = {
+  pomo: {
+    name: "pomo extra",
+    croquetas: 400,
+    points: 1000,
+  },
+  stream: {
+    name: "stream personalizado",
+    croquetas: 900,
+    points: 2000,
+  },
+};
+
 class PersonalData {
   constructor() {
     this.sign;
@@ -40,6 +68,35 @@ const MESSAGE = {
       : `${user} le entrego ${croquetasUser} croquetas en todo este tiempo 🍪`,
   noPoints: (user) =>
     `${user}, 😐 no tiene puntos. Puede generar los mismos registrando y gestionando tus tareas y examenes`,
+  // Nuevos mensajes para el sistema de croquetas y beneficios
+  croquetaDelivered: (user, amount, total) =>
+    `🐶 ${user} le entregó ${amount} croqueta${amount > 1 ? "s" : ""} a Brunito 🍪\n🦴 Total acumulado: ${total}`,
+  croquetaBonus: (user, amount, total) =>
+    `🐶 ¡Brunito encontró una croqueta dorada! ✨\n${user} recibió +${amount} 🦴\n🦴 Total acumulado: ${total}`,
+  benefitRequirements: (user, benefitName, croquetas, croquetasRequired, points, pointsRequired) => {
+    const croquetasOk = croquetas >= croquetasRequired;
+    const pointsOk = points >= pointsRequired;
+    
+    let message = `🐶 @${user} todavía no puede pedir ${benefitName}.\n\n`;
+    message += `🦴 Croquetas: ${croquetas} / ${croquetasRequired} ${croquetasOk ? "✅" : "❌"}\n`;
+    message += `⭐ Gestión: ${points} / ${pointsRequired} ${pointsOk ? "✅" : "❌"}\n`;
+    
+    if (!croquetasOk || !pointsOk) {
+      message += `\nTe faltan:\n`;
+      if (!croquetasOk) {
+        message += `🦴 ${croquetasRequired - croquetas} croquetas\n`;
+      }
+      if (!pointsOk) {
+        message += `⭐ ${pointsRequired - points} puntos de gestión`;
+      }
+    }
+    
+    return message;
+  },
+  benefitAvailable: (user, benefitName, croquetas, croquetasRequired, points, pointsRequired) =>
+    `🐶 @${user} puede pedir ${benefitName}.\n\n🦴 Croquetas: ${croquetas} / ${croquetasRequired} ✅\n⭐ Gestión: ${points} / ${pointsRequired} ✅`,
+  benefitGranted: (benefitName, pointsCost) =>
+    `⭐ -${pointsCost} puntos\n🦴 0 croquetas descontadas\n🎁 ${benefitName} concedido`,
 };
 
 const reviewPersonalData = (user, channel) => {
@@ -252,17 +309,98 @@ const giveCroquetas = (user, channel) => {
   const currentPoints = personalData.points;
   const currentCroquetas = personalData.croquetastotal || 0;
 
-  // Canjear 1 punto → 1 croqueta
+  // Determinar cantidad de croquetas (bonus aleatorio)
+  const random = Math.random();
+  let croquetasToAdd = CROQUETA_BONUS.NORMAL_AMOUNT;
+  let isBonus = false;
+
+  if (random < CROQUETA_BONUS.GOLDEN_PROBABILITY) {
+    croquetasToAdd = CROQUETA_BONUS.GOLDEN_AMOUNT;
+    isBonus = true;
+  } else if (random < CROQUETA_BONUS.GOLDEN_PROBABILITY + CROQUETA_BONUS.BONUS_PROBABILITY) {
+    croquetasToAdd = CROQUETA_BONUS.BONUS_AMOUNT;
+    isBonus = true;
+  }
+
+  // Canjear 1 punto → croquetas (siempre consume 1 punto)
   const newPoints = currentPoints - 1;
-  const newCroquetas = currentCroquetas + 1;
+  const newCroquetas = currentCroquetas + croquetasToAdd;
 
   // Guardar cambios
   updatePersonalData(user, "points", newPoints);
   updatePersonalData(user, "croquetastotal", newCroquetas);
 
-  // Avisar
+  // Avisar con el mensaje apropiado
+  if (isBonus) {
+    sendMensaje(
+      MESSAGE.croquetaBonus(user, croquetasToAdd, newCroquetas),
+      channel
+    );
+  } else {
+    sendMensaje(
+      MESSAGE.croquetaDelivered(user, croquetasToAdd, newCroquetas),
+      channel
+    );
+  }
+};
+
+// Función genérica para reclamar beneficios
+const redeemBenefit = (user, benefitKey, channel) => {
+  // Verificar que el beneficio existe
+  const benefit = BENEFITS[benefitKey];
+  if (!benefit) {
+    sendMensaje(`❌ Beneficio no reconocido: ${benefitKey}`, channel);
+    return;
+  }
+
+  // Asegurar que el usuario existe y tiene datos personales
+  reviewPersonalData(user);
+  const personalData = users[user].personaldata[0];
+
+  // Obtener valores actuales (asegurar números)
+  const currentCroquetas = Number(personalData.croquetastotal) || 0;
+  const currentPoints = Number(personalData.points) || 0;
+
+  // Verificar requisitos
+  const croquetasOk = currentCroquetas >= benefit.croquetas;
+  const pointsOk = currentPoints >= benefit.points;
+
+  // Si no cumple los requisitos, informar
+  if (!croquetasOk || !pointsOk) {
+    sendMensaje(
+      MESSAGE.benefitRequirements(
+        user,
+        benefit.name,
+        currentCroquetas,
+        benefit.croquetas,
+        currentPoints,
+        benefit.points
+      ),
+      channel
+    );
+    return;
+  }
+
+  // Si cumple los requisitos, informar que puede reclamar
   sendMensaje(
-    MESSAGE.addCroquetasUser(user, newCroquetas),
+    MESSAGE.benefitAvailable(
+      user,
+      benefit.name,
+      currentCroquetas,
+      benefit.croquetas,
+      currentPoints,
+      benefit.points
+    ),
+    channel
+  );
+
+  // Descontar SOLO los puntos (las croquetas no se descuentan)
+  const newPoints = currentPoints - benefit.points;
+  updatePersonalData(user, "points", newPoints);
+
+  // Confirmar el beneficio
+  sendMensaje(
+    MESSAGE.benefitGranted(benefit.name, benefit.points),
     channel
   );
 };
@@ -279,4 +417,5 @@ export {
   giveCroquetas,
   bonusPoint,
   grantCroquetas,
+  redeemBenefit,
 };

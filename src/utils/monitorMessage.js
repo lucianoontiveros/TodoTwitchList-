@@ -40,6 +40,7 @@ import {
   addStudyFor,
   giveCroquetas,
   grantCroquetas,
+  redeemBenefit,
 } from "../data/controllerProperties/controllerPersonalData";
 
 import { repairBrokenUsers } from "./repairUsers";
@@ -224,6 +225,12 @@ export const monitorMessage = async (
       break;
     case "croqueta":
       giveCroquetas(username, channel);
+      break;
+    case "cambiarpomo":
+      redeemBenefit(username, "pomo", channel);
+      break;
+    case "cambiarstream":
+      redeemBenefit(username, "stream", channel);
       break;
     case "nacionalidad":
       addDataNationality(username, task, channel);
