@@ -4,8 +4,8 @@ import {
 } from "../LocalStorage/controllerLocalStorage";
 import { foundOrCreateUser } from "../controllerUsers/controllerUsers";
 import { addDataPoints } from "./controllerPersonalData";
-import client from "../controllerClientTwitch/clientTwitch";
 import { bonusPoint } from "./controllerPersonalData";
+import { sendChatMessage as sendMessage } from "../../utils/sendChatMessage";
 class Task {
   constructor(task, ID) {
     this.description = task;
@@ -13,11 +13,6 @@ class Task {
     this.active = false;
   }
 }
-
-// Gestor de mensajes
-const sendMessage = (message, channel) => {
-  client.say(channel, message);
-};
 
 const MESSAGES = {
   addTask: (user, task, ID) =>
@@ -40,7 +35,7 @@ const MESSAGES = {
   exceededTask: (user, MAX_TASKS) =>
     `¡ @${user} ! superaste el limite de ${MAX_TASKS} preestablecidos. No podras agregar otras hasta terminar alguno de tus pendientes ❌📋`,
   limiteTask: (user, availableTasks, MAX_TASKS) =>
-    `¡ @${user} ! Solo pudiste agregar ${availableTasks} de las taras que querias registrar, por que superaste el limite de ${MAX_TASKS} preestablecidos ❌📋.`,
+    `¡ @${user} ! Solo pudiste agregar ${availableTasks} de las tareas que querias registrar, por que superaste el limite de ${MAX_TASKS} preestablecidos ❌📋.`,
 };
 
 // Funciones para dar soporte a funciones principales
@@ -54,15 +49,15 @@ const reviewListTask = (user, channel) => {
       console.error(`Usuario no encontrado: ${user}`);
       return;
     }
-    
+
     // Asegurarse de que tasks sea un array
     if (!Array.isArray(users[user].tasks)) {
       console.log(`Reparando tasks para el usuario ${user}`);
       users[user].tasks = [];
     }
-    
+
     const tasks = users[user].tasks;
-    
+
     if (tasks.length === 0) {
       sendMessage(MESSAGES.noTasks(user), channel);
     } else {
@@ -78,7 +73,10 @@ const reviewListTask = (user, channel) => {
     }
   } catch (error) {
     console.error(`Error en reviewListTask para el usuario ${user}:`, error);
-    sendMessage(`❌ Ocurrió un error al revisar las tareas de ${user}`, channel);
+    sendMessage(
+      `❌ Ocurrió un error al revisar las tareas de ${user}`,
+      channel
+    );
   }
 };
 
@@ -138,24 +136,27 @@ const reviewListTaskUser = (user, channel, tag) => {
   try {
     // Asegurarse de que el usuario existe
     foundOrCreateUser(user, tag);
-    
+
     // Verificar nuevamente que el usuario existe después de crearlo
     if (!users[user]) {
       console.error(`No se pudo crear/find el usuario: ${user}`);
       sendMessage(`❌ No se pudo acceder a las tareas de @${user}`, channel);
       return;
     }
-    
+
     // Verificar que tasks sea un array
     if (!Array.isArray(users[user].tasks)) {
       users[user].tasks = [];
       console.log(`Se inicializó el array de tareas para el usuario: ${user}`);
     }
-    
+
     reviewListTask(user, channel);
   } catch (error) {
     console.error(`Error en reviewListTaskUser para ${user}:`, error);
-    sendMessage(`❌ Ocurrió un error al revisar las tareas de @${user}`, channel);
+    sendMessage(
+      `❌ Ocurrió un error al revisar las tareas de @${user}`,
+      channel
+    );
   }
 };
 
@@ -232,20 +233,22 @@ const completeFirstTask = (user, channel) => {
 
   // Obtener la primera tarea
   const firstTask = users[user].tasks[0];
-  
+
   // Marcar como completada
-  users[user].tasks = users[user].tasks.filter(task => task._id !== firstTask._id);
-  
+  users[user].tasks = users[user].tasks.filter(
+    (task) => task._id !== firstTask._id
+  );
+
   // Guardar cambios
   addDataPoints(user);
   registrationUsers(users);
-  
+
   // Enviar mensaje de confirmación (incluye ID)
   sendMessage(
     MESSAGES.readyTask(user, firstTask.description, firstTask._id),
     channel
   );
-  
+
   return firstTask;
 };
 

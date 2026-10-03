@@ -7,6 +7,7 @@ import {
   verifyIdUser,
   changeNameUser,
   deleteInactiveUsersTwoMonths,
+  testDeleteInactiveUsers,
 } from "../data/controllerUsers/controllerUsers";
 
 import {
@@ -25,6 +26,9 @@ import {
   deleteExam,
   reviewExam,
   deleteAllExams,
+  summaryExams,
+  modifyExamDate,
+  modifyExamDescription,
 } from "../data/controllerProperties/controllerExams";
 
 import {
@@ -36,17 +40,11 @@ import {
   addStudyFor,
   giveCroquetas,
   grantCroquetas,
+  redeemBenefit,
 } from "../data/controllerProperties/controllerPersonalData";
 
-// Importaciones de utilidad con el localStorage
-import jsonData from "../data/localStorageData.json";
-
-import {
-  loadLocalStorageFromFile,
-  saveLocalStorageFile,
-} from "../data/LocalStorage/controllerLocalStorage";
-
 import { repairBrokenUsers } from "./repairUsers";
+import { parseIds } from "./parseIds";
 import client from "../data/controllerClientTwitch/clientTwitch";
 
 export const monitorMessage = async (
@@ -65,7 +63,6 @@ export const monitorMessage = async (
   // Validar comando
   const commandVerify = validateCommand(message.toLowerCase().split(" ")[0]);
   if (!commandVerify) return;
- 
 
   // promps que extraemos del comando
   const command = message.toLowerCase().split(" ")[0].slice(1);
@@ -78,43 +75,46 @@ export const monitorMessage = async (
   const taskMod =
     taskLowercase.charAt(0).toUpperCase() + taskLowercase.slice(4);
 
-
-    // Parsear los badges, manejando tanto string como objeto
-    const badges = {};
-    if (tags.badges) {
-      if (typeof tags.badges === 'string') {
-        // Formato antiguo: "moderator/1,subscriber/12"
-        tags.badges.split(',').forEach(badge => {
-          const [name, version] = badge.split('/');
-          if (name && version) {
-            badges[name.toLowerCase()] = version;
-          }
-        });
-      } else if (typeof tags.badges === 'object') {
-        // Formato nuevo: { moderator: '1', subscriber: '12' }
-        Object.entries(tags.badges).forEach(([name, version]) => {
-          if (name && version) {
-            badges[name.toLowerCase()] = version;
-          }
-        });
-      }
+  // Parsear los badges, manejando tanto string como objeto
+  const badges = {};
+  if (tags.badges) {
+    if (typeof tags.badges === "string") {
+      // Formato antiguo: "moderator/1,subscriber/12"
+      tags.badges.split(",").forEach((badge) => {
+        const [name, version] = badge.split("/");
+        if (name && version) {
+          badges[name.toLowerCase()] = version;
+        }
+      });
+    } else if (typeof tags.badges === "object") {
+      // Formato nuevo: { moderator: '1', subscriber: '12' }
+      Object.entries(tags.badges).forEach(([name, version]) => {
+        if (name && version) {
+          badges[name.toLowerCase()] = version;
+        }
+      });
     }
+  }
 
-    const isPrime = badges.premium !== undefined;
-    const isVip = badges.vip !== undefined;
-    const isMod = badges.moderator !== undefined;
-    const isBroadcaster = badges.broadcaster !== undefined;
-    const isSub = badges.subscriber !== undefined || isBroadcaster;
+  const isPrime = badges.premium !== undefined;
+  const isVip = badges.vip !== undefined;
+  const isMod = badges.moderator !== undefined;
+  const isBroadcaster = badges.broadcaster !== undefined;
+  const isSub = badges.subscriber !== undefined || isBroadcaster;
 
-    let isTag = isSub ? "sub" 
-    : isMod ? "mod" 
-  : isVip ? "vip" 
-  : isPrime ? "prime" 
-  : "none";
+  let isTag = isSub
+    ? "sub"
+    : isMod
+    ? "mod"
+    : isVip
+    ? "vip"
+    : isPrime
+    ? "prime"
+    : "none";
 
-console.log(isTag);
+  console.log(isTag);
 
-    foundOrCreateUser(username, isTag);
+  foundOrCreateUser(username, isTag);
   // Manejo de comandos
   switch (command) {
     // Administrar usuarios
@@ -163,11 +163,7 @@ console.log(isTag);
     case "check":
       // Soporte multi-ID con espacios opcionales: "!marcar 12; 34; 56;"
       {
-        const idsText = taskLowercase.trim();
-        const ids = idsText
-          .split(";")
-          .map((s) => s.trim())
-          .filter((s) => s.length > 0);
+        const ids = parseIds(taskLowercase);
 
         if (ids.length > 1) {
           ids.forEach((id) => {
@@ -188,11 +184,7 @@ console.log(isTag);
     case "delete":
       // Soporte multi-ID con espacios opcionales: "!eliminar 12; 34; 56;"
       {
-        const idsText = taskLowercase.trim();
-        const ids = idsText
-          .split(";")
-          .map((s) => s.trim())
-          .filter((s) => s.length > 0);
+        const ids = parseIds(taskLowercase);
 
         if (ids.length > 1) {
           ids.forEach((id) => {
@@ -234,6 +226,12 @@ console.log(isTag);
     case "croqueta":
       giveCroquetas(username, channel);
       break;
+    case "cambiarpomo":
+      redeemBenefit(username, "pomo", channel);
+      break;
+    case "cambiarstream":
+      redeemBenefit(username, "stream", channel);
+      break;
     case "nacionalidad":
       addDataNationality(username, task, channel);
       break;
@@ -248,20 +246,27 @@ console.log(isTag);
     case "croquetas50":
     case "dar50": {
       if (username !== "cuartodechenz") {
-        await client.say(channel, "❌ Solo el streamer puede usar este comando.");
+        await client.say(
+          channel,
+          "❌ Solo el streamer puede usar este comando."
+        );
         break;
       }
       const targetRaw = (arg || taskLowercase).trim();
       const target = targetRaw.replace(/^@/, "");
       if (!target) {
-        await client.say(channel, "Uso: !croquetas50 <usuario> | !dar50 <usuario>");
+        await client.say(
+          channel,
+          "Uso: !croquetas50 <usuario> | !dar50 <usuario>"
+        );
         break;
       }
       try {
         grantCroquetas(target, 50, channel);
         await client.say(channel, `🍪 Se otorgaron 50 croquetas a @${target}.`);
-      } catch (e) {
-        await client.say(channel, "❌ No se pudo otorgar croquetas.");
+      } catch (error) {
+        console.error("Error otorgando croquetas:", error);
+        await client.say(channel, "No se pudo otorgar croquetas.");
       }
       break;
     }
@@ -269,27 +274,29 @@ console.log(isTag);
     // Comando para reparar usuarios (solo para el streamer)
     case "reparar":
       console.log(`Comando reparar recibido de ${username}`);
-      if (username === "cuartodechenz") {  // Asegurarse que solo el streamer puede usarlo
+      if (username === "cuartodechenz") {
+        // Asegurarse que solo el streamer puede usarlo
         try {
           console.log("Iniciando reparación de usuarios...");
           await client.say(channel, "🔧 Iniciando reparación de usuarios...");
-          
+
           const result = await repairBrokenUsers();
           console.log("Resultado de la reparación:", result);
-          
+
           if (result.repaired) {
             const message = `✅ Reparación completada. Se repararon ${result.count} usuarios.`;
             console.log(message);
             await client.say(channel, message);
-            
+
             // Mostrar los usuarios reparados en grupos para no exceder el límite de caracteres
             const chunkSize = 5;
             for (let i = 0; i < result.users.length; i += chunkSize) {
               const chunk = result.users.slice(i, i + chunkSize);
-              await client.say(channel, `📋 Reparados: ${chunk.join(', ')}`);
+              await client.say(channel, `📋 Reparados: ${chunk.join(", ")}`);
             }
           } else {
-            const message = "ℹ️ No se encontraron usuarios que requieran reparación.";
+            const message =
+              "ℹ️ No se encontraron usuarios que requieran reparación.";
             console.log(message);
             await client.say(channel, message);
           }
@@ -300,34 +307,155 @@ console.log(isTag);
         }
       } else {
         console.log(`Usuario no autorizado intentó usar !reparar: ${username}`);
-        await client.say(channel, "❌ Solo el streamer puede usar este comando.");
+        await client.say(
+          channel,
+          "❌ Solo el streamer puede usar este comando."
+        );
+      }
+      break;
+
+    // Comando de prueba para limpieza de usuarios inactivos (solo streamer)
+    case "testinactive":
+      console.log(`Comando testinactive recibido de ${username}`);
+      if (username === "cuartodechenz") {
+        try {
+          console.log(
+            "Ejecutando prueba de limpieza de usuarios inactivos (DRY-RUN)..."
+          );
+          await client.say(
+            channel,
+            "🔍 Ejecutando prueba de limpieza de usuarios inactivos (DRY-RUN)..."
+          );
+          testDeleteInactiveUsers(channel);
+        } catch (error) {
+          const errorMsg = `❌ Error en prueba de limpieza: ${error.message}`;
+          console.error(errorMsg, error);
+          await client.say(channel, errorMsg);
+        }
+      } else {
+        await client.say(
+          channel,
+          "❌ Solo el streamer puede usar este comando."
+        );
+      }
+      break;
+
+    // Comando manual para borrar usuarios inactivos (solo streamer)
+    case "deleteinactive":
+      console.log(`Comando deleteinactive recibido de ${username}`);
+      if (username === "cuartodechenz") {
+        try {
+          console.log(
+            "Ejecutando limpieza de usuarios inactivos (90+ días)..."
+          );
+          await client.say(
+            channel,
+            "🗑️ Ejecutando limpieza de usuarios inactivos (90+ días)..."
+          );
+          deleteInactiveUsersTwoMonths();
+          await client.say(
+            channel,
+            "✅ Limpieza de usuarios inactivos completada."
+          );
+        } catch (error) {
+          const errorMsg = `❌ Error en limpieza de usuarios: ${error.message}`;
+          console.error(errorMsg, error);
+          await client.say(channel, errorMsg);
+        }
+      } else {
+        await client.say(
+          channel,
+          "❌ Solo el streamer puede usar este comando."
+        );
       }
       break;
 
     // Administrar lista de examenes
     case "addexam":
+    case "agregarexamen":
       addExam(username, task, channel, isTag);
       break;
     case "examdelete":
+    case "eliminarexamen":
       deleteExam(username, arg, channel, isTag);
       break;
     case "reviewexam":
+    case "revisarexamen":
       reviewExam(username, channel, isTag);
       break;
     case "deleteallexam":
+    case "eliminartodosexamenes":
       deleteAllExams(username, channel, isTag);
       break;
-
-    /* Administrar lista de examenes
-    case "guardar":
-      saveLocalStorageFile();
+    case "summary":
+    case "resumenexamenes":
+      summaryExams(username, channel);
       break;
-    case "cargar":
-      loadLocalStorageFromFile(jsonData);
-      break;
+    case "modifydateexam":
+    case "modificarfechaexamen":{
+      // Formato: !modifydateexam ID nuevaFecha | !modificarfechaexamen ID nuevaFecha
+      // Ejemplo: !modifydateexam x7z 15-09 | !modificarfechaexamen x7z 15-09
+      let modifyArgs;
+      if (command === "modificarfechaexamen") {
+        // Para comandos en español, necesitamos extraer correctamente los argumentos
+        const fullMessage = message.toLowerCase().split(" ");
+        modifyArgs = fullMessage.slice(1); // Saltar el comando
+      } else {
+        modifyArgs = taskLowercase.trim().split(" ");
+      }
+      const examIdToModify = modifyArgs[0];
+      const newExamDate = modifyArgs[1];
+      if (examIdToModify && newExamDate) {
+        modifyExamDate(username, examIdToModify, newExamDate, channel, isTag);
+      } else {
+        client.say(
+          channel,
+          "Uso: !modifydateexam ID nuevaFecha | !modificarfechaexamen ID nuevaFecha"
+        );
+      }
 
-    default:
-      break; */
+      
+      break;}
+    case "modifydescripexam":
+    case "modificardescripexam": {
+      // Formato:
+      // !modifydescripexam ID nuevaDescripcion
+      // !modificardescripexam ID nuevaDescripcion
+
+      let descArgs;
+
+      if (command === "modificardescripexam") {
+        // Para comandos en español, extraemos correctamente los argumentos
+        const fullMessage = message.toLowerCase().split(" ");
+        descArgs = fullMessage.slice(1);
+      } else {
+        descArgs = taskLowercase.trim().split(" ");
+      }
+
+      const examIdForDesc = descArgs[0];
+
+      const newDescription = descArgs
+        .slice(1)
+        .join(" ")
+        .replace(/^["']|["']$/g, "");
+
+      if (examIdForDesc && newDescription) {
+        modifyExamDescription(
+          username,
+          examIdForDesc,
+          newDescription,
+          channel,
+          isTag
+        );
+      } else {
+        client.say(
+          channel,
+          "Uso: !modifydescripexam ID 'nueva descripción' | !modificardescripexam ID 'nueva descripción'"
+        );
+      }
+
+      break;
+    }
   }
 
   // Lógica de temporizador
@@ -341,5 +469,5 @@ console.log(isTag);
 
   setCurrentUser(username);
   setIsInfoUserVisible(true);
-  deleteInactiveUsersTwoMonths();
+  // deleteInactiveUsersTwoMonths(); // Desactivado - ahora se usa comando manual !deleteinactive
 };

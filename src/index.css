@@ -6,27 +6,49 @@ body {
 
 /* FONDOS */
 
+.contenedor {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 auto;
+  padding: var(--spacing-md);
+  box-sizing: border-box;
+  font-optical-sizing: auto;
+
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  z-index: 1000;
+  overflow: hidden;
+}
+
 .maincontainer {
   display: grid;
+  margin-top: 10px;
   grid-template-columns: 1fr;
-  height: 45rem;
-  width: 31.25rem;
-  gap: 1rem;
-  padding: 1rem;
-  box-sizing: border-box;
+  gap: 0;
+  padding: 0;
   font-family: "Sawarabi Gothic", "Segoe UI Emoji", "Segoe UI Symbol",
     "Apple Color Emoji", "Noto Color Emoji", sans-serif;
-  font-optical-sizing: auto;
   background-color: rgba(84, 108, 111, 0.5);
   border-radius: 1em;
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
 }
 
 .infoUser_containers {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 43em;
-  width: 29em; 
+  height: 1080px;
+  width: 720px;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 .container_header {
@@ -39,16 +61,18 @@ body {
 .header_user {
   background-color: black;
   width: 80%;
-  height: 3em;
+  height: 5em;
   border-radius: 1em;
   text-align: center;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.header_user h2{
-  padding: 0;
-  margin-top: 0.1em;
-  font-size: 1.5em;
+.header_user h2 {
+  padding: 0.5em;
+  margin: 0;
+  font-size: 2.2em;
 }
 
 .header_info {
@@ -59,21 +83,20 @@ body {
   flex-wrap: wrap;
 }
 
-.header_info div{
-font-size: 0.9em;
-background-color: black;
-padding: 0.5em;
-border-radius: 1em;
-margin-left: 0.1em;
-margin-bottom: 0.1em;
+.header_info div {
+  font-size: 1.2rem;
+  background-color: black;
+  padding: 0.6em;
+  border-radius: 1em;
+  margin-left: 0.2em;
+  margin-bottom: 0.2em;
 }
-
 
 .data {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  font-size: 0.7em;
+  font-size: 1.2rem;
 }
 
 /* Animación base reutilizable */
@@ -100,15 +123,30 @@ margin-bottom: 0.1em;
   transform: translateY(20px) scale(0.98);
 }
 
-
 /* MODERADORES: Propiedades para el fondo y colores de tareas  */
 .mod {
-  background: url("/img/mod_fondo.jpeg");
+  background: url("/img/mod_fondo.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
   border-radius: 1em;
   color: #86efac;
+}
+
+/* Base para usuarios específicos con colores personalizados */
+.user-custom-color {
+  --user-color: #ffffff;
+  color: var(--user-color);
+}
+
+.user-custom-color .task-header-title,
+.user-custom-color .task-item {
+  color: var(--user-color);
+}
+
+.user-custom-color .task-item .task-id {
+  font-size: medium;
+  background-color: var(--user-color);
 }
 
 .mod .task-header {
@@ -135,7 +173,7 @@ margin-bottom: 0.1em;
 /* VIP: Propiedades para el fondo y colores de tareas  */
 
 .vip {
-  background: url("/img/vip.jpeg");
+  background: url("/img/vip_fondo.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -167,7 +205,7 @@ margin-bottom: 0.1em;
 /* PRIME: Propiedades para el fondo y colores de tareas  */
 
 .prime {
-  background: url("/img/prime.jpeg");
+  background: url("/img/prime_fondo.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -199,25 +237,25 @@ margin-bottom: 0.1em;
 /* SUS: Propiedades para el fondo y colores de tareas  */
 
 .sub {
-  background: url("/img/sub.jpeg");
+  background: url("/img/sus_fondo.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
   border-radius: 1em;
-  color: #F2DCDE;
+  color: #f2dcde;
 }
 
 .sub .task-header {
-  color: #F2DCDE;
+  color: #f2dcde;
 }
 
 .sub .task-list {
-  color: #F2DCDE;
+  color: #f2dcde;
 }
 
 .sub .task-item {
   max-width: 26.99em;
-  color: #F2DCDE;
+  color: #f2dcde;
 }
 
 .sub .task-list .task-item {
@@ -232,7 +270,7 @@ margin-bottom: 0.1em;
 /* VIEWER: Propiedades para el fondo y colores de tareas  */
 
 .none {
-  background: url("/img/viewer.jpeg");
+  background: url("/img/viewer.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -264,898 +302,338 @@ margin-bottom: 0.1em;
 
 /* Usuarios premium: Propiedades para el fondo y colores de tareas  */
 
-
-
-
 /* Usuarios premium: Propiedades para el fondo y colores de tareas  */
 
 /* -------------------------------------------------------- */
 
 .mandaariina {
-  color: #f2955e;
-}
-
-.mandaariina .task-header-title {
-  color: #f2955e;
-}
-
-.mandaariina .task-item {
-  color: #f2955e;
-}
-
-.mandaariina .task-item .task-id {
-  font-size: medium;
-  background-color: #f2955e;
+  --user-color: #f2955e;
 }
 
 /* -------------------------------------------------------- */
 
 .antonellavrl_ {
-  color: #fcd34d;
-}
-
-.antonellavrl_ .task-header-title {
-  color: #fcd34d;
-}
-
-.antonellavrl_ .task-item {
-  color: #fcd34d;
-}
-
-.antonellavrl_ .task-item .task-id {
-  font-size: medium;
-  background-color: #fcd34d;
+  --user-color: #fcd34d;
 }
 
 /* -------------------------------------------------------- */
 
 .summertime0805 {
-  color: #f36cdd;
-}
-
-.summertime0805 .task-header-title {
-  color: #f36cdd;
-}
-
-.summertime0805 .task-item {
-  color: #f36cdd;
-}
-
-.summertime0805 .task-item .task-id {
-  font-size: medium;
-  background-color: #e41ac3;
+  --user-color: #f36cdd;
 }
 
 /* -------------------------------------------------------- */
 
 .gominola_opositora {
-  color: #15d4ff;
-}
-
-.gominola_opositora .task-header-title {
-  color: #15d4ff;
-}
-
-.gominola_opositora .task-item {
-  color: #15d4ff;
-}
-
-.gominola_opositora .task-item .task-id {
-  font-size: medium;
-  background-color: #12a0ec;
+  --user-color: #15d4ff;
 }
 
 /* -------------------------------------------------------- */
 
 .chinita098 {
-  color: #ff8181;
-}
-
-.chinita098 .task-header-title {
-  color: #ff8181;
-}
-
-.chinita098 .task-item {
-  color: #ff8181;
-}
-
-.chinita098 .task-item .task-id {
-  font-size: medium;
-  background-color: #ff8181;
+  --user-color: #ff8181;
 }
 
 /* -------------------------------------------------------- */
 
 .agos__________ {
-  color: #c8ecf4;
-}
-
-.agos__________ .task-header-title {
-  color: #c8ecf4;
-}
-
-.agos__________ .task-item {
-  color: #c8ecf4;
-}
-
-.agos__________ .task-item .task-id {
-  font-size: medium;
-  background-color: #c8ecf4;
+  --user-color: #c8ecf4;
 }
 
 /* -------------------------------------------------------- */
 
 .sofiaantok {
-  color: #fcd34d;
-}
-
-.sofiaantok .task-header-title {
-  color: #fcd34d;
-}
-
-.sofiaantok .task-item {
-  color: #fcd34d;
-}
-
-.sofiaantok .task-item .task-id {
-  font-size: medium;
-  background-color: #fcd34d;
+  --user-color: #fcd34d;
 }
 
 /* -------------------------------------------------------- */
 
 .jana10dv {
-  color: #2ceded;
-}
-
-.jana10dv .task-header-title {
-  color: #2ceded;
-}
-
-.jana10dv .task-item {
-  color: #2ceded;
-}
-
-.jana10dv .task-item .task-id {
-  font-size: medium;
-  background-color: #2ceded;
+  --user-color: #2ceded;
 }
 
 /* -------------------------------------------------------- */
 
 .mont_opo {
-  color: #f2955e;
-}
-
-.mont_opo .task-header-title {
-  color: #f2955e;
-}
-
-.mont_opo .task-item {
-  color: #f2955e;
-}
-
-.mont_opo .task-item .task-id {
-  font-size: medium;
-  background-color: #f2955e;
+  --user-color: #f2955e;
 }
 
 /* -------------------------------------------------------- */
 
 .camm_sss {
-  color: #f87b33;
-}
-
-.camm_sss .task-header-title {
-  color: #f87b33;
-}
-
-.camm_sss .task-item {
-  color: #f87b33;
-}
-
-.camm_sss .task-item .task-id {
-  font-size: medium;
-  background-color: #f87b33;
+  --user-color: #f87b33;
 }
 
 /* -------------------------------------------------------- */
 
 .antof253 {
-  color: #d9936a;
-}
-
-.antof253 .task-header-title {
-  color: #d9936a;
-}
-
-.antof253 .task-item {
-  color: #d9936a;
-}
-
-.antof253 .task-item .task-id {
-  font-size: medium;
-  background-color: #f2955e;
+  --user-color: #d9936a;
 }
 
 /* -------------------------------------------------------- */
 
 .rsofiaa {
-  color: #c8ecf4;
-}
-
-.rsofiaa .task-header-title {
-  color: #c8ecf4;
-}
-
-.rsofiaa .task-item {
-  color: #c8ecf4;
-}
-
-.rsofiaa .task-item .task-id {
-  font-size: medium;
-  background-color: #c8ecf4;
+  --user-color: #c8ecf4;
 }
 
 /* -------------------------------------------------------- */
 
 .wandazk {
-  color: #f0f2ac;
-}
-
-.wandazk .task-header-title {
-  color: #f0f2ac;
-}
-
-.wandazk .task-item {
-  color: #f0f2ac;
-}
-
-.wandazk .task-item .task-id {
-  font-size: medium;
-  background-color: #f0f2ac;
+  --user-color: #f0f2ac;
 }
 
 /* -------------------------------------------------------- */
 
-.olmediito {  
-  color: #bca7d9;
-}
-
-.olmediito .task-header-title {
-  color: #bca7d9;
-}
-
-.olmediito .task-item {
-  color: #bca7d9;
-}
-
-.olmediito .task-item .task-id {
-  font-size: medium;
-  background-color: #af8ae4;
+.olmediito {
+  --user-color: #bca7d9;
 }
 
 /* -------------------------------------------------------- */
 
 .liln1k {
-  color: #fcd34d;
-}
-
-.liln1k .task-header-title {
-  color: #fcd34d;
-}
-
-.liln1k .task-item {
-  color: #fcd34d;
-}
-
-.liln1k .task-item .task-id {
-  font-size: medium;
-  background-color: #fcd34d;
+  --user-color: #fcd34d;
 }
 
 /* -------------------------------------------------------- */
 
-.condrocita {         
-  color: #f2bdd0;
-}
-
-.condrocita .task-header-title {
-  color: #f2bdd0;
-}
-
-.condrocita .task-item {
-  color: #f2bdd0;
-}
-
-.condrocita .task-item .task-id {
-  font-size: medium;
-  background-color: #f2bdd0;
+.condrocita {
+  --user-color: #f2bdd0;
 }
 
 /* -------------------------------------------------------- */
 
 .kakarotita_ {
-  color: #ccbbf2;
-}
-
-.kakarotita_ .task-header-title {
-  color: #ccbbf2;
-}
-
-.kakarotita_ .task-item {
-  color: #ccbbf2;
-}
-
-.kakarotita_ .task-item .task-id {
-  font-size: medium;
-  background-color: #ccbbf2;
+  --user-color: #ccbbf2;
 }
 
 /* -------------------------------------------------------- */
 
 .karlitarachel {
-  color: #f1ebf0;
-}
-
-.karlitarachel .task-header-title {
-  color: #f1ebf0;
-}
-
-.karlitarachel .task-item {
-  color: #f1ebf0;
-}
-
-.karlitarachel .task-item .task-id {
-  font-size: medium;
-  background-color: #f1ebf0;
+  --user-color: #f1ebf0;
 }
 
 /* -------------------------------------------------------- */
 
 .ruidodemate_rocio {
-  color: #f2a663;
-}
-
-.ruidodemate_rocio .task-header-title {
-  color: #f2a663;
-}
-
-.ruidodemate_rocio .task-item {
-  color: #f2a663;
-}
-
-.ruidodemate_rocio .task-item .task-id {
-  font-size: medium;
-  background-color: #f2a663;
+  --user-color: #f2a663;
 }
 
 /* -------------------------------------------------------- */
 
 .crissworkoutt {
-  color: #f2bdd0;
-}
-
-.crissworkoutt .task-header-title {
-  color: #f2bdd0;
-}
-
-.crissworkoutt .task-item {
-  color: #f2bdd0;
-}
-
-.crissworkoutt .task-item .task-id {
-  font-size: medium;
-  background-color: #f2bdd0;
+  --user-color: #f2bdd0;
 }
 
 /* -------------------------------------------------------- */
 
 .sofamb1 {
-  color: #F2C438;
-}   
-
-.sofamb1 .task-header-title {
-  color: #F2C438;
-}
-
-.sofamb1 .task-item {
-  color: #F2C438;
-}
-
-.sofamb1 .task-item .task-id {
-  font-size: medium;
-  background-color: #F2C438;
+  --user-color: #f2c438;
 }
 
 /* -------------------------------------------------------- */
 
 .macacuelloo {
-  color: #f2bdd0;
-}
-
-.macacuelloo .task-header-title {
-  color: #f2bdd0;
-}
-
-.macacuelloo .task-item {
-  color: #f2bdd0;
-}
-
-.macacuelloo .task-item .task-id {
-  font-size: medium;
-  background-color: #f2bdd0;
+  --user-color: #f2bdd0;
 }
 
 /* -------------------------------------------------------- */
 
 .bleisny {
-  color: #bcd955;
-}
-
-.bleisny .task-header-title {
-  color: #bcd955;
-}
-
-.bleisny .task-item {
-  color: #bcd955;
-}
-
-.bleisny .task-item .task-id {
-  font-size: medium;
-  background-color: #bcd955;
+  --user-color: #bcd955;
 }
 
 /* -------------------------------------------------------- */
 
-.fla_vius_ {
-  color: #f257a0;
-}
-
-.fla_vius_ .task-header-title {
-  color: #f257a0;
-}
-
-.fla_vius_ .task-item {
-  color: #f257a0;
-}
-
-.fla_vius_ .task-item .task-id {
-  font-size: medium;
-  background-color: #f257a0;
+.flan_vius_ {
+  --user-color: #f257a0;
 }
 
 /* -------------------------------------------------------- */
 .mariong898 {
-  color: #d9a74a;
-}
-
-.mariong898 .task-header-title {
-  color: #d9a74a;
-}
-
-.mariong898 .task-item {
-  color: #d9a74a;
-}
-
-.mariong898 .task-item .task-id {
-  font-size: medium;
-  background-color: #d9a74a;
+  --user-color: #d9a74a;
 }
 
 /* -------------------------------------------------------- */
 .Mariong898 {
-  color: #d9a74a;
+  --user-color: #d9a74a;
 }
-
-.Mariong898 .task-header-title {
-  color: #d9a74a;
-}
-
-.Mariong898 .task-item {
-  color: #d9a74a;
-}
-
-.Mariong898 .task-item .task-id {
-  font-size: medium;
-  background-color: #d9a74a;
-}
-
-
 
 /* -------------------------------------------------------- */
 
 .valenm07 {
-  color: #b75eeb;
-}
-
-.valenm07 .task-header-title {
-  color: #b75eeb;
-}
-
-.valenm07 .task-item {
-  color: #b75eeb;
-}
-
-.valenm07 .task-item .task-id {
-  font-size: medium;
-  background-color: #b75eeb;
+  --user-color: #b75eeb;
 }
 
 /* -------------------------------------------------------- */
 
 .mmmericina {
-  color:  #EBB9A8;
-}
-
-.mmmericina .task-header-title {
-  color:  #EBB9A8;
-}
-
-.mmmericina .task-item {
-  color:  #EBB9A8;
-}
-
-.mmmericina .task-item .task-id {
-  font-size: medium;
-  background-color:  #EBB9A8;
+  --user-color: #ebb9a8;
 }
 
 /* -------------------------------------------------------- */
 
 .micaaavllr {
-  color: #F2D272;
+  --user-color: #f2d272;
 }
-
-.micaaavllr .task-header-title {
-  color: #F2D272;
-}
-
-.micaaavllr .task-item {
-  color: #F2D272;
-}
-
-.micaaavllr .task-item .task-id {
-  font-size: medium;
-  background-color: #F2D272;
-}
-
 
 .misucarla_ {
-  color: #c9eb81;
-}
-
-.misucarla_ .task-header-title {
-  color: #c9eb81;
-}
-
-.misucarla_ .task-item {
-  color: #c9eb81;
-}
-
-.misucarla_ .task-item .task-id {
-  font-size: medium;
-  background-color: #c9eb81;
+  --user-color: #c9eb81;
 }
 
 /* -------------------------------------------------------- */
 .medicensosoxp {
-  color: #F1F2C2;
-}
-
-.medicensosoxp .task-header-title {
-  color: #F1F2C2;
-}
-
-.medicensosoxp .task-item {
-  color: #F1F2C2;
-}
-
-.medicensosoxp .task-item .task-id {
-  font-size: medium;
-  background-color: #F1F2C2;
+  --user-color: #f1f2c2;
 }
 
 /* -------------------------------------------------------- */
 
 .rocio_adm {
-  color: #f59444;
-}
-
-.rocio_adm .task-header-title {
-  color: #f59444;
-}
-
-.rocio_adm .task-item {
-  color: #f59444;
-}
-
-.rocio_adm .task-item .task-id {
-  font-size: medium;
-  background-color: #f59444;
+  --user-color: #f59444;
 }
 
 /* -------------------------------------------------------- */
 
 .romatwch {
-  color: #F2A7B5;
-}
-
-.romatwch .task-header-title {
-  color: #F2A7B5;
-}
-
-.romatwch .task-item {
-  color: #F2A7B5;
-}
-
-.romatwch .task-item .task-id {
-  font-size: medium;
-  background-color: #F2A7B5;
+  --user-color: #f2a7b5;
 }
 
 /* -------------------------------------------------------- */
 
 .cande_pl {
-  color: #9bf272;
-}
-
-.cande_pl .task-header-title {
-  color: #9bf272;
-}
-
-.cande_pl .task-item {
-  color: #9bf272;
-}
-
-.cande_pl .task-item .task-id {
-  font-size: medium;
-  background-color: #9bf272;
+  --user-color: #9bf272;
 }
 
 /* -------------------------------------------------------- */
 
 .butterflylander {
-  color: #f9fcfc;
-}
-
-.butterflylander .task-header-title {
-  color: #f9fcfc;
-}
-
-.butterflylander .task-item {
-  color: #f9fcfc;
-}
-
-.butterflylander .task-item .task-id {
-  font-size: medium;
-  background-color: #f9fcfc;
+  --user-color: #f9fcfc;
 }
 
 /* -------------------------------------------------------- */
 
 .camiichan15 {
-  color: #ec81c8;
-}
-
-.camiichan15 .task-header-title {
-  color: #ec81c8;
-}
-
-.camiichan15 .task-item {
-  color: #ec81c8;
-}
-
-.camiichan15 .task-item .task-id {
-  font-size: medium;
-  background-color: #ec81c8;
+  --user-color: #ec81c8;
 }
 
 /* -------------------------------------------------------- */
 
 .lulaluzz {
-  color: #D9D9D9;
-}
-
-.lulaluzz .task-header-title {
-  color: #D9D9D9;
-}
-
-.lulaluzz .task-item {
-  color: #D9D9D9;
-}
-
-.lulaluzz .task-item .task-id {
-  font-size: medium;
-  background-color: #D9D9D9;
+  --user-color: #d9d9d9;
 }
 
 /* -------------------------------------------------------- */
 
 .andirivero1312 {
-  color: #AEA7D9;
-}
-
-.andirivero1312 .task-header-title {
-  color: #AEA7D9;
-}
-
-.andirivero1312 .task-item {
-  color: #AEA7D9;
-}
-
-.andirivero1312 .task-item .task-id {
-  font-size: medium;
-  background-color: #AEA7D9;
+  --user-color: #aea7d9;
 }
 
 /* -------------------------------------------------------- */
 .serolae {
-  color: #F2CED5;
-}
-
-.serolae .task-header-title {
-  color: #F2CED5;
-}
-
-.serolae .task-item {
-  color: #F2CED5;
-}
-
-.serolae .task-item .task-id {
-  font-size: medium;
-  background-color: #F2CED5;
+  --user-color: #f2ced5;
 }
 /* -------------------------------------------------------- */
 
 .valetpwk {
-  color: #D9B4BE ;
-}
-
-.valetpwk .task-header-title {
-  color: #D9B4BE ;
-}
-
-.valetpwk .task-item {
-  color: #D9B4BE ;
-}
-
-.valetpwk .task-item .task-id {
-  font-size: medium;
-  background-color: #D9B4BE ;
+  --user-color: #d9b4be;
 }
 
 /* -------------------------------------------------------- */
 
 .pablinn12lp {
-  color: #BFB8AE;
-}
-
-.pablinn12lp .task-header-title {
-  color: #BFB8AE ;
-}
-
-.pablinn12lp .task-item {
-  color: #BFB8AE ;
-}
-
-.pablinn12lp .task-item .task-id {
-  font-size: medium;
-  background-color: #BFB8AE ;
+  --user-color: #bfb8ae;
 }
 
 /* -------------------------------------------------------- */
 
 .polarizemile {
-  color: #F2B077;
-}
-
-.polarizemile .task-header-title {
-  color: #F2B077;
-}
-
-.polarizemile .task-item {
-  color: #F2B077;
-}
-
-.polarizemile .task-item .task-id {
-  font-size: medium;
-  background-color: #F2B077;
+  --user-color: #f2b077;
 }
 /* -------------------------------------------------------- */
 
 /* -------------------------------------------------------- */
 
 .diaaazm {
-  color: #F2C2CF;
-}
-
-.diaaazm .task-header-title {
-  color: #F2C2CF;
-}
-
-.diaaazm .task-item {
-  color: #F2C2CF;
-}
-
-.diaaazm .task-item .task-id {
-  font-size: medium;
-  background-color: #F2C2CF;
+  --user-color: #f2c2cf;
 }
 /* -------------------------------------------------------- */
 
 /* -------------------------------------------------------- */
 
-.boniataereunarata {
-  color: #d4c5fc;
-}
-
-.boniataereunarata .task-header-title {
-  color: #d4c5fc;
-}
-
-.boniataereunarata .task-item {
-  color: #d4c5fc;
-}
-
-.boniataereunarata .task-item .task-id {
-  font-size: medium;
-  background-color: #d4c5fc;
+.boniatadelnorte {
+  --user-color: #d4c5fc;
 }
 /* -------------------------------------------------------- */
 
 /* -------------------------------------------------------- */
 
-.hyant08 {
-  color: #f2cd13;
-}
-
-.hyant08 .task-header-title {
-  color: #f2cd13;
-}
-
-.hyant08 .task-item {
-  color: #f2cd13;
-}
-
-.hyant08 .task-item .task-id {
-  font-size: medium;
-  background-color: #f2cd13;
+.virhyant08 {
+  --user-color: #f2cd13;
 }
 /* -------------------------------------------------------- */
 .luluprcl {
-  color: #fea486;
+  --user-color: #fea486;
+}
+/* -------------------------------------------------------- */
+
+.agustttiina {
+  --user-color: #f094d3;
+}
+/* -------------------------------------------------------- */
+
+.ellchambeador {
+  --user-color: #d4ddf7;
+}
+/* -------------------------------------------------------- */
+
+/* -------------------------------------------------------- */
+
+.somepassioncc {
+  --user-color: #f5f9f9;
+}
+/* -------------------------------------------------------- */
+
+/* -------------------------------------------------------- */
+
+.julietavancini {
+  --user-color: #b3d9ff;
+}
+/* -------------------------------------------------------- */
+
+/* -------------------------------------------------------- */
+
+.ldaiana_ {
+  --user-color: #f6c3ca;
+}
+/* -------------------------------------------------------- */
+
+.lachaambeadora {
+  --user-color: #b4dafe;
+}
+/* -------------------------------------------------------- */
+
+.anitta8 {
+  --user-color: #f2ced8;
 }
 
-.luluprcl .task-header-title {
-  color: #fea486;
-}
+/* -------------------------------------------------------- */
 
-.luluprcl .task-item {
-  color: #fea486;
-}
-
-.luluprcl .task-item .task-id {
-  font-size: medium;
-  background-color: #fea486;
+.idaianax {
+  --user-color: #4ef4bc;
 }
 /* -------------------------------------------------------- */
 
 /* #F2D272 */
+.nanchycita {
+  --user-color: #ffffff;
+}
+/* -------------------------------------------------------- */
+
+.sandey27 {
+  --user-color: #db2777;
+}
+
+/* #F2D272 */
 .cuartodechenz {
-  color: #F2D272;
-}
-
-.cuartodechenz .task-header-title {
-  color: #F2D272;
-}
-
-.cuartodechenz .task-item {
-  color: #F2D272;
-}
-
-.cuartodechenz .task-item .task-id {
-  font-size: medium;
-  background-color: #F2D272;
+  --user-color: #f2d272;
 }
 /* -------------------------------------------------------- */

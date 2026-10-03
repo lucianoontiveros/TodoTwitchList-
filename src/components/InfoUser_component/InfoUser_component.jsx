@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+// Usar ruta absoluta desde la carpeta public para mejor compatibilidad en producción
 import Tasklist_component from "../Tasklist_component/TaskList_component";
 
 // Importar fondos según rol
@@ -39,7 +40,7 @@ const InfoUser_component = ({ user, username }) => {
 
     let backgroundImage = backgroundSets[normalizedName];
     if (backgroundImage) {
-      setStylesTasks(`infoUser_containers ${user?.name}`);
+      setStylesTasks(`infoUser_containers user-custom-color ${user?.name}`);
     }
 
     if (!backgroundImage) {
