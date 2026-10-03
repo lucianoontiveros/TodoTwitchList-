@@ -40,7 +40,7 @@ const InfoUser_component = ({ user, username }) => {
 
     let backgroundImage = backgroundSets[normalizedName];
     if (backgroundImage) {
-      setStylesTasks(`infoUser_containers ${user?.name}`);
+      setStylesTasks(`infoUser_containers user-custom-color ${user?.name}`);
     }
 
     if (!backgroundImage) {

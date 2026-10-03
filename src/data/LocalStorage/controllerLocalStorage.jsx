@@ -23,7 +23,9 @@ const loadLocalStorageFromFile = (jsonData) => {
       localStorage.setItem(key, jsonData[key]);
     });
     window.dispatchEvent(new Event("usersUpdated")); // 🔹 Notificar actualización
-  } catch (error) {}
+  } catch (error) {
+    console.error('Error loading localStorage:', error);
+  }
 };
 
 export {

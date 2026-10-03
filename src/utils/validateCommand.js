@@ -37,9 +37,24 @@ export const validateCommand = (message) => {
     "examdelete",
     "reviewexam",
     "deleteallexam",
+    "summary",
+    "modifydateexam",
+    "modifydescripexam",
+    // Comandos en español
+    "agregarexamen",
+    "revisarexamen",
+    "eliminarexamen",
+    "eliminartodosexamenes",
+    "resumenexamenes",
+    "modificarfechaexamen",
+    "modificardescripexamen",
     "reparar", // Agregado el comando reparar
     "croquetas50",
     "dar50",
+    "testinactive", // Comando de prueba para limpieza de usuarios inactivos
+    "deleteinactive", // Comando manual para borrar usuarios inactivos (90+ días)
+    "cambiarpomo", // Comando para reclamar pomo extra
+    "cambiarstream", // Comando para reclamar stream personalizado
   ]);
 
   const command = message.slice(1).split(" ")[0].toLowerCase();
