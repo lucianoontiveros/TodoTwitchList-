@@ -1,10 +1,5 @@
 import tmi from "tmi.js";
 
-// Configuración básica
-const KEEP_ALIVE_URL = typeof window !== 'undefined' && window.location ? 
-  window.location.origin : 
-  'http://localhost:5174';
-
 class TwitchClient {
   constructor() {
     const username = import.meta.env.VITE_APP_USERNAME;
@@ -24,8 +19,12 @@ class TwitchClient {
       },
       connection: {
         secure: true,
-        reconnect: true, // Deshabilitar reconexión automática de tmi.js
-        timeout: 30000
+        reconnect: true,
+        maxReconnectAttempts: Infinity,
+        reconnectInterval: 1000,
+        reconnectDecay: 1.5,
+        maxReconnectInterval: 30000,
+        timeout: 30000,
       },
       identity: {
         username,
@@ -34,7 +33,6 @@ class TwitchClient {
       channels: [channels],
     });
 
-    this.keepAliveInterval = null;
     this.isConnected = false;
     this.setupEventHandlers();
   }
@@ -43,13 +41,11 @@ class TwitchClient {
     this.client.on('connected', (address, port) => {
       console.log(`Bot conectado a ${address}:${port}`);
       this.isConnected = true;
-      this.startKeepAlive();
     });
 
     this.client.on('disconnected', (reason) => {
       console.log('Bot desconectado:', reason);
       this.isConnected = false;
-      this.stopKeepAlive();
     });
 
     this.client.on('error', (error) => {
@@ -58,31 +54,11 @@ class TwitchClient {
     });
   }
 
-  startKeepAlive() {
-    this.stopKeepAlive();
-    
-    this.keepAliveInterval = setInterval(() => {
-      if (this.isConnected) {
-        fetch(KEEP_ALIVE_URL)
-          .then(() => console.log('Keep-alive ping enviado'))
-          .catch(err => console.error('Error en keep-alive:', err));
-      }
-    }, 270000);
-  }
-
-  stopKeepAlive() {
-    if (this.keepAliveInterval) {
-      clearInterval(this.keepAliveInterval);
-      this.keepAliveInterval = null;
-    }
-  }
-
   checkConnection() {
     return this.isConnected && this.client.readyState() === 'OPEN';
   }
 
   disconnect() {
-    this.stopKeepAlive();
     this.isConnected = false;
     if (this.client) {
       this.client.disconnect();

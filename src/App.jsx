@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, useCallback, memo } from "react";
+import React, { useEffect, useState, useRef, memo } from "react";
 import { getTwitchClient } from "./data/controllerClientTwitch/clientTwitch.js";
 
 // Importación de componentes
@@ -15,93 +15,10 @@ const App = memo(() => {
   
   const prevUser = useRef(null);
   const timeoutRef = useRef(null);
-  const reconnectAttempts = useRef(0);
   const messageHandlerRef = useRef(null);
-  const maxReconnectAttempts = 3;
-  const reconnectTimeoutRef = useRef(null);
 
   // Obtener instancia única del cliente
   const twitchClient = getTwitchClient();
-
-    useEffect(() => {
-    const REFRESH_TIME_MINUTES = 30; // Cambialo: 5, 10, 15...
-    console.log("Me ejecute");
-    const interval = setInterval(() => {
-      console.log("Auto-refresh OBS source");
-      window.location.reload();
-    }, REFRESH_TIME_MINUTES * 60 * 1000);
-
-    return () => clearInterval(interval);
-    }, []); 
-
-  // Manejador de mensajes memoizado
-  const handleMessage = useCallback((channel, tags, message, self) => {
-    if (self) return;
-    
-    try {
-      monitorMessage(
-        channel,
-        tags,
-        message,
-        self,
-        prevUser,
-        timeoutRef,
-        setIsInfoUserVisible,
-        setCurrentUser
-      );
-    } catch (err) {
-      console.error("Error al procesar el mensaje:", err);
-    }
-  }, []);
-
-  // ------------------ REEMPLAZAR cleanupAll ------------------
-  // Limpiar todos los timeouts y reconexiones (NO remover el listener "message")
-  const cleanupAll = useCallback(() => {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-      timeoutRef.current = null;
-    }
-    if (reconnectTimeoutRef.current) {
-      clearTimeout(reconnectTimeoutRef.current);
-      reconnectTimeoutRef.current = null;
-    }
-    // << NO remover el listener "message" aquí >> 
-    // removing the message listener here causes the bot to become "sordo"
-  }, []); // ya no depende de twitchClient
-
-  // ------------------ REEMPLAZAR handleReconnect ------------------
-  // Manejador de reconexión con mejor control (no borra listener)
-  const handleReconnect = useCallback(() => {
-    // solo limpiar timeouts, no remover listeners
-    if (reconnectAttempts.current >= maxReconnectAttempts) {
-      setConnectionStatus("max_attempts_reached");
-      console.error("Máximo número de intentos de reconexión alcanzado");
-      return;
-    }
-
-    reconnectAttempts.current += 1;
-    console.log(`Intento de reconexión ${reconnectAttempts.current}/${maxReconnectAttempts}`);
-
-    // Intentamos reconectar. Si connect falla, volvemos a intentar.
-    reconnectTimeoutRef.current = setTimeout(async () => {
-      try {
-        await twitchClient.client.connect();
-        console.log("Reconexión: connect() resuelta");
-        // cuando se conecte, el evento 'connected' (registrado más abajo) se encargará de
-        // setear estado y (si hace falta) volver a asegurar el message handler.
-      } catch (err) {
-        console.error("Error en la reconexión:", err);
-        if (reconnectAttempts.current < maxReconnectAttempts) {
-          handleReconnect();
-        } else {
-          setConnectionStatus("error");
-        }
-      }
-    }, Math.min(3000 * reconnectAttempts.current, 10000));
-  }, [twitchClient]);
-
-
-  // ------------------ REEMPLAZAR useEffect principal (registrar handlers UNA vez) ------------------
 
   useEffect(() => {
     let isMounted = true;
@@ -165,7 +82,6 @@ const App = memo(() => {
       if (!isMounted) return;
       console.log("Evento connected recibido");
       setConnectionStatus("connected");
-      reconnectAttempts.current = 0;
 
       // Si por alguna razón el handler message se perdió, lo re-adjuntamos
       try {
@@ -184,15 +100,24 @@ const App = memo(() => {
     const disconnectedHandler = () => {
       if (!isMounted) return;
       console.log("Evento disconnected recibido");
-      setConnectionStatus("disconnected");
-      // No removemos el handler aquí: lo mantenemos y lo reasignamos al reconectar
-      handleReconnect();
+      setConnectionStatus("reconnecting");
+    };
+
+    const reconnectHandler = () => {
+      if (!isMounted) return;
+      console.log("Reconectando con Twitch...");
+      setConnectionStatus("reconnecting");
+    };
+
+    const maxReconnectHandler = () => {
+      if (!isMounted) return;
+      console.error("Se alcanzó el máximo de intentos de reconexión de Twitch");
+      setConnectionStatus("error");
     };
 
     const errorHandler = (err) => {
       if (!isMounted) return;
       console.error("Error en la conexión:", err);
-      setConnectionStatus("error");
     };
 
     // Registrar handlers de conexión (si no están ya)
@@ -208,62 +133,61 @@ const App = memo(() => {
         : false;
       if (!hasDisconnected) twitchClient.client.on("disconnected", disconnectedHandler);
 
+      const hasReconnect = twitchClient.client.listeners
+        ? twitchClient.client.listeners("reconnect").includes(reconnectHandler)
+        : false;
+      if (!hasReconnect) twitchClient.client.on("reconnect", reconnectHandler);
+
+      const hasMaxReconnect = twitchClient.client.listeners
+        ? twitchClient.client.listeners("maxreconnect").includes(maxReconnectHandler)
+        : false;
+      if (!hasMaxReconnect) twitchClient.client.on("maxreconnect", maxReconnectHandler);
+
       const hasError = twitchClient.client.listeners
         ? twitchClient.client.listeners("error").includes(errorHandler)
         : false;
       if (!hasError) twitchClient.client.on("error", errorHandler);
     } catch (err) {
+      console.warn("No se pudo comprobar listeners existentes:", err);
       // Si listeners() no está implementado en la versión, registramos sin checks
       twitchClient.client.on("connected", connectedHandler);
       twitchClient.client.on("disconnected", disconnectedHandler);
+      twitchClient.client.on("reconnect", reconnectHandler);
+      twitchClient.client.on("maxreconnect", maxReconnectHandler);
       twitchClient.client.on("error", errorHandler);
     }
 
-    // Intentamos conectar (si es necesario)
+    // tmi.js owns retries after the initial connection attempt.
     twitchClient.client.connect().catch((err) => {
       if (!isMounted) return;
       console.error("Error en la conexión inicial:", err);
-      setConnectionStatus("error");
-      handleReconnect();
+      setConnectionStatus("reconnecting");
     });
 
-    // Cleanup al desmontar el componente (no removemos message handler)
     return () => {
       isMounted = false;
-      // limpiar timeouts/reconnects
       if (timeoutRef.current) {
         clearTimeout(timeoutRef.current);
         timeoutRef.current = null;
       }
-      if (reconnectTimeoutRef.current) {
-        clearTimeout(reconnectTimeoutRef.current);
-        reconnectTimeoutRef.current = null;
-      }
-      // Quitamos solo los handlers de conexión (connected/disconnected/error)
       try {
         twitchClient.client.removeListener("connected", connectedHandler);
         twitchClient.client.removeListener("disconnected", disconnectedHandler);
+        twitchClient.client.removeListener("reconnect", reconnectHandler);
+        twitchClient.client.removeListener("maxreconnect", maxReconnectHandler);
         twitchClient.client.removeListener("error", errorHandler);
       } catch (err) {
         console.warn("Error removiendo handlers en cleanup:", err);
       }
-      // NO llamar twitchClient.disconnect() aquí para no "matar" la instancia global si hay refreshs del DOM.
     };
-  }, [twitchClient, handleReconnect]);
+  }, [twitchClient]);
 
   // Renderizado condicional basado en el estado de conexión
-  if (
-    connectionStatus === "error" ||
-    connectionStatus === "max_attempts_reached"
-  ) {
+  if (connectionStatus === "error") {
     return (
       <div className="connection-error">
         <h2>Error de conexión</h2>
-        <p>
-          {connectionStatus === "max_attempts_reached"
-            ? "No se pudo reconectar después de múltiples intentos"
-            : "Error en la conexión con Twitch"}
-        </p>
+        <p>No se pudo restablecer la conexión con Twitch.</p>
       </div>
     );
   }
@@ -272,6 +196,11 @@ const App = memo(() => {
     <>
       {connectionStatus === "connecting" && (
         <div className="connecting">Conectando con Twitch...</div>
+      )}
+      {connectionStatus === "reconnecting" && (
+        <div className="connecting">
+          Conexión con Twitch interrumpida. Reintentando automáticamente...
+        </div>
       )}
       {connectionStatus === "connected" &&
         (isInfoUserVisible && currentUser ? (
